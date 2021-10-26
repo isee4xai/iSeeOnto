@@ -57,6 +57,12 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasGoal"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#hasIntent -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasIntent">
@@ -220,6 +226,12 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#hasGoal"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#hasIntent"/>
                 <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
             </owl:Restriction>
@@ -245,6 +257,62 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Debugging -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Debugging">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Education -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Education">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Effectiveness -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Effectiveness">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Efficiency -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Efficiency">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Persuasiveness -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Persuasiveness">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#ProductManufacturing -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#ProductManufacturing">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000999"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Satisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Satisfaction">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#ScreenDisplay -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
@@ -253,10 +321,34 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Scruitablity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Scruitablity">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Speaker -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Speaker">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#AudioFacilities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Transparency -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Transparency">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Trust -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Trust">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
     </owl:NamedIndividual>
     
 

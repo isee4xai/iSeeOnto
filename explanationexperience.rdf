@@ -1,12 +1,247 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/explanationexperience#"
      xml:base="http://www.w3id.org/iSeeOnto/explanationexperience"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience"/>
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:user="http://www.w3id.org/iSeeOnto/user#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:explanationexperience="http://www.w3id.org/iSeeOnto/explanationexperience#">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience">
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/user"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/workflow"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasUser"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000006 -->
+
+    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000006">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Concurrentness -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#Concurrentness">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Description -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Description">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#user"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Solution -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Solution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Workflow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/heals/eo#ArtificialIntelligenceMethod -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://purl.org/heals/eo#ExplanationModality -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#ExplanationModality">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://purl.org/heals/eo#user -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#user">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Bosch -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Bosch">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
+        <hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#BoschDescription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#BoschDescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#BoschDescription">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+        <hasFeature rdf:resource="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+        <hasFeature rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#BoschUser"/>
+        <hasFeature rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#YoloImage"/>
+        <hasFeature rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#YoloNeuralNetwork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#BoschUser -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#BoschUser">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#YoloImage -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#YoloImage">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#YoloNeuralNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#YoloNeuralNetwork">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#ProductManufacturing -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ProductManufacturing">
+        <user:hasGoal rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
