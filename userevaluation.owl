@@ -21,8 +21,95 @@
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation">
+        <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
+        <owl:imports rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/evaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#hasContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#hasContent">
+        <rdfs:label xml:lang="en">has content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Question -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Question">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+        <rdfs:comment xml:lang="en">A Question posed to the user and used as a metric for guiding assessment of an entity, such as an Explanation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#ResultInterpretationPolicy -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#ResultInterpretationPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#hasContent"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Aids the interpretation of a User Evaluation Result by providing a textual description detailing how the result of a metric should be interpreted</rdfs:comment>
+        <rdfs:label xml:lang="en">Result Interpretation Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Survey -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Survey">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+        <rdfs:label xml:lang="en">A Survey used to query a user as part of an evaluation activity, assessing, for example, an Explanation.</rdfs:label>
+        <rdfs:label xml:lang="en">Survey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluation -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluation">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment"/>
+        <rdfs:label>User Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluationResult -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluationResult">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
+        <rdfs:comment xml:lang="en">The result (outcome) of a User Evaluation assessment.</rdfs:comment>
+        <rdfs:label xml:lang="en">User Evaluation Result</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
