@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#"
-     xml:base="http://www.isee4xai.com/ontologies/iseeonto/userevaluation"
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/userevaluation#"
+     xml:base="http://www.w3id.org/iSeeOnto/userevaluation"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -20,9 +20,9 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/userevaluation">
         <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
-        <owl:imports rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/evaluation"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
     </owl:Ontology>
     
@@ -39,9 +39,9 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#hasContent -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#hasContent -->
 
-    <owl:DatatypeProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#hasContent">
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#hasContent">
         <rdfs:label xml:lang="en">has content</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -58,9 +58,9 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Question -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Question -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Question">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Question">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
         <rdfs:comment xml:lang="en">A Question posed to the user and used as a metric for guiding assessment of an entity, such as an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">Question</rdfs:label>
@@ -68,13 +68,13 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#ResultInterpretationPolicy -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#ResultInterpretationPolicy">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#hasContent"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasContent"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -84,9 +84,9 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Survey -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Survey -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#Survey">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Survey">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
         <rdfs:label xml:lang="en">A Survey used to query a user as part of an evaluation activity, assessing, for example, an Explanation.</rdfs:label>
         <rdfs:label xml:lang="en">Survey</rdfs:label>
@@ -94,18 +94,18 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluation -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluation">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment"/>
         <rdfs:label>User Evaluation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluationResult -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/userevaluation#UserEvaluationResult">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
         <rdfs:comment xml:lang="en">The result (outcome) of a User Evaluation assessment.</rdfs:comment>
         <rdfs:label xml:lang="en">User Evaluation Result</rdfs:label>

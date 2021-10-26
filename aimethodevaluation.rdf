@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#"
-     xml:base="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation"
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/aimethodevaluation#"
+     xml:base="http://www.w3id.org/iSeeOnto/aimethodevaluation"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -19,9 +19,9 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimethodevaluation">
         <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
-        <owl:imports rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/evaluation"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
     </owl:Ontology>
     
@@ -38,36 +38,36 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodAssessmentDimension -->
+    <!-- http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodAssessmentDimension -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodAssessmentDimension">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodAssessmentDimension">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension"/>
         <rdfs:label xml:lang="en">AI Method Assessment Dimension</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodAssessmentMetric -->
+    <!-- http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodAssessmentMetric -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodAssessmentMetric">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodAssessmentMetric">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
         <rdfs:label xml:lang="en">AI Method Assessment Metric</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodAssessmentResult -->
+    <!-- http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodAssessmentResult -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodAssessmentResult">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodAssessmentResult">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
         <rdfs:label xml:lang="en">AI Method Assessment Result</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodEffectivenessAssessment -->
+    <!-- http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodEffectivenessAssessment -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethodevaluation#AIMethodEffectivenessAssessment">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethodevaluation#AIMethodEffectivenessAssessment">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment"/>
         <rdfs:subClassOf>
             <owl:Restriction>

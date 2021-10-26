@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.isee4xai.com/ontologies/iseeonto/explainer#"
-     xml:base="http://www.isee4xai.com/ontologies/iseeonto/explainer"
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/explainer#"
+     xml:base="http://www.w3id.org/iSeeOnto/explainer"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -20,7 +20,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/explainer">
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
     </owl:Ontology>
     
@@ -37,69 +37,69 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#applicableProblemType -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#applicableProblemType -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#applicableProblemType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasApplicableModelType -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasApplicableModelType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasComplexity -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasComplexity -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasComplexity"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasComplexity"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasExplanationScope -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasExplanationScope"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasHocness -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasHocness -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasHocness"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasHocness"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasOutputType -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasOutputType -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasOutputType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasOutputType"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasPortability -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasPortability -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasPortability"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPortability"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#hasPresentation -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasPresentation -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#hasPresentation"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPresentation"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#isCompatibleWithFeatureTypes -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#isCompatibleWithFeatureTypes"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#targetType -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#targetType -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#targetType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#targetType"/>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#utilises -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#utilises -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#utilises"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#utilises"/>
     
 
 
@@ -114,72 +114,72 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#ComputationalComplexity -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ComputationalComplexity">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity">
         <rdfs:comment xml:lang="en">Details relating the resources required by an Explainability Technique to generate an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">Computational Complexity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#Concurrentness -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Concurrentness -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#Concurrentness">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Concurrentness">
         <rdfs:comment xml:lang="en">Captured if the technique is ante-hoc (i.e. use the same model for the task and creating explanations) or post-hoc (i.e. different models are used to create the eo:SystemRecommendation and eo:Explanation)</rdfs:comment>
         <rdfs:label xml:lang="en">Concurrentness</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DataType -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DataType">
         <rdfs:comment xml:lang="en">The types of model features (e.g., categorical, numerical, ordinal, image) that a given Explainability Technique can be used.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Type</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplainabilityTechnique -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplainabilityTechnique">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">
         <rdfs:comment xml:lang="en">The technique used by an Explainer to generate an Explanation, such as ule-based learner, Decision Tree, Influence functions, Sensitivity, Saliency, and so on as categorised by Arrieta et. al. (2020)</rdfs:comment>
         <rdfs:label xml:lang="en">Explainability Technique</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#Explainer -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Explainer -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#Explainer">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Explainer">
         <rdfs:comment xml:lang="en">An Explainer uses an Explainability Technique to generate Explanations for an AI Models output.</rdfs:comment>
         <rdfs:label xml:lang="en">Explainer</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationScope -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ExplanationScope -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationScope">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">
         <rdfs:comment xml:lang="en">The extent to which explanations generated by an explanation technique can be generalised.</rdfs:comment>
         <rdfs:label xml:lang="en">Explanation Scope</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationTarget -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationTarget">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">
         <rdfs:comment xml:lang="en">The target of the Explanation Technique, i.e. the thing an Explanation is being generated for.</rdfs:comment>
         <rdfs:label xml:lang="en">Explanation Target</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#Portability -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Portability -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#Portability">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Portability">
         <rdfs:comment xml:lang="en">The type of model an Explainability Technique can be applied to.</rdfs:comment>
         <rdfs:label xml:lang="en">Portability</rdfs:label>
     </owl:Class>
@@ -197,146 +197,146 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#ante-hoc -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ante-hoc -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ante-hoc">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#Concurrentness"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Concurrentness"/>
         <rdfs:comment xml:lang="en">An anti-hoc Explanation Technique use the same model for the task and creating explanations</rdfs:comment>
         <rdfs:label xml:lang="en">anti-hoc</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#categorical -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#categorical -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#categorical">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#categorical">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment xml:lang="en">Data having a categorical type.</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#cohort -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#cohort -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#cohort">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationScope"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#cohort">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"/>
         <rdfs:comment xml:lang="en">Explanations generated by an Explanation Technique with local scope explain a subgroup in a dataset or subspace in a model&apos;s decision space.</rdfs:comment>
         <rdfs:label xml:lang="en">cohort</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#data -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#data -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#data">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationTarget"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#data">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"/>
         <rdfs:comment xml:lang="en">Raw or feature data that are the target of an explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">data</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#global -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#global -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#global">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationScope"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#global">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"/>
         <rdfs:comment xml:lang="en">Explanations generated by an Explanation Technique with global scope explain an AI Model.</rdfs:comment>
         <rdfs:label xml:lang="en">global</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#image -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#image -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#image">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#image">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment xml:lang="en">Data of type image.</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#local -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#local -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#local">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationScope"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#local">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"/>
         <rdfs:comment xml:lang="en">Explanations generated by an Explanation Technique with local scope explain a single data point or prediction.</rdfs:comment>
         <rdfs:label xml:lang="en">local</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#model -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#model -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#model">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationTarget"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#model">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"/>
         <rdfs:comment xml:lang="en">The AI Model is the target of an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">model</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#model-agnostic -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#model-agnostic -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#model-agnostic">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#Portability"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#model-agnostic">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Portability"/>
         <rdfs:comment xml:lang="en">An Explanation Technique that works with any model family.</rdfs:comment>
         <rdfs:label xml:lang="en">model-agnostic</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#modelClassSpecific -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#modelClassSpecific">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#Portability"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Portability"/>
         <rdfs:comment xml:lang="en">An Explanation Technique that works with a particular family of models.</rdfs:comment>
         <rdfs:label xml:lang="en">model-class specific</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#modelSpecific -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#modelSpecific -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#modelSpecific">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#Portability"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#modelSpecific">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Portability"/>
         <rdfs:label xml:lang="en">An Explanation Technique that works with a specific type of model.</rdfs:label>
         <rdfs:label xml:lang="en">model-specific</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#numerical -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#numerical -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#numerical">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#numerical">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment xml:lang="en">Data having a numerical type</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#ordinal -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ordinal -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ordinal">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#ordinal">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment xml:lang="en">Data having an ordinal type</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#post-hoc -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#post-hoc -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#post-hoc">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#Concurrentness"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#post-hoc">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Concurrentness"/>
         <rdfs:comment xml:lang="en">A post-hoc Explanation Technique uses different models to create the eo:SystemRecommendation and eo:Explanation to that which were used as part of the Task</rdfs:comment>
         <rdfs:label xml:lang="en">post-hoc</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer#prediction -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#prediction -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#prediction">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplanationTarget"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#prediction">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"/>
         <rdfs:comment xml:lang="en">The Predictions are the target of an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">prediction</rdfs:label>
     </owl:NamedIndividual>
