@@ -20,7 +20,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user">
+    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user">
         <owl:imports rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
     </owl:Ontology>
@@ -38,18 +38,18 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#addressesQuestion -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#addressesQuestion -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#addressesQuestion">
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#addressesQuestion">
         <rdfs:comment xml:lang="en">Relationship between an Explanation Technique and the questions it addresses.</rdfs:comment>
         <rdfs:label xml:lang="en">addresses question</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#canHandle -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#canHandle -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#canHandle">
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#canHandle">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:comment xml:lang="en">Relationship between a Technical Facilitiy and the types of Explanation Modality that the facility can support.</rdfs:comment>
         <rdfs:label xml:lang="en">can handle</rdfs:label>
@@ -57,34 +57,42 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#hasIntent -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#hasIntent -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#hasIntent">
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#hasIntent">
         <rdfs:label xml:lang="en">has intent</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#hasResources -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#hasResources -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#hasResources">
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#hasResources">
         <rdfs:label xml:lang="en">has resources</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#levelOfKnowledge -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#hasSubDomain -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#levelOfKnowledge">
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#hasSubDomain">
+        <rdfs:label xml:lang="en">has subdomain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#levelOfKnowledge -->
+
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#levelOfKnowledge">
         <rdfs:comment xml:lang="en">Captures an agent&apos;s level of knowledge / expertise.</rdfs:comment>
         <rdfs:label xml:lang="en">level of knowledge</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#operatesIn -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#operatesIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#operatesIn">
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#operatesIn">
         <rdfs:comment xml:lang="en">Relationship between an AI Task and the Domain that it is operating in.</rdfs:comment>
         <rdfs:label xml:lang="en">operates in</rdfs:label>
     </owl:ObjectProperty>
@@ -107,7 +115,7 @@
     <rdf:Description rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplainabilityTechnique">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#addressesQuestion"/>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#addressesQuestion"/>
                 <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -115,9 +123,9 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#AIMethodKnowledge -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#AIMethodKnowledge -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#AIMethodKnowledge">
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#AIMethodKnowledge">
         <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#knowledge"/>
         <rdfs:comment xml:lang="en">Knowledge of a particular AI Method or type of AI Method</rdfs:comment>
         <rdfs:label xml:lang="en">AI Method Knowledge</rdfs:label>
@@ -125,27 +133,33 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#AudioFacilities -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#AudioFacilities -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#AudioFacilities">
-        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#TechnicalFacilities"/>
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#AudioFacilities">
+        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#TechnicalFacilities"/>
         <rdfs:comment xml:lang="en">Different type of Audio facilities (speakers, headphones, microphones, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">Audio Facilities</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#Domain -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#Domain -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#Domain">
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#Domain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#hasSubDomain"/>
+                <owl:allValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#Domain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Domain</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#DomainKnowledge -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#DomainKnowledge -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#DomainKnowledge">
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#DomainKnowledge">
         <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#knowledge"/>
         <rdfs:comment xml:lang="en">Knowledge of a specific, specialised domain or field.</rdfs:comment>
         <rdfs:label xml:lang="en">Domain Knowledge</rdfs:label>
@@ -153,21 +167,21 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#KnowledgeLevel -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#KnowledgeLevel -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#KnowledgeLevel">
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#KnowledgeLevel">
         <rdfs:comment xml:lang="en">Enumeration class for defining the levels of knowledge / expertise an agent can have of discipline, field, or topic.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge Level</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#TechnicalFacilities -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#TechnicalFacilities -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#TechnicalFacilities">
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#TechnicalFacilities">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#canHandle"/>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#canHandle"/>
                 <owl:allValuesFrom rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -177,10 +191,10 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#VisualFacilities -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#VisualFacilities -->
 
-    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#VisualFacilities">
-        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#TechnicalFacilities"/>
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#VisualFacilities">
+        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#TechnicalFacilities"/>
         <rdfs:comment xml:lang="en">Different types of technical facilities capable of displaying visual information ( projector, monitor, television, tablet, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Visual Facilities</rdfs:label>
     </owl:Class>
@@ -192,9 +206,9 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#knowledge">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#levelOfKnowledge"/>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#levelOfKnowledge"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#KnowledgeLevel"/>
+                <owl:onClass rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#KnowledgeLevel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -206,14 +220,14 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#hasIntent"/>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#hasIntent"/>
                 <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#hasResources"/>
-                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#TechnicalFacilities"/>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#hasResources"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#TechnicalFacilities"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -231,44 +245,44 @@
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#ScreenDisplay -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#ScreenDisplay -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#ScreenDisplay">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#VisualFacilities"/>
+    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#ScreenDisplay">
+        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#VisualFacilities"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#Speaker -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#Speaker -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#Speaker">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#AudioFacilities"/>
+    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#Speaker">
+        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#AudioFacilities"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#high -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#high -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#high">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#KnowledgeLevel"/>
+    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#high">
+        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#KnowledgeLevel"/>
         <rdfs:label xml:lang="en">high</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#low -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#low -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#low">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#KnowledgeLevel"/>
+    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#low">
+        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#KnowledgeLevel"/>
         <rdfs:label xml:lang="en">low</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.isee4xai.com/ontologies/iseeonto/explainer/user#medium -->
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/user#medium -->
 
-    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#medium">
-        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer/user#KnowledgeLevel"/>
+    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/ontologies/iseeonto/user#medium">
+        <rdf:type rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/user#KnowledgeLevel"/>
         <rdfs:label xml:lang="en">medium</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>

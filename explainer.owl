@@ -145,7 +145,7 @@
 
     <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/explainer#ExplainabilityTechnique">
         <rdfs:comment xml:lang="en">The technique used by an Explainer to generate an Explanation, such as ule-based learner, Decision Tree, Influence functions, Sensitivity, Saliency, and so on as categorised by Arrieta et. al. (2020)</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">Explainability Technique</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Explainability Technique</rdfs:label>
     </owl:Class>
     
 

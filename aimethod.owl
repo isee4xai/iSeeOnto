@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.isee4xai.com/ontologies/iseeonto/aimethod#"
+     xml:base="http://www.isee4xai.com/ontologies/iseeonto/aimethod"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethod">
+        <owl:imports rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer"/>
+        <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <rdfs:comment xml:lang="en">The focus of the AI Method module  is to further expand the definition of the AI task and AI method to be able to specify the information required by the iSee Platform.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethod#trainedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethod#trainedOn">
+        <rdfs:comment xml:lang="en">Relationship between an AI Method, and the types of data it was trained on.</rdfs:comment>
+        <rdfs:label xml:lang="en">trained on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethod#numberOfFeatures -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethod#numberOfFeatures">
+        <rdfs:label>number of features</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethod#numberOfInstances -->
+
+    <owl:DatatypeProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethod#numberOfInstances">
+        <rdfs:label>number of instances</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethod#AITakGoal -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethod#AITakGoal">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000337"/>
+        <rdfs:comment>The goal of an AI Task, or the purpose it was developed to achieve</rdfs:comment>
+        <rdfs:label>AI Task Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/aimethod#Dataset -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/aimethod#Dataset">
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/heals/eo#ArtificialIntelligenceMethod -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/aimethod#trainedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/explainer#DataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/aimethod#Dataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

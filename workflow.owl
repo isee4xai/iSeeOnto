@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.isee4xai.com/ontologies/iseeonto/workflow#"
+     xml:base="http://www.isee4xai.com/ontologies/iseeonto/workflow"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow">
+        <rdfs:comment xml:lang="en">The workflow module provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#composedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#composedOf">
+        <rdfs:label xml:lang="en">composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#hasOutput">
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#isInputTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#isInputTo">
+        <rdfs:label xml:lang="en">is input to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#startTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#startTask">
+        <rdfs:label xml:lang="en">start task</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#CompositeTask -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#CompositeTask">
+        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#composedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#ControlConstruct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Composite Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#ControlConstruct -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#ControlConstruct">
+        <rdfs:label xml:lang="en">Control Construct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#IfTheElse -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#IfTheElse">
+        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#ControlConstruct"/>
+        <rdfs:label xml:lang="en">If Then Else</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#Sequence -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#Sequence">
+        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#ControlConstruct"/>
+        <rdfs:label xml:lang="en">Sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#SimpleTask -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#SimpleTask">
+        <rdfs:subClassOf rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#Task"/>
+        <rdfs:label xml:lang="en">Simple Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#Task -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#Task">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#Variable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#Variable -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#Variable">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#isInputTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.isee4xai.com/ontologies/iseeonto/workflow#Workflow -->
+
+    <owl:Class rdf:about="http://www.isee4xai.com/ontologies/iseeonto/workflow#Workflow">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#startTask"/>
+                <owl:someValuesFrom rdf:resource="http://www.isee4xai.com/ontologies/iseeonto/workflow#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Workflow</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
