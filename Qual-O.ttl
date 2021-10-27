@@ -1,0 +1,159 @@
+# baseURI: http://sensornet.abdn.ac.uk/onts/Qual-O
+# imports: http://www.w3.org/ns/prov
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix property:  <http://dtp-126.sncs.abdn.ac.uk/quality/SensorBox/Property/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix prov-dc:  <http://www.w3.org/ns/prov-dc#> .
+@prefix qual:    <http://sensornet.abdn.ac.uk/onts/Qual-O#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sensornet.abdn.ac.uk/onts/Qual-O>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/ns/prov> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+qual:Assessment
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Activity ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:onClass qual:Subject ;
+                owl:onProperty prov:used ;
+                owl:qualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger
+              ] .
+
+qual:Dimension
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Entity .
+
+qual:Metric
+      rdfs:subClassOf prov:Entity .
+
+qual:Result
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Entity ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue qual:result ;
+                owl:onProperty prov:hadRole
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty prov:hadRole
+              ] .
+
+qual:Subject
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Entity ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty prov:hadRole
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:hasValue qual:subject ;
+                owl:onProperty prov:hadRole
+              ] ;
+      owl:disjointWith qual:Result , qual:Dimension , qual:Metric .
+
+qual:annotates
+      rdf:type owl:TransitiveProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range qual:Subject ;
+      rdfs:subPropertyOf prov:wasDerivedFrom ;
+      owl:propertyChainAxiom
+              (qual:resultOf qual:assesses) .
+
+qual:assessedProperty
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range rdf:Property .
+
+qual:assessedValue
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range owl:Thing .
+
+qual:assesses
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain qual:Assessment ;
+      rdfs:range qual:Subject ;
+      rdfs:subPropertyOf prov:used .
+
+qual:basedOn
+      rdf:type owl:TransitiveProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range qual:Metric ;
+      rdfs:subPropertyOf prov:wasDerivedFrom ;
+      owl:propertyChainAxiom
+              (qual:resultOf qual:guidedBy) .
+
+qual:canReuse
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range xsd:boolean .
+
+qual:guidedBy
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain qual:Assessment ;
+      rdfs:range qual:Metric ;
+      rdfs:subPropertyOf prov:used .
+
+qual:hasScore
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range xsd:integer .
+
+qual:measures
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain qual:Metric ;
+      rdfs:range qual:Dimension ;
+      rdfs:subPropertyOf prov:wasDerivedFrom .
+
+qual:metric
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Role .
+
+qual:quantifies
+      rdf:type owl:TransitiveProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range qual:Dimension ;
+      rdfs:subPropertyOf prov:wasDerivedFrom ;
+      owl:propertyChainAxiom
+              (qual:basedOn qual:measures) .
+
+qual:result
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Role .
+
+qual:resultOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range qual:Assessment ;
+      rdfs:subPropertyOf prov:wasGeneratedBy .
+
+qual:subject
+      rdf:type owl:Class ;
+      rdfs:subClassOf prov:Role .
+
+qual:targetOf
+      rdf:type owl:ObjectProperty ;
+      owl:inverseOf prov:used .
+
+prov:hadResultRole
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain qual:Result ;
+      rdfs:range qual:result ;
+      rdfs:subPropertyOf prov:hadRole .
+
+prov:used
+      owl:inverseOf qual:targetOf .
