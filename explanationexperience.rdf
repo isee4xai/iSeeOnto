@@ -217,6 +217,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#BoschUser">
         <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
+        <hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#BoschDescription"/>
         <user:hasIntent rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
     </owl:NamedIndividual>
     
