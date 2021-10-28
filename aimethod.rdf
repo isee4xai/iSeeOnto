@@ -39,6 +39,18 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimethod#hasDataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#hasDataType"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimethod#solves -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#solves"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimethod#trainedOn -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#trainedOn">
@@ -86,6 +98,31 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimethod#AIModel -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethod#AIModel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#solves"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#AITask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#trainedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#Dataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explainer#utilises"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimethod#AITakGoal -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethod#AITakGoal">
@@ -99,6 +136,12 @@
     <!-- http://www.w3id.org/iSeeOnto/aimethod#Dataset -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethod#Dataset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#hasDataType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Dataset</rdfs:label>
     </owl:Class>
     
@@ -109,14 +152,14 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#trainedOn"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#Dataset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#Dataset"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#trainedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>

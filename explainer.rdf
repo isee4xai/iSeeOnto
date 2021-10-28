@@ -55,6 +55,14 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">
+        <rdfs:label xml:lang="en">has concurrentness</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"/>
