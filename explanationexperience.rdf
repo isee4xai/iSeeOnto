@@ -266,6 +266,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#BoschAnomalyDeepNeuralNetwork">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#YoloNeuralNetwork"/>
     </owl:NamedIndividual>
     
 
