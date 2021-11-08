@@ -158,9 +158,9 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Explainer_Concurrentness -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Explainer_Concurrentness">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">
         <rdfs:comment xml:lang="en">Captured if the technique is ante-hoc (i.e. use the same model for the task and creating explanations) or post-hoc (i.e. different models are used to create the eo:SystemRecommendation and eo:Explanation)</rdfs:comment>
         <rdfs:label xml:lang="en">Explainer Concurrentness</rdfs:label>
     </owl:Class>
@@ -208,7 +208,7 @@
     <!-- http://www.w3id.org/iSeeOnto/explainer#ante-hoc -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer_Concurrentness"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"/>
         <rdfs:comment xml:lang="en">An anti-hoc Explanation Technique use the same model for the task and creating explanations</rdfs:comment>
         <rdfs:label xml:lang="en">anti-hoc</rdfs:label>
     </owl:NamedIndividual>
@@ -334,7 +334,7 @@
     <!-- http://www.w3id.org/iSeeOnto/explainer#post-hoc -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#post-hoc">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer_Concurrentness"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"/>
         <rdfs:comment xml:lang="en">A post-hoc Explanation Technique uses different models to create the eo:SystemRecommendation and eo:Explanation to that which were used as part of the Task</rdfs:comment>
         <rdfs:label xml:lang="en">post-hoc</rdfs:label>
     </owl:NamedIndividual>
