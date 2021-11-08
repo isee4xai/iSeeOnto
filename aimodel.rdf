@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/aimethod#"
-     xml:base="http://www.w3id.org/iSeeOnto/aimethod"
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/aimodel#"
+     xml:base="http://www.w3id.org/iSeeOnto/aimodel"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -20,7 +20,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimethod">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimodel">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
         <rdfs:comment xml:lang="en">The focus of the AI Method module  is to further expand the definition of the AI task and AI method to be able to specify the information required by the iSee Platform.</rdfs:comment>
@@ -39,21 +39,21 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#hasDataType -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasDataType -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#hasDataType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDataType"/>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#solves -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#solves -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#solves"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#solves"/>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#trainedOn -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#trainedOn -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#trainedOn">
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#trainedOn">
         <rdfs:comment xml:lang="en">Relationship between an AI Method, and the types of data it was trained on.</rdfs:comment>
         <rdfs:label xml:lang="en">trained on</rdfs:label>
     </owl:ObjectProperty>
@@ -71,17 +71,17 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#numberOfFeatures -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#numberOfFeatures">
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures">
         <rdfs:label>number of features</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#numberOfInstances -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimethod#numberOfInstances">
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances">
         <rdfs:label>number of instances</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -98,19 +98,19 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#AIModel -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AIModel -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethod#AIModel">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AIModel">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#solves"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#solves"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#AITask"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#trainedOn"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#Dataset"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -123,9 +123,9 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#AITakGoal -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AITakGoal -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethod#AITakGoal">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AITakGoal">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000337"/>
         <rdfs:comment>The goal of an AI Task, or the purpose it was developed to achieve</rdfs:comment>
         <rdfs:label>AI Task Goal</rdfs:label>
@@ -133,12 +133,12 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimethod#Dataset -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dataset -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimethod#Dataset">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#hasDataType"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasDataType"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -153,12 +153,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#Dataset"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimethod#trainedOn"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
             </owl:Restriction>
         </rdfs:subClassOf>

@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#"
+     xml:base="http://www.w3id.org/iSeeOnto/BoschExplanationExperience"
+     xmlns:eo="https://purl.org/heals/eo#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:user="http://www.w3id.org/iSeeOnto/user#"
+     xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
+     xmlns:explainer="http://www.w3id.org/iSeeOnto/explainer#"
+	 xmlns:explanationexperience="http://www.w3id.org/iSeeOnto/explanationexperience#">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience">
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
+    </owl:Ontology>
+
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#Bosch -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplanationExperience">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomalyDeepNeuralNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomalyDeepNeuralNetwork">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomalyDetectionModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomalyDetectionModel">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
+        <aimodel:solves rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschSensorAnomalyDetection"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomalyDeepNeuralNetwork"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomolyVisualisation -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomolyVisualisation">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <explainer:hasConcurrentness rdf:resource="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+        <explainer:hasExplanationScope rdf:resource="http://www.w3id.org/iSeeOnto/explainer#local"/>
+        <explainer:hasOutputType rdf:resource="http://www.w3id.org/iSeeOnto/explainer#image"/>
+        <explainer:hasPortability rdf:resource="http://www.w3id.org/iSeeOnto/explainer#modelSpecific"/>
+        <explainer:hasPresentation rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloImage"/>
+        <explainer:targetType rdf:resource="http://www.w3id.org/iSeeOnto/explainer#prediction"/>
+        <user:addressesQuestion rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#Description"/>
+        <explanationexperience:hasAIModel rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomalyDetectionModel"/>
+        <explanationexperience:hasExplainer rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplainer"/>
+        <explanationexperience:hasUser rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschUser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplainer">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschAnomolyVisualisation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschSensorAnomalyDetection -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschSensorAnomalyDetection">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#AITask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschUser -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschUser">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription"/>
+        <eo:asks rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor"/>
+        <eo:possess rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpert"/>
+        <user:hasIntent rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
+        <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#ScreenDisplay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpert -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpertKnowledge">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#DomainKnowledge"/>
+        <user:levelOfKnowledge rdf:resource="http://www.w3id.org/iSeeOnto/user#high"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:label xml:lang="en">What is the anomaly in the sensor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloImage -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloImage">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloNeuralNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloNeuralNetwork">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ProductManufacturing">
+        <user:hasGoal rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
+        <user:canHandle rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloImage"/>
+    </rdf:Description>
+	
+</rdf:RDF>
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

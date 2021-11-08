@@ -60,20 +60,12 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">
         <rdfs:label xml:lang="en">has concurrentness</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"/>
     
-
-
-    <!-- http://www.w3id.org/iSeeOnto/explainer#hasHocness -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasHocness"/>
-    
-
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasOutputType -->
 
