@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#"
+     xml:base="http://www.w3id.org/iSeeOnto/JivaExplanationExperience"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:eo="https://purl.org/heals/eo#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:user="http://www.w3id.org/iSeeOnto/user#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
+     xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:explainer="http://www.w3id.org/iSeeOnto/explainer#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:explanationexperience="http://www.w3id.org/iSeeOnto/explanationexperience#">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience">
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Doctor -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Doctor">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaProstateDescription"/>
+        <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#ScreenDisplay"/>
+        <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#Speaker"/>
+        <eo:asks rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaDoctorQuestion"/>
+        <eo:possess rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#DoctorDomainExpert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#DoctorDomainExpert -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#DoctorDomainExpert">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#DomainKnowledge"/>
+        <user:levelOfKnowledge rdf:resource="http://www.w3id.org/iSeeOnto/user#high"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Image_DICOM -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Image_DICOM">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaCNN -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaCNN">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaComputerVisionModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaComputerVisionModel">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
+        <aimodel:solves rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#TumorClassification"/>
+        <aimodel:trainedOn rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#ProstateX"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaCNN"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaDoctorQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaDoctorQuestion">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:label xml:lang="en">How do you know the classification is X?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExampleBasedExplainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExampleBasedExplainer">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <explainer:hasConcurrentness rdf:resource="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+        <explainer:hasExplanationScope rdf:resource="http://www.w3id.org/iSeeOnto/explainer#local"/>
+        <explainer:hasOutputType rdf:resource="http://www.w3id.org/iSeeOnto/explainer#image"/>
+        <explainer:hasPortability rdf:resource="http://www.w3id.org/iSeeOnto/explainer#model-agnostic"/>
+        <explainer:hasPresentation rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#ListofImages"/>
+        <explainer:targetType rdf:resource="http://www.w3id.org/iSeeOnto/explainer#prediction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExplainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExplainer">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExampleBasedExplainer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExplanationExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaExplanationExperience">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaProstateDescription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaPatientQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaPatientQuestion">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:label xml:lang="en">Are you sure?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaProstateDescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaProstateDescription">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#ListofImages -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#ListofImages">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Patient -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Patient">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
+        <aimodel:hasDataType rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaProstateDescription"/>
+        <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#ScreenDisplay"/>
+        <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#Speaker"/>
+        <eo:asks rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#JivaPatientQuestion"/>
+        <eo:possess rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#PatientDomainNovice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#PatientDomainNovice -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#PatientDomainNovice">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#DomainKnowledge"/>
+        <user:levelOfKnowledge rdf:resource="http://www.w3id.org/iSeeOnto/user#low"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#ProstateX -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#ProstateX">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
+        <aimodel:hasDataType rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Image_DICOM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/JivaExplanationExperience#TumorClassification -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#TumorClassification">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#AITask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#ScreenDisplay -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
+        <user:canHandle rdf:resource="http://www.w3id.org/iSeeOnto/JivaExplanationExperience#Image_DICOM"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
