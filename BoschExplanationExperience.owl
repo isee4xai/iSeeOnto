@@ -1,21 +1,69 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#"
      xml:base="http://www.w3id.org/iSeeOnto/BoschExplanationExperience"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:eo="https://purl.org/heals/eo#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:user="http://www.w3id.org/iSeeOnto/user#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
      xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
      xmlns:explainer="http://www.w3id.org/iSeeOnto/explainer#"
-	 xmlns:explanationexperience="http://www.w3id.org/iSeeOnto/explanationexperience#">
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:SimilarityKnowledge="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#"
+     xmlns:explanationexperience="http://www.w3id.org/iSeeOnto/explanationexperience#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
     </owl:Ontology>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#applicableSimilarityStrategy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#applicableSimilarityStrategy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#Description -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#Description"/>
+    
 
 
     <!-- 
@@ -26,15 +74,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#Bosch -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplanationExperience">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
-        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription"/>
-    </owl:NamedIndividual>
     
 
 
@@ -91,10 +130,19 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplanationExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschExplanationExperience">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschSensorAnomalyDetection -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschSensorAnomalyDetection">
-        <rdf:type rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection"/>
     </owl:NamedIndividual>
     
 
@@ -104,15 +152,21 @@
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschUser">
         <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
         <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoschDescription"/>
-        <eo:asks rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor"/>
-        <eo:possess rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpert"/>
         <user:hasIntent rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
         <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#ScreenDisplay"/>
+        <eo:asks rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor"/>
+        <eo:possess rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpert"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpert -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpert"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpertKnowledge -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#BoshUserDomainExpertKnowledge">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#DomainKnowledge"/>
@@ -146,6 +200,22 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#ProductManufacturing -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ProductManufacturing">
+        <user:hasGoal rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#ScreenDisplay -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
+        <user:canHandle rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloImage"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -154,13 +224,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ProductManufacturing">
-        <user:hasGoal rdf:resource="http://www.w3id.org/iSeeOnto/user#ProductManufacturing"/>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#DataType">
+        <SimilarityKnowledge:applicableSimilarityStrategy>
+            <rdf:Description/>
+        </SimilarityKnowledge:applicableSimilarityStrategy>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
-        <user:canHandle rdf:resource="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#YoloImage"/>
-    </rdf:Description>
-	
 </rdf:RDF>
+
+
+
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

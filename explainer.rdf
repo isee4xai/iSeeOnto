@@ -60,12 +60,14 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">
         <rdfs:label xml:lang="en">has concurrentness</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"/>
     
+
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasOutputType -->
 
@@ -111,6 +113,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Categorical -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Categorical">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+    </owl:Class>
     
 
 
@@ -173,6 +183,30 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">
         <rdfs:comment xml:lang="en">The target of the Explanation Technique, i.e. the thing an Explanation is being generated for.</rdfs:comment>
         <rdfs:label xml:lang="en">Explanation Target</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Image -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Image">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Numerical -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Numerical">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Ordinal -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Ordinal">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
     </owl:Class>
     
 

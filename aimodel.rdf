@@ -133,6 +133,22 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Classification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Dataset -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset">
@@ -143,6 +159,14 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Forecasting -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
     </owl:Class>
     
 
@@ -162,6 +186,27 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting"/>
+            <rdf:Description rdf:about="https://purl.org/heals/eo#AbductiveTask"/>
+            <rdf:Description rdf:about="https://purl.org/heals/eo#DeductiveTask"/>
+            <rdf:Description rdf:about="https://purl.org/heals/eo#InductiveTask"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
