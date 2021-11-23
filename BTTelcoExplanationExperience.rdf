@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#"
+     xml:base="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:eo="https://purl.org/heals/eo#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:user="http://www.w3id.org/iSeeOnto/user#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
+     xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:explainer="http://www.w3id.org/iSeeOnto/explainer#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:explanationexperience="http://www.w3id.org/iSeeOnto/explanationexperience#">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience">
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlanner -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlanner">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#user"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTFastmopDescription"/>
+        <user:hasResources rdf:resource="http://www.w3id.org/iSeeOnto/user#ScreenDisplay"/>
+        <eo:asks rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion"/>
+        <eo:possess rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerDomainExpert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerDomainExpert -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerDomainExpert">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#DomainKnowledge"/>
+        <user:levelOfKnowledge rdf:resource="http://www.w3id.org/iSeeOnto/user#high"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#KNN -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#KNN">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#TFIDF -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#TFIDF">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ScenarioRecommendationModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ScenarioRecommendationModel">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
+        <aimodel:solves rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ScenarioClassification"/>
+        <aimodel:trainedOn rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#EngineeringNotes"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#KNN"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#TFIDF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:label xml:lang="en">What is the next action to take on the network task?</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:label xml:lang="en">Why has this recommendation been made?</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:label xml:lang="en">What are the other possible next actions derived from classification model?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ExampleBasedExplanation -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ExampleBasedExplanation">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <explainer:hasConcurrentness rdf:resource="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+        <explainer:hasExplanationScope rdf:resource="http://www.w3id.org/iSeeOnto/explainer#local"/>
+        <explainer:hasOutputType rdf:resource="http://www.w3id.org/iSeeOnto/explainer#text"/>
+        <explainer:hasPortability rdf:resource="http://www.w3id.org/iSeeOnto/explainer#model-agnostic"/>
+        <explainer:hasPresentation rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text"/>
+        <explainer:targetType rdf:resource="http://www.w3id.org/iSeeOnto/explainer#prediction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTTelcoExplainer -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTTelcoExplainer">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
+        <explainer:utilises rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ExampleBasedExplanation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTTelcoExplanationExperience -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTTelcoExplanationExperience">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
+        <explanationexperience:hasDescription rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTFastmopDescription"/>
+    </owl:NamedIndividual>
+    
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTFastmopDescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#BTFastmopDescription">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+    </owl:NamedIndividual>
+    
+    
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#EngineeringNotes -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#EngineeringNotes">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
+        <aimodel:hasDataType rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text"/>
+        <aimodel:hasDataType rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Figure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ScenarioClassification -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#ScenarioClassification">
+        <rdf:type rdf:resource="https://purl.org/heals/eo#AITask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#ScreenDisplay -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
+        <user:canHandle rdf:resource="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Text"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
