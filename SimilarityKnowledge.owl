@@ -61,6 +61,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
         <rdfs:comment xml:lang="en">There is match if two individuals are exactly the same individual.</rdfs:comment>
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
     </owl:Class>
     
 
@@ -95,6 +96,9 @@
     <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
     
 
 
@@ -106,13 +110,46 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000006">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#HierarchyDistance"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000015">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#HierarchyDistance"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000358">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#DataType">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#TechnicalFacilities">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#UserQuestion">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget">
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/heals/eo#AITask">
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/heals/eo#ExplanationModality">
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch"/>
     </rdf:Description>
 </rdf:RDF>

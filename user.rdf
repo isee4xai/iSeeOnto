@@ -60,9 +60,10 @@
     <!-- http://www.w3id.org/iSeeOnto/user#hasGoal -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasGoal">
-		<rdfs:label xml:lang="en">has goal</rdfs:label>
+        <rdfs:domain rdf:resource="https://purl.org/heals/eo#user"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+        <rdfs:label xml:lang="en">has goal</rdfs:label>
     </owl:ObjectProperty>
-    
     
 
 
@@ -71,6 +72,12 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasIntent">
         <rdfs:label xml:lang="en">has intent</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#hasQuestionTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasQuestionTarget"/>
     
 
 
@@ -176,6 +183,14 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#HowQuestion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#HowQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#KnowledgeLevel -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel">
@@ -200,6 +215,26 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#UserQuestion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#UserQuestion">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#hasQuestionTarget"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#UserQuestionTarget -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#VisualFacilities -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#VisualFacilities">
@@ -207,6 +242,59 @@
         <rdfs:comment xml:lang="en">Different types of technical facilities capable of displaying visual information ( projector, monitor, television, tablet, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Visual Facilities</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#WhatQuestion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhatQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#WhenQuestion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhenQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#WhyQuestion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhyQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/heals/eo#AITask -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#AITask">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/heals/eo#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://purl.org/heals/eo#ArtificialIntelligenceMethod -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://purl.org/heals/eo#SystemRecommendation -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#SystemRecommendation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget"/>
+    </rdf:Description>
     
 
 
