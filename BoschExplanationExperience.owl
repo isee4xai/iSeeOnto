@@ -178,7 +178,7 @@
     <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#WhatQuestion"/>
         <rdfs:label xml:lang="en">What is the anomaly in the sensor</rdfs:label>
     </owl:NamedIndividual>
     

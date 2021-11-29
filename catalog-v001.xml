@@ -10,6 +10,7 @@
     <uri id="Imports Wizard Entry" name="https://purl.org/heals/eo/1.0.0" uri="https://raw.githubusercontent.com/tetherless-world/explanation-ontology/master/Ontologies/explanation-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3id.org/iSeeOnto/user" uri="user.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+
         <uri id="Automatically generated entry, Timestamp=1637666888381" name="http://www.isee4xai.com/ontologies/iseeonto/explainer" uri="explainer.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1637666888381" name="http://www.w3id.org/iSeeOnto/BoschExplanationExperience" uri="BoschExplanationExperience.owl"/>
         <uri id="Automatically generated entry, Timestamp=1637666888381" name="http://www.w3id.org/iSeeOnto/SimilarityKnowledge" uri="SimilarityKnowledge.owl"/>
@@ -20,5 +21,6 @@
         <uri id="Automatically generated entry, Timestamp=1637666888381" name="http://www.w3id.org/iSeeOnto/explanationexperience" uri="explanationexperience.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1637666888381" name="http://www.w3id.org/iSeeOnto/userevaluation" uri="userevaluation.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1637666888381" name="http://www.w3id.org/iSeeOnto/workflow" uri="workflow.rdf"/>
+
     </group>
 </catalog>
