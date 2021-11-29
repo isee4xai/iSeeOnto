@@ -98,28 +98,28 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion -->
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#What_is_the_next_action_to_take_on_the_network_task -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#What_is_the_next_action_to_take_on_the_network_task">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#WhatQuestion"/>
         <rdfs:label xml:lang="en">What is the next action to take on the network task?</rdfs:label>
     </owl:NamedIndividual>
 
 
 
-    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion -->
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Why_has_this_recommendation_been_made -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#Why_has_this_recommendation_been_made">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#WhyQuestion"/>
         <rdfs:label xml:lang="en">Why has this recommendation been made?</rdfs:label>
     </owl:NamedIndividual>
 
 
 
-    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion -->
+    <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#What_are_the_other_possible_next_actions_derived_from_classification_model -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#NetworkPlannerQuestion">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#What_are_the_other_possible_next_actions_derived_from_classification_model">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#WhatQuestion"/>
         <rdfs:label xml:lang="en">What are the other possible next actions derived from classification model?</rdfs:label>
     </owl:NamedIndividual>
     
