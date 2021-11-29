@@ -74,14 +74,14 @@
     <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#KNN -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#KNN">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours"/>
     </owl:NamedIndividual>
 
 
     <!-- http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#TFIDF -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BTTelcoExplanationExperience#TFIDF">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency"/>
     </owl:NamedIndividual>
     
 
