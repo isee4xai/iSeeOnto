@@ -56,12 +56,29 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactFilter -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactFilter">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#FilteringStrategy"/>
+        <rdfs:comment>Only cases with the same value (instance) will be retrieved</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
         <rdfs:comment xml:lang="en">There is match if two individuals are exactly the same individual.</rdfs:comment>
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#FilteringStrategy -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#FilteringStrategy">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#RetrievalStrategy"/>
     </owl:Class>
     
 
@@ -84,6 +101,12 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#RetrievalStrategy -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#RetrievalStrategy"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch">
@@ -95,7 +118,9 @@
 
     <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#RetrievalStrategy"/>
+    </owl:Class>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
     </rdf:Description>
