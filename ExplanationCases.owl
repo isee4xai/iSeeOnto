@@ -1,0 +1,124 @@
+Prefix(:=<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases>
+Import(<http://www.w3id.org/iSeeOnto/SimilarityKnowledge>)
+Import(<http://www.w3id.org/iSeeOnto/aimodel>)
+Import(<http://www.w3id.org/iSeeOnto/aimodelevaluation>)
+Import(<http://www.w3id.org/iSeeOnto/evaluation>)
+Import(<http://www.w3id.org/iSeeOnto/explainer>)
+Import(<http://www.w3id.org/iSeeOnto/explanationexperience>)
+Import(<http://www.w3id.org/iSeeOnto/user>)
+Import(<http://www.w3id.org/iSeeOnto/userevaluation>)
+Import(<http://www.w3id.org/iSeeOnto/workflow>)
+
+Declaration(Class(:Case-based_Reasoning))
+Declaration(Class(:RecommendationTask))
+Declaration(NamedIndividual(:ShoprCBR))
+Declaration(NamedIndividual(:ShoprClient))
+Declaration(NamedIndividual(:ShoprClothingItemRecommendation))
+Declaration(NamedIndividual(:ShoprContentBasedTechnique))
+Declaration(NamedIndividual(:ShoprDataset))
+Declaration(NamedIndividual(:ShoprDescription))
+Declaration(NamedIndividual(:ShoprExplainer))
+Declaration(NamedIndividual(:ShoprExplanationExperience))
+Declaration(NamedIndividual(:ShoprRecommenderSystem))
+Declaration(NamedIndividual(:text))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Case-based_Reasoning (:Case-based_Reasoning)
+
+SubClassOf(:Case-based_Reasoning <https://purl.org/heals/eo#KnowledgeBasedSystems>)
+
+# Class: :RecommendationTask (:RecommendationTask)
+
+SubClassOf(:RecommendationTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :ShoprCBR (:ShoprCBR)
+
+ClassAssertion(:Case-based_Reasoning :ShoprCBR)
+
+# Individual: :ShoprClient (:ShoprClient)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :ShoprClient)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ShoprClient <http://www.w3id.org/iSeeOnto/user#Scruitablity>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ShoprClient <http://www.w3id.org/iSeeOnto/user#Trust>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :ShoprClient <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+
+# Individual: :ShoprClothingItemRecommendation (:ShoprClothingItemRecommendation)
+
+ClassAssertion(:RecommendationTask :ShoprClothingItemRecommendation)
+
+# Individual: :ShoprContentBasedTechnique (:ShoprContentBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ShoprContentBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ShoprContentBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :ShoprContentBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :ShoprDataset (:ShoprDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :ShoprDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :ShoprDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+
+# Individual: :ShoprDescription (:ShoprDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :ShoprDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :ShoprDescription :ShoprRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :ShoprDescription :ShoprExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :ShoprDescription :ShoprClient)
+
+# Individual: :ShoprExplainer (:ShoprExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :ShoprExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ShoprExplainer :ShoprContentBasedTechnique)
+
+# Individual: :ShoprExplanationExperience (:ShoprExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :ShoprExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :ShoprExplanationExperience :ShoprDescription)
+
+# Individual: :ShoprRecommenderSystem (:ShoprRecommenderSystem)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :ShoprRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :ShoprRecommenderSystem :ShoprClothingItemRecommendation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :ShoprRecommenderSystem :ShoprDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ShoprRecommenderSystem :ShoprCBR)
+
+# Individual: :text (:text)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000651> :text)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> (Why was this item recommended?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> "Why was this item recommended?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+
+# Individual: <http://www.w3id.org/iSeeOnto/user#ScreenDisplay> (<http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3id.org/iSeeOnto/user#ScreenDisplay> :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3id.org/iSeeOnto/user#ScreenDisplay> <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+
+)
