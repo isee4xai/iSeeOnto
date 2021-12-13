@@ -18,12 +18,25 @@ Import(<http://www.w3id.org/iSeeOnto/userevaluation>)
 Import(<http://www.w3id.org/iSeeOnto/workflow>)
 
 Declaration(Class(:Case-based_Reasoning))
+Declaration(Class(:ClusteringTask))
+Declaration(Class(:Naive_Bayes))
 Declaration(Class(:RecommendationTask))
 Declaration(Class(:Touch_Facilities))
 Declaration(Class(:touch_entity))
+Declaration(NamedIndividual(:DataClustering))
 Declaration(NamedIndividual(:HappyMovieDataset))
 Declaration(NamedIndividual(:HappyMovieItemRecommendation))
 Declaration(NamedIndividual(:HappyMovieRecommenderSystem))
+Declaration(NamedIndividual(:IbcmCBRBayesianExpTechnique))
+Declaration(NamedIndividual(:IbcmCBRBayesianMethod))
+Declaration(NamedIndividual(:IbcmClusteringModel))
+Declaration(NamedIndividual(:IbcmClusteringProblem))
+Declaration(NamedIndividual(:IbcmDataset))
+Declaration(NamedIndividual(:IbcmDescription))
+Declaration(NamedIndividual(:IbcmExplainer))
+Declaration(NamedIndividual(:IbcmExplanationExperience))
+Declaration(NamedIndividual(:IbcmUser))
+Declaration(NamedIndividual(:IbcmUserDomain))
 Declaration(NamedIndividual(:MobileDevice))
 Declaration(NamedIndividual(:PsieDescription))
 Declaration(NamedIndividual(:PsieExplainer))
@@ -43,8 +56,10 @@ Declaration(NamedIndividual(:ShoprRecommenderSystem))
 Declaration(NamedIndividual(:ShoprUserDomain))
 Declaration(NamedIndividual(:SocialGroupRecommendationMethod))
 Declaration(NamedIndividual(:TouchScreen))
+Declaration(NamedIndividual(:label))
 Declaration(NamedIndividual(:text))
 Declaration(NamedIndividual(:touch))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
 
 
@@ -57,6 +72,16 @@ Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11
 
 AnnotationAssertion(rdfs:label :Case-based_Reasoning "Case-based Reasoning")
 SubClassOf(:Case-based_Reasoning <https://purl.org/heals/eo#KnowledgeBasedSystems>)
+
+# Class: :ClusteringTask (ClusteringTask)
+
+AnnotationAssertion(rdfs:label :ClusteringTask "ClusteringTask")
+SubClassOf(:ClusteringTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+# Class: :Naive_Bayes (Naive Bayes)
+
+AnnotationAssertion(rdfs:label :Naive_Bayes "Naive Bayes")
+SubClassOf(:Naive_Bayes <http://purl.obolibrary.org/obo/OMIT_0001483>)
 
 # Class: :RecommendationTask (:RecommendationTask)
 
@@ -77,6 +102,10 @@ SubClassOf(:touch_entity <http://semanticscience.org/resource/SIO_000015>)
 #   Named Individuals
 ############################
 
+# Individual: :DataClustering (:DataClustering)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DataClustering)
+
 # Individual: :HappyMovieDataset (:HappyMovieDataset)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :HappyMovieDataset)
@@ -94,6 +123,67 @@ ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :HappyMovieRecomme
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :HappyMovieRecommenderSystem :HappyMovieItemRecommendation)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :HappyMovieRecommenderSystem :HappyMovieDataset)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :HappyMovieRecommenderSystem :SocialGroupRecommendationMethod)
+
+# Individual: :IbcmCBRBayesianExpTechnique (:IbcmCBRBayesianExpTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :IbcmCBRBayesianExpTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :IbcmCBRBayesianExpTechnique :label)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :IbcmCBRBayesianExpTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :IbcmCBRBayesianMethod (:IbcmCBRBayesianMethod)
+
+ClassAssertion(:Case-based_Reasoning :IbcmCBRBayesianMethod)
+ClassAssertion(:Naive_Bayes :IbcmCBRBayesianMethod)
+
+# Individual: :IbcmClusteringModel (:IbcmClusteringModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :IbcmClusteringModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :IbcmClusteringModel :IbcmClusteringProblem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :IbcmClusteringModel :IbcmDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :IbcmClusteringModel :IbcmCBRBayesianMethod)
+
+# Individual: :IbcmClusteringProblem (:IbcmClusteringProblem)
+
+ClassAssertion(:ClusteringTask :IbcmClusteringProblem)
+
+# Individual: :IbcmDataset (:IbcmDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :IbcmDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :IbcmDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+
+# Individual: :IbcmDescription (:IbcmDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :IbcmDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :IbcmDescription :IbcmClusteringModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :IbcmDescription :IbcmExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :IbcmDescription :IbcmUser)
+
+# Individual: :IbcmExplainer (:IbcmExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :IbcmExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :IbcmExplainer :IbcmCBRBayesianExpTechnique)
+
+# Individual: :IbcmExplanationExperience (:IbcmExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :IbcmExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :IbcmExplanationExperience :IbcmDescription)
+
+# Individual: :IbcmUser (:IbcmUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :IbcmUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :IbcmUser :DataClustering)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :IbcmUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :IbcmUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :IbcmUser :IbcmUserDomain)
+
+# Individual: :IbcmUserDomain (:IbcmUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :IbcmUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :IbcmUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
 
 # Individual: :MobileDevice (:MobileDevice)
 
@@ -218,6 +308,10 @@ ClassAssertion(<https://purl.org/heals/eo#KnowledgeBasedSystems> :SocialGroupRec
 ClassAssertion(:Touch_Facilities :TouchScreen)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :TouchScreen :touch)
 
+# Individual: :label (:label)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000114> :label)
+
 # Individual: :text (:text)
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000651> :text)
@@ -225,6 +319,11 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000651> :text)
 # Individual: :touch (:touch)
 
 ClassAssertion(:touch_entity :touch)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> (How was the data clustered?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> "How was the data clustered?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
 
 # Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> (Why was this item recommended?)
 
