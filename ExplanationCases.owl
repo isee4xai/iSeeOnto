@@ -21,7 +21,14 @@ Declaration(Class(:Case-based_Reasoning))
 Declaration(Class(:RecommendationTask))
 Declaration(Class(:Touch_Facilities))
 Declaration(Class(:touch_entity))
+Declaration(NamedIndividual(:HappyMovieDataset))
+Declaration(NamedIndividual(:HappyMovieItemRecommendation))
+Declaration(NamedIndividual(:HappyMovieRecommenderSystem))
 Declaration(NamedIndividual(:MobileDevice))
+Declaration(NamedIndividual(:PsieDescription))
+Declaration(NamedIndividual(:PsieExplainer))
+Declaration(NamedIndividual(:PsieExplanationExperience))
+Declaration(NamedIndividual(:PsieUser))
 Declaration(NamedIndividual(:ShoprCBR))
 Declaration(NamedIndividual(:ShoprClient))
 Declaration(NamedIndividual(:ShoprClothingItemRecommendation))
@@ -32,6 +39,7 @@ Declaration(NamedIndividual(:ShoprExplainer))
 Declaration(NamedIndividual(:ShoprExplanationExperience))
 Declaration(NamedIndividual(:ShoprRecommenderSystem))
 Declaration(NamedIndividual(:ShoprUserDomain))
+Declaration(NamedIndividual(:SocialGroupRecommendationMethod))
 Declaration(NamedIndividual(:TouchScreen))
 Declaration(NamedIndividual(:text))
 Declaration(NamedIndividual(:touch))
@@ -67,12 +75,42 @@ SubClassOf(:touch_entity <http://semanticscience.org/resource/SIO_000015>)
 #   Named Individuals
 ############################
 
+# Individual: :HappyMovieDataset (:HappyMovieDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :HappyMovieDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :HappyMovieDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :HappyMovieDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :HappyMovieDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :HappyMovieItemRecommendation (:HappyMovieItemRecommendation)
+
+ClassAssertion(:RecommendationTask :HappyMovieItemRecommendation)
+
+# Individual: :HappyMovieRecommenderSystem (:HappyMovieRecommenderSystem)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :HappyMovieRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :HappyMovieRecommenderSystem :HappyMovieItemRecommendation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :HappyMovieRecommenderSystem :HappyMovieDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :HappyMovieRecommenderSystem :SocialGroupRecommendationMethod)
+
 # Individual: :MobileDevice (:MobileDevice)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#VisualFacilities> :MobileDevice)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :text)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :touch)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :PsieDescription (:PsieDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :PsieDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :PsieDescription :HappyMovieRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :PsieDescription :PsieExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :PsieDescription :PsieUser)
+
+# Individual: :PsieExplanationExperience (:PsieExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :PsieExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :PsieExplanationExperience :PsieDescription)
 
 # Individual: :ShoprCBR (:ShoprCBR)
 
@@ -137,6 +175,10 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :Shopr
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :ShoprUserDomain)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :ShoprUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :SocialGroupRecommendationMethod (:SocialGroupRecommendationMethod)
+
+ClassAssertion(<https://purl.org/heals/eo#KnowledgeBasedSystems> :SocialGroupRecommendationMethod)
 
 # Individual: :TouchScreen (:TouchScreen)
 
