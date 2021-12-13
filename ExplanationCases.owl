@@ -23,6 +23,17 @@ Declaration(Class(:Naive_Bayes))
 Declaration(Class(:RecommendationTask))
 Declaration(Class(:Touch_Facilities))
 Declaration(Class(:touch_entity))
+Declaration(NamedIndividual(:ALimeRuleBasedTechnique))
+Declaration(NamedIndividual(:AlimeClassification))
+Declaration(NamedIndividual(:AlimeClassificationModel))
+Declaration(NamedIndividual(:AlimeDataset))
+Declaration(NamedIndividual(:AlimeDescription))
+Declaration(NamedIndividual(:AlimeExplainer))
+Declaration(NamedIndividual(:AlimeExplanationExperience))
+Declaration(NamedIndividual(:AlimeMachineLearningMethod))
+Declaration(NamedIndividual(:AlimeUser))
+Declaration(NamedIndividual(:AlimeUserDomain))
+Declaration(NamedIndividual(:ClassificationUnderstanding))
 Declaration(NamedIndividual(:DataClustering))
 Declaration(NamedIndividual(:HappyMovieDataset))
 Declaration(NamedIndividual(:HappyMovieItemRecommendation))
@@ -59,6 +70,8 @@ Declaration(NamedIndividual(:TouchScreen))
 Declaration(NamedIndividual(:label))
 Declaration(NamedIndividual(:text))
 Declaration(NamedIndividual(:touch))
+Declaration(NamedIndividual(:trace))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
 
@@ -101,6 +114,73 @@ SubClassOf(:touch_entity <http://semanticscience.org/resource/SIO_000015>)
 ############################
 #   Named Individuals
 ############################
+
+# Individual: :ALimeRuleBasedTechnique (:ALimeRuleBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ALimeRuleBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ALimeRuleBasedTechnique :trace)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :ALimeRuleBasedTechnique :text)
+
+# Individual: :AlimeClassification (:AlimeClassification)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Classification> :AlimeClassification)
+
+# Individual: :AlimeClassificationModel (:AlimeClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :AlimeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :AlimeClassificationModel :AlimeClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :AlimeClassificationModel :AlimeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :AlimeClassificationModel :AlimeMachineLearningMethod)
+
+# Individual: :AlimeDataset (:AlimeDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :AlimeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :AlimeDescription (:AlimeDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :AlimeDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :AlimeDescription :AlimeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :AlimeDescription :AlimeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :AlimeDescription :AlimeUser)
+
+# Individual: :AlimeExplainer (:AlimeExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :AlimeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :AlimeExplainer :ALimeRuleBasedTechnique)
+
+# Individual: :AlimeExplanationExperience (:AlimeExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :AlimeExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :AlimeExplanationExperience :AlimeDescription)
+
+# Individual: :AlimeMachineLearningMethod (:AlimeMachineLearningMethod)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0001480> :AlimeMachineLearningMethod)
+
+# Individual: :AlimeUser (:AlimeUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :AlimeUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :AlimeUser :ClassificationUnderstanding)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :AlimeUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :AlimeUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :AlimeUser :AlimeUserDomain)
+
+# Individual: :AlimeUserDomain (:AlimeUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :AlimeUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :AlimeUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :ClassificationUnderstanding (:ClassificationUnderstanding)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :ClassificationUnderstanding)
 
 # Individual: :DataClustering (:DataClustering)
 
@@ -310,7 +390,7 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :TouchScre
 
 # Individual: :label (:label)
 
-ClassAssertion(<http://semanticscience.org/resource/SIO_000114> :label)
+ClassAssertion(<http://semanticscience.org/resource/SIO_000179> :label)
 
 # Individual: :text (:text)
 
@@ -319,6 +399,15 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000651> :text)
 # Individual: :touch (:touch)
 
 ClassAssertion(:touch_entity :touch)
+
+# Individual: :trace (:trace)
+
+ClassAssertion(<https://purl.org/heals/eo#TraceBasedExplanation> :trace)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?> (How do you know the classification is X?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?> "How do you know the classification is X?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
 
 # Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> (How was the data clustered?)
 
