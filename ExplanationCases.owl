@@ -28,7 +28,9 @@ Declaration(NamedIndividual(:MobileDevice))
 Declaration(NamedIndividual(:PsieDescription))
 Declaration(NamedIndividual(:PsieExplainer))
 Declaration(NamedIndividual(:PsieExplanationExperience))
+Declaration(NamedIndividual(:PsieRuleBasedTechnique))
 Declaration(NamedIndividual(:PsieUser))
+Declaration(NamedIndividual(:PsieUserDomain))
 Declaration(NamedIndividual(:ShoprCBR))
 Declaration(NamedIndividual(:ShoprClient))
 Declaration(NamedIndividual(:ShoprClothingItemRecommendation))
@@ -107,10 +109,41 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasA
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :PsieDescription :PsieExplainer)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :PsieDescription :PsieUser)
 
+# Individual: :PsieExplainer (:PsieExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :PsieExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :PsieExplainer :PsieRuleBasedTechnique)
+
 # Individual: :PsieExplanationExperience (:PsieExplanationExperience)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :PsieExplanationExperience)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :PsieExplanationExperience :PsieDescription)
+
+# Individual: :PsieRuleBasedTechnique (:PsieRuleBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :PsieRuleBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :PsieRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :PsieRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :PsieUser (:PsieUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :PsieUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :PsieUser <http://www.w3id.org/iSeeOnto/user#Efficiency>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :PsieUser <http://www.w3id.org/iSeeOnto/user#Satisfaction>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :PsieUser <http://www.w3id.org/iSeeOnto/user#Trust>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :PsieUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :PsieUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :PsieUser :PsieUserDomain)
+
+# Individual: :PsieUserDomain (:PsieUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :PsieUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :PsieUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
 
 # Individual: :ShoprCBR (:ShoprCBR)
 
