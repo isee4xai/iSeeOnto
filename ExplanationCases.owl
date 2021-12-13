@@ -19,6 +19,9 @@ Import(<http://www.w3id.org/iSeeOnto/workflow>)
 
 Declaration(Class(:Case-based_Reasoning))
 Declaration(Class(:RecommendationTask))
+Declaration(Class(:Touch_Facilities))
+Declaration(Class(:touch_entity))
+Declaration(NamedIndividual(:MobileDevice))
 Declaration(NamedIndividual(:ShoprCBR))
 Declaration(NamedIndividual(:ShoprClient))
 Declaration(NamedIndividual(:ShoprClothingItemRecommendation))
@@ -28,7 +31,10 @@ Declaration(NamedIndividual(:ShoprDescription))
 Declaration(NamedIndividual(:ShoprExplainer))
 Declaration(NamedIndividual(:ShoprExplanationExperience))
 Declaration(NamedIndividual(:ShoprRecommenderSystem))
+Declaration(NamedIndividual(:ShoprUserDomain))
+Declaration(NamedIndividual(:TouchScreen))
 Declaration(NamedIndividual(:text))
+Declaration(NamedIndividual(:touch))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
 
 
@@ -37,18 +43,36 @@ Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11
 #   Classes
 ############################
 
-# Class: :Case-based_Reasoning (:Case-based_Reasoning)
+# Class: :Case-based_Reasoning (Case-based Reasoning)
 
+AnnotationAssertion(rdfs:label :Case-based_Reasoning "Case-based Reasoning")
 SubClassOf(:Case-based_Reasoning <https://purl.org/heals/eo#KnowledgeBasedSystems>)
 
 # Class: :RecommendationTask (:RecommendationTask)
 
 SubClassOf(:RecommendationTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
 
+# Class: :Touch_Facilities (Touch Facilities)
+
+AnnotationAssertion(rdfs:label :Touch_Facilities "Touch Facilities")
+SubClassOf(:Touch_Facilities <http://www.w3id.org/iSeeOnto/user#TechnicalFacilities>)
+
+# Class: :touch_entity (touch entity)
+
+AnnotationAssertion(rdfs:label :touch_entity "touch entity")
+SubClassOf(:touch_entity <http://semanticscience.org/resource/SIO_000015>)
+
 
 ############################
 #   Named Individuals
 ############################
+
+# Individual: :MobileDevice (:MobileDevice)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#VisualFacilities> :MobileDevice)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :touch)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice <http://www.w3id.org/iSeeOnto/explainer#image>)
 
 # Individual: :ShoprCBR (:ShoprCBR)
 
@@ -59,8 +83,11 @@ ClassAssertion(:Case-based_Reasoning :ShoprCBR)
 ClassAssertion(<https://purl.org/heals/eo#user> :ShoprClient)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ShoprClient <http://www.w3id.org/iSeeOnto/user#Scruitablity>)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ShoprClient <http://www.w3id.org/iSeeOnto/user#Trust>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient :MobileDevice)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient :TouchScreen)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
 ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :ShoprClient <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :ShoprClient :ShoprUserDomain)
 
 # Individual: :ShoprClothingItemRecommendation (:ShoprClothingItemRecommendation)
 
@@ -106,9 +133,23 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :ShoprReco
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :ShoprRecommenderSystem :ShoprDataset)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ShoprRecommenderSystem :ShoprCBR)
 
+# Individual: :ShoprUserDomain (:ShoprUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :ShoprUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :ShoprUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :TouchScreen (:TouchScreen)
+
+ClassAssertion(:Touch_Facilities :TouchScreen)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :TouchScreen :touch)
+
 # Individual: :text (:text)
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000651> :text)
+
+# Individual: :touch (:touch)
+
+ClassAssertion(:touch_entity :touch)
 
 # Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> (Why was this item recommended?)
 
