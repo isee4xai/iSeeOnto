@@ -49,6 +49,7 @@ Declaration(NamedIndividual(:IbcmExplanationExperience))
 Declaration(NamedIndividual(:IbcmUser))
 Declaration(NamedIndividual(:IbcmUserDomain))
 Declaration(NamedIndividual(:MobileDevice))
+Declaration(NamedIndividual(:ParseTree))
 Declaration(NamedIndividual(:PsieDescription))
 Declaration(NamedIndividual(:PsieExplainer))
 Declaration(NamedIndividual(:PsieExplanationExperience))
@@ -67,6 +68,17 @@ Declaration(NamedIndividual(:ShoprRecommenderSystem))
 Declaration(NamedIndividual(:ShoprUserDomain))
 Declaration(NamedIndividual(:SocialGroupRecommendationMethod))
 Declaration(NamedIndividual(:TouchScreen))
+Declaration(NamedIndividual(:Understand_why_a_CNN_learns_knowledge_as_it_is))
+Declaration(NamedIndividual(:ZhangCNN))
+Declaration(NamedIndividual(:ZhangClassificationModel))
+Declaration(NamedIndividual(:ZhangDataset))
+Declaration(NamedIndividual(:ZhangDecisionTreeBasedExplanation))
+Declaration(NamedIndividual(:ZhangExplainer))
+Declaration(NamedIndividual(:ZhangImageClassification))
+Declaration(NamedIndividual(:ZhangMethodDescription))
+Declaration(NamedIndividual(:ZhangMethodExplanationExperience))
+Declaration(NamedIndividual(:ZhangUser))
+Declaration(NamedIndividual(:ZhangUserDomain))
 Declaration(NamedIndividual(:label))
 Declaration(NamedIndividual(:text))
 Declaration(NamedIndividual(:touch))
@@ -272,6 +284,10 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDev
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :touch)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice <http://www.w3id.org/iSeeOnto/explainer#image>)
 
+# Individual: :ParseTree (:ParseTree)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000602> :ParseTree)
+
 # Individual: :PsieDescription (:PsieDescription)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :PsieDescription)
@@ -387,6 +403,71 @@ ClassAssertion(<https://purl.org/heals/eo#KnowledgeBasedSystems> :SocialGroupRec
 
 ClassAssertion(:Touch_Facilities :TouchScreen)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :TouchScreen :touch)
+
+# Individual: :Understand_why_a_CNN_learns_knowledge_as_it_is (Understand why a CNN learns knowledge as it is)
+
+AnnotationAssertion(rdfs:label :Understand_why_a_CNN_learns_knowledge_as_it_is "Understand why a CNN learns knowledge as it is")
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Understand_why_a_CNN_learns_knowledge_as_it_is)
+
+# Individual: :ZhangCNN (:ZhangCNN)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :ZhangCNN)
+
+# Individual: :ZhangClassificationModel (:ZhangClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :ZhangClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :ZhangClassificationModel :ZhangImageClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :ZhangClassificationModel :ZhangDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ZhangClassificationModel :ZhangCNN)
+
+# Individual: :ZhangDataset (:ZhangDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :ZhangDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :ZhangDataset <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :ZhangDecisionTreeBasedExplanation (:ZhangDecisionTreeBasedExplanation)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ZhangDecisionTreeBasedExplanation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ZhangDecisionTreeBasedExplanation :ParseTree)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :ZhangExplainer (:ZhangExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :ZhangExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ZhangExplainer :ZhangDecisionTreeBasedExplanation)
+
+# Individual: :ZhangImageClassification (:ZhangImageClassification)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Classification> :ZhangImageClassification)
+
+# Individual: :ZhangMethodDescription (:ZhangMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :ZhangMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :ZhangMethodDescription :ZhangClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :ZhangMethodDescription :ZhangExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :ZhangMethodDescription :ZhangUser)
+
+# Individual: :ZhangMethodExplanationExperience (:ZhangMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :ZhangMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :ZhangMethodExplanationExperience :ZhangMethodDescription)
+
+# Individual: :ZhangUser (:ZhangUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :ZhangUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ZhangUser :Understand_why_a_CNN_learns_knowledge_as_it_is)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ZhangUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :ZhangUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :ZhangUser :ZhangUserDomain)
+
+# Individual: :ZhangUserDomain (:ZhangUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :ZhangUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :ZhangUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
 
 # Individual: :label (:label)
 
