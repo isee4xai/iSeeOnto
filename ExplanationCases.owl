@@ -19,9 +19,11 @@ Import(<http://www.w3id.org/iSeeOnto/workflow>)
 
 Declaration(Class(:Case-based_Reasoning))
 Declaration(Class(:ClusteringTask))
+Declaration(Class(:IllnessDiagnosis))
 Declaration(Class(:Naive_Bayes))
 Declaration(Class(:RecommendationTask))
 Declaration(Class(:Touch_Facilities))
+Declaration(Class(:WhichQuestion))
 Declaration(Class(:touch_entity))
 Declaration(NamedIndividual(:ALimeRuleBasedTechnique))
 Declaration(NamedIndividual(:AlimeClassification))
@@ -35,6 +37,7 @@ Declaration(NamedIndividual(:AlimeUser))
 Declaration(NamedIndividual(:AlimeUserDomain))
 Declaration(NamedIndividual(:ClassificationUnderstanding))
 Declaration(NamedIndividual(:DataClustering))
+Declaration(NamedIndividual(:HAIsDiagnosis))
 Declaration(NamedIndividual(:HappyMovieDataset))
 Declaration(NamedIndividual(:HappyMovieItemRecommendation))
 Declaration(NamedIndividual(:HappyMovieRecommenderSystem))
@@ -48,6 +51,16 @@ Declaration(NamedIndividual(:IbcmExplainer))
 Declaration(NamedIndividual(:IbcmExplanationExperience))
 Declaration(NamedIndividual(:IbcmUser))
 Declaration(NamedIndividual(:IbcmUserDomain))
+Declaration(NamedIndividual(:InnocbrDataset))
+Declaration(NamedIndividual(:InnocbrDescription))
+Declaration(NamedIndividual(:InnocbrDoctor))
+Declaration(NamedIndividual(:InnocbrExplainer))
+Declaration(NamedIndividual(:InnocbrExplanationExperience))
+Declaration(NamedIndividual(:InnocbrHAIsDiagnosis))
+Declaration(NamedIndividual(:InnocbrHAIsDiagnosisModel))
+Declaration(NamedIndividual(:InnocbrMachineLearningCBRMethod))
+Declaration(NamedIndividual(:InnocbrRuleBasedTechnique))
+Declaration(NamedIndividual(:InnocbrUserExpertDomain))
 Declaration(NamedIndividual(:MobileDevice))
 Declaration(NamedIndividual(:ParseTree))
 Declaration(NamedIndividual(:PsieDescription))
@@ -69,6 +82,7 @@ Declaration(NamedIndividual(:ShoprUserDomain))
 Declaration(NamedIndividual(:SocialGroupRecommendationMethod))
 Declaration(NamedIndividual(:TouchScreen))
 Declaration(NamedIndividual(:Understand_why_a_CNN_learns_knowledge_as_it_is))
+Declaration(NamedIndividual(:Which_HAIs_is_a_patient_going_to_suffer))
 Declaration(NamedIndividual(:ZhangCNN))
 Declaration(NamedIndividual(:ZhangClassificationModel))
 Declaration(NamedIndividual(:ZhangDataset))
@@ -85,6 +99,7 @@ Declaration(NamedIndividual(:touch))
 Declaration(NamedIndividual(:trace))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
 
 
@@ -103,6 +118,10 @@ SubClassOf(:Case-based_Reasoning <https://purl.org/heals/eo#KnowledgeBasedSystem
 AnnotationAssertion(rdfs:label :ClusteringTask "ClusteringTask")
 SubClassOf(:ClusteringTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
 
+# Class: :IllnessDiagnosis (:IllnessDiagnosis)
+
+SubClassOf(:IllnessDiagnosis <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
 # Class: :Naive_Bayes (Naive Bayes)
 
 AnnotationAssertion(rdfs:label :Naive_Bayes "Naive Bayes")
@@ -116,6 +135,10 @@ SubClassOf(:RecommendationTask <http://www.w3id.org/iSeeOnto/aimodel#Classificat
 
 AnnotationAssertion(rdfs:label :Touch_Facilities "Touch Facilities")
 SubClassOf(:Touch_Facilities <http://www.w3id.org/iSeeOnto/user#TechnicalFacilities>)
+
+# Class: :WhichQuestion (:WhichQuestion)
+
+SubClassOf(:WhichQuestion <http://www.w3id.org/iSeeOnto/user#UserQuestion>)
 
 # Class: :touch_entity (touch entity)
 
@@ -198,6 +221,10 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :ClassificationU
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DataClustering)
 
+# Individual: :HAIsDiagnosis (:HAIsDiagnosis)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :HAIsDiagnosis)
+
 # Individual: :HappyMovieDataset (:HappyMovieDataset)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :HappyMovieDataset)
@@ -276,6 +303,70 @@ ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :IbcmUser :IbcmUserD
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :IbcmUserDomain)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :IbcmUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :InnocbrDataset (:InnocbrDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :InnocbrDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :InnocbrDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :InnocbrDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :InnocbrDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :InnocbrDescription (:InnocbrDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :InnocbrDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :InnocbrDescription :InnocbrHAIsDiagnosisModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :InnocbrDescription :InnocbrExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :InnocbrDescription :InnocbrDoctor)
+
+# Individual: :InnocbrDoctor (:InnocbrDoctor)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :InnocbrDoctor)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :InnocbrDoctor :HAIsDiagnosis)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :InnocbrDoctor <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :InnocbrDoctor :Which_HAIs_is_a_patient_going_to_suffer)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :InnocbrDoctor <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :InnocbrDoctor :InnocbrUserExpertDomain)
+
+# Individual: :InnocbrExplainer (:InnocbrExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :InnocbrExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :InnocbrExplainer :InnocbrRuleBasedTechnique)
+
+# Individual: :InnocbrExplanationExperience (:InnocbrExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :InnocbrExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :InnocbrExplanationExperience :InnocbrDescription)
+
+# Individual: :InnocbrHAIsDiagnosis (:InnocbrHAIsDiagnosis)
+
+ClassAssertion(:IllnessDiagnosis :InnocbrHAIsDiagnosis)
+
+# Individual: :InnocbrHAIsDiagnosisModel (:InnocbrHAIsDiagnosisModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :InnocbrHAIsDiagnosisModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :InnocbrHAIsDiagnosisModel :InnocbrHAIsDiagnosis)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :InnocbrHAIsDiagnosisModel :InnocbrDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :InnocbrHAIsDiagnosisModel :InnocbrMachineLearningCBRMethod)
+
+# Individual: :InnocbrMachineLearningCBRMethod (:InnocbrMachineLearningCBRMethod)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0001480> :InnocbrMachineLearningCBRMethod)
+ClassAssertion(:Case-based_Reasoning :InnocbrMachineLearningCBRMethod)
+
+# Individual: :InnocbrRuleBasedTechnique (:InnocbrRuleBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :InnocbrRuleBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :InnocbrRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :InnocbrRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :InnocbrUserExpertDomain (:InnocbrUserExpertDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :InnocbrUserExpertDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :InnocbrUserExpertDomain <http://www.w3id.org/iSeeOnto/user#high>)
 
 # Individual: :MobileDevice (:MobileDevice)
 
@@ -409,6 +500,11 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :TouchScre
 AnnotationAssertion(rdfs:label :Understand_why_a_CNN_learns_knowledge_as_it_is "Understand why a CNN learns knowledge as it is")
 ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Understand_why_a_CNN_learns_knowledge_as_it_is)
 
+# Individual: :Which_HAIs_is_a_patient_going_to_suffer (Which HAIs is a patient going to suffer?)
+
+AnnotationAssertion(rdfs:label :Which_HAIs_is_a_patient_going_to_suffer "Which HAIs is a patient going to suffer?")
+ClassAssertion(:WhichQuestion :Which_HAIs_is_a_patient_going_to_suffer)
+
 # Individual: :ZhangCNN (:ZhangCNN)
 
 ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :ZhangCNN)
@@ -494,6 +590,11 @@ ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.seman
 
 AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> "How was the data clustered?")
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?> (Why or why not is a patient going to suffer a HAIs?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?> "Why or why not is a patient going to suffer a HAIs?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>)
 
 # Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> (Why was this item recommended?)
 
