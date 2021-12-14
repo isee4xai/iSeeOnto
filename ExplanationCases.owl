@@ -20,6 +20,7 @@ Import(<http://www.w3id.org/iSeeOnto/workflow>)
 Declaration(Class(:Case-based_Reasoning))
 Declaration(Class(:ClusteringTask))
 Declaration(Class(:IllnessDiagnosis))
+Declaration(Class(:ImageClassification))
 Declaration(Class(:Naive_Bayes))
 Declaration(Class(:RecommendationTask))
 Declaration(Class(:Touch_Facilities))
@@ -37,6 +38,16 @@ Declaration(NamedIndividual(:AlimeUser))
 Declaration(NamedIndividual(:AlimeUserDomain))
 Declaration(NamedIndividual(:ClassificationUnderstanding))
 Declaration(NamedIndividual(:DataClustering))
+Declaration(NamedIndividual(:GaonkarClassificationModel))
+Declaration(NamedIndividual(:GaonkarDataset))
+Declaration(NamedIndividual(:GaonkarDoctor))
+Declaration(NamedIndividual(:GaonkarExpertUserDomain))
+Declaration(NamedIndividual(:GaonkarExplainer))
+Declaration(NamedIndividual(:GaonkarImageClassification))
+Declaration(NamedIndividual(:GaonkarMethodDescription))
+Declaration(NamedIndividual(:GaonkarMethodExplanationExperience))
+Declaration(NamedIndividual(:GaonkarSVM))
+Declaration(NamedIndividual(:GaonkarStatisticBasedTechnique))
 Declaration(NamedIndividual(:HAIsDiagnosis))
 Declaration(NamedIndividual(:HappyMovieDataset))
 Declaration(NamedIndividual(:HappyMovieItemRecommendation))
@@ -51,6 +62,7 @@ Declaration(NamedIndividual(:IbcmExplainer))
 Declaration(NamedIndividual(:IbcmExplanationExperience))
 Declaration(NamedIndividual(:IbcmUser))
 Declaration(NamedIndividual(:IbcmUserDomain))
+Declaration(NamedIndividual(:ImageFeatureRegion))
 Declaration(NamedIndividual(:InnocbrDataset))
 Declaration(NamedIndividual(:InnocbrDescription))
 Declaration(NamedIndividual(:InnocbrDoctor))
@@ -62,6 +74,8 @@ Declaration(NamedIndividual(:InnocbrMachineLearningCBRMethod))
 Declaration(NamedIndividual(:InnocbrRuleBasedTechnique))
 Declaration(NamedIndividual(:InnocbrUserExpertDomain))
 Declaration(NamedIndividual(:MobileDevice))
+Declaration(NamedIndividual(:NeuroImaging))
+Declaration(NamedIndividual(:NeurologicalDisorderDetection))
 Declaration(NamedIndividual(:ParseTree))
 Declaration(NamedIndividual(:PsieDescription))
 Declaration(NamedIndividual(:PsieExplainer))
@@ -99,6 +113,7 @@ Declaration(NamedIndividual(:touch))
 Declaration(NamedIndividual(:trace))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
 
@@ -121,6 +136,10 @@ SubClassOf(:ClusteringTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>
 # Class: :IllnessDiagnosis (:IllnessDiagnosis)
 
 SubClassOf(:IllnessDiagnosis <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+# Class: :ImageClassification (:ImageClassification)
+
+SubClassOf(:ImageClassification <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
 
 # Class: :Naive_Bayes (Naive Bayes)
 
@@ -221,6 +240,66 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :ClassificationU
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DataClustering)
 
+# Individual: :GaonkarClassificationModel (:GaonkarClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :GaonkarClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :GaonkarClassificationModel :GaonkarImageClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :GaonkarClassificationModel :GaonkarDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :GaonkarClassificationModel :GaonkarSVM)
+
+# Individual: :GaonkarDataset (:GaonkarDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :GaonkarDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :GaonkarDataset :NeuroImaging)
+
+# Individual: :GaonkarDoctor (:GaonkarDoctor)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :GaonkarDoctor)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :GaonkarDoctor :NeurologicalDisorderDetection)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :GaonkarDoctor <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :GaonkarDoctor <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :GaonkarDoctor :GaonkarExpertUserDomain)
+
+# Individual: :GaonkarExpertUserDomain (:GaonkarExpertUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :GaonkarExpertUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :GaonkarExpertUserDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :GaonkarExplainer (:GaonkarExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :GaonkarExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :GaonkarExplainer :GaonkarStatisticBasedTechnique)
+
+# Individual: :GaonkarImageClassification (:GaonkarImageClassification)
+
+ClassAssertion(:ImageClassification :GaonkarImageClassification)
+
+# Individual: :GaonkarMethodDescription (:GaonkarMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :GaonkarMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :GaonkarMethodDescription :GaonkarClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :GaonkarMethodDescription :GaonkarExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :GaonkarMethodDescription :GaonkarDoctor)
+
+# Individual: :GaonkarMethodExplanationExperience (:GaonkarMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :GaonkarMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :GaonkarMethodExplanationExperience :GaonkarMethodDescription)
+
+# Individual: :GaonkarSVM (:GaonkarSVM)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0027764> :GaonkarSVM)
+
+# Individual: :GaonkarStatisticBasedTechnique (:GaonkarStatisticBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :GaonkarStatisticBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :GaonkarStatisticBasedTechnique :ImageFeatureRegion)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
 # Individual: :HAIsDiagnosis (:HAIsDiagnosis)
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :HAIsDiagnosis)
@@ -304,6 +383,10 @@ ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :IbcmUser :IbcmUserD
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :IbcmUserDomain)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :IbcmUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
 
+# Individual: :ImageFeatureRegion (:ImageFeatureRegion)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000081> :ImageFeatureRegion)
+
 # Individual: :InnocbrDataset (:InnocbrDataset)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :InnocbrDataset)
@@ -374,6 +457,14 @@ ClassAssertion(<http://www.w3id.org/iSeeOnto/user#VisualFacilities> :MobileDevic
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :text)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :touch)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :NeuroImaging (:NeuroImaging)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Image> :NeuroImaging)
+
+# Individual: :NeurologicalDisorderDetection (:NeurologicalDisorderDetection)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :NeurologicalDisorderDetection)
 
 # Individual: :ParseTree (:ParseTree)
 
@@ -590,6 +681,11 @@ ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.seman
 
 AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> "How was the data clustered?")
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?> (Which features/patterns/regions contribute the most to the classification?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?> "Which features/patterns/regions contribute the most to the classification?")
+ClassAssertion(:WhichQuestion <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>)
 
 # Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?> (Why or why not is a patient going to suffer a HAIs?)
 
