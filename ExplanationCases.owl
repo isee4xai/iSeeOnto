@@ -38,6 +38,7 @@ Declaration(NamedIndividual(:AlimeUser))
 Declaration(NamedIndividual(:AlimeUserDomain))
 Declaration(NamedIndividual(:ClassificationUnderstanding))
 Declaration(NamedIndividual(:DataClustering))
+Declaration(NamedIndividual(:DepressionScreening))
 Declaration(NamedIndividual(:GaonkarClassificationModel))
 Declaration(NamedIndividual(:GaonkarDataset))
 Declaration(NamedIndividual(:GaonkarDoctor))
@@ -73,6 +74,16 @@ Declaration(NamedIndividual(:InnocbrHAIsDiagnosisModel))
 Declaration(NamedIndividual(:InnocbrMachineLearningCBRMethod))
 Declaration(NamedIndividual(:InnocbrRuleBasedTechnique))
 Declaration(NamedIndividual(:InnocbrUserExpertDomain))
+Declaration(NamedIndividual(:MXAIDeveloper))
+Declaration(NamedIndividual(:MXALEBasedTechnique))
+Declaration(NamedIndividual(:MXDataset))
+Declaration(NamedIndividual(:MXDepressionScreening))
+Declaration(NamedIndividual(:MXDepressionScreeningModel))
+Declaration(NamedIndividual(:MXExpertUserDomain))
+Declaration(NamedIndividual(:MXExplainer))
+Declaration(NamedIndividual(:MXMethodDescription))
+Declaration(NamedIndividual(:MXMethodExplanationExperience))
+Declaration(NamedIndividual(:MXNeuralNetwork))
 Declaration(NamedIndividual(:MobileDevice))
 Declaration(NamedIndividual(:NeuroImaging))
 Declaration(NamedIndividual(:NeurologicalDisorderDetection))
@@ -107,12 +118,14 @@ Declaration(NamedIndividual(:ZhangMethodDescription))
 Declaration(NamedIndividual(:ZhangMethodExplanationExperience))
 Declaration(NamedIndividual(:ZhangUser))
 Declaration(NamedIndividual(:ZhangUserDomain))
+Declaration(NamedIndividual(:chart))
 Declaration(NamedIndividual(:label))
 Declaration(NamedIndividual(:text))
 Declaration(NamedIndividual(:touch))
 Declaration(NamedIndividual(:trace))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>))
 Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
@@ -239,6 +252,10 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :ClassificationU
 # Individual: :DataClustering (:DataClustering)
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DataClustering)
+
+# Individual: :DepressionScreening (:DepressionScreening)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DepressionScreening)
 
 # Individual: :GaonkarClassificationModel (:GaonkarClassificationModel)
 
@@ -451,6 +468,67 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :Inn
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :InnocbrUserExpertDomain)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :InnocbrUserExpertDomain <http://www.w3id.org/iSeeOnto/user#high>)
 
+# Individual: :MXAIDeveloper (:MXAIDeveloper)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :MXAIDeveloper)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :MXAIDeveloper :DepressionScreening)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :MXAIDeveloper <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :MXAIDeveloper <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :MXAIDeveloper :MXExpertUserDomain)
+
+# Individual: :MXALEBasedTechnique (:MXALEBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :MXALEBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#global>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :MXALEBasedTechnique :chart)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :MXALEBasedTechnique :chart)
+
+# Individual: :MXDataset (:MXDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :MXDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :MXDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+
+# Individual: :MXDepressionScreening (:MXDepressionScreening)
+
+ClassAssertion(:IllnessDiagnosis :MXDepressionScreening)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXDepressionScreening :MXALEBasedTechnique)
+
+# Individual: :MXDepressionScreeningModel (:MXDepressionScreeningModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :MXDepressionScreeningModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :MXDepressionScreeningModel :MXDepressionScreening)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :MXDepressionScreeningModel :MXDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXDepressionScreeningModel :MXNeuralNetwork)
+
+# Individual: :MXExpertUserDomain (:MXExpertUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :MXExpertUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :MXExpertUserDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :MXExplainer (:MXExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :MXExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXExplainer :MXALEBasedTechnique)
+
+# Individual: :MXMethodDescription (:MXMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :MXMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :MXMethodDescription :MXDepressionScreeningModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :MXMethodDescription :MXExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :MXMethodDescription :MXAIDeveloper)
+
+# Individual: :MXMethodExplanationExperience (:MXMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :MXMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :MXMethodExplanationExperience :MXMethodDescription)
+
+# Individual: :MXNeuralNetwork (:MXNeuralNetwork)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :MXNeuralNetwork)
+
 # Individual: :MobileDevice (:MobileDevice)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#VisualFacilities> :MobileDevice)
@@ -656,6 +734,10 @@ ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :ZhangUser :ZhangUse
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :ZhangUserDomain)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :ZhangUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
 
+# Individual: :chart (:chart)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000904> :chart)
+
 # Individual: :label (:label)
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000179> :label)
@@ -681,6 +763,11 @@ ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.seman
 
 AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> "How was the data clustered?")
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?> (What are the most important aspects to predict depression in undergraduate students?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?> "What are the most important aspects to predict depression in undergraduate students?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhatQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>)
 
 # Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?> (Which features/patterns/regions contribute the most to the classification?)
 
