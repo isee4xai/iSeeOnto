@@ -38,6 +38,17 @@ Declaration(NamedIndividual(:AlimeUser))
 Declaration(NamedIndividual(:AlimeUserDomain))
 Declaration(NamedIndividual(:ClassificationUnderstanding))
 Declaration(NamedIndividual(:DataClustering))
+Declaration(NamedIndividual(:DeClassification))
+Declaration(NamedIndividual(:DeClassificationModel))
+Declaration(NamedIndividual(:DeClusteringTrepanTechnique))
+Declaration(NamedIndividual(:DeDataset))
+Declaration(NamedIndividual(:DeExplainer))
+Declaration(NamedIndividual(:DeMethodDescription))
+Declaration(NamedIndividual(:DeMethodExplanationExperience))
+Declaration(NamedIndividual(:DeNeuralNetwork))
+Declaration(NamedIndividual(:DeUser))
+Declaration(NamedIndividual(:DeUserDomain))
+Declaration(NamedIndividual(:Decipher_the_exact_reasons_behind_the_classification_model_prediction))
 Declaration(NamedIndividual(:DepressionScreening))
 Declaration(NamedIndividual(:GaonkarClassificationModel))
 Declaration(NamedIndividual(:GaonkarDataset))
@@ -252,6 +263,73 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :ClassificationU
 # Individual: :DataClustering (:DataClustering)
 
 ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DataClustering)
+
+# Individual: :DeClassification (:DeClassification)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Classification> :DeClassification)
+
+# Individual: :DeClassificationModel (:DeClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :DeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :DeClassificationModel :DeClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :DeClassificationModel :DeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :DeClassificationModel :DeNeuralNetwork)
+
+# Individual: :DeClusteringTrepanTechnique (:DeClusteringTrepanTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :DeClusteringTrepanTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :DeClusteringTrepanTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :DeClusteringTrepanTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :DeDataset (:DeDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :DeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :DeDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :DeDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :DeDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :DeExplainer (:DeExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :DeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :DeExplainer :DeClusteringTrepanTechnique)
+
+# Individual: :DeMethodDescription (:DeMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :DeMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :DeMethodDescription :DeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :DeMethodDescription :DeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :DeMethodDescription :DeUser)
+
+# Individual: :DeMethodExplanationExperience (:DeMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :DeMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :DeMethodExplanationExperience :DeMethodDescription)
+
+# Individual: :DeNeuralNetwork (:DeNeuralNetwork)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :DeNeuralNetwork)
+
+# Individual: :DeUser (:DeUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :DeUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :DeUser :Decipher_the_exact_reasons_behind_the_classification_model_prediction)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :DeUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :DeUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :DeUser :DeUserDomain)
+
+# Individual: :DeUserDomain (:DeUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :DeUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :DeUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :Decipher_the_exact_reasons_behind_the_classification_model_prediction (Decipher the exact reasons behind the classification model prediction)
+
+AnnotationAssertion(rdfs:label :Decipher_the_exact_reasons_behind_the_classification_model_prediction "Decipher the exact reasons behind the classification model prediction")
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Decipher_the_exact_reasons_behind_the_classification_model_prediction)
 
 # Individual: :DepressionScreening (:DepressionScreening)
 
