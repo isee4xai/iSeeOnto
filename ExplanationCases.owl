@@ -27,6 +27,12 @@ Declaration(Class(:Touch_Facilities))
 Declaration(Class(:WhichQuestion))
 Declaration(Class(:touch_entity))
 Declaration(NamedIndividual(:ALimeRuleBasedTechnique))
+Declaration(NamedIndividual(:AdepuExplainer))
+Declaration(NamedIndividual(:AdepuIndustrialOperator))
+Declaration(NamedIndividual(:AdepuIndustrialOperatorExpertUserDomain))
+Declaration(NamedIndividual(:AdepuMethodDescription))
+Declaration(NamedIndividual(:AdepuMethodExplanationExperience))
+Declaration(NamedIndividual(:AdepuProbabilisticReasoningTechnique))
 Declaration(NamedIndividual(:AlimeClassification))
 Declaration(NamedIndividual(:AlimeClassificationModel))
 Declaration(NamedIndividual(:AlimeDataset))
@@ -96,6 +102,7 @@ Declaration(NamedIndividual(:MXMethodDescription))
 Declaration(NamedIndividual(:MXMethodExplanationExperience))
 Declaration(NamedIndividual(:MXNeuralNetwork))
 Declaration(NamedIndividual(:MobileDevice))
+Declaration(NamedIndividual(:Monitor_the_system_for_potential_undesirable_behaviours))
 Declaration(NamedIndividual(:NeuroImaging))
 Declaration(NamedIndividual(:NeurologicalDisorderDetection))
 Declaration(NamedIndividual(:ParseTree))
@@ -116,9 +123,14 @@ Declaration(NamedIndividual(:ShoprExplanationExperience))
 Declaration(NamedIndividual(:ShoprRecommenderSystem))
 Declaration(NamedIndividual(:ShoprUserDomain))
 Declaration(NamedIndividual(:SocialGroupRecommendationMethod))
+Declaration(NamedIndividual(:SwatControlSystem))
+Declaration(NamedIndividual(:SwatDataset))
+Declaration(NamedIndividual(:SwatMonitoringTask))
+Declaration(NamedIndividual(:SwatPLCMethod))
 Declaration(NamedIndividual(:TouchScreen))
 Declaration(NamedIndividual(:Understand_why_a_CNN_learns_knowledge_as_it_is))
 Declaration(NamedIndividual(:Which_HAIs_is_a_patient_going_to_suffer))
+Declaration(NamedIndividual(:Why_is_the_system_making_certain_decisions))
 Declaration(NamedIndividual(:ZhangCNN))
 Declaration(NamedIndividual(:ZhangClassificationModel))
 Declaration(NamedIndividual(:ZhangDataset))
@@ -202,6 +214,46 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
 ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :ALimeRuleBasedTechnique :text)
+
+# Individual: :AdepuExplainer (:AdepuExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :AdepuExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :AdepuExplainer :AdepuProbabilisticReasoningTechnique)
+
+# Individual: :AdepuIndustrialOperator (:AdepuIndustrialOperator)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :AdepuIndustrialOperator)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :AdepuIndustrialOperator :Monitor_the_system_for_potential_undesirable_behaviours)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :AdepuIndustrialOperator <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :AdepuIndustrialOperator :Why_is_the_system_making_certain_decisions)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :AdepuIndustrialOperator :AdepuIndustrialOperatorExpertUserDomain)
+
+# Individual: :AdepuIndustrialOperatorExpertUserDomain (:AdepuIndustrialOperatorExpertUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :AdepuIndustrialOperatorExpertUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :AdepuIndustrialOperatorExpertUserDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :AdepuMethodDescription (:AdepuMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :AdepuMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :AdepuMethodDescription :SwatControlSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :AdepuMethodDescription :AdepuExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :AdepuMethodDescription :AdepuIndustrialOperator)
+
+# Individual: :AdepuMethodExplanationExperience (:AdepuMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :AdepuMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :AdepuMethodExplanationExperience :AdepuMethodDescription)
+
+# Individual: :AdepuProbabilisticReasoningTechnique (:AdepuProbabilisticReasoningTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :AdepuProbabilisticReasoningTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :AdepuProbabilisticReasoningTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :AdepuProbabilisticReasoningTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
 
 # Individual: :AlimeClassification (:AlimeClassification)
 
@@ -614,6 +666,11 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDev
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :touch)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice <http://www.w3id.org/iSeeOnto/explainer#image>)
 
+# Individual: :Monitor_the_system_for_potential_undesirable_behaviours (Monitor the system for potential undesirable behaviours)
+
+AnnotationAssertion(rdfs:label :Monitor_the_system_for_potential_undesirable_behaviours "Monitor the system for potential undesirable behaviours")
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Monitor_the_system_for_potential_undesirable_behaviours)
+
 # Individual: :NeuroImaging (:NeuroImaging)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Image> :NeuroImaging)
@@ -737,6 +794,28 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :Sh
 
 ClassAssertion(<https://purl.org/heals/eo#KnowledgeBasedSystems> :SocialGroupRecommendationMethod)
 
+# Individual: :SwatControlSystem (:SwatControlSystem)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :SwatControlSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :SwatControlSystem :SwatMonitoringTask)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :SwatControlSystem :SwatDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :SwatControlSystem :SwatPLCMethod)
+
+# Individual: :SwatDataset (:SwatDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :SwatDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :SwatDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :SwatDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :SwatDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :SwatMonitoringTask (:SwatMonitoringTask)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection> :SwatMonitoringTask)
+
+# Individual: :SwatPLCMethod (:SwatPLCMethod)
+
+ClassAssertion(<https://purl.org/heals/eo#ArtificialIntelligenceMethod> :SwatPLCMethod)
+
 # Individual: :TouchScreen (:TouchScreen)
 
 ClassAssertion(:Touch_Facilities :TouchScreen)
@@ -751,6 +830,11 @@ ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Understand_why_
 
 AnnotationAssertion(rdfs:label :Which_HAIs_is_a_patient_going_to_suffer "Which HAIs is a patient going to suffer?")
 ClassAssertion(:WhichQuestion :Which_HAIs_is_a_patient_going_to_suffer)
+
+# Individual: :Why_is_the_system_making_certain_decisions (Why is the system making certain decisions)
+
+AnnotationAssertion(rdfs:label :Why_is_the_system_making_certain_decisions "Why is the system making certain decisions")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhyQuestion> :Why_is_the_system_making_certain_decisions)
 
 # Individual: :ZhangCNN (:ZhangCNN)
 
