@@ -171,6 +171,28 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</terms:source>
+        <rdfs:label>K-Nearest Neighbours</rdfs:label>
+        <skos:definition>is a supervised machine learning algorithm for labeling an unknown data point given existing labeled data.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+        <terms:source>https://en.wikipedia.org/wiki/Tf%E2%80%93idf</terms:source>
+        <rdfs:label>Term frequency–Inverse document frequency</rdfs:label>
+        <skos:definition>is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/heals/eo#ArtificialIntelligenceMethod -->
 
     <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">

@@ -1,0 +1,1011 @@
+Prefix(:=<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases>
+Import(<http://www.w3id.org/iSeeOnto/SimilarityKnowledge>)
+Import(<http://www.w3id.org/iSeeOnto/aimodel>)
+Import(<http://www.w3id.org/iSeeOnto/aimodelevaluation>)
+Import(<http://www.w3id.org/iSeeOnto/evaluation>)
+Import(<http://www.w3id.org/iSeeOnto/explainer>)
+Import(<http://www.w3id.org/iSeeOnto/explanationexperience>)
+Import(<http://www.w3id.org/iSeeOnto/user>)
+Import(<http://www.w3id.org/iSeeOnto/userevaluation>)
+Import(<http://www.w3id.org/iSeeOnto/workflow>)
+
+Declaration(Class(<http://sensornet.abdn.ac.uk/onts/Qual-O#Metric>))
+Declaration(Class(:Case-based_Reasoning))
+Declaration(Class(:ClusteringTask))
+Declaration(Class(:IllnessDiagnosis))
+Declaration(Class(:ImageClassification))
+Declaration(Class(:Naive_Bayes))
+Declaration(Class(:RecommendationTask))
+Declaration(Class(:Touch_Facilities))
+Declaration(Class(:WhichQuestion))
+Declaration(Class(:touch_entity))
+Declaration(Class(rdf:Property))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#activityOfInfluence>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#agentOfInfluence>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#contributed>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#ended>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#entityOfInfluence>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#generalizationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#generatedAsDerivation>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#hadDelegate>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#hadDerivation>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#hadInfluence>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#hadRevision>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#informed>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#locationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedAssociationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedAttributionOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedCommunicationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedDelegationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedDerivationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedEndOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedGenerationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedInfluenceOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedInvalidationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedQuotationOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedSourceOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedStartOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#qualifiedUsingActivity>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#quotedAs>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#revisedEntity>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#started>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasActivityOfInfluence>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasAssociateFor>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasMemberOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasPlanOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasPrimarySourceOf>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRoleIn>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasUsedBy>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasUsedInDerivation>))
+Declaration(NamedIndividual(<http://sensornet.abdn.ac.uk/onts/Qual-O#result>))
+Declaration(NamedIndividual(<http://sensornet.abdn.ac.uk/onts/Qual-O#subject>))
+Declaration(NamedIndividual(:ALimeRuleBasedTechnique))
+Declaration(NamedIndividual(:AdepuExplainer))
+Declaration(NamedIndividual(:AdepuIndustrialOperator))
+Declaration(NamedIndividual(:AdepuIndustrialOperatorExpertUserDomain))
+Declaration(NamedIndividual(:AdepuMethodDescription))
+Declaration(NamedIndividual(:AdepuMethodExplanationExperience))
+Declaration(NamedIndividual(:AdepuProbabilisticReasoningTechnique))
+Declaration(NamedIndividual(:AlimeClassification))
+Declaration(NamedIndividual(:AlimeClassificationModel))
+Declaration(NamedIndividual(:AlimeDataset))
+Declaration(NamedIndividual(:AlimeDescription))
+Declaration(NamedIndividual(:AlimeExplainer))
+Declaration(NamedIndividual(:AlimeExplanationExperience))
+Declaration(NamedIndividual(:AlimeMachineLearningMethod))
+Declaration(NamedIndividual(:AlimeUser))
+Declaration(NamedIndividual(:AlimeUserDomain))
+Declaration(NamedIndividual(:ClassificationUnderstanding))
+Declaration(NamedIndividual(:DataClustering))
+Declaration(NamedIndividual(:DeClassification))
+Declaration(NamedIndividual(:DeClassificationModel))
+Declaration(NamedIndividual(:DeClusteringTrepanTechnique))
+Declaration(NamedIndividual(:DeDataset))
+Declaration(NamedIndividual(:DeExplainer))
+Declaration(NamedIndividual(:DeMethodDescription))
+Declaration(NamedIndividual(:DeMethodExplanationExperience))
+Declaration(NamedIndividual(:DeNeuralNetwork))
+Declaration(NamedIndividual(:DeUser))
+Declaration(NamedIndividual(:DeUserDomain))
+Declaration(NamedIndividual(:Decipher_the_exact_reasons_behind_the_classification_model_prediction))
+Declaration(NamedIndividual(:DepressionScreening))
+Declaration(NamedIndividual(:GaonkarClassificationModel))
+Declaration(NamedIndividual(:GaonkarDataset))
+Declaration(NamedIndividual(:GaonkarDoctor))
+Declaration(NamedIndividual(:GaonkarExpertUserDomain))
+Declaration(NamedIndividual(:GaonkarExplainer))
+Declaration(NamedIndividual(:GaonkarImageClassification))
+Declaration(NamedIndividual(:GaonkarMethodDescription))
+Declaration(NamedIndividual(:GaonkarMethodExplanationExperience))
+Declaration(NamedIndividual(:GaonkarSVM))
+Declaration(NamedIndividual(:GaonkarStatisticBasedTechnique))
+Declaration(NamedIndividual(:HAIsDiagnosis))
+Declaration(NamedIndividual(:HappyMovieDataset))
+Declaration(NamedIndividual(:HappyMovieItemRecommendation))
+Declaration(NamedIndividual(:HappyMovieRecommenderSystem))
+Declaration(NamedIndividual(:IbcmCBRBayesianExpTechnique))
+Declaration(NamedIndividual(:IbcmCBRBayesianMethod))
+Declaration(NamedIndividual(:IbcmClusteringModel))
+Declaration(NamedIndividual(:IbcmClusteringProblem))
+Declaration(NamedIndividual(:IbcmDataset))
+Declaration(NamedIndividual(:IbcmDescription))
+Declaration(NamedIndividual(:IbcmExplainer))
+Declaration(NamedIndividual(:IbcmExplanationExperience))
+Declaration(NamedIndividual(:IbcmUser))
+Declaration(NamedIndividual(:IbcmUserDomain))
+Declaration(NamedIndividual(:ImageFeatureRegion))
+Declaration(NamedIndividual(:InnocbrDataset))
+Declaration(NamedIndividual(:InnocbrDescription))
+Declaration(NamedIndividual(:InnocbrDoctor))
+Declaration(NamedIndividual(:InnocbrExplainer))
+Declaration(NamedIndividual(:InnocbrExplanationExperience))
+Declaration(NamedIndividual(:InnocbrHAIsDiagnosis))
+Declaration(NamedIndividual(:InnocbrHAIsDiagnosisModel))
+Declaration(NamedIndividual(:InnocbrMachineLearningCBRMethod))
+Declaration(NamedIndividual(:InnocbrRuleBasedTechnique))
+Declaration(NamedIndividual(:InnocbrUserExpertDomain))
+Declaration(NamedIndividual(:MXAIDeveloper))
+Declaration(NamedIndividual(:MXALEBasedTechnique))
+Declaration(NamedIndividual(:MXDataset))
+Declaration(NamedIndividual(:MXDepressionScreening))
+Declaration(NamedIndividual(:MXDepressionScreeningModel))
+Declaration(NamedIndividual(:MXExpertUserDomain))
+Declaration(NamedIndividual(:MXExplainer))
+Declaration(NamedIndividual(:MXMethodDescription))
+Declaration(NamedIndividual(:MXMethodExplanationExperience))
+Declaration(NamedIndividual(:MXNeuralNetwork))
+Declaration(NamedIndividual(:MobileDevice))
+Declaration(NamedIndividual(:Monitor_the_system_for_potential_undesirable_behaviours))
+Declaration(NamedIndividual(:NeuroImaging))
+Declaration(NamedIndividual(:NeurologicalDisorderDetection))
+Declaration(NamedIndividual(:ParseTree))
+Declaration(NamedIndividual(:PsieDescription))
+Declaration(NamedIndividual(:PsieExplainer))
+Declaration(NamedIndividual(:PsieExplanationExperience))
+Declaration(NamedIndividual(:PsieRuleBasedTechnique))
+Declaration(NamedIndividual(:PsieUser))
+Declaration(NamedIndividual(:PsieUserDomain))
+Declaration(NamedIndividual(:ShoprCBR))
+Declaration(NamedIndividual(:ShoprClient))
+Declaration(NamedIndividual(:ShoprClothingItemRecommendation))
+Declaration(NamedIndividual(:ShoprContentBasedTechnique))
+Declaration(NamedIndividual(:ShoprDataset))
+Declaration(NamedIndividual(:ShoprDescription))
+Declaration(NamedIndividual(:ShoprExplainer))
+Declaration(NamedIndividual(:ShoprExplanationExperience))
+Declaration(NamedIndividual(:ShoprRecommenderSystem))
+Declaration(NamedIndividual(:ShoprUserDomain))
+Declaration(NamedIndividual(:SocialGroupRecommendationMethod))
+Declaration(NamedIndividual(:SwatControlSystem))
+Declaration(NamedIndividual(:SwatDataset))
+Declaration(NamedIndividual(:SwatMonitoringTask))
+Declaration(NamedIndividual(:SwatPLCMethod))
+Declaration(NamedIndividual(:TouchScreen))
+Declaration(NamedIndividual(:Understand_why_a_CNN_learns_knowledge_as_it_is))
+Declaration(NamedIndividual(:Which_HAIs_is_a_patient_going_to_suffer))
+Declaration(NamedIndividual(:Why_is_the_system_making_certain_decisions))
+Declaration(NamedIndividual(:ZhangCNN))
+Declaration(NamedIndividual(:ZhangClassificationModel))
+Declaration(NamedIndividual(:ZhangDataset))
+Declaration(NamedIndividual(:ZhangDecisionTreeBasedExplanation))
+Declaration(NamedIndividual(:ZhangExplainer))
+Declaration(NamedIndividual(:ZhangImageClassification))
+Declaration(NamedIndividual(:ZhangMethodDescription))
+Declaration(NamedIndividual(:ZhangMethodExplanationExperience))
+Declaration(NamedIndividual(:ZhangUser))
+Declaration(NamedIndividual(:ZhangUserDomain))
+Declaration(NamedIndividual(:chart))
+Declaration(NamedIndividual(:label))
+Declaration(NamedIndividual(:text))
+Declaration(NamedIndividual(:touch))
+Declaration(NamedIndividual(:trace))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>))
+Declaration(NamedIndividual(<http://www.w3.org/TR/prov-o/#inverse-names-table>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-20130312>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o-20130312>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o-20130430>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-aq#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-dc#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-dc-refinements#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-dictionary#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-links#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o#>))
+Declaration(NamedIndividual(<http://www.w3.org/ns/prov-o-inverses#>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/frbr/core#abridgement>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/frbr/core#complement>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Case-based_Reasoning (Case-based Reasoning)
+
+AnnotationAssertion(rdfs:label :Case-based_Reasoning "Case-based Reasoning")
+SubClassOf(:Case-based_Reasoning <https://purl.org/heals/eo#KnowledgeBasedSystems>)
+
+# Class: :ClusteringTask (ClusteringTask)
+
+AnnotationAssertion(rdfs:label :ClusteringTask "ClusteringTask")
+SubClassOf(:ClusteringTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+# Class: :IllnessDiagnosis (:IllnessDiagnosis)
+
+SubClassOf(:IllnessDiagnosis <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+# Class: :ImageClassification (:ImageClassification)
+
+SubClassOf(:ImageClassification <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+# Class: :Naive_Bayes (Naive Bayes)
+
+AnnotationAssertion(rdfs:label :Naive_Bayes "Naive Bayes")
+SubClassOf(:Naive_Bayes <http://purl.obolibrary.org/obo/OMIT_0001483>)
+
+# Class: :RecommendationTask (:RecommendationTask)
+
+SubClassOf(:RecommendationTask <http://www.w3id.org/iSeeOnto/aimodel#Classification>)
+
+# Class: :Touch_Facilities (Touch Facilities)
+
+AnnotationAssertion(rdfs:label :Touch_Facilities "Touch Facilities")
+SubClassOf(:Touch_Facilities <http://www.w3id.org/iSeeOnto/user#TechnicalFacilities>)
+
+# Class: :WhichQuestion (:WhichQuestion)
+
+SubClassOf(:WhichQuestion <http://www.w3id.org/iSeeOnto/user#UserQuestion>)
+
+# Class: :touch_entity (touch entity)
+
+AnnotationAssertion(rdfs:label :touch_entity "touch entity")
+SubClassOf(:touch_entity <http://semanticscience.org/resource/SIO_000015>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :ALimeRuleBasedTechnique (:ALimeRuleBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ALimeRuleBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ALimeRuleBasedTechnique :trace)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ALimeRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :ALimeRuleBasedTechnique :text)
+
+# Individual: :AdepuExplainer (:AdepuExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :AdepuExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :AdepuExplainer :AdepuProbabilisticReasoningTechnique)
+
+# Individual: :AdepuIndustrialOperator (:AdepuIndustrialOperator)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :AdepuIndustrialOperator)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :AdepuIndustrialOperator :Monitor_the_system_for_potential_undesirable_behaviours)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :AdepuIndustrialOperator <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :AdepuIndustrialOperator :Why_is_the_system_making_certain_decisions)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :AdepuIndustrialOperator :AdepuIndustrialOperatorExpertUserDomain)
+
+# Individual: :AdepuIndustrialOperatorExpertUserDomain (:AdepuIndustrialOperatorExpertUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :AdepuIndustrialOperatorExpertUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :AdepuIndustrialOperatorExpertUserDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :AdepuMethodDescription (:AdepuMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :AdepuMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :AdepuMethodDescription :SwatControlSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :AdepuMethodDescription :AdepuExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :AdepuMethodDescription :AdepuIndustrialOperator)
+
+# Individual: :AdepuMethodExplanationExperience (:AdepuMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :AdepuMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :AdepuMethodExplanationExperience :AdepuMethodDescription)
+
+# Individual: :AdepuProbabilisticReasoningTechnique (:AdepuProbabilisticReasoningTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :AdepuProbabilisticReasoningTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :AdepuProbabilisticReasoningTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :AdepuProbabilisticReasoningTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :AdepuProbabilisticReasoningTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :AlimeClassification (:AlimeClassification)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Classification> :AlimeClassification)
+
+# Individual: :AlimeClassificationModel (:AlimeClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :AlimeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :AlimeClassificationModel :AlimeClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :AlimeClassificationModel :AlimeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :AlimeClassificationModel :AlimeMachineLearningMethod)
+
+# Individual: :AlimeDataset (:AlimeDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :AlimeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :AlimeDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :AlimeDescription (:AlimeDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :AlimeDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :AlimeDescription :AlimeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :AlimeDescription :AlimeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :AlimeDescription :AlimeUser)
+
+# Individual: :AlimeExplainer (:AlimeExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :AlimeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :AlimeExplainer :ALimeRuleBasedTechnique)
+
+# Individual: :AlimeExplanationExperience (:AlimeExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :AlimeExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :AlimeExplanationExperience :AlimeDescription)
+
+# Individual: :AlimeMachineLearningMethod (:AlimeMachineLearningMethod)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0001480> :AlimeMachineLearningMethod)
+
+# Individual: :AlimeUser (:AlimeUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :AlimeUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :AlimeUser :ClassificationUnderstanding)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :AlimeUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :AlimeUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :AlimeUser :AlimeUserDomain)
+
+# Individual: :AlimeUserDomain (:AlimeUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :AlimeUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :AlimeUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :ClassificationUnderstanding (:ClassificationUnderstanding)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :ClassificationUnderstanding)
+
+# Individual: :DataClustering (:DataClustering)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DataClustering)
+
+# Individual: :DeClassification (:DeClassification)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Classification> :DeClassification)
+
+# Individual: :DeClassificationModel (:DeClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :DeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :DeClassificationModel :DeClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :DeClassificationModel :DeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :DeClassificationModel :DeNeuralNetwork)
+
+# Individual: :DeClusteringTrepanTechnique (:DeClusteringTrepanTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :DeClusteringTrepanTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :DeClusteringTrepanTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :DeClusteringTrepanTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :DeClusteringTrepanTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :DeDataset (:DeDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :DeDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :DeDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :DeDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :DeDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :DeExplainer (:DeExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :DeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :DeExplainer :DeClusteringTrepanTechnique)
+
+# Individual: :DeMethodDescription (:DeMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :DeMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :DeMethodDescription :DeClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :DeMethodDescription :DeExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :DeMethodDescription :DeUser)
+
+# Individual: :DeMethodExplanationExperience (:DeMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :DeMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :DeMethodExplanationExperience :DeMethodDescription)
+
+# Individual: :DeNeuralNetwork (:DeNeuralNetwork)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :DeNeuralNetwork)
+
+# Individual: :DeUser (:DeUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :DeUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :DeUser :Decipher_the_exact_reasons_behind_the_classification_model_prediction)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :DeUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :DeUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :DeUser :DeUserDomain)
+
+# Individual: :DeUserDomain (:DeUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :DeUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :DeUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :Decipher_the_exact_reasons_behind_the_classification_model_prediction (Decipher the exact reasons behind the classification model prediction)
+
+AnnotationAssertion(rdfs:label :Decipher_the_exact_reasons_behind_the_classification_model_prediction "Decipher the exact reasons behind the classification model prediction")
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Decipher_the_exact_reasons_behind_the_classification_model_prediction)
+
+# Individual: :DepressionScreening (:DepressionScreening)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :DepressionScreening)
+
+# Individual: :GaonkarClassificationModel (:GaonkarClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :GaonkarClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :GaonkarClassificationModel :GaonkarImageClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :GaonkarClassificationModel :GaonkarDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :GaonkarClassificationModel :GaonkarSVM)
+
+# Individual: :GaonkarDataset (:GaonkarDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :GaonkarDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :GaonkarDataset :NeuroImaging)
+
+# Individual: :GaonkarDoctor (:GaonkarDoctor)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :GaonkarDoctor)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :GaonkarDoctor :NeurologicalDisorderDetection)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :GaonkarDoctor <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :GaonkarDoctor <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :GaonkarDoctor :GaonkarExpertUserDomain)
+
+# Individual: :GaonkarExpertUserDomain (:GaonkarExpertUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :GaonkarExpertUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :GaonkarExpertUserDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :GaonkarExplainer (:GaonkarExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :GaonkarExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :GaonkarExplainer :GaonkarStatisticBasedTechnique)
+
+# Individual: :GaonkarImageClassification (:GaonkarImageClassification)
+
+ClassAssertion(:ImageClassification :GaonkarImageClassification)
+
+# Individual: :GaonkarMethodDescription (:GaonkarMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :GaonkarMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :GaonkarMethodDescription :GaonkarClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :GaonkarMethodDescription :GaonkarExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :GaonkarMethodDescription :GaonkarDoctor)
+
+# Individual: :GaonkarMethodExplanationExperience (:GaonkarMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :GaonkarMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :GaonkarMethodExplanationExperience :GaonkarMethodDescription)
+
+# Individual: :GaonkarSVM (:GaonkarSVM)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0027764> :GaonkarSVM)
+
+# Individual: :GaonkarStatisticBasedTechnique (:GaonkarStatisticBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :GaonkarStatisticBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :GaonkarStatisticBasedTechnique :ImageFeatureRegion)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :GaonkarStatisticBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :HAIsDiagnosis (:HAIsDiagnosis)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :HAIsDiagnosis)
+
+# Individual: :HappyMovieDataset (:HappyMovieDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :HappyMovieDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :HappyMovieDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :HappyMovieDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :HappyMovieDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :HappyMovieItemRecommendation (:HappyMovieItemRecommendation)
+
+ClassAssertion(:RecommendationTask :HappyMovieItemRecommendation)
+
+# Individual: :HappyMovieRecommenderSystem (:HappyMovieRecommenderSystem)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :HappyMovieRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :HappyMovieRecommenderSystem :HappyMovieItemRecommendation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :HappyMovieRecommenderSystem :HappyMovieDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :HappyMovieRecommenderSystem :SocialGroupRecommendationMethod)
+
+# Individual: :IbcmCBRBayesianExpTechnique (:IbcmCBRBayesianExpTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :IbcmCBRBayesianExpTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :IbcmCBRBayesianExpTechnique :label)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :IbcmCBRBayesianExpTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :IbcmCBRBayesianExpTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :IbcmCBRBayesianMethod (:IbcmCBRBayesianMethod)
+
+ClassAssertion(:Case-based_Reasoning :IbcmCBRBayesianMethod)
+ClassAssertion(:Naive_Bayes :IbcmCBRBayesianMethod)
+
+# Individual: :IbcmClusteringModel (:IbcmClusteringModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :IbcmClusteringModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :IbcmClusteringModel :IbcmClusteringProblem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :IbcmClusteringModel :IbcmDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :IbcmClusteringModel :IbcmCBRBayesianMethod)
+
+# Individual: :IbcmClusteringProblem (:IbcmClusteringProblem)
+
+ClassAssertion(:ClusteringTask :IbcmClusteringProblem)
+
+# Individual: :IbcmDataset (:IbcmDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :IbcmDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :IbcmDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+
+# Individual: :IbcmDescription (:IbcmDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :IbcmDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :IbcmDescription :IbcmClusteringModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :IbcmDescription :IbcmExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :IbcmDescription :IbcmUser)
+
+# Individual: :IbcmExplainer (:IbcmExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :IbcmExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :IbcmExplainer :IbcmCBRBayesianExpTechnique)
+
+# Individual: :IbcmExplanationExperience (:IbcmExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :IbcmExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :IbcmExplanationExperience :IbcmDescription)
+
+# Individual: :IbcmUser (:IbcmUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :IbcmUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :IbcmUser :DataClustering)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :IbcmUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :IbcmUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :IbcmUser :IbcmUserDomain)
+
+# Individual: :IbcmUserDomain (:IbcmUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :IbcmUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :IbcmUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :ImageFeatureRegion (:ImageFeatureRegion)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000081> :ImageFeatureRegion)
+
+# Individual: :InnocbrDataset (:InnocbrDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :InnocbrDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :InnocbrDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :InnocbrDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :InnocbrDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :InnocbrDescription (:InnocbrDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :InnocbrDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :InnocbrDescription :InnocbrHAIsDiagnosisModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :InnocbrDescription :InnocbrExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :InnocbrDescription :InnocbrDoctor)
+
+# Individual: :InnocbrDoctor (:InnocbrDoctor)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :InnocbrDoctor)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :InnocbrDoctor :HAIsDiagnosis)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :InnocbrDoctor <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :InnocbrDoctor :Which_HAIs_is_a_patient_going_to_suffer)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :InnocbrDoctor <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :InnocbrDoctor :InnocbrUserExpertDomain)
+
+# Individual: :InnocbrExplainer (:InnocbrExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :InnocbrExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :InnocbrExplainer :InnocbrRuleBasedTechnique)
+
+# Individual: :InnocbrExplanationExperience (:InnocbrExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :InnocbrExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :InnocbrExplanationExperience :InnocbrDescription)
+
+# Individual: :InnocbrHAIsDiagnosis (:InnocbrHAIsDiagnosis)
+
+ClassAssertion(:IllnessDiagnosis :InnocbrHAIsDiagnosis)
+
+# Individual: :InnocbrHAIsDiagnosisModel (:InnocbrHAIsDiagnosisModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :InnocbrHAIsDiagnosisModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :InnocbrHAIsDiagnosisModel :InnocbrHAIsDiagnosis)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :InnocbrHAIsDiagnosisModel :InnocbrDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :InnocbrHAIsDiagnosisModel :InnocbrMachineLearningCBRMethod)
+
+# Individual: :InnocbrMachineLearningCBRMethod (:InnocbrMachineLearningCBRMethod)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0001480> :InnocbrMachineLearningCBRMethod)
+ClassAssertion(:Case-based_Reasoning :InnocbrMachineLearningCBRMethod)
+
+# Individual: :InnocbrRuleBasedTechnique (:InnocbrRuleBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :InnocbrRuleBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :InnocbrRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :InnocbrRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :InnocbrRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :InnocbrUserExpertDomain (:InnocbrUserExpertDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :InnocbrUserExpertDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :InnocbrUserExpertDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :MXAIDeveloper (:MXAIDeveloper)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :MXAIDeveloper)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :MXAIDeveloper :DepressionScreening)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :MXAIDeveloper <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :MXAIDeveloper <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :MXAIDeveloper :MXExpertUserDomain)
+
+# Individual: :MXALEBasedTechnique (:MXALEBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :MXALEBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#global>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :MXALEBasedTechnique :chart)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :MXALEBasedTechnique :chart)
+
+# Individual: :MXDataset (:MXDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :MXDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :MXDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+
+# Individual: :MXDepressionScreening (:MXDepressionScreening)
+
+ClassAssertion(:IllnessDiagnosis :MXDepressionScreening)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXDepressionScreening :MXALEBasedTechnique)
+
+# Individual: :MXDepressionScreeningModel (:MXDepressionScreeningModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :MXDepressionScreeningModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :MXDepressionScreeningModel :MXDepressionScreening)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :MXDepressionScreeningModel :MXDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXDepressionScreeningModel :MXNeuralNetwork)
+
+# Individual: :MXExpertUserDomain (:MXExpertUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :MXExpertUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :MXExpertUserDomain <http://www.w3id.org/iSeeOnto/user#high>)
+
+# Individual: :MXExplainer (:MXExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :MXExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXExplainer :MXALEBasedTechnique)
+
+# Individual: :MXMethodDescription (:MXMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :MXMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :MXMethodDescription :MXDepressionScreeningModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :MXMethodDescription :MXExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :MXMethodDescription :MXAIDeveloper)
+
+# Individual: :MXMethodExplanationExperience (:MXMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :MXMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :MXMethodExplanationExperience :MXMethodDescription)
+
+# Individual: :MXNeuralNetwork (:MXNeuralNetwork)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :MXNeuralNetwork)
+
+# Individual: :MobileDevice (:MobileDevice)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#VisualFacilities> :MobileDevice)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice :touch)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :MobileDevice <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :Monitor_the_system_for_potential_undesirable_behaviours (Monitor the system for potential undesirable behaviours)
+
+AnnotationAssertion(rdfs:label :Monitor_the_system_for_potential_undesirable_behaviours "Monitor the system for potential undesirable behaviours")
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Monitor_the_system_for_potential_undesirable_behaviours)
+
+# Individual: :NeuroImaging (:NeuroImaging)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Image> :NeuroImaging)
+
+# Individual: :NeurologicalDisorderDetection (:NeurologicalDisorderDetection)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :NeurologicalDisorderDetection)
+
+# Individual: :ParseTree (:ParseTree)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000602> :ParseTree)
+
+# Individual: :PsieDescription (:PsieDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :PsieDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :PsieDescription :HappyMovieRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :PsieDescription :PsieExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :PsieDescription :PsieUser)
+
+# Individual: :PsieExplainer (:PsieExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :PsieExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :PsieExplainer :PsieRuleBasedTechnique)
+
+# Individual: :PsieExplanationExperience (:PsieExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :PsieExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :PsieExplanationExperience :PsieDescription)
+
+# Individual: :PsieRuleBasedTechnique (:PsieRuleBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :PsieRuleBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :PsieRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model-agnostic>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :PsieRuleBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :PsieRuleBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :PsieUser (:PsieUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :PsieUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :PsieUser <http://www.w3id.org/iSeeOnto/user#Efficiency>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :PsieUser <http://www.w3id.org/iSeeOnto/user#Satisfaction>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :PsieUser <http://www.w3id.org/iSeeOnto/user#Trust>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :PsieUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :PsieUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :PsieUser :PsieUserDomain)
+
+# Individual: :PsieUserDomain (:PsieUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :PsieUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :PsieUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :ShoprCBR (:ShoprCBR)
+
+ClassAssertion(:Case-based_Reasoning :ShoprCBR)
+
+# Individual: :ShoprClient (:ShoprClient)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :ShoprClient)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ShoprClient <http://www.w3id.org/iSeeOnto/user#Scruitablity>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ShoprClient <http://www.w3id.org/iSeeOnto/user#Trust>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient :MobileDevice)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient :TouchScreen)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ShoprClient <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :ShoprClient <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :ShoprClient :ShoprUserDomain)
+
+# Individual: :ShoprClothingItemRecommendation (:ShoprClothingItemRecommendation)
+
+ClassAssertion(:RecommendationTask :ShoprClothingItemRecommendation)
+
+# Individual: :ShoprContentBasedTechnique (:ShoprContentBasedTechnique)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ShoprContentBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#post-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ShoprContentBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :ShoprContentBasedTechnique :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPresentation> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#image>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ShoprContentBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+
+# Individual: :ShoprDataset (:ShoprDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :ShoprDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :ShoprDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+
+# Individual: :ShoprDescription (:ShoprDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :ShoprDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :ShoprDescription :ShoprRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :ShoprDescription :ShoprExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :ShoprDescription :ShoprClient)
+
+# Individual: :ShoprExplainer (:ShoprExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :ShoprExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ShoprExplainer :ShoprContentBasedTechnique)
+
+# Individual: :ShoprExplanationExperience (:ShoprExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :ShoprExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :ShoprExplanationExperience :ShoprDescription)
+
+# Individual: :ShoprRecommenderSystem (:ShoprRecommenderSystem)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :ShoprRecommenderSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :ShoprRecommenderSystem :ShoprClothingItemRecommendation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :ShoprRecommenderSystem :ShoprDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ShoprRecommenderSystem :ShoprCBR)
+
+# Individual: :ShoprUserDomain (:ShoprUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :ShoprUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :ShoprUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :SocialGroupRecommendationMethod (:SocialGroupRecommendationMethod)
+
+ClassAssertion(<https://purl.org/heals/eo#KnowledgeBasedSystems> :SocialGroupRecommendationMethod)
+
+# Individual: :SwatControlSystem (:SwatControlSystem)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :SwatControlSystem)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :SwatControlSystem :SwatMonitoringTask)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :SwatControlSystem :SwatDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :SwatControlSystem :SwatPLCMethod)
+
+# Individual: :SwatDataset (:SwatDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :SwatDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :SwatDataset <http://www.w3id.org/iSeeOnto/explainer#categorical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :SwatDataset <http://www.w3id.org/iSeeOnto/explainer#numerical>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :SwatDataset <http://www.w3id.org/iSeeOnto/explainer#ordinal>)
+
+# Individual: :SwatMonitoringTask (:SwatMonitoringTask)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection> :SwatMonitoringTask)
+
+# Individual: :SwatPLCMethod (:SwatPLCMethod)
+
+ClassAssertion(<https://purl.org/heals/eo#ArtificialIntelligenceMethod> :SwatPLCMethod)
+
+# Individual: :TouchScreen (:TouchScreen)
+
+ClassAssertion(:Touch_Facilities :TouchScreen)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> :TouchScreen :touch)
+
+# Individual: :Understand_why_a_CNN_learns_knowledge_as_it_is (Understand why a CNN learns knowledge as it is)
+
+AnnotationAssertion(rdfs:label :Understand_why_a_CNN_learns_knowledge_as_it_is "Understand why a CNN learns knowledge as it is")
+ClassAssertion(<http://semanticscience.org/resource/SIO_000999> :Understand_why_a_CNN_learns_knowledge_as_it_is)
+
+# Individual: :Which_HAIs_is_a_patient_going_to_suffer (Which HAIs is a patient going to suffer?)
+
+AnnotationAssertion(rdfs:label :Which_HAIs_is_a_patient_going_to_suffer "Which HAIs is a patient going to suffer?")
+ClassAssertion(:WhichQuestion :Which_HAIs_is_a_patient_going_to_suffer)
+
+# Individual: :Why_is_the_system_making_certain_decisions (Why is the system making certain decisions)
+
+AnnotationAssertion(rdfs:label :Why_is_the_system_making_certain_decisions "Why is the system making certain decisions")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhyQuestion> :Why_is_the_system_making_certain_decisions)
+
+# Individual: :ZhangCNN (:ZhangCNN)
+
+ClassAssertion(<http://purl.obolibrary.org/obo/OMIT_0017046> :ZhangCNN)
+
+# Individual: :ZhangClassificationModel (:ZhangClassificationModel)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#AIModel> :ZhangClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#solves> :ZhangClassificationModel :ZhangImageClassification)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> :ZhangClassificationModel :ZhangDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ZhangClassificationModel :ZhangCNN)
+
+# Individual: :ZhangDataset (:ZhangDataset)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :ZhangDataset)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :ZhangDataset <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :ZhangDecisionTreeBasedExplanation (:ZhangDecisionTreeBasedExplanation)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ZhangDecisionTreeBasedExplanation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#local>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ZhangDecisionTreeBasedExplanation :ParseTree)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#prediction>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :ZhangDecisionTreeBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+# Individual: :ZhangExplainer (:ZhangExplainer)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :ZhangExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :ZhangExplainer :ZhangDecisionTreeBasedExplanation)
+
+# Individual: :ZhangImageClassification (:ZhangImageClassification)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Classification> :ZhangImageClassification)
+
+# Individual: :ZhangMethodDescription (:ZhangMethodDescription)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#Description> :ZhangMethodDescription)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> :ZhangMethodDescription :ZhangClassificationModel)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> :ZhangMethodDescription :ZhangExplainer)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> :ZhangMethodDescription :ZhangUser)
+
+# Individual: :ZhangMethodExplanationExperience (:ZhangMethodExplanationExperience)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> :ZhangMethodExplanationExperience)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> :ZhangMethodExplanationExperience :ZhangMethodDescription)
+
+# Individual: :ZhangUser (:ZhangUser)
+
+ClassAssertion(<https://purl.org/heals/eo#user> :ZhangUser)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasIntent> :ZhangUser :Understand_why_a_CNN_learns_knowledge_as_it_is)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :ZhangUser <http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :ZhangUser <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :ZhangUser :ZhangUserDomain)
+
+# Individual: :ZhangUserDomain (:ZhangUserDomain)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :ZhangUserDomain)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :ZhangUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :chart (:chart)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000904> :chart)
+
+# Individual: :label (:label)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000179> :label)
+
+# Individual: :text (:text)
+
+ClassAssertion(<http://semanticscience.org/resource/SIO_000651> :text)
+
+# Individual: :touch (:touch)
+
+ClassAssertion(:touch_entity :touch)
+
+# Individual: :trace (:trace)
+
+ClassAssertion(<https://purl.org/heals/eo#TraceBasedExplanation> :trace)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?> (How do you know the classification is X?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?> "How do you know the classification is X?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_do_you_know_the_classification_is_X?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> (How was the data clustered?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?> "How was the data clustered?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#How_was_the_data_clustered?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?> (What are the most important aspects to predict depression in undergraduate students?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?> "What are the most important aspects to predict depression in undergraduate students?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhatQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?> (Which features/patterns/regions contribute the most to the classification?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?> "Which features/patterns/regions contribute the most to the classification?")
+ClassAssertion(:WhichQuestion <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Which_features/patterns/regions_contribute_the_most_to_the_classification?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?> (Why or why not is a patient going to suffer a HAIs?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?> "Why or why not is a patient going to suffer a HAIs?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_or_why_not_is_a_patient_going_to_suffer_a_HAIs?>)
+
+# Individual: <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> (Why was this item recommended?)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?> "Why was this item recommended?")
+ClassAssertion(<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#Why_was_this_item_recommended?>)
+
+# Individual: <http://www.w3id.org/iSeeOnto/user#ScreenDisplay> (<http://www.w3id.org/iSeeOnto/user#ScreenDisplay>)
+
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3id.org/iSeeOnto/user#ScreenDisplay> :text)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3id.org/iSeeOnto/user#ScreenDisplay> <http://www.w3id.org/iSeeOnto/explainer#image>)
+
+
+)

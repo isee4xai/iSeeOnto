@@ -175,6 +175,14 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#ColorImage -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#ColorImage">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Image"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/BoschExplanationExperience#What_is_the_anomaly_in_the_sensor">
