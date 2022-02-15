@@ -83,6 +83,7 @@ Declaration(NamedIndividual(:AlimeExplanationExperience))
 Declaration(NamedIndividual(:AlimeMachineLearningMethod))
 Declaration(NamedIndividual(:AlimeUser))
 Declaration(NamedIndividual(:AlimeUserDomain))
+Declaration(NamedIndividual(:ChartVisualisationBasedExplanation))
 Declaration(NamedIndividual(:ClassificationUnderstanding))
 Declaration(NamedIndividual(:DataClustering))
 Declaration(NamedIndividual(:DeClassification))
@@ -133,7 +134,6 @@ Declaration(NamedIndividual(:InnocbrMachineLearningCBRMethod))
 Declaration(NamedIndividual(:InnocbrRuleBasedTechnique))
 Declaration(NamedIndividual(:InnocbrUserExpertDomain))
 Declaration(NamedIndividual(:MXAIDeveloper))
-Declaration(NamedIndividual(:MXALEBasedTechnique))
 Declaration(NamedIndividual(:MXDataset))
 Declaration(NamedIndividual(:MXDepressionScreening))
 Declaration(NamedIndividual(:MXDepressionScreeningModel))
@@ -363,6 +363,16 @@ ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :AlimeUser :AlimeUse
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> :AlimeUserDomain)
 ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :AlimeUserDomain <http://www.w3id.org/iSeeOnto/user#low>)
+
+# Individual: :ChartVisualisationBasedExplanation (:ChartVisualisationBasedExplanation)
+
+ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :ChartVisualisationBasedExplanation)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :ChartVisualisationBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :ChartVisualisationBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#global>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :ChartVisualisationBasedExplanation :chart)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :ChartVisualisationBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :ChartVisualisationBasedExplanation <http://www.w3id.org/iSeeOnto/explainer#model>)
+ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :ChartVisualisationBasedExplanation :chart)
 
 # Individual: :ClassificationUnderstanding (:ClassificationUnderstanding)
 
@@ -662,16 +672,6 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#hasResources> :MXAIDe
 ObjectPropertyAssertion(<https://purl.org/heals/eo#asks> :MXAIDeveloper <http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#What_are_the_most_important_aspects_to_predict_depression_in_undergraduate_students?>)
 ObjectPropertyAssertion(<https://purl.org/heals/eo#possess> :MXAIDeveloper :MXExpertUserDomain)
 
-# Individual: :MXALEBasedTechnique (:MXALEBasedTechnique)
-
-ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> :MXALEBasedTechnique)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#ante-hoc>)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#global>)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasOutputType> :MXALEBasedTechnique :chart)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#hasPortability> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#modelSpecific>)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#targetType> :MXALEBasedTechnique <http://www.w3id.org/iSeeOnto/explainer#model>)
-ObjectPropertyAssertion(<https://purl.org/heals/eo#hasPresentation> :MXALEBasedTechnique :chart)
-
 # Individual: :MXDataset (:MXDataset)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/aimodel#Dataset> :MXDataset)
@@ -680,7 +680,7 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> :MXDa
 # Individual: :MXDepressionScreening (:MXDepressionScreening)
 
 ClassAssertion(:IllnessDiagnosis :MXDepressionScreening)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXDepressionScreening :MXALEBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXDepressionScreening :ChartVisualisationBasedExplanation)
 
 # Individual: :MXDepressionScreeningModel (:MXDepressionScreeningModel)
 
@@ -697,7 +697,7 @@ ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> :MX
 # Individual: :MXExplainer (:MXExplainer)
 
 ClassAssertion(<http://www.w3id.org/iSeeOnto/explainer#Explainer> :MXExplainer)
-ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXExplainer :MXALEBasedTechnique)
+ObjectPropertyAssertion(<http://www.w3id.org/iSeeOnto/explainer#utilises> :MXExplainer :ChartVisualisationBasedExplanation)
 
 # Individual: :MXMethodDescription (:MXMethodDescription)
 
