@@ -1,13 +1,41 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/workflow#"
      xml:base="http://www.w3id.org/iSeeOnto/workflow"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/workflow">
-        <rdfs:comment xml:lang="en">The workflow module provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.</rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
+        <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Workflow Ontology is an ontology provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.
+		
+This representation is influenced by those described by: Recio-García, J., Díaz-Agudo, B., and González-Calero, P. (2009). Semantic templates for case-based reasoning systems. The Knowledge Engineering Review, 24(3), 245-264. doi:10.1017/S0269888909990051; and Garijo D, Gil Y. Augmenting PROV with Plans in P-PLAN: Scientific Processes as Linked Data. Linked Science 2012 - Tackling Big Data workshop ISWC 2012.
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Workflow Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wf</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/workflow</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -26,6 +54,7 @@
     <!-- http://www.w3id.org/iSeeOnto/workflow#composedOf -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/workflow#composedOf">
+        <rdfs:comment>Link between a CompositeTask and the ControlConstruct it is decomposed to.</rdfs:comment>
         <rdfs:label xml:lang="en">composed of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -34,6 +63,7 @@
     <!-- http://www.w3id.org/iSeeOnto/workflow#hasOutput -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/workflow#hasOutput">
+        <rdfs:comment>Link between a Task and a variable generated as output of the Task.</rdfs:comment>
         <rdfs:label xml:lang="en">has output</rdfs:label>
     </owl:ObjectProperty>
     
@@ -42,6 +72,7 @@
     <!-- http://www.w3id.org/iSeeOnto/workflow#isInputTo -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/workflow#isInputTo">
+        <rdfs:comment>Link between a Task and a variable provided as input to the Task.</rdfs:comment>
         <rdfs:label xml:lang="en">is input to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -50,6 +81,7 @@
     <!-- http://www.w3id.org/iSeeOnto/workflow#startTask -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/workflow#startTask">
+        <rdfs:comment>Link between a Workflow and the first task to be performed.</rdfs:comment>
         <rdfs:label xml:lang="en">start task</rdfs:label>
     </owl:ObjectProperty>
     
@@ -76,6 +108,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A Task consisting of a multiple steps. Composite Tasks should be decomposed inot other Tasks through the use of Control Constructs.</rdfs:comment>
         <rdfs:label xml:lang="en">Composite Task</rdfs:label>
     </owl:Class>
     
@@ -84,6 +117,7 @@
     <!-- http://www.w3id.org/iSeeOnto/workflow#ControlConstruct -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct">
+        <rdfs:comment>Defines how multiple tasks should be combined. This is an extension point for the workflow ontology.</rdfs:comment>
         <rdfs:label xml:lang="en">Control Construct</rdfs:label>
     </owl:Class>
     
@@ -93,6 +127,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/workflow#IfTheElse">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"/>
+        <rdfs:comment>An If-Then-Else control construct to be used to define that a specified Task should be performed if some condition is satified, otherwise another Task should be performed.</rdfs:comment>
         <rdfs:label xml:lang="en">If Then Else</rdfs:label>
     </owl:Class>
     
@@ -102,6 +137,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/workflow#Sequence">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"/>
+        <rdfs:comment>An Sequence control construct to be used to define a list of Task that should be performed in the specified order.</rdfs:comment>
         <rdfs:label xml:lang="en">Sequence</rdfs:label>
     </owl:Class>
     
@@ -111,6 +147,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/workflow#SimpleTask">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Task"/>
+        <rdfs:comment>A Task consisting of a single-step that can be achieved by some method..</rdfs:comment>
         <rdfs:label xml:lang="en">Simple Task</rdfs:label>
     </owl:Class>
     
@@ -125,6 +162,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Variable"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A Task is a step in a workflow that will be performed to generate an explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">Task</rdfs:label>
     </owl:Class>
     
@@ -139,6 +177,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Task"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Variables are used to define parameters that can be passed as input to a Task, or produced as the output of a Task.</rdfs:comment>
         <rdfs:label xml:lang="en">Variable</rdfs:label>
     </owl:Class>
     
@@ -153,6 +192,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Task"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A Workflow consists of one or more Tasks to generate an Explanation that will be provided to, and evaluated by, the User. Tasks can be either a SimpleTask representing a single-step that can be achieved by some Method, or a CompositeTask.  </rdfs:comment>
         <rdfs:label xml:lang="en">Workflow</rdfs:label>
     </owl:Class>
 </rdf:RDF>

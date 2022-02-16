@@ -19,8 +19,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:prov-o="http://www.w3.org/TR/prov-o/"
      xmlns:schema="http://schema.org/"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:explainer="http://www.w3id.org/iSeeOnto/explainer#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
@@ -30,22 +30,20 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/user"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/workflow"/>
+        <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explanation Experience Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/explanationexperience</vann:preferredNamespaceUri>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explanation Experience is an ontology is the initial model for case representations in the iSeeOnto ontology network. The case representation defines the structure for describing user experiences of explanations, serving as a model for querying, along with an initial model for describing solutions intended to generate the workflow necessary to provide explanations to users.
+		
+		This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</rdfs:comment>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
- 
     
 
 
@@ -57,12 +55,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
 
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-		<rdfs:label xml:lang="en">has AI Model</rdfs:label>
+        <rdfs:comment>Relationship between a Description and a AI Model.</rdfs:comment>
+        <rdfs:label xml:lang="en">has AI Model</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -70,7 +71,8 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription">
-		<rdfs:label xml:lang="en">has description</rdfs:label>
+        <rdfs:comment xml:lang="en">Relationship between an Explanation Experience and a Description.</rdfs:comment>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -78,7 +80,8 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer">
-		<rdfs:label xml:lang="en">has explainer</rdfs:label>
+        <rdfs:comment xml:lang="en">Relationship between a Description and an Explainer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has explainer</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -86,7 +89,7 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature">
-		<rdfs:label xml:lang="en">has feature</rdfs:label>
+        <rdfs:label xml:lang="en">has feature</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -94,7 +97,8 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution">
-		<rdfs:label xml:lang="en">has solution</rdfs:label>
+        <rdfs:comment xml:lang="en">Relationship between an Explanation Experience and a Solution.</rdfs:comment>
+        <rdfs:label xml:lang="en">has solution</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -102,7 +106,8 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasUser -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasUser">
-		<rdfs:label xml:lang="en">has user</rdfs:label>
+        <rdfs:comment xml:lang="en">Relationship between a Description and a User</rdfs:comment>
+        <rdfs:label xml:lang="en">has user</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -111,7 +116,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-		<rdfs:label xml:lang="en">has workflow</rdfs:label>
+        <rdfs:comment xml:lang="en">Relationship between a Solution and a Workflow</rdfs:comment>
+        <rdfs:label xml:lang="en">has workflow</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -146,15 +152,15 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature">
-		<rdfs:label xml:lang="en">Case Feature</rdfs:label>
-	</owl:Class>
+        <rdfs:comment xml:lang="en">Classes defined as subclasses of Case Feature are suitable to be used as types of features in a case description.</rdfs:comment>
+        <rdfs:label xml:lang="en">Case Feature</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Description -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Description">
-		<rdfs:label xml:lang="en">Description</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel"/>
@@ -173,6 +179,8 @@
                 <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#user"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Defines the description of a case using classes defined in other iSeeOnto ontologies to define the query in terms of the AIModel, eo:Explainer (defined in the Explainer Ontology), and eo:User (defined in the Explanation Ontology).</rdfs:comment>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
     </owl:Class>
     
 
@@ -180,7 +188,6 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience">
-		<rdfs:label xml:lang="en">Explanation Experience</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription"/>
@@ -193,6 +200,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Explanation Experience classis intended to capture an individual case in terms of the eo:AIModel used, the Explainer being used, and the User and the Solution created as an Explanation Strategy to satisfy the explanation needs of a user.</rdfs:comment>
+        <rdfs:label xml:lang="en">Explanation Experience</rdfs:label>
     </owl:Class>
     
 
@@ -200,25 +209,23 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Solution -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Solution">
-		<rdfs:label xml:lang="en">Solution</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Workflow"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Solution class is intended to describe the Workflow (defined in the workflow ontology) created as an Explanation Strategy to satisfy the Explanation needs of a user.</rdfs:comment>
+        <rdfs:label xml:lang="en">Solution</rdfs:label>
     </owl:Class>
     
 
- 
+
     <!-- https://purl.org/heals/eo#user -->
 
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
     </rdf:Description>
-    
-
-
 </rdf:RDF>
 
 

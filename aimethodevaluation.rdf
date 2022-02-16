@@ -23,6 +23,25 @@
         <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+		<terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Method Evaluation Ontology is an ontology that models the assessments, such as accuracy, F1 score, etc. of an AI Method. 
+		
+		An assessment activity is performed to evaluate the performance of a AI Method, using a metric which defines how the assessment should be performed. The outcome of the assessment is captured in the Result concept. The metric measuress some aspect of the AI Method, such as accuracy, precision, recall, completeness, etc. The assessment is performed by an Agent, either software or human. 
+		
+		The Prov properties startedAtTime and endedAtTime are used to record when the assessment took place.
+		
+		This pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E. Pignotti, 2015. QUAL: A Provenance-Aware Quality Model. J. Data and Information Quality 5, 3, Article 12 (February 2015) DOI:https://doi.org/10.1145/2700413.
+
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</rdfs:comment>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Method Evaluation Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aieval</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/aimethodevaluation</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -43,6 +62,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension"/>
         <rdfs:label xml:lang="en">AI Method Assessment Dimension</rdfs:label>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The dimension, such as Accuracy, Prevision, Recall, etc. that an evaluation assessed.</rdfs:comment>
     </owl:Class>
     
 
@@ -52,6 +72,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
         <rdfs:label xml:lang="en">AI Method Assessment Metric</rdfs:label>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The criteria used to guide the assessment of an AI Method and determine the result.</rdfs:comment>
     </owl:Class>
     
 
@@ -61,13 +82,15 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
         <rdfs:label xml:lang="en">AI Method Assessment Result</rdfs:label>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The result of assessing a specified dimention of an AI Method, as described by the metric specification.</rdfs:comment>
+
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodEffectivenessAssessment -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodEffectivenessAssessment">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -76,7 +99,9 @@
                 <owl:onClass rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">AI Method Effectiveness Assessment</rdfs:label>
+        <rdfs:label xml:lang="en">AI Method  Assessment</rdfs:label>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The activity performed that made an assessment of a AI Method, guided by a metric, to generate a Result. The assessment can be associated with the agent (e.g. User) that performed the assessment.</rdfs:comment>
+
     </owl:Class>
 </rdf:RDF>
 

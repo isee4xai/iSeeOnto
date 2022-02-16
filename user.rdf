@@ -23,6 +23,18 @@
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/user">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/user</vann:preferredNamespaceUri>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Ontology is an ontology that models users of the iSee platform. This includes capturing information related to users, their pre-existing knowledge (e.g., knowledge of the domain and/or AI techniques), their intent (i.e. goal/need for an explanation), and industry they are involved in.
+	
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -70,6 +82,7 @@
     <!-- http://www.w3id.org/iSeeOnto/user#hasIntent -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasIntent">
+        <rdfs:comment xml:lang="en">Relationship between a User and their Intent(s).</rdfs:comment>
         <rdfs:label xml:lang="en">has intent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -77,13 +90,17 @@
 
     <!-- http://www.w3id.org/iSeeOnto/user#hasQuestionTarget -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasQuestionTarget"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasQuestionTarget">
+        <rdfs:comment xml:lang="en">Relationship between a User Question and the target/subject of that question.</rdfs:comment>
+        <rdfs:label xml:lang="en">has question target</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/user#hasResources -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasResources">
+        <rdfs:comment xml:lang="en">Relationship between a User and the TechnicalFacilities they have available to them for, for example, consuming an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">has resources</rdfs:label>
     </owl:ObjectProperty>
     
@@ -92,6 +109,7 @@
     <!-- http://www.w3id.org/iSeeOnto/user#hasSubDomain -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#hasSubDomain">
+        <rdfs:comment xml:lang="en">Relationship between a Domain and its sub-domains.</rdfs:comment>
         <rdfs:label xml:lang="en">has subdomain</rdfs:label>
     </owl:ObjectProperty>
     
@@ -187,6 +205,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#HowQuestion">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+        <rdfs:comment xml:lang="en">Questions of a How nature.</rdfs:comment>
+        <rdfs:label xml:lang="en">How Question</rdfs:label>
     </owl:Class>
     
 
@@ -225,6 +245,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">User Question</rdfs:label>
     </owl:Class>
     
 
@@ -249,6 +270,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhatQuestion">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+        <rdfs:comment xml:lang="en">Questions of a What nature.</rdfs:comment>
+        <rdfs:label xml:lang="en">What Question</rdfs:label>
     </owl:Class>
     
 
@@ -257,6 +280,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhenQuestion">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+        <rdfs:comment xml:lang="en">Questions of a When nature.</rdfs:comment>
+        <rdfs:label xml:lang="en">When Question</rdfs:label>
     </owl:Class>
     
 
@@ -265,6 +290,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhyQuestion">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+        <rdfs:comment xml:lang="en">Questions of a Why nature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Why Question</rdfs:label>
     </owl:Class>
     
 
@@ -384,14 +411,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Persuasiveness">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#ProductManufacturing -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#ProductManufacturing">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000999"/>
     </owl:NamedIndividual>
     
 

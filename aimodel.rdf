@@ -23,7 +23,18 @@
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimodel">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <rdfs:comment xml:lang="en">The focus of the AI Method module  is to further expand the definition of the AI task and AI method to be able to specify the information required by the iSee Platform.</rdfs:comment>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:description xml:lang="en">The focus of the AI Model ontology is to further expand the definition of the AI Task and AI Method concepts from the Explanation Ontology to be able to specify the information required by the iSee Platform.
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Model Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aimod</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/aimodel</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -41,13 +52,19 @@
 
     <!-- http://www.w3id.org/iSeeOnto/aimodel#hasDataType -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDataType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDataType">
+        <rdfs:comment xml:lang="en">The relationship between a DataSet and the type of data it contains.</rdfs:comment>
+        <rdfs:label>has data type</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/aimodel#solves -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#solves"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#solves">
+        <rdfs:comment xml:lang="en">The relationship between an AI Model and the AI Task it (attempts to) solve.</rdfs:comment>
+        <rdfs:label xml:lang="en">solves</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -74,6 +91,7 @@
     <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures">
+        <rdfs:comment xml:lang="en">The number of features a dataset has.</rdfs:comment>
         <rdfs:label>number of features</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -82,6 +100,7 @@
     <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances">
+        <rdfs:comment xml:lang="en">The number of instances in a dataset.</rdfs:comment>
         <rdfs:label>number of instances</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -119,13 +138,15 @@
                 <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An Artificial Intelligence Model that has been developed using some AI Method by training on some Dataset to solve some AI Task.</rdfs:comment>
+        <rdfs:label>Artificial Intelligence Model</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimodel#AITakGoal -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AITakGoal">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000337"/>
         <rdfs:comment>The goal of an AI Task, or the purpose it was developed to achieve</rdfs:comment>
         <rdfs:label>AI Task Goal</rdfs:label>
@@ -137,6 +158,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+        <rdfs:comment xml:lang="en">AI classification task for Anomaly Detection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anomaly Detection</rdfs:label>
     </owl:Class>
     
 
@@ -145,6 +168,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification">
         <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:comment xml:lang="en">AI Tasks performing some classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Classification</rdfs:label>
     </owl:Class>
     
 
@@ -158,6 +183,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Dataset that has been used to train an AI model.</rdfs:comment>
         <rdfs:label xml:lang="en">Dataset</rdfs:label>
     </owl:Class>
     
@@ -167,6 +193,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting">
         <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:comment xml:lang="en">An AI forecasting task.</rdfs:comment>
+        <rdfs:label xml:lang="en">Forecasting</rdfs:label>
     </owl:Class>
     
 

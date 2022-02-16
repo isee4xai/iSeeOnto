@@ -22,6 +22,26 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
+		 <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Similarity Knowledge Ontology</terms:title>
+        <rdfs:comment xml:lang="en">The similarity knowledge ontology defines four strategies that can be used when evaluating the similarity of two concepts defined in iSeeOnto. 
+These following classes defined as subclasses of the Similarity Strategy class:
+- Exact Match, which indicates that there is a match if two individuals are exactly the same individual.
+
+- Hierarchy Distance, which indicates that two individuals match if they share a common type, but the similarity score depends on the distance between the asserted type of the type individuals.
+
+- Hierarchy Match, which indicates that two individuals match if they share a common type, regardless of its place in the hierarchy.
+
+- Same Type Match, which indicates that two individuals match if they both have the same asserted type.</rdfs:comment>
+
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simkn</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/SimilarityKnowledge</vann:preferredNamespaceUri>
+       
     </owl:Ontology>
     
 
@@ -40,6 +60,8 @@
     <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#applicableSimilarityStrategy -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#applicableSimilarityStrategy">
+        <rdfs:comment xml:lang="en">This property allows existing concepts to be annotated with a reference to the type of Similarity Strategy that is applicable.</rdfs:comment>
+        <rdfs:label xml:lang="en">applicable similarity strategy</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
     </owl:AnnotationProperty>
     
@@ -61,6 +83,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactFilter">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#FilteringStrategy"/>
         <rdfs:comment>Only cases with the same value (instance) will be retrieved</rdfs:comment>
+        <rdfs:label xml:lang="en">Exact Filter</rdfs:label>
     </owl:Class>
     
 
@@ -70,6 +93,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
         <rdfs:comment xml:lang="en">There is match if two individuals are exactly the same individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exact Match</rdfs:label>
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
     </owl:Class>
     
@@ -79,6 +103,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#FilteringStrategy">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#RetrievalStrategy"/>
+        <rdfs:comment xml:lang="en">Strategies for filtering results.</rdfs:comment>
+        <rdfs:label xml:lang="en">Filtering Strategy</rdfs:label>
     </owl:Class>
     
 
@@ -88,6 +114,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#HierarchyDistance">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
         <rdfs:comment xml:lang="en">Match if two individual share a common type, but the similarity score depends on the distance between the asserted types of the two individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hierarchy Distance</rdfs:label>
     </owl:Class>
     
 
@@ -97,6 +124,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#HierarchyMatch">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
         <rdfs:comment xml:lang="en">There is a match if two individual shares a common type, regardless of its place in the hierarch.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hierarchy Match</rdfs:label>
     </owl:Class>
     
 
@@ -112,6 +140,7 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SameTypeMatch">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
         <rdfs:comment xml:lang="en">There is a match if both individuals have the same asserted type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Same Type Match</rdfs:label>
     </owl:Class>
     
 
@@ -120,6 +149,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#RetrievalStrategy"/>
+        <rdfs:comment xml:lang="en">Strategies that can be used when evaluating the similarity of two concepts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Similarity Strategy</rdfs:label>
     </owl:Class>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
