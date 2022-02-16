@@ -21,7 +21,21 @@
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/explainer">
+        <owl:imports rdf:resource="http://purl.org/vocab/vann/"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explainer Ontology is an ontology that models the technique used by an Explainer (as defined by the &lt;a href=&quot;https://purl.org/heals/eo&quot;&gt;Explanation Ontology&lt;/a&gt;), to generate an Explanation. The concepts in this ontology reflect the a subset of the explanability fact sheet dimensions defined by Kacper Sokol and Peter Flach. 2020. Explainability fact sheets: a framework for systematic assessment of explainable approaches, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* &apos;20) DOI:https://doi.org/10.1145/3351095.3372870.
+
+This ontology was created as part of the iSee project (https://isee4xai.com) which
+received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explainer Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">explnr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/explainer</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -39,25 +53,40 @@
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#applicableProblemType -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">applicable problem type</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has applicable model types</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasComplexity -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasComplexity"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has complexity</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"/>
         <rdfs:label xml:lang="en">has concurrentness</rdfs:label>
     </owl:ObjectProperty>
     
@@ -65,7 +94,11 @@
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has explanation scope</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -74,13 +107,18 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasOutputType">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has output type</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#hasPortability -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPortability"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPortability">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Portability"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has portability</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -89,6 +127,7 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPresentation">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has presentation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -101,13 +140,21 @@
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#targetType -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#targetType"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#targetType">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target type</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#utilises -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#utilises"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#utilises">
+        <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utilises</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -126,6 +173,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Categorical">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categorical data type.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categorical</rdfs:label>
     </owl:Class>
     
 
@@ -169,6 +218,14 @@
     <!-- http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ante-hoc"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment xml:lang="en">Captured if the technique is ante-hoc (i.e. use the same model for the task and creating explanations) or post-hoc (i.e. different models are used to create the eo:SystemRecommendation and eo:Explanation)</rdfs:comment>
         <rdfs:label xml:lang="en">Explainer Concurrentness</rdfs:label>
     </owl:Class>
@@ -178,6 +235,15 @@
     <!-- http://www.w3id.org/iSeeOnto/explainer#ExplanationScope -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#cohort"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#global"/>
+                    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#local"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment xml:lang="en">The extent to which explanations generated by an explanation technique can be generalised.</rdfs:comment>
         <rdfs:label xml:lang="en">Explanation Scope</rdfs:label>
     </owl:Class>
@@ -197,6 +263,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Image">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image data type</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image</rdfs:label>
     </owl:Class>
     
 
@@ -205,6 +273,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Numerical">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical data type.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical</rdfs:label>
     </owl:Class>
     
 
@@ -213,6 +283,8 @@
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Ordinal">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinal data type.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinal</rdfs:label>
     </owl:Class>
     
 
@@ -252,6 +324,7 @@
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#categorical">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment xml:lang="en">Data having a categorical type.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorical</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -339,7 +412,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#modelSpecific">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Portability"/>
-        <rdfs:label xml:lang="en">An Explanation Technique that works with a specific type of model.</rdfs:label>
+        <rdfs:comment xml:lang="en">An Explanation Technique that works with a specific type of model.</rdfs:comment>
         <rdfs:label xml:lang="en">model-specific</rdfs:label>
     </owl:NamedIndividual>
     
@@ -380,6 +453,24 @@
         <rdfs:comment xml:lang="en">The Predictions are the target of an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">prediction</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ante-hoc"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
