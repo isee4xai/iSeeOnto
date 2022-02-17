@@ -1,0 +1,81 @@
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://www.w3.org/2002/07/owl#imports> <http://sensornet.abdn.ac.uk/onts/Qual-O> .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/evaluation> .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://www.w3.org/2002/07/owl#imports> <https://purl.org/heals/eo/1.0.0> .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/contributor> "Chamath Palihawadana" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/contributor> "David Corsar" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/contributor> "Ikechukwu Nkisi-Orji" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/contributor> "Juan A. Recio-Garcia" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/contributor> "Marta Caro Martínez" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/dc/terms/title> "The User Evaluation Ontology" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/vocab/vann/preferredNamespacePrefix> "usreval" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/userevaluation" .
+<http://www.w3id.org/iSeeOnto/userevaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "The UserEvaluation Ontology is an ontology that models the assessments, made by a User of, for example, an Explanation.\n\t\t\nAn assessment activity is performed to evaluate the subject (e.g. Explanation) using a metric (e.g. a Question) which is designed to evaluate some aspect of the subject, such as how understandable or useful it is.  The outcome of the assessment is captured in the Result concept.  \n\t\t\nThe Prov properties startedAtTime and endedAtTime are used to record when the assessment took place.\n\t\t\nThis pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E. Pignotti, 2015. QUAL: A Provenance-Aware Quality Model. J. Data and Information Quality 5, 3, Article 12 (February 2015) DOI:https://doi.org/10.1145/2700413.\n\n\t\t\nThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies." .
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/userevaluation#hasContent
+<http://www.w3id.org/iSeeOnto/userevaluation#hasContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/iSeeOnto/userevaluation#hasContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides a  textual description detailing how the result of a metric should be interpreted."@en .
+<http://www.w3id.org/iSeeOnto/userevaluation#hasContent> <http://www.w3.org/2000/01/rdf-schema#label> "has content"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Metric
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Result
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3id.org/iSeeOnto/userevaluation#Question
+<http://www.w3id.org/iSeeOnto/userevaluation#Question> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/userevaluation#Question> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> .
+<http://www.w3id.org/iSeeOnto/userevaluation#Question> <http://www.w3.org/2000/01/rdf-schema#comment> "A Question posed to the user and used as a metric for guiding assessment of an entity, such as an Explanation."@en .
+<http://www.w3id.org/iSeeOnto/userevaluation#Question> <http://www.w3.org/2000/01/rdf-schema#label> "Question"@en .
+# 
+# http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy
+<http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/userevaluation#hasContent> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "Aids the interpretation of a User Evaluation Result by providing a textual description detailing how the result of a metric should be interpreted"@en .
+<http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Result Interpretation Policy"@en .
+# 
+# http://www.w3id.org/iSeeOnto/userevaluation#Survey
+<http://www.w3id.org/iSeeOnto/userevaluation#Survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/userevaluation#Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> .
+<http://www.w3id.org/iSeeOnto/userevaluation#Survey> <http://www.w3.org/2000/01/rdf-schema#comment> "A Survey used to query a user as part of an evaluation activity, assessing, for example, an Explanation."@en .
+<http://www.w3id.org/iSeeOnto/userevaluation#Survey> <http://www.w3.org/2000/01/rdf-schema#label> "Survey"@en .
+# 
+# http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment> .
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "The assessment performed by a User to assessing, for example, an Explanation, using a given Metric (e.g. Question), producing a UserEvaluationResult"@en .
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "User Evaluation" .
+# 
+# http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Result> .
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The result (outcome) of a User Evaluation assessment."@en .
+<http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult> <http://www.w3.org/2000/01/rdf-schema#label> "User Evaluation Result"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

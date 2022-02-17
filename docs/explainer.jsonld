@@ -1,0 +1,531 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#ante-hoc"
+    }, {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#post-hoc"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#cohort"
+    }, {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#global"
+    }, {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#local"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#ante-hoc"
+    }, {
+      "@id" : "http://www.w3id.org/iSeeOnto/explainer#post-hoc"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Anjana Wijekoon"
+  }, {
+    "@value" : "Chamath Palihawadana"
+  }, {
+    "@value" : "David Corsar"
+  }, {
+    "@value" : "Ikechukwu Nkisi-Orji"
+  }, {
+    "@value" : "Juan A. Recio-Garcia"
+  }, {
+    "@value" : "Marta Caro Martínez"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The Explainer Ontology is an ontology that models the technique used by an Explainer (as defined by the <a href=\"https://purl.org/heals/eo\">Explanation Ontology</a>), to generate an Explanation. The concepts in this ontology reflect the a subset of the explanability fact sheet dimensions defined by Kacper Sokol and Peter Flach. 2020. Explainability fact sheets: a framework for systematic assessment of explainable approaches, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20) DOI:https://doi.org/10.1145/3351095.3372870.\n\nThis ontology was created as part of the iSee project (https://isee4xai.com) which\nreceived funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "The Explainer Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "explnr"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://www.w3id.org/iSeeOnto/explainer"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/vocab/vann/"
+  }, {
+    "@id" : "https://purl.org/heals/eo/1.0.0"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#Categorical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Categorical data type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Categorical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#DataType"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Details relating the resources required by an Explainability Technique to generate an Explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Computational Complexity"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#DataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The types of model features (e.g., categorical, numerical, ordinal, image) that a given Explainability Technique can be used."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Type"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The technique used by an Explainer to generate an Explanation, such as rule-based learner, Decision Tree, Influence functions, Sensitivity, Saliency, and so on as categorised by Arrieta et. al. (2020)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Explainability Technique"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#Explainer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An Explainer uses an Explainability Technique to generate Explanations for an AI Models output."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Explainer"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Captured if the technique is ante-hoc (i.e. use the same model for the task and creating explanations) or post-hoc (i.e. different models are used to create the eo:SystemRecommendation and eo:Explanation)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Explainer Concurrentness"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplanationScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The extent to which explanations generated by an explanation technique can be generalised."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Explanation Scope"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The target of the Explanation Technique, i.e. the thing an Explanation is being generated for."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Explanation Target"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Image data type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Image"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#DataType"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#Numerical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Numerical data type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Numerical"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#DataType"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#Ordinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ordinal data type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ordinal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#DataType"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#Portability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The type of model an Explainability Technique can be applied to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Portability"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ante-hoc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An ante-hoc Explanation Technique use the same model for the task and creating explanations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ante-hoc"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#applicableProblemType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an ExplainabilityTechnique and the type of eo:AI Task the technique can be used with. The Explanation Ontology defines three subclasses of eo:AI Task that the system was undertaking, namely for inductive, abductive, and deductive tasks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "applicable problem type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/heals/eo#AITask"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#categorical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#DataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data having a categorical type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "categorical"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#cohort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplanationScope" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Explanations generated by an Explanation Technique with local scope explain a subgroup in a dataset or subspace in a model's decision space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cohort"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#data",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Raw or feature data that are the target of an explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "data"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#global",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplanationScope" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Explanations generated by an Explanation Technique with global scope explain an AI Model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "global"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For ExplainabilityTechniques with Portability of model-class specific (works with a particular family of models) and model-specific, this property links to the relevant class in the eo:AI Method hierarchy that this ExplainabilityTechnique can be used with."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has applicable model types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://purl.org/heals/eo#ArtificialIntelligenceMethod"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasComplexity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationahip between an ExplainabilityTechnique and some representation of the ComputationalComplexity of using it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has complexity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an ExplinabilityTechnique and whether it is ante-hoc or post-hoc.\n\t\t"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has concurrentness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an ExplinabilityTechnique and the extent to which explanations generated by it can be generalised, as defined in individuals of type ExplanationScope (e.g. local, cohort, global).\n\t\t"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has explanation scope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasOutputType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an ExplinabilityTechnique and the type of explanations generated by it, as defined by subclasses of eo:Explanation.\n\t\t"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has output type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasPortability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link between Explainability Technique and the type of AI models it can be applied in terms of model-agnostic (works with any model family), model-class specific (works with a particular family of models), and model-specific as represented in individuals of type Portability."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has portability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#Portability"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#hasPresentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link between Explainability Technique and the types of Information Content Entity (e.g. mathematical, language, computational) that is used to present the explanation. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has presentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://semanticscience.org/resource/SIO_000015"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#DataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data of type image."
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link between Explainability Technique and the types of features used by the model being explained that the technique can be used with.\t"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is compatible with feature types"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#local",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplanationScope" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Explanations generated by an Explanation Technique with local scope explain a single data point or prediction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "local"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The AI Model is the target of an Explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "model"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#model-agnostic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#Portability" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An Explanation Technique that works with any model family."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "model-agnostic"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#Portability" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An Explanation Technique that works with a particular family of models."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "model-class specific"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#modelSpecific",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#Portability" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An Explanation Technique that works with a specific type of model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "model-specific"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#numerical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#DataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data having a numerical type"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#ordinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#DataType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data having an ordinal type"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#post-hoc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A post-hoc Explanation Technique uses different models to create the eo:SystemRecommendation and eo:Explanation to that which were used as part of the Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "post-hoc"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#prediction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Predictions are the target of an Explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "prediction"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#targetType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link between Explainability Technique and target of the explaination - i.e. the thing being explained."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "target type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/explainer#utilises",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link between an Explainer and the Explainability Technique that is uses."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#Explainer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "utilises"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+  } ]
+} ]

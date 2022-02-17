@@ -1,0 +1,65 @@
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://www.w3.org/2002/07/owl#imports> <http://sensornet.abdn.ac.uk/onts/Qual-O> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/evaluation> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://www.w3.org/2002/07/owl#imports> <https://purl.org/heals/eo/1.0.0> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/contributor> "Chamath Palihawadana" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/contributor> "David Corsar" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/contributor> "Ikechukwu Nkisi-Orji" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/contributor> "Juan A. Recio-Garcia" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/contributor> "Marta Caro Martínez" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/dc/terms/title> "The AI Method Evaluation Ontology" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aieval" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/aimethodevaluation" .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "The AI Method Evaluation Ontology is an ontology that models the assessments, such as accuracy, F1 score, etc. of an AI Method. \n\t\t\n\t\tAn assessment activity is performed to evaluate the performance of a AI Method, using a metric which defines how the assessment should be performed. The outcome of the assessment is captured in the Result concept. The metric measuress some aspect of the AI Method, such as accuracy, precision, recall, completeness, etc. The assessment is performed by an Agent, either software or human. \n\t\t\n\t\tThe Prov properties startedAtTime and endedAtTime are used to record when the assessment took place.\n\t\t\n\t\tThis pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E. Pignotti, 2015. QUAL: A Provenance-Aware Quality Model. J. Data and Information Quality 5, 3, Article 12 (February 2015) DOI:https://doi.org/10.1145/2700413.\n\n\t\t\nThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies." .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Metric
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://sensornet.abdn.ac.uk/onts/Qual-O#Result
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#used> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <https://purl.org/heals/eo#ArtificialIntelligenceMethod> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity performed that made an assessment of a AI Method, guided by a metric, to generate a Result. The assessment can be associated with the agent (e.g. User) that performed the assessment." .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "AI Method  Assessment"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The dimension, such as Accuracy, Prevision, Recall, etc. that an evaluation assessed." .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension> <http://www.w3.org/2000/01/rdf-schema#label> "AI Method Assessment Dimension"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "The criteria used to guide the assessment of an AI Method and determine the result." .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric> <http://www.w3.org/2000/01/rdf-schema#label> "AI Method Assessment Metric"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensornet.abdn.ac.uk/onts/Qual-O#Result> .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of assessing a specified dimention of an AI Method, as described by the metric specification." .
+<http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult> <http://www.w3.org/2000/01/rdf-schema#label> "AI Method Assessment Result"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

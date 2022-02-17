@@ -1,0 +1,268 @@
+<http://www.w3id.org/iSeeOnto/user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/iSeeOnto/user> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/explainer> .
+<http://www.w3id.org/iSeeOnto/user> <http://www.w3.org/2002/07/owl#imports> <https://purl.org/heals/eo/1.0.0> .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/contributor> "Chamath Palihawadana" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/contributor> "David Corsar" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/contributor> "Ikechukwu Nkisi-Orji" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/contributor> "Juan A. Recio-Garcia" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/contributor> "Marta Caro Martínez" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/dc/terms/title> "The User Ontology" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/vocab/vann/preferredNamespacePrefix> "usr" .
+<http://www.w3id.org/iSeeOnto/user> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/user" .
+<http://www.w3id.org/iSeeOnto/user> <http://www.w3.org/2000/01/rdf-schema#comment> "The User Ontology is an ontology that models users of the iSee platform. This includes capturing information related to users, their pre-existing knowledge (e.g., knowledge of the domain and/or AI techniques), their intent (i.e. goal/need for an explanation), and industry they are involved in.\n\t\nThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies." .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/user#addressesQuestion
+<http://www.w3id.org/iSeeOnto/user#addressesQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#addressesQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an Explanation Technique and the questions it addresses."@en .
+<http://www.w3id.org/iSeeOnto/user#addressesQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "addresses question"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#canHandle
+<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Technical Facilitiy and the types of Explanation Modality that the facility can support."@en .
+<http://www.w3id.org/iSeeOnto/user#canHandle> <http://www.w3.org/2000/01/rdf-schema#label> "can handle"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#hasGoal
+<http://www.w3id.org/iSeeOnto/user#hasGoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#hasGoal> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/heals/eo#user> .
+<http://www.w3id.org/iSeeOnto/user#hasGoal> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticscience.org/resource/SIO_000006> .
+<http://www.w3id.org/iSeeOnto/user#hasGoal> <http://www.w3.org/2000/01/rdf-schema#label> "has goal"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#hasIntent
+<http://www.w3id.org/iSeeOnto/user#hasIntent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#hasIntent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a User and their Intent(s)."@en .
+<http://www.w3id.org/iSeeOnto/user#hasIntent> <http://www.w3.org/2000/01/rdf-schema#label> "has intent"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#hasQuestionTarget
+<http://www.w3id.org/iSeeOnto/user#hasQuestionTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#hasQuestionTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a User Question and the target/subject of that question."@en .
+<http://www.w3id.org/iSeeOnto/user#hasQuestionTarget> <http://www.w3.org/2000/01/rdf-schema#label> "has question target"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#hasResources
+<http://www.w3id.org/iSeeOnto/user#hasResources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#hasResources> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a User and the TechnicalFacilities they have available to them for, for example, consuming an Explanation."@en .
+<http://www.w3id.org/iSeeOnto/user#hasResources> <http://www.w3.org/2000/01/rdf-schema#label> "has resources"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#hasSubDomain
+<http://www.w3id.org/iSeeOnto/user#hasSubDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#hasSubDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Domain and its sub-domains."@en .
+<http://www.w3id.org/iSeeOnto/user#hasSubDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has subdomain"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#levelOfKnowledge
+<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Captures an agent's level of knowledge / expertise."@en .
+<http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "level of knowledge"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#operatesIn
+<http://www.w3id.org/iSeeOnto/user#operatesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/user#operatesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an AI Task and the Domain that it is operating in."@en .
+<http://www.w3id.org/iSeeOnto/user#operatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "operates in"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique
+<http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#addressesQuestion> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticscience.org/resource/SIO_000085> .
+# 
+# http://www.w3id.org/iSeeOnto/user#AIMethodKnowledge
+<http://www.w3id.org/iSeeOnto/user#AIMethodKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#AIMethodKnowledge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/heals/eo#knowledge> .
+<http://www.w3id.org/iSeeOnto/user#AIMethodKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Knowledge of a particular AI Method or type of AI Method"@en .
+<http://www.w3id.org/iSeeOnto/user#AIMethodKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "AI Method Knowledge"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#AudioFacilities
+<http://www.w3id.org/iSeeOnto/user#AudioFacilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#AudioFacilities> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> .
+<http://www.w3id.org/iSeeOnto/user#AudioFacilities> <http://www.w3.org/2000/01/rdf-schema#comment> "Different type of Audio facilities (speakers, headphones, microphones, etc.)."@en .
+<http://www.w3id.org/iSeeOnto/user#AudioFacilities> <http://www.w3.org/2000/01/rdf-schema#label> "Audio Facilities"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#Domain
+<http://www.w3id.org/iSeeOnto/user#Domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#Domain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#hasSubDomain> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3id.org/iSeeOnto/user#Domain> .
+<http://www.w3id.org/iSeeOnto/user#Domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#DomainKnowledge
+<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/heals/eo#knowledge> .
+<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Knowledge of a specific, specialised domain or field."@en .
+<http://www.w3id.org/iSeeOnto/user#DomainKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "Domain Knowledge"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#HowQuestion
+<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#UserQuestion> .
+<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Questions of a How nature."@en .
+<http://www.w3id.org/iSeeOnto/user#HowQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "How Question"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#KnowledgeLevel
+<http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration class for defining the levels of knowledge / expertise an agent can have of discipline, field, or topic."@en .
+<http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Level"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#TechnicalFacilities
+<http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#canHandle> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purl.org/heals/eo#ExplanationModality> .
+<http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines different typs of technical resources (audio, video, etc)."@en .
+<http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Facilities"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#UserQuestion
+<http://www.w3id.org/iSeeOnto/user#UserQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#UserQuestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000085> .
+<http://www.w3id.org/iSeeOnto/user#UserQuestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#hasQuestionTarget> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/user#UserQuestionTarget> .
+<http://www.w3id.org/iSeeOnto/user#UserQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "User Question"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#UserQuestionTarget
+<http://www.w3id.org/iSeeOnto/user#UserQuestionTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3id.org/iSeeOnto/user#VisualFacilities
+<http://www.w3id.org/iSeeOnto/user#VisualFacilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#VisualFacilities> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> .
+<http://www.w3id.org/iSeeOnto/user#VisualFacilities> <http://www.w3.org/2000/01/rdf-schema#comment> "Different types of technical facilities capable of displaying visual information ( projector, monitor, television, tablet, etc.)"@en .
+<http://www.w3id.org/iSeeOnto/user#VisualFacilities> <http://www.w3.org/2000/01/rdf-schema#label> "Visual Facilities"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#WhatQuestion
+<http://www.w3id.org/iSeeOnto/user#WhatQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#WhatQuestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#UserQuestion> .
+<http://www.w3id.org/iSeeOnto/user#WhatQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Questions of a What nature."@en .
+<http://www.w3id.org/iSeeOnto/user#WhatQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "What Question"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#WhenQuestion
+<http://www.w3id.org/iSeeOnto/user#WhenQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#WhenQuestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#UserQuestion> .
+<http://www.w3id.org/iSeeOnto/user#WhenQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Questions of a When nature."@en .
+<http://www.w3id.org/iSeeOnto/user#WhenQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "When Question"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#WhyQuestion
+<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#UserQuestion> .
+<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Questions of a Why nature."@en .
+<http://www.w3id.org/iSeeOnto/user#WhyQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "Why Question"@en .
+# 
+# https://purl.org/heals/eo#AITask
+<https://purl.org/heals/eo#AITask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://purl.org/heals/eo#implements> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/user#UserQuestion> .
+# 
+# https://purl.org/heals/eo#ArtificialIntelligenceMethod
+<https://purl.org/heals/eo#ArtificialIntelligenceMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#UserQuestionTarget> .
+# 
+# https://purl.org/heals/eo#SystemRecommendation
+<https://purl.org/heals/eo#SystemRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/user#UserQuestionTarget> .
+# 
+# https://purl.org/heals/eo#knowledge
+<https://purl.org/heals/eo#knowledge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#levelOfKnowledge> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> .
+# 
+# https://purl.org/heals/eo#user
+<https://purl.org/heals/eo#user> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#hasGoal> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticscience.org/resource/SIO_000006> .
+<https://purl.org/heals/eo#user> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#hasIntent> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticscience.org/resource/SIO_000358> .
+<https://purl.org/heals/eo#user> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/user#hasResources> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/user#TechnicalFacilities> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/user#Debugging
+<http://www.w3id.org/iSeeOnto/user#Debugging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Debugging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Education
+<http://www.w3id.org/iSeeOnto/user#Education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Effectiveness
+<http://www.w3id.org/iSeeOnto/user#Effectiveness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Effectiveness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Efficiency
+<http://www.w3id.org/iSeeOnto/user#Efficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Efficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Persuasiveness
+<http://www.w3id.org/iSeeOnto/user#Persuasiveness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Persuasiveness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Satisfaction
+<http://www.w3id.org/iSeeOnto/user#Satisfaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Satisfaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#ScreenDisplay
+<http://www.w3id.org/iSeeOnto/user#ScreenDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#ScreenDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3id.org/iSeeOnto/user#VisualFacilities> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Scruitablity
+<http://www.w3id.org/iSeeOnto/user#Scruitablity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Scruitablity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Speaker
+<http://www.w3id.org/iSeeOnto/user#Speaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Speaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3id.org/iSeeOnto/user#AudioFacilities> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Transparency
+<http://www.w3id.org/iSeeOnto/user#Transparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Transparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#Trust
+<http://www.w3id.org/iSeeOnto/user#Trust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#Trust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticscience.org/resource/SIO_000358> .
+# 
+# http://www.w3id.org/iSeeOnto/user#high
+<http://www.w3id.org/iSeeOnto/user#high> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#high> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> .
+<http://www.w3id.org/iSeeOnto/user#high> <http://www.w3.org/2000/01/rdf-schema#label> "high"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#low
+<http://www.w3id.org/iSeeOnto/user#low> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#low> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> .
+<http://www.w3id.org/iSeeOnto/user#low> <http://www.w3.org/2000/01/rdf-schema#label> "low"@en .
+# 
+# http://www.w3id.org/iSeeOnto/user#medium
+<http://www.w3id.org/iSeeOnto/user#medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3id.org/iSeeOnto/user#medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3id.org/iSeeOnto/user#KnowledgeLevel> .
+<http://www.w3id.org/iSeeOnto/user#medium> <http://www.w3.org/2000/01/rdf-schema#label> "medium"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

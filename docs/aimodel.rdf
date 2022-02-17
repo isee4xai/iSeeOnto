@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/aimodel#"
+     xml:base="http://www.w3id.org/iSeeOnto/aimodel"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:prov-o="http://www.w3.org/TR/prov-o/"
+     xmlns:schema="http://schema.org/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimodel">
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
+        <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
+        <terms:description xml:lang="en">The focus of the AI Model ontology is to further expand the definition of the AI Task and AI Method concepts from the Explanation Ontology to be able to specify the information required by the iSee Platform.
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title>The AI Model Ontology</terms:title>
+        <vann:preferredNamespacePrefix>aimod</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.w3id.org/iSeeOnto/aimodel</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasDataType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDataType">
+        <rdfs:comment xml:lang="en">The relationship between a DataSet and the type of data it contains.</rdfs:comment>
+        <rdfs:label>has data type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#solves -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#solves">
+        <rdfs:comment xml:lang="en">The relationship between an AI Model and the AI Task it (attempts to) solve.</rdfs:comment>
+        <rdfs:label xml:lang="en">solves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#trainedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#trainedOn">
+        <rdfs:comment xml:lang="en">Relationship between an AI Method, and the types of data it was trained on.</rdfs:comment>
+        <rdfs:label xml:lang="en">trained on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures">
+        <rdfs:comment xml:lang="en">The number of features a dataset has.</rdfs:comment>
+        <rdfs:label>number of features</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances">
+        <rdfs:comment xml:lang="en">The number of instances in a dataset.</rdfs:comment>
+        <rdfs:label>number of instances</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AIModel -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AIModel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#solves"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#AITask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explainer#utilises"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An Artificial Intelligence Model that has been developed using some AI Method by training on some Dataset to solve some AI Task.</rdfs:comment>
+        <rdfs:label>Artificial Intelligence Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000337"/>
+        <rdfs:comment>The goal of an AI Task, or the purpose it was developed to achieve</rdfs:comment>
+        <rdfs:label>AI Task Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+        <rdfs:comment xml:lang="en">AI classification task for Anomaly Detection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anomaly Detection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Classification -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:comment xml:lang="en">AI Tasks performing some classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasDataType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Dataset that has been used to train an AI model.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Forecasting -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:comment xml:lang="en">An AI forecasting task.</rdfs:comment>
+        <rdfs:label xml:lang="en">Forecasting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</terms:source>
+        <rdfs:label>K-Nearest Neighbours</rdfs:label>
+        <skos:definition>is a supervised machine learning algorithm for labeling an unknown data point given existing labeled data.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency -->
+
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+        <terms:source>https://en.wikipedia.org/wiki/Tf%E2%80%93idf</terms:source>
+        <rdfs:label>Term frequency–Inverse document frequency</rdfs:label>
+        <skos:definition>is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/heals/eo#ArtificialIntelligenceMethod -->
+
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#ArtificialIntelligenceMethod">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#used"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting"/>
+            <rdf:Description rdf:about="https://purl.org/heals/eo#AbductiveTask"/>
+            <rdf:Description rdf:about="https://purl.org/heals/eo#DeductiveTask"/>
+            <rdf:Description rdf:about="https://purl.org/heals/eo#InductiveTask"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

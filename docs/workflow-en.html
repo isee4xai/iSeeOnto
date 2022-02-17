@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The Workflow Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/workflow","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/workflow","name":"The Workflow Ontology", "headline":"The Workflow Ontology is an ontology provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.				This representation is influenced by those described by: Recio-García, J., Díaz-Agudo, B., and González-Calero, P. (2009). Semantic templates for case-based reasoning systems. The Knowledge Engineering Review, 24(3), 245-264. doi:10.1017/S0269888909990051; and Garijo D, Gil Y. Augmenting PROV with Plans in P-PLAN: Scientific Processes as Linked Data. Linked Science 2012 - Tackling Big Data workshop ISWC 2012.				This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Wed Feb 16 21:36:39 GMT 2022", "contributor":[{"@type":"Person","name":"Anjana Wijekoon"},{"@type":"Person","name":"Chamath Palihawadana"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Workflow Ontology</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://www.w3id.org/iSeeOnto/workflow">https://www.w3id.org/iSeeOnto/workflow</a></dd>
+<dt>Contributors:</dt>
+<dd>Anjana Wijekoon</dd><dd>Chamath Palihawadana</dd><dd>David Corsar</dd><dd>Ikechukwu Nkisi-Orji</dd><dd>Juan A. Recio-Garcia</dd><dd>Marta Caro Martínez</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://linkedu.eu/dedalo/explanationPattern.owl">explanationPattern.owl</a></dd><dd><a href="http://semanticscience.org/ontology/sio.owl">sio.owl</a></dd><dd><a href="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl">cpannotationschema.owl</a></dd><dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3id.org/iSeeOnto/explainer">explainer</a></dd><dd><a href="https://purl.org/heals/eo">eo</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="workflow.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="workflow.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="workflow.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="workflow.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd> The Workflow Ontology.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Workflow Ontology is an ontology provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.
+		
+This representation is influenced by those described by: Recio-García, J., Díaz-Agudo, B., and González-Calero, P. (2009). Semantic templates for case-based reasoning systems. The Knowledge Engineering Review, 24(3), 245-264. doi:10.1017/S0269888909990051; and Garijo D, Gil Y. Augmenting PROV with Plans in P-PLAN: Scientific Processes as Linked Data. Linked Science 2012 - Tackling Big Data workshop ISWC 2012.
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.
+		</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>wf</b></td><td>&lt;https://www.w3id.org/iSeeOnto/workflow&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>wf</b></td><td>&lt;http://www.w3id.org/iSeeOnto/workflow&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The Workflow Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#CompositeTask"
+         title="http://www.w3id.org/iSeeOnto/workflow#CompositeTask">Composite Task</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+         title="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct">Control Construct</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#IfTheElse" title="http://www.w3id.org/iSeeOnto/workflow#IfTheElse">If Then Else</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#Sequence" title="http://www.w3id.org/iSeeOnto/workflow#Sequence">Sequence</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#SimpleTask" title="http://www.w3id.org/iSeeOnto/workflow#SimpleTask">Simple Task</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#Task" title="http://www.w3id.org/iSeeOnto/workflow#Task">Task</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#Variable" title="http://www.w3id.org/iSeeOnto/workflow#Variable">Variable</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#Workflow" title="http://www.w3id.org/iSeeOnto/workflow#Workflow">Workflow</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#composedOf" title="http://www.w3id.org/iSeeOnto/workflow#composedOf">composed of</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#hasOutput" title="http://www.w3id.org/iSeeOnto/workflow#hasOutput">has output</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#isInputTo" title="http://www.w3id.org/iSeeOnto/workflow#isInputTo">is input to</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/workflow#startTask" title="http://www.w3id.org/iSeeOnto/workflow#startTask">start task</a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The Workflow Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<img src="imgs/Workflow.png" alt="Outline of the Workflow ontology main classes and relationships">
+<figcaption>Outline of the Workflow ontology main classes and relationships. Concepts highlighted in purple are defined in this ontology.</figcaption>
+<
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for The Workflow Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Workflow Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#CompositeTask"
+            title="http://www.w3id.org/iSeeOnto/workflow#CompositeTask">Composite Task</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+            title="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct">Control Construct</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#IfTheElse" title="http://www.w3id.org/iSeeOnto/workflow#IfTheElse">If Then Else</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#Sequence" title="http://www.w3id.org/iSeeOnto/workflow#Sequence">Sequence</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#SimpleTask" title="http://www.w3id.org/iSeeOnto/workflow#SimpleTask">Simple Task</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#Task" title="http://www.w3id.org/iSeeOnto/workflow#Task">Task</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#Variable" title="http://www.w3id.org/iSeeOnto/workflow#Variable">Variable</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#Workflow" title="http://www.w3id.org/iSeeOnto/workflow#Workflow">Workflow</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#CompositeTask">
+      <h3>Composite Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#CompositeTask</p>
+      <div class="comment">
+         <span class="markdown">A Task consisting of a multiple steps. Composite Tasks should be decomposed inot other Tasks through the use of Control Constructs.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/workflow#Task" title="http://www.w3id.org/iSeeOnto/workflow#Task">Task</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct">
+      <h3>Control Construct<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#ControlConstruct</p>
+      <div class="comment">
+         <span class="markdown">Defines how multiple tasks should be combined. This is an extension point for the workflow ontology.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/workflow#IfTheElse" title="http://www.w3id.org/iSeeOnto/workflow#IfTheElse">If Then Else</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/iSeeOnto/workflow#Sequence" title="http://www.w3id.org/iSeeOnto/workflow#Sequence">Sequence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#IfTheElse">
+      <h3>If Then Else<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#IfTheElse</p>
+      <div class="comment">
+         <span class="markdown">An If-Then-Else control construct to be used to define that a specified Task should be performed if some condition is satified, otherwise another Task should be performed.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+               title="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct">Control Construct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#Sequence">
+      <h3>Sequence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#Sequence</p>
+      <div class="comment">
+         <span class="markdown">An Sequence control construct to be used to define a list of Task that should be performed in the specified order.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+               title="http://www.w3id.org/iSeeOnto/workflow#ControlConstruct">Control Construct</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#SimpleTask">
+      <h3>Simple Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#SimpleTask</p>
+      <div class="comment">
+         <span class="markdown">A Task consisting of a single-step that can be achieved by some method..</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/workflow#Task" title="http://www.w3id.org/iSeeOnto/workflow#Task">Task</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#Task">
+      <h3>Task<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#Task</p>
+      <div class="comment">
+         <span class="markdown">A Task is a step in a workflow that will be performed to generate an explanation.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/workflow#CompositeTask"
+               title="http://www.w3id.org/iSeeOnto/workflow#CompositeTask">Composite Task</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/iSeeOnto/workflow#SimpleTask" title="http://www.w3id.org/iSeeOnto/workflow#SimpleTask">Simple Task</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#Variable">
+      <h3>Variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#Variable</p>
+      <div class="comment">
+         <span class="markdown">Variables are used to define parameters that can be passed as input to a Task, or produced as the output of a Task.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#Workflow">
+      <h3>Workflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#Workflow</p>
+      <div class="comment">
+         <span class="markdown">A Workflow consists of one or more Tasks to generate an Explanation that will be provided to, and evaluated by, the User. Tasks can be either a SimpleTask representing a single-step that can be achieved by some Method, or a CompositeTask.  </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#composedOf" title="http://www.w3id.org/iSeeOnto/workflow#composedOf">composed of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#hasOutput" title="http://www.w3id.org/iSeeOnto/workflow#hasOutput">has output</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#isInputTo" title="http://www.w3id.org/iSeeOnto/workflow#isInputTo">is input to</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/workflow#startTask" title="http://www.w3id.org/iSeeOnto/workflow#startTask">start task</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#composedOf">
+      <h3>composed of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#composedOf</p>
+      <div class="comment">
+         <span class="markdown">Link between a CompositeTask and the ControlConstruct it is decomposed to.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#hasOutput">
+      <h3>has output<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#hasOutput</p>
+      <div class="comment">
+         <span class="markdown">Link between a Task and a variable generated as output of the Task.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#isInputTo">
+      <h3>is input to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#isInputTo</p>
+      <div class="comment">
+         <span class="markdown">Link between a Task and a variable provided as input to the Task.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/workflow#startTask">
+      <h3>start task<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/workflow#startTask</p>
+      <div class="comment">
+         <span class="markdown">Link between a Workflow and the first task to be performed.</span>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

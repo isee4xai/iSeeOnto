@@ -1,0 +1,139 @@
+@prefix : <http://www.w3id.org/iSeeOnto/explanationexperience#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/iSeeOnto/explanationexperience> .
+
+<http://www.w3id.org/iSeeOnto/explanationexperience> rdf:type owl:Ontology ;
+                                                      owl:imports <http://www.w3id.org/iSeeOnto/aimodel> ,
+                                                                  <http://www.w3id.org/iSeeOnto/explainer> ,
+                                                                  <http://www.w3id.org/iSeeOnto/user> ,
+                                                                  <http://www.w3id.org/iSeeOnto/workflow> ,
+                                                                  <https://purl.org/heals/eo/1.0.0> ;
+                                                      <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" ,
+                                                                                             "Chamath Palihawadana" ,
+                                                                                             "David Corsar" ,
+                                                                                             "Ikechukwu Nkisi-Orji" ,
+                                                                                             "Juan A. Recio-Garcia" ,
+                                                                                             "Marta Caro Martínez" ;
+                                                      <http://purl.org/dc/terms/title> "The Explanation Experience Ontology" ;
+                                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "ee" ;
+                                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/explanationexperience" ;
+                                                      rdfs:comment """The Explanation Experience is an ontology is the initial model for case representations in the iSeeOnto ontology network. The case representation defines the structure for describing user experiences of explanations, serving as a model for querying, along with an initial model for describing solutions intended to generate the workflow necessary to provide explanations to users.
+		
+		This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.""" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel
+:hasAIModel rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:comment "Relationship between a Description and a AI Model." ;
+            rdfs:label "has AI Model"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription
+:hasDescription rdf:type owl:ObjectProperty ;
+                rdfs:comment "Relationship between an Explanation Experience and a Description."@en ;
+                rdfs:label "has description"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer
+:hasExplainer rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relationship between a Description and an Explainer."@en ;
+              rdfs:label "has explainer"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature
+:hasFeature rdf:type owl:ObjectProperty ;
+            rdfs:label "has feature"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution
+:hasSolution rdf:type owl:ObjectProperty ;
+             rdfs:comment "Relationship between an Explanation Experience and a Solution."@en ;
+             rdfs:label "has solution"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasUser
+:hasUser rdf:type owl:ObjectProperty ;
+         rdfs:comment "Relationship between a Description and a User"@en ;
+         rdfs:label "has user"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow
+:hasWorkflow rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:comment "Relationship between a Solution and a Workflow"@en ;
+             rdfs:label "has workflow"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3id.org/iSeeOnto/aimodel#AIModel
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> rdfs:subClassOf :CaseFeature .
+
+
+###  http://www.w3id.org/iSeeOnto/explainer#Explainer
+<http://www.w3id.org/iSeeOnto/explainer#Explainer> rdfs:subClassOf :CaseFeature .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature
+:CaseFeature rdf:type owl:Class ;
+             rdfs:comment "Classes defined as subclasses of Case Feature are suitable to be used as types of features in a case description."@en ;
+             rdfs:label "Case Feature"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#Description
+:Description rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAIModel ;
+                               owl:someValuesFrom <http://www.w3id.org/iSeeOnto/aimodel#AIModel>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasExplainer ;
+                               owl:someValuesFrom <http://www.w3id.org/iSeeOnto/explainer#Explainer>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasUser ;
+                               owl:someValuesFrom <https://purl.org/heals/eo#user>
+                             ] ;
+             rdfs:comment "Defines the description of a case using classes defined in other iSeeOnto ontologies to define the query in terms of the AIModel, eo:Explainer (defined in the Explainer Ontology), and eo:User (defined in the Explanation Ontology)."@en ;
+             rdfs:label "Description"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience
+:ExplanationExperience rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasDescription ;
+                                         owl:someValuesFrom :Description
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasSolution ;
+                                         owl:someValuesFrom :Solution
+                                       ] ;
+                       rdfs:comment "The Explanation Experience classis intended to capture an individual case in terms of the eo:AIModel used, the Explainer being used, and the User and the Solution created as an Explanation Strategy to satisfy the explanation needs of a user."@en ;
+                       rdfs:label "Explanation Experience"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/explanationexperience#Solution
+:Solution rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasWorkflow ;
+                            owl:someValuesFrom <http://www.w3id.org/iSeeOnto/workflow#Workflow>
+                          ] ;
+          rdfs:comment "The Solution class is intended to describe the Workflow (defined in the workflow ontology) created as an Explanation Strategy to satisfy the Explanation needs of a user."@en ;
+          rdfs:label "Solution"@en .
+
+
+###  https://purl.org/heals/eo#user
+<https://purl.org/heals/eo#user> rdfs:subClassOf :CaseFeature .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

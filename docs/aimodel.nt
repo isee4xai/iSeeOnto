@@ -1,0 +1,167 @@
+<http://www.w3id.org/iSeeOnto/aimodel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/explainer> .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://www.w3.org/2002/07/owl#imports> <https://purl.org/heals/eo/1.0.0> .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/contributor> "Chamath Palihawadana" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/contributor> "David Corsar" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/contributor> "Ikechukwu Nkisi-Orji" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/contributor> "Juan A. Recio-Garcia" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/contributor> "Marta Caro Martínez" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/description> "The focus of the AI Model ontology is to further expand the definition of the AI Task and AI Method concepts from the Explanation Ontology to be able to specify the information required by the iSee Platform.\n\t\t\nThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies."@en .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/dc/terms/title> "The AI Model Ontology" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aimod" .
+<http://www.w3id.org/iSeeOnto/aimodel> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/aimodel" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#hasDataType
+<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a DataSet and the type of data it contains."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#hasDataType> <http://www.w3.org/2000/01/rdf-schema#label> "has data type" .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#solves
+<http://www.w3id.org/iSeeOnto/aimodel#solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/aimodel#solves> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between an AI Model and the AI Task it (attempts to) solve."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#solves> <http://www.w3.org/2000/01/rdf-schema#label> "solves"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#trainedOn
+<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an AI Method, and the types of data it was trained on."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#trainedOn> <http://www.w3.org/2000/01/rdf-schema#label> "trained on"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures
+<http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of features a dataset has."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures> <http://www.w3.org/2000/01/rdf-schema#label> "number of features" .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances
+<http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of instances in a dataset."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances> <http://www.w3.org/2000/01/rdf-schema#label> "number of instances" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#AIModel
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/aimodel#solves> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purl.org/heals/eo#AITask> .
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/aimodel#trainedOn> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/aimodel#Dataset> .
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explainer#utilises> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purl.org/heals/eo#ArtificialIntelligenceMethod> .
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/2000/01/rdf-schema#comment> "An Artificial Intelligence Model that has been developed using some AI Method by training on some Dataset to solve some AI Task."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/2000/01/rdf-schema#label> "Artificial Intelligence Model" .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal
+<http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000337> .
+<http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal> <http://www.w3.org/2000/01/rdf-schema#comment> "The goal of an AI Task, or the purpose it was developed to achieve" .
+<http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal> <http://www.w3.org/2000/01/rdf-schema#label> "AI Task Goal" .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection
+<http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/aimodel#Classification> .
+<http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection> <http://www.w3.org/2000/01/rdf-schema#comment> "AI classification task for Anomaly Detection."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection> <http://www.w3.org/2000/01/rdf-schema#label> "Anomaly Detection"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#Classification
+<http://www.w3id.org/iSeeOnto/aimodel#Classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#Classification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/heals/eo#AITask> .
+<http://www.w3id.org/iSeeOnto/aimodel#Classification> <http://www.w3.org/2000/01/rdf-schema#comment> "AI Tasks performing some classification."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#Classification> <http://www.w3.org/2000/01/rdf-schema#label> "Classification"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#Dataset
+<http://www.w3id.org/iSeeOnto/aimodel#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/aimodel#hasDataType> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/explainer#DataType> .
+<http://www.w3id.org/iSeeOnto/aimodel#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A Dataset that has been used to train an AI model."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#Forecasting
+<http://www.w3id.org/iSeeOnto/aimodel#Forecasting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#Forecasting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/heals/eo#AITask> .
+<http://www.w3id.org/iSeeOnto/aimodel#Forecasting> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI forecasting task."@en .
+<http://www.w3id.org/iSeeOnto/aimodel#Forecasting> <http://www.w3.org/2000/01/rdf-schema#label> "Forecasting"@en .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours
+<http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OMIT_0001483> .
+<http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm" .
+<http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours> <http://www.w3.org/2000/01/rdf-schema#label> "K-Nearest Neighbours" .
+<http://www.w3id.org/iSeeOnto/aimodel#K-Nearest_Neighbours> <http://www.w3.org/2004/02/skos/core#definition> "is a supervised machine learning algorithm for labeling an unknown data point given existing labeled data." .
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency
+<http://www.w3id.org/iSeeOnto/aimodel#Term_frequency\u2013Inverse_document_frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/aimodel#Term_frequency\u2013Inverse_document_frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OMIT_0010354> .
+<http://www.w3id.org/iSeeOnto/aimodel#Term_frequency\u2013Inverse_document_frequency> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Tf%E2%80%93idf" .
+<http://www.w3id.org/iSeeOnto/aimodel#Term_frequency\u2013Inverse_document_frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Term frequency–Inverse document frequency" .
+<http://www.w3id.org/iSeeOnto/aimodel#Term_frequency\u2013Inverse_document_frequency> <http://www.w3.org/2004/02/skos/core#definition> "is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus." .
+# 
+# https://purl.org/heals/eo#ArtificialIntelligenceMethod
+<https://purl.org/heals/eo#ArtificialIntelligenceMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#used> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/aimodel#Dataset> .
+<https://purl.org/heals/eo#ArtificialIntelligenceMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/aimodel#trainedOn> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/explainer#DataType> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid7 <http://www.w3.org/2002/07/owl#members> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/iSeeOnto/aimodel#Classification> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/iSeeOnto/aimodel#Forecasting> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/heals/eo#AbductiveTask> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/heals/eo#DeductiveTask> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/heals/eo#InductiveTask> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

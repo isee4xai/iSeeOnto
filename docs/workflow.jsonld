@@ -1,0 +1,213 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#composedOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#hasOutput"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#Variable"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#isInputTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#Task"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#startTask"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#Task"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Anjana Wijekoon"
+  }, {
+    "@value" : "Chamath Palihawadana"
+  }, {
+    "@value" : "David Corsar"
+  }, {
+    "@value" : "Ikechukwu Nkisi-Orji"
+  }, {
+    "@value" : "Juan A. Recio-Garcia"
+  }, {
+    "@value" : "Marta Caro Martínez"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "The Workflow Ontology is an ontology provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.\n\t\t\n\t\tThis representation is influenced by those described by: Recio-García, J., Díaz-Agudo, B., and González-Calero, P. (2009). Semantic templates for case-based reasoning systems. The Knowledge Engineering Review, 24(3), 245-264. doi:10.1017/S0269888909990051; and Garijo D, Gil Y. Augmenting PROV with Plans in P-PLAN: Scientific Processes as Linked Data. Linked Science 2012 - Tackling Big Data workshop ISWC 2012.\n\t\t\n\t\tThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.\n\t\t"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "The Workflow Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "wf"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://www.w3id.org/iSeeOnto/workflow"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/explainer"
+  }, {
+    "@id" : "https://purl.org/heals/eo/1.0.0"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#CompositeTask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Task consisting of a multiple steps. Composite Tasks should be decomposed inot other Tasks through the use of Control Constructs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Composite Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#Task"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#ControlConstruct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defines how multiple tasks should be combined. This is an extension point for the workflow ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Control Construct"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#IfTheElse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An If-Then-Else control construct to be used to define that a specified Task should be performed if some condition is satified, otherwise another Task should be performed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "If Then Else"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#Sequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An Sequence control construct to be used to define a list of Task that should be performed in the specified order."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#ControlConstruct"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#SimpleTask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Task consisting of a single-step that can be achieved by some method.."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Simple Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3id.org/iSeeOnto/workflow#Task"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#Task",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Task is a step in a workflow that will be performed to generate an explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#Variable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Variables are used to define parameters that can be passed as input to a Task, or produced as the output of a Task."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#Workflow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Workflow consists of one or more Tasks to generate an Explanation that will be provided to, and evaluated by, the User. Tasks can be either a SimpleTask representing a single-step that can be achieved by some Method, or a CompositeTask.  "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Workflow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#composedOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Link between a CompositeTask and the ControlConstruct it is decomposed to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "composed of"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#hasOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Link between a Task and a variable generated as output of the Task."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has output"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#isInputTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Link between a Task and a variable provided as input to the Task."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is input to"
+  } ]
+}, {
+  "@id" : "http://www.w3id.org/iSeeOnto/workflow#startTask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Link between a Workflow and the first task to be performed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "start task"
+  } ]
+} ]

@@ -1,0 +1,112 @@
+<http://www.w3id.org/iSeeOnto/workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/iSeeOnto/workflow> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/explainer> .
+<http://www.w3id.org/iSeeOnto/workflow> <http://www.w3.org/2002/07/owl#imports> <https://purl.org/heals/eo/1.0.0> .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/contributor> "Chamath Palihawadana" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/contributor> "David Corsar" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/contributor> "Ikechukwu Nkisi-Orji" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/contributor> "Juan A. Recio-Garcia" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/contributor> "Marta Caro Martínez" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/description> "The Workflow Ontology is an ontology provides a high-level description of how an Explainer can be integrated with an eo:AI Method, to generate an ex:Explanation provided to, and evaluated by a eo:User. The representation itself is influenced those of Recio-García (2007) and Garijo (2012) to provide the starting point, which will be extended with more specific types of Tasks (e.g., choice, repeat-while, repeat-until) and parameters (e.g., for describing the passing of parameters for web service calls or programming language - Java, Python, Javascript, etc.), method calls and parameter exchange as required by the use cases.\n\t\t\n\t\tThis representation is influenced by those described by: Recio-García, J., Díaz-Agudo, B., and González-Calero, P. (2009). Semantic templates for case-based reasoning systems. The Knowledge Engineering Review, 24(3), 245-264. doi:10.1017/S0269888909990051; and Garijo D, Gil Y. Augmenting PROV with Plans in P-PLAN: Scientific Processes as Linked Data. Linked Science 2012 - Tackling Big Data workshop ISWC 2012.\n\t\t\n\t\tThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.\n\t\t" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/dc/terms/title> "The Workflow Ontology" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wf" .
+<http://www.w3id.org/iSeeOnto/workflow> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/workflow" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/workflow#composedOf
+<http://www.w3id.org/iSeeOnto/workflow#composedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/workflow#composedOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a CompositeTask and the ControlConstruct it is decomposed to." .
+<http://www.w3id.org/iSeeOnto/workflow#composedOf> <http://www.w3.org/2000/01/rdf-schema#label> "composed of"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#hasOutput
+<http://www.w3id.org/iSeeOnto/workflow#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/workflow#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a Task and a variable generated as output of the Task." .
+<http://www.w3id.org/iSeeOnto/workflow#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#isInputTo
+<http://www.w3id.org/iSeeOnto/workflow#isInputTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/workflow#isInputTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a Task and a variable provided as input to the Task." .
+<http://www.w3id.org/iSeeOnto/workflow#isInputTo> <http://www.w3.org/2000/01/rdf-schema#label> "is input to"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#startTask
+<http://www.w3id.org/iSeeOnto/workflow#startTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/workflow#startTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a Workflow and the first task to be performed." .
+<http://www.w3id.org/iSeeOnto/workflow#startTask> <http://www.w3.org/2000/01/rdf-schema#label> "start task"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/workflow#CompositeTask
+<http://www.w3id.org/iSeeOnto/workflow#CompositeTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#CompositeTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/workflow#Task> .
+<http://www.w3id.org/iSeeOnto/workflow#CompositeTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/workflow#composedOf> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/workflow#ControlConstruct> .
+<http://www.w3id.org/iSeeOnto/workflow#CompositeTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task consisting of a multiple steps. Composite Tasks should be decomposed inot other Tasks through the use of Control Constructs." .
+<http://www.w3id.org/iSeeOnto/workflow#CompositeTask> <http://www.w3.org/2000/01/rdf-schema#label> "Composite Task"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#ControlConstruct
+<http://www.w3id.org/iSeeOnto/workflow#ControlConstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#ControlConstruct> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines how multiple tasks should be combined. This is an extension point for the workflow ontology." .
+<http://www.w3id.org/iSeeOnto/workflow#ControlConstruct> <http://www.w3.org/2000/01/rdf-schema#label> "Control Construct"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#IfTheElse
+<http://www.w3id.org/iSeeOnto/workflow#IfTheElse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#IfTheElse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/workflow#ControlConstruct> .
+<http://www.w3id.org/iSeeOnto/workflow#IfTheElse> <http://www.w3.org/2000/01/rdf-schema#comment> "An If-Then-Else control construct to be used to define that a specified Task should be performed if some condition is satified, otherwise another Task should be performed." .
+<http://www.w3id.org/iSeeOnto/workflow#IfTheElse> <http://www.w3.org/2000/01/rdf-schema#label> "If Then Else"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#Sequence
+<http://www.w3id.org/iSeeOnto/workflow#Sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#Sequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/workflow#ControlConstruct> .
+<http://www.w3id.org/iSeeOnto/workflow#Sequence> <http://www.w3.org/2000/01/rdf-schema#comment> "An Sequence control construct to be used to define a list of Task that should be performed in the specified order." .
+<http://www.w3id.org/iSeeOnto/workflow#Sequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#SimpleTask
+<http://www.w3id.org/iSeeOnto/workflow#SimpleTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#SimpleTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/workflow#Task> .
+<http://www.w3id.org/iSeeOnto/workflow#SimpleTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task consisting of a single-step that can be achieved by some method.." .
+<http://www.w3id.org/iSeeOnto/workflow#SimpleTask> <http://www.w3.org/2000/01/rdf-schema#label> "Simple Task"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#Task
+<http://www.w3id.org/iSeeOnto/workflow#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/workflow#hasOutput> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/workflow#Variable> .
+<http://www.w3id.org/iSeeOnto/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "A Task is a step in a workflow that will be performed to generate an explanation." .
+<http://www.w3id.org/iSeeOnto/workflow#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#Variable
+<http://www.w3id.org/iSeeOnto/workflow#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/workflow#isInputTo> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/workflow#Task> .
+<http://www.w3id.org/iSeeOnto/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variables are used to define parameters that can be passed as input to a Task, or produced as the output of a Task." .
+<http://www.w3id.org/iSeeOnto/workflow#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
+# 
+# http://www.w3id.org/iSeeOnto/workflow#Workflow
+<http://www.w3id.org/iSeeOnto/workflow#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/workflow#startTask> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/workflow#Task> .
+<http://www.w3id.org/iSeeOnto/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A Workflow consists of one or more Tasks to generate an Explanation that will be provided to, and evaluated by, the User. Tasks can be either a SimpleTask representing a single-step that can be achieved by some Method, or a CompositeTask.  " .
+<http://www.w3id.org/iSeeOnto/workflow#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

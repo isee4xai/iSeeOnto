@@ -1,0 +1,98 @@
+@prefix : <http://www.w3id.org/iSeeOnto/userevaluation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/iSeeOnto/userevaluation> .
+
+<http://www.w3id.org/iSeeOnto/userevaluation> rdf:type owl:Ontology ;
+                                               owl:imports <http://sensornet.abdn.ac.uk/onts/Qual-O> ,
+                                                           <http://www.w3id.org/iSeeOnto/evaluation> ,
+                                                           <https://purl.org/heals/eo/1.0.0> ;
+                                               <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" ,
+                                                                                      "Chamath Palihawadana" ,
+                                                                                      "David Corsar" ,
+                                                                                      "Ikechukwu Nkisi-Orji" ,
+                                                                                      "Juan A. Recio-Garcia" ,
+                                                                                      "Marta Caro Martínez" ;
+                                               <http://purl.org/dc/terms/title> "The User Evaluation Ontology" ;
+                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "usreval" ;
+                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/userevaluation" ;
+                                               rdfs:comment """The UserEvaluation Ontology is an ontology that models the assessments, made by a User of, for example, an Explanation.
+		
+An assessment activity is performed to evaluate the subject (e.g. Explanation) using a metric (e.g. a Question) which is designed to evaluate some aspect of the subject, such as how understandable or useful it is.  The outcome of the assessment is captured in the Result concept.  
+		
+The Prov properties startedAtTime and endedAtTime are used to record when the assessment took place.
+		
+This pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E. Pignotti, 2015. QUAL: A Provenance-Aware Quality Model. J. Data and Information Quality 5, 3, Article 12 (February 2015) DOI:https://doi.org/10.1145/2700413.
+
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.""" .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3id.org/iSeeOnto/userevaluation#hasContent
+:hasContent rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Provides a  textual description detailing how the result of a metric should be interpreted."@en ;
+            rdfs:label "has content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment> rdf:type owl:Class .
+
+
+###  http://sensornet.abdn.ac.uk/onts/Qual-O#Metric
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> rdf:type owl:Class .
+
+
+###  http://sensornet.abdn.ac.uk/onts/Qual-O#Result
+<http://sensornet.abdn.ac.uk/onts/Qual-O#Result> rdf:type owl:Class .
+
+
+###  http://www.w3id.org/iSeeOnto/userevaluation#Question
+:Question rdf:type owl:Class ;
+          rdfs:subClassOf <http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> ;
+          rdfs:comment "A Question posed to the user and used as a metric for guiding assessment of an entity, such as an Explanation."@en ;
+          rdfs:label "Question"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy
+:ResultInterpretationPolicy rdf:type owl:Class ;
+                            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasContent ;
+                                              owl:allValuesFrom xsd:string
+                                            ] ;
+                            rdfs:comment "Aids the interpretation of a User Evaluation Result by providing a textual description detailing how the result of a metric should be interpreted"@en ;
+                            rdfs:label "Result Interpretation Policy"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/userevaluation#Survey
+:Survey rdf:type owl:Class ;
+        rdfs:subClassOf <http://sensornet.abdn.ac.uk/onts/Qual-O#Metric> ;
+        rdfs:comment "A Survey used to query a user as part of an evaluation activity, assessing, for example, an Explanation."@en ;
+        rdfs:label "Survey"@en .
+
+
+###  http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluation
+:UserEvaluation rdf:type owl:Class ;
+                rdfs:subClassOf <http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment> ;
+                rdfs:comment "The assessment performed by a User to assessing, for example, an Explanation, using a given Metric (e.g. Question), producing a UserEvaluationResult"@en ;
+                rdfs:label "User Evaluation" .
+
+
+###  http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult
+:UserEvaluationResult rdf:type owl:Class ;
+                      rdfs:subClassOf <http://sensornet.abdn.ac.uk/onts/Qual-O#Result> ;
+                      rdfs:comment "The result (outcome) of a User Evaluation assessment."@en ;
+                      rdfs:label "User Evaluation Result"@en .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

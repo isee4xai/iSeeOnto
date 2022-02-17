@@ -1,0 +1,124 @@
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/aimodel> .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/explainer> .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/user> .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/iSeeOnto/workflow> .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/2002/07/owl#imports> <https://purl.org/heals/eo/1.0.0> .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/contributor> "Anjana Wijekoon" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/contributor> "Chamath Palihawadana" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/contributor> "David Corsar" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/contributor> "Ikechukwu Nkisi-Orji" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/contributor> "Juan A. Recio-Garcia" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/contributor> "Marta Caro Martínez" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/dc/terms/title> "The Explanation Experience Ontology" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ee" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/iSeeOnto/explanationexperience" .
+<http://www.w3id.org/iSeeOnto/explanationexperience> <http://www.w3.org/2000/01/rdf-schema#comment> "The Explanation Experience is an ontology is the initial model for case representations in the iSeeOnto ontology network. The case representation defines the structure for describing user experiences of explanations, serving as a model for querying, along with an initial model for describing solutions intended to generate the workflow necessary to provide explanations to users.\n\t\t\n\t\tThis ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies." .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Description and a AI Model." .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> <http://www.w3.org/2000/01/rdf-schema#label> "has AI Model"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an Explanation Experience and a Description."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Description and an Explainer."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> <http://www.w3.org/2000/01/rdf-schema#label> "has explainer"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature> <http://www.w3.org/2000/01/rdf-schema#label> "has feature"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an Explanation Experience and a Solution."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution> <http://www.w3.org/2000/01/rdf-schema#label> "has solution"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasUser
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Description and a User"@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> <http://www.w3.org/2000/01/rdf-schema#label> "has user"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a Solution and a Workflow"@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "has workflow"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/iSeeOnto/aimodel#AIModel
+<http://www.w3id.org/iSeeOnto/aimodel#AIModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature> .
+# 
+# http://www.w3id.org/iSeeOnto/explainer#Explainer
+<http://www.w3id.org/iSeeOnto/explainer#Explainer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature> .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature
+<http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Classes defined as subclasses of Case Feature are suitable to be used as types of features in a case description."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature> <http://www.w3.org/2000/01/rdf-schema#label> "Case Feature"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#Description
+<http://www.w3id.org/iSeeOnto/explanationexperience#Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Description> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/aimodel#AIModel> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Description> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/explainer#Explainer> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Description> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explanationexperience#hasUser> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purl.org/heals/eo#user> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Description> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the description of a case using classes defined in other iSeeOnto ontologies to define the query in terms of the AIModel, eo:Explainer (defined in the Explainer Ontology), and eo:User (defined in the Explanation Ontology)."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience
+<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/explanationexperience#Description> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/explanationexperience#Solution> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "The Explanation Experience classis intended to capture an individual case in terms of the eo:AIModel used, the Explainer being used, and the User and the Solution created as an Explanation Strategy to satisfy the explanation needs of a user."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Explanation Experience"@en .
+# 
+# http://www.w3id.org/iSeeOnto/explanationexperience#Solution
+<http://www.w3id.org/iSeeOnto/explanationexperience#Solution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Solution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3id.org/iSeeOnto/workflow#Workflow> .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Solution> <http://www.w3.org/2000/01/rdf-schema#comment> "The Solution class is intended to describe the Workflow (defined in the workflow ontology) created as an Explanation Strategy to satisfy the Explanation needs of a user."@en .
+<http://www.w3id.org/iSeeOnto/explanationexperience#Solution> <http://www.w3.org/2000/01/rdf-schema#label> "Solution"@en .
+# 
+# https://purl.org/heals/eo#user
+<https://purl.org/heals/eo#user> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

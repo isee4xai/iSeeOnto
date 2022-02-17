@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The Explainer Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/explainer","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/explainer","name":"The Explainer Ontology", "headline":"The Explainer Ontology is an ontology that models the technique used by an Explainer (as defined by the <a href="https://purl.org/heals/eo">Explanation Ontology</a>), to generate an Explanation. The concepts in this ontology reflect the a subset of the explanability fact sheet dimensions defined by Kacper Sokol and Peter Flach. 2020. Explainability fact sheets: a framework for systematic assessment of explainable approaches, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20) DOI:https://doi.org/10.1145/3351095.3372870.This ontology was created as part of the iSee project (https://isee4xai.com) whichreceived funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Wed Feb 16 13:42:46 GMT 2022", "contributor":[{"@type":"Person","name":"Anjana Wijekoon"},{"@type":"Person","name":"Chamath Palihawadana"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Explainer Ontology</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://www.w3id.org/iSeeOnto/explainer">https://www.w3id.org/iSeeOnto/explainer</a></dd>
+<dt>Contributors:</dt>
+<dd>Anjana Wijekoon</dd><dd>Chamath Palihawadana</dd><dd>David Corsar</dd><dd>Ikechukwu Nkisi-Orji</dd><dd>Juan A. Recio-Garcia</dd><dd>Marta Caro Martínez</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://linkedu.eu/dedalo/explanationPattern.owl">explanationPattern.owl</a></dd><dd><a href="http://semanticscience.org/ontology/sio.owl">sio.owl</a></dd><dd><a href="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl">cpannotationschema.owl</a></dd><dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="https://purl.org/heals/eo">eo</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="explainer.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="explainer.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="explainer.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="explainer.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd> The Explainer Ontology.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Explainer Ontology is an ontology that models the technique used by an Explainer (as defined by the <a href="https://purl.org/heals/eo">Explanation Ontology</a>), to generate an Explanation. The concepts in this ontology reflect the a subset of the explanability fact sheet dimensions defined by Kacper Sokol and Peter Flach. 2020. Explainability fact sheets: a framework for systematic assessment of explainable approaches, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20) DOI:https://doi.org/10.1145/3351095.3372870.
+
+This ontology was created as part of the iSee project (https://isee4xai.com) which
+received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>explnr</b></td><td>&lt;https://www.w3id.org/iSeeOnto/explainer&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>explanationPattern</b></td><td>&lt;http://linkedu.eu/dedalo/explanationPattern.owl&gt;</td></tr>
+<tr><td><b>void</b></td><td>&lt;http://rdfs.org/ns/void&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>resource</b></td><td>&lt;http://semanticscience.org/resource&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>protege</b></td><td>&lt;http://protege.stanford.edu/plugins/owl/protege&gt;</td></tr>
+<tr><td><b>cpannotationschema</b></td><td>&lt;http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>eo</b></td><td>&lt;https://purl.org/heals/eo&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>cito</b></td><td>&lt;http://purl.org/spar/cito&gt;</td></tr>
+<tr><td><b>prov-o</b></td><td>&lt;http://www.w3.org/TR/prov-o&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>explnr</b></td><td>&lt;http://www.isee4xai.com/ontologies/iseeonto/explainer&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>obo</b></td><td>&lt;http://purl.obolibrary.org/obo&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
+<tr><td><b>explainer</b></td><td>&lt;http://www.w3id.org/iSeeOnto/explainer&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The Explainer Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#Categorical"
+         title="http://www.w3id.org/iSeeOnto/explainer#Categorical">Categorical</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"
+         title="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity">Computational Complexity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+         title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#Explainer" title="http://www.w3id.org/iSeeOnto/explainer#Explainer">Explainer</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"
+         title="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">Explainer Concurrentness</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+         title="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">Explanation Scope</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+         title="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">Explanation Target</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#Image" title="http://www.w3id.org/iSeeOnto/explainer#Image">Image</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#Numerical" title="http://www.w3id.org/iSeeOnto/explainer#Numerical">Numerical</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#Ordinal" title="http://www.w3id.org/iSeeOnto/explainer#Ordinal">Ordinal</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#Portability"
+         title="http://www.w3id.org/iSeeOnto/explainer#Portability">Portability</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#applicableProblemType"
+         title="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType">applicable problem type</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">has applicable model types</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasComplexity"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">has complexity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">has concurrentness</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">has explanation scope</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasOutputType"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasOutputType">has output type</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPortability"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasPortability">has portability</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPresentation"
+         title="http://www.w3id.org/iSeeOnto/explainer#hasPresentation">has presentation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes"
+         title="http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes">is compatible with feature types</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#targetType"
+         title="http://www.w3id.org/iSeeOnto/explainer#targetType">target type</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#utilises" title="http://www.w3id.org/iSeeOnto/explainer#utilises">utilises</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ante-hoc" title="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">ante-hoc</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#categorical"
+         title="http://www.w3id.org/iSeeOnto/explainer#categorical">categorical</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#cohort" title="http://www.w3id.org/iSeeOnto/explainer#cohort">cohort</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#data" title="http://www.w3id.org/iSeeOnto/explainer#data">data</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#global" title="http://www.w3id.org/iSeeOnto/explainer#global">global</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#image" title="http://www.w3id.org/iSeeOnto/explainer#image">
+         <span>image</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#local" title="http://www.w3id.org/iSeeOnto/explainer#local">local</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#model" title="http://www.w3id.org/iSeeOnto/explainer#model">model</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#model-agnostic"
+         title="http://www.w3id.org/iSeeOnto/explainer#model-agnostic">model-agnostic</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific"
+         title="http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific">model-class specific</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#modelSpecific"
+         title="http://www.w3id.org/iSeeOnto/explainer#modelSpecific">model-specific</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#numerical" title="http://www.w3id.org/iSeeOnto/explainer#numerical">
+         <span>numerical</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#ordinal" title="http://www.w3id.org/iSeeOnto/explainer#ordinal">
+         <span>ordinal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#post-hoc" title="http://www.w3id.org/iSeeOnto/explainer#post-hoc">post-hoc</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/explainer#prediction"
+         title="http://www.w3id.org/iSeeOnto/explainer#prediction">prediction</a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The Explainer Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<img src="imgs/Explainer.png" alt="Outline of the Explainer ontology main classes and relationships">
+<figcaption>Outline of the Explainer ontology main classes and relationships. Concepts highlighted in peach are defined in this ontology.</figcaption>
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for The Explainer Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Explainer Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#Categorical"
+            title="http://www.w3id.org/iSeeOnto/explainer#Categorical">Categorical</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"
+            title="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity">Computational Complexity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+            title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#Explainer" title="http://www.w3id.org/iSeeOnto/explainer#Explainer">Explainer</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"
+            title="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">Explainer Concurrentness</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+            title="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">Explanation Scope</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+            title="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">Explanation Target</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#Image" title="http://www.w3id.org/iSeeOnto/explainer#Image">Image</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#Numerical" title="http://www.w3id.org/iSeeOnto/explainer#Numerical">Numerical</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#Ordinal" title="http://www.w3id.org/iSeeOnto/explainer#Ordinal">Ordinal</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#Portability"
+            title="http://www.w3id.org/iSeeOnto/explainer#Portability">Portability</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#Categorical">
+      <h3>Categorical<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#Categorical</p>
+      <div class="comment">
+         <span class="markdown">Categorical data type.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity">
+      <h3>Computational Complexity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity</p>
+      <div class="comment">
+         <span class="markdown">Details relating the resources required by an Explainability Technique to generate an Explanation.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#hasComplexity"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">has complexity</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#DataType">
+      <h3>Data Type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#DataType</p>
+      <div class="comment">
+         <span class="markdown">The types of model features (e.g., categorical, numerical, ordinal, image) that a given Explainability Technique can be used.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#Categorical"
+               title="http://www.w3id.org/iSeeOnto/explainer#Categorical">Categorical</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#Image" title="http://www.w3id.org/iSeeOnto/explainer#Image">Image</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#Numerical" title="http://www.w3id.org/iSeeOnto/explainer#Numerical">Numerical</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#Ordinal" title="http://www.w3id.org/iSeeOnto/explainer#Ordinal">Ordinal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#categorical"
+               title="http://www.w3id.org/iSeeOnto/explainer#categorical">categorical</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#image" title="http://www.w3id.org/iSeeOnto/explainer#image">image</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#numerical" title="http://www.w3id.org/iSeeOnto/explainer#numerical">numerical</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#ordinal" title="http://www.w3id.org/iSeeOnto/explainer#ordinal">ordinal</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">
+      <h3>Explainability Technique<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique</p>
+      <div class="comment">
+         <span class="markdown">The technique used by an Explainer to generate an Explanation, such as rule-based learner, Decision Tree, Influence functions, Sensitivity, Saliency, and so on as categorised by Arrieta et. al. (2020)</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#applicableProblemType"
+               title="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType">applicable problem type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">has applicable model types</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasComplexity"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">has complexity</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">has concurrentness</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">has explanation scope</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasOutputType"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasOutputType">has output type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPortability"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasPortability">has portability</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPresentation"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasPresentation">has presentation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#targetType"
+               title="http://www.w3id.org/iSeeOnto/explainer#targetType">target type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#utilises" title="http://www.w3id.org/iSeeOnto/explainer#utilises">utilises</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#Explainer">
+      <h3>Explainer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#Explainer</p>
+      <div class="comment">
+         <span class="markdown">An Explainer uses an Explainability Technique to generate Explanations for an AI Models output.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#utilises" title="http://www.w3id.org/iSeeOnto/explainer#utilises">utilises</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">
+      <h3>Explainer Concurrentness<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness</p>
+      <div class="comment">
+         <span class="markdown">Captured if the technique is ante-hoc (i.e. use the same model for the task and creating explanations) or post-hoc (i.e. different models are used to create the eo:SystemRecommendation and eo:Explanation)</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#http://www.w3id.org/iSeeOnto/explainer#ante-hoc" title="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">ante-hoc</a> , <a href="#http://www.w3id.org/iSeeOnto/explainer#post-hoc" title="http://www.w3id.org/iSeeOnto/explainer#post-hoc">post-hoc</a> }</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">has concurrentness</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ante-hoc" title="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">ante-hoc</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#post-hoc" title="http://www.w3id.org/iSeeOnto/explainer#post-hoc">post-hoc</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">
+      <h3>Explanation Scope<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ExplanationScope</p>
+      <div class="comment">
+         <span class="markdown">The extent to which explanations generated by an explanation technique can be generalised.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#http://www.w3id.org/iSeeOnto/explainer#cohort" title="http://www.w3id.org/iSeeOnto/explainer#cohort">cohort</a> , <a href="#http://www.w3id.org/iSeeOnto/explainer#global" title="http://www.w3id.org/iSeeOnto/explainer#global">global</a> , <a href="#http://www.w3id.org/iSeeOnto/explainer#local" title="http://www.w3id.org/iSeeOnto/explainer#local">local</a> }</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">has explanation scope</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#cohort" title="http://www.w3id.org/iSeeOnto/explainer#cohort">cohort</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#global" title="http://www.w3id.org/iSeeOnto/explainer#global">global</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#local" title="http://www.w3id.org/iSeeOnto/explainer#local">local</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">
+      <h3>Explanation Target<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget</p>
+      <div class="comment">
+         <span class="markdown">The target of the Explanation Technique, i.e. the thing an Explanation is being generated for.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#targetType"
+               title="http://www.w3id.org/iSeeOnto/explainer#targetType">target type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#data" title="http://www.w3id.org/iSeeOnto/explainer#data">data</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#model" title="http://www.w3id.org/iSeeOnto/explainer#model">model</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#prediction"
+               title="http://www.w3id.org/iSeeOnto/explainer#prediction">prediction</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#Image">
+      <h3>Image<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#Image</p>
+      <div class="comment">
+         <span class="markdown">Image data type</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#Numerical">
+      <h3>Numerical<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#Numerical</p>
+      <div class="comment">
+         <span class="markdown">Numerical data type.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#Ordinal">
+      <h3>Ordinal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#Ordinal</p>
+      <div class="comment">
+         <span class="markdown">Ordinal data type.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#Portability">
+      <h3>Portability<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#Portability</p>
+      <div class="comment">
+         <span class="markdown">The type of model an Explainability Technique can be applied to.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPortability"
+               title="http://www.w3id.org/iSeeOnto/explainer#hasPortability">has portability</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#model-agnostic"
+               title="http://www.w3id.org/iSeeOnto/explainer#model-agnostic">model-agnostic</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific"
+               title="http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific">model-class specific</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/explainer#modelSpecific"
+               title="http://www.w3id.org/iSeeOnto/explainer#modelSpecific">model-specific</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#applicableProblemType"
+            title="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType">applicable problem type</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">has applicable model types</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasComplexity"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">has complexity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">has concurrentness</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">has explanation scope</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasOutputType"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasOutputType">has output type</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPortability"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasPortability">has portability</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#hasPresentation"
+            title="http://www.w3id.org/iSeeOnto/explainer#hasPresentation">has presentation</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes"
+            title="http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes">is compatible with feature types</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#targetType"
+            title="http://www.w3id.org/iSeeOnto/explainer#targetType">target type</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#utilises" title="http://www.w3id.org/iSeeOnto/explainer#utilises">utilises</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType">
+      <h3>applicable problem type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#applicableProblemType</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an ExplainabilityTechnique and the type of eo:AI Task the technique can be used with. The Explanation Ontology defines three subclasses of eo:AI Task that the system was undertaking, namely for inductive, abductive, and deductive tasks.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://purl.org/heals/eo#AITask"
+                  target="_blank"
+                  title="https://purl.org/heals/eo#AITask">a i task</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">
+      <h3>has applicable model types<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType</p>
+      <div class="comment">
+         <span class="markdown">For ExplainabilityTechniques with Portability of model-class specific (works with a particular family of models) and model-specific, this property links to the relevant class in the eo:AI Method hierarchy that this ExplainabilityTechnique can be used with.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://purl.org/heals/eo#ArtificialIntelligenceMethod"
+                  target="_blank"
+                  title="https://purl.org/heals/eo#ArtificialIntelligenceMethod">artificial intelligence method</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">
+      <h3>has complexity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasComplexity</p>
+      <div class="comment">
+         <span class="markdown">Relationahip between an ExplainabilityTechnique and some representation of the ComputationalComplexity of using it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity">Computational Complexity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness">
+      <h3>has concurrentness<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an ExplinabilityTechnique and whether it is ante-hoc or post-hoc.
+		</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">Explainer Concurrentness</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">
+      <h3>has explanation scope<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an ExplinabilityTechnique and the extent to which explanations generated by it can be generalised, as defined in individuals of type ExplanationScope (e.g. local, cohort, global).
+		</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">Explanation Scope</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasOutputType">
+      <h3>has output type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasOutputType</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an ExplinabilityTechnique and the type of explanations generated by it, as defined by subclasses of eo:Explanation.
+		</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"
+                  target="_blank"
+                  title="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation">explanation</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasPortability">
+      <h3>has portability<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasPortability</p>
+      <div class="comment">
+         <span class="markdown">Link between Explainability Technique and the type of AI models it can be applied in terms of model-agnostic (works with any model family), model-class specific (works with a particular family of models), and model-specific as represented in individuals of type Portability.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#Portability"
+                  title="http://www.w3id.org/iSeeOnto/explainer#Portability">Portability</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#hasPresentation">
+      <h3>has presentation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#hasPresentation</p>
+      <div class="comment">
+         <span class="markdown">Link between Explainability Technique and the types of Information Content Entity (e.g. mathematical, language, computational) that is used to present the explanation. </span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://semanticscience.org/resource/SIO_000015"
+                  target="_blank"
+                  title="http://semanticscience.org/resource/SIO_000015">s i o 000015</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes">
+      <h3>is compatible with feature types<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes</p>
+      <div class="comment">
+         <span class="markdown">Link between Explainability Technique and the types of features used by the model being explained that the technique can be used with.	</span>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#targetType">
+      <h3>target type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#targetType</p>
+      <div class="comment">
+         <span class="markdown">Link between Explainability Technique and target of the explaination - i.e. the thing being explained.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">Explanation Target</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#utilises">
+      <h3>utilises<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#utilises</p>
+      <div class="comment">
+         <span class="markdown">Link between an Explainer and the Explainability Technique that is uses.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#Explainer" title="http://www.w3id.org/iSeeOnto/explainer#Explainer">Explainer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"
+                  title="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">Explainability Technique</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ante-hoc" title="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">ante-hoc</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#categorical"
+            title="http://www.w3id.org/iSeeOnto/explainer#categorical">categorical</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#cohort" title="http://www.w3id.org/iSeeOnto/explainer#cohort">cohort</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#data" title="http://www.w3id.org/iSeeOnto/explainer#data">data</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#global" title="http://www.w3id.org/iSeeOnto/explainer#global">global</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#image" title="http://www.w3id.org/iSeeOnto/explainer#image">
+            <span>image</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#local" title="http://www.w3id.org/iSeeOnto/explainer#local">local</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#model" title="http://www.w3id.org/iSeeOnto/explainer#model">model</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#model-agnostic"
+            title="http://www.w3id.org/iSeeOnto/explainer#model-agnostic">model-agnostic</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific"
+            title="http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific">model-class specific</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#modelSpecific"
+            title="http://www.w3id.org/iSeeOnto/explainer#modelSpecific">model-specific</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#numerical" title="http://www.w3id.org/iSeeOnto/explainer#numerical">
+            <span>numerical</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#ordinal" title="http://www.w3id.org/iSeeOnto/explainer#ordinal">
+            <span>ordinal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#post-hoc" title="http://www.w3id.org/iSeeOnto/explainer#post-hoc">post-hoc</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/explainer#prediction"
+            title="http://www.w3id.org/iSeeOnto/explainer#prediction">prediction</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ante-hoc">
+      <h3>ante-hoc<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ante-hoc</p>
+      <div class="comment">
+         <span class="markdown">An ante-hoc Explanation Technique use the same model for the task and creating explanations</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">Explainer Concurrentness</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#categorical">
+      <h3>categorical<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#categorical</p>
+      <div class="comment">
+         <span class="markdown">Data having a categorical type.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#cohort">
+      <h3>cohort<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#cohort</p>
+      <div class="comment">
+         <span class="markdown">Explanations generated by an Explanation Technique with local scope explain a subgroup in a dataset or subspace in a model's decision space.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">Explanation Scope</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#data">
+      <h3>data<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#data</p>
+      <div class="comment">
+         <span class="markdown">Raw or feature data that are the target of an explanation.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">Explanation Target</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#global">
+      <h3>global<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#global</p>
+      <div class="comment">
+         <span class="markdown">Explanations generated by an Explanation Technique with global scope explain an AI Model.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">Explanation Scope</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#image">
+      <h3>image<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#image</p>
+      <div class="comment">
+         <span class="markdown">Data of type image.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#local">
+      <h3>local<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#local</p>
+      <div class="comment">
+         <span class="markdown">Explanations generated by an Explanation Technique with local scope explain a single data point or prediction.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope">Explanation Scope</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#model">
+      <h3>model<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#model</p>
+      <div class="comment">
+         <span class="markdown">The AI Model is the target of an Explanation.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">Explanation Target</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#model-agnostic">
+      <h3>model-agnostic<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#model-agnostic</p>
+      <div class="comment">
+         <span class="markdown">An Explanation Technique that works with any model family.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#Portability"
+               title="http://www.w3id.org/iSeeOnto/explainer#Portability">Portability</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific">
+      <h3>model-class specific<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#modelClassSpecific</p>
+      <div class="comment">
+         <span class="markdown">An Explanation Technique that works with a particular family of models.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#Portability"
+               title="http://www.w3id.org/iSeeOnto/explainer#Portability">Portability</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#modelSpecific">
+      <h3>model-specific<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#modelSpecific</p>
+      <div class="comment">
+         <span class="markdown">An Explanation Technique that works with a specific type of model.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#Portability"
+               title="http://www.w3id.org/iSeeOnto/explainer#Portability">Portability</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#numerical">
+      <h3>numerical<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#numerical</p>
+      <div class="comment">
+         <span class="markdown">Data having a numerical type</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#ordinal">
+      <h3>ordinal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#ordinal</p>
+      <div class="comment">
+         <span class="markdown">Data having an ordinal type</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#DataType" title="http://www.w3id.org/iSeeOnto/explainer#DataType">Data Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#post-hoc">
+      <h3>post-hoc<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#post-hoc</p>
+      <div class="comment">
+         <span class="markdown">A post-hoc Explanation Technique uses different models to create the eo:SystemRecommendation and eo:Explanation to that which were used as part of the Task</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness">Explainer Concurrentness</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/explainer#prediction">
+      <h3>prediction<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/explainer#prediction</p>
+      <div class="comment">
+         <span class="markdown">The Predictions are the target of an Explanation.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"
+               title="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">Explanation Target</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
