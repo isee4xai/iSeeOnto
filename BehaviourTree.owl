@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#"
+     xml:base="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree">
+		<terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesus Miguel Darias Goitia</terms:contributor>
+	    <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belén Díaz-Agudo</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:description xml:lang="en">The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system. 
+		
+			This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Behaviour Tree Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">btree</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/BehaviourTree</vann:preferredNamespaceUri>
+	</owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes">
+        <rdfs:label xml:lang="en">custom nodes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data">
+        <rdfs:label xml:lang="en">has Data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild">
+        <rdfs:label xml:lang="en">first child</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember">
+        <rdfs:label xml:lang="en">has dictionary member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next">
+        <rdfs:label xml:lang="en">next</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes">
+        <rdfs:label xml:lang="en">nodes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject">
+        <rdfs:label>pair value object</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode">
+        <rdfs:label xml:lang="en">root node</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree">
+        <rdfs:label xml:lang="en">selected tree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees">
+        <rdfs:label xml:lang="en">trees</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">pair key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal">
+        <rdfs:label xml:lang="en">pair value literal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+        <rdfs:label xml:lang="en">Action Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Behaviour Tree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+        <rdfs:label xml:lang="en">Composite Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+        <rdfs:label xml:lang="en">Condition Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+        <rdfs:label xml:lang="en">Decorator Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Dictionary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+        <rdfs:label xml:lang="en">Evaluation Method Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"/>
+        <rdfs:label xml:lang="en">Explanation Method Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"/>
+        <rdfs:label xml:lang="en">Failure Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"/>
+        <rdfs:label xml:lang="en">Inverter Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair"/>
+        <rdfs:label xml:lang="en">Key Literal Value Pair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Key Object Value Pair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Key Value Pair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"/>
+        <rdfs:label xml:lang="en">Limit At Activations Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"/>
+        <rdfs:label xml:lang="en">Priority Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"/>
+        <rdfs:label xml:lang="en">Repeat At X Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"/>
+        <rdfs:label xml:lang="en">Repeat Until Failure Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"/>
+        <rdfs:label xml:lang="en">Repeat Until Succes sNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"/>
+        <rdfs:label xml:lang="en">SequenceNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"/>
+        <rdfs:label xml:lang="en">Succeeder Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Tree</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

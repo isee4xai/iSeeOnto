@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The Behaviour Tree Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/BehaviourTree","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/BehaviourTree","name":"The Behaviour Tree Ontology", "headline":"The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system. 					This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Mon Apr 04 14:12:25 BST 2022", "contributor":[{"@type":"Person","name":"Belén Díaz-Agudo"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Jesus Miguel Darias Goitia"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Behaviour Tree Ontology</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://www.w3id.org/iSeeOnto/BehaviourTree">https://www.w3id.org/iSeeOnto/BehaviourTree</a></dd>
+<dt>Contributors:</dt>
+<dd>Belén Díaz-Agudo</dd><dd>David Corsar</dd><dd>Ikechukwu Nkisi-Orji</dd><dd>Jesus Miguel Darias Goitia</dd><dd>Juan A. Recio-Garcia</dd><dd>Marta Caro Martínez</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd> The Behaviour Tree Ontology.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system. 
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+
+</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>btree</b></td><td>&lt;https://www.w3id.org/iSeeOnto/BehaviourTree&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>btree</b></td><td>&lt;http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+ <div id="description"><h2 id="desc" class="list">The Behaviour Tree Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<img src="imgs/BehaviourTree.png" alt="Outline of the Behaviour Tree ontology main classes and relationships">
+<figcaption>Outline of the Behaviour Tree ontology main classes and relationships.</figcaption>
+</div>
+   
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The Behaviour Tree Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">Action Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree">Behaviour Tree</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">Composite Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode">Condition Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data">Data</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary">Dictionary</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode">Evaluation Method Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode">Explanation Method Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode">Failure Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode">Inverter Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair">Key Literal Value Pair</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair">Key Object Value Pair</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair">Key Value Pair</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode">Limit At Activations Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode">Priority Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode">Repeat At X Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode">Repeat Until Failure Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode">Repeat Until Succes sNode</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode">SequenceNode</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode">Succeeder Node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree">Tree</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes">custom nodes</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild">first child</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data">has Data</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember">has dictionary member</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next">next</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes">nodes</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject">pair value object</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties">
+         <span>properties</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode">root node</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree">selected tree</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees">trees</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey">pair key</a>
+   </li>
+   <li>
+      <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal"
+         title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal">pair value literal</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred namespace prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred namespace uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The Behaviour Tree Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for The Behaviour Tree Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Behaviour Tree Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">Action Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree">Behaviour Tree</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">Composite Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode">Condition Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data">Data</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary">Dictionary</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode">Evaluation Method Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode">Explanation Method Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode">Failure Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode">Inverter Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair">Key Literal Value Pair</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair">Key Object Value Pair</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair">Key Value Pair</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode">Limit At Activations Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode">Priority Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode">Repeat At X Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode">Repeat Until Failure Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode">Repeat Until Succes sNode</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode">SequenceNode</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode">Succeeder Node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree">Tree</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">
+      <h3>Action Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode">Explanation Method Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode">Failure Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode">Succeeder Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree">
+      <h3>Behaviour Tree<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#BehaviourTree</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">
+      <h3>Composite Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode">Priority Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode">SequenceNode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode">
+      <h3>Condition Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data">
+      <h3>Data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Data</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">
+      <h3>Decorator Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode">Inverter Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode">Limit At Activations Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode">Repeat At X Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode">Repeat Until Failure Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode">Repeat Until Succes sNode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary">
+      <h3>Dictionary<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Dictionary</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode">
+      <h3>Evaluation Method Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode">
+      <h3>Explanation Method Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ExplanationMethodNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">Action Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode">
+      <h3>Failure Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#FailureNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">Action Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode">
+      <h3>Inverter Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#InverterNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair">
+      <h3>Key Literal Value Pair<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair">Key Value Pair</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair">Key Object Value Pair</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair">
+      <h3>Key Object Value Pair<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair">Key Value Pair</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair">Key Literal Value Pair</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair">
+      <h3>Key Value Pair<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyValuePair</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyLiteralValuePair">Key Literal Value Pair</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#KeyObjectValuePair">Key Object Value Pair</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode">
+      <h3>Limit At Activations Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#LimitAtActivationsNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node">
+      <h3>Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Node</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">Action Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">Composite Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ConditionNode">Condition Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#EvaluationMethodNode">Evaluation Method Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode">
+      <h3>Priority Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#PriorityNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">Composite Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode">
+      <h3>Repeat At X Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatAtXNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode">
+      <h3>Repeat Until Failure Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilFailureNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode">
+      <h3>Repeat Until Succes sNode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#RepeatUntilSuccessNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#DecoratorNode">Decorator Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode">
+      <h3>SequenceNode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SequenceNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#CompositeNode">Composite Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode">
+      <h3>Succeeder Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#SucceederNode</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode"
+               title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#ActionNode">Action Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree">
+      <h3>Tree<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#Tree</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes">custom nodes</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild">first child</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data">has Data</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember">has dictionary member</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next">next</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes">nodes</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject">pair value object</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties">
+            <span>properties</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode">root node</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree">selected tree</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees">trees</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes">
+      <h3>custom nodes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#customNodes</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild">
+      <h3>first child<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#firstChild</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data">
+      <h3>has Data<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#data</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember">
+      <h3>has dictionary member<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#hasDictionaryMember</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next">
+      <h3>next<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#next</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes">
+      <h3>nodes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#nodes</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject">
+      <h3>pair value object<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairValueObject</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties">
+      <h3>properties<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#properties</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode">
+      <h3>root node<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#rootNode</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree">
+      <h3>selected tree<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#selectedTree</p>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees">
+      <h3>trees<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#trees</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey">pair key</a>
+      </li>
+      <li>
+         <a href="#http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal"
+            title="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal">pair value literal</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey">
+      <h3>pair key<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pairKey</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal">
+      <h3>pair value literal<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/david/ontologies/2022/2/untitled-ontology-69#pair_value_literal</p>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+            <span>contributor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+            title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+            <span>preferred namespace prefix</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+            <span>preferred namespace uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/terms/contributor">
+      <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+      <h3>preferred namespace prefix<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+      <h3>preferred namespace uri<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
