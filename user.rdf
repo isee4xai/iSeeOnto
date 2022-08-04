@@ -23,12 +23,12 @@
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/user">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usr</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/user</vann:preferredNamespaceUri>
@@ -463,29 +463,50 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#high -->
+    <!-- http://www.w3id.org/iSeeOnto/user#advanced_beginner -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#high">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#advanced_beginner">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
-        <rdfs:label xml:lang="en">high</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#low -->
+    <!-- http://www.w3id.org/iSeeOnto/user#competent -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#low">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#competent">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
-        <rdfs:label xml:lang="en">low</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#medium -->
+    <!-- http://www.w3id.org/iSeeOnto/user#expert -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#medium">
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#expert">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
-        <rdfs:label xml:lang="en">medium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#no_knowledge -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#no_knowledge">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#novice -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#novice">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#proficient -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#proficient">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
