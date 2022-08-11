@@ -70,6 +70,7 @@ These following classes defined as subclasses of the Similarity Strategy class:
     <owl:AnnotationProperty rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#isFilter">
         <rdfs:comment xml:lang="en">Used to indicate that a resource (property, class, individual) can be used when filtering query results.</rdfs:comment>
         <rdfs:label xml:lang="en">is filter</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:AnnotationProperty>
     
 
