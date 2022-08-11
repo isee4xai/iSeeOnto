@@ -22,13 +22,15 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
-		 <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Similarity Knowledge Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simkn</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/SimilarityKnowledge</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">The similarity knowledge ontology defines four strategies that can be used when evaluating the similarity of two concepts defined in iSeeOnto. 
 These following classes defined as subclasses of the Similarity Strategy class:
 - Exact Match, which indicates that there is a match if two individuals are exactly the same individual.
@@ -38,10 +40,6 @@ These following classes defined as subclasses of the Similarity Strategy class:
 - Hierarchy Match, which indicates that two individuals match if they share a common type, regardless of its place in the hierarchy.
 
 - Same Type Match, which indicates that two individuals match if they both have the same asserted type.</rdfs:comment>
-
-        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simkn</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/SimilarityKnowledge</vann:preferredNamespaceUri>
-       
     </owl:Ontology>
     
 
@@ -63,6 +61,15 @@ These following classes defined as subclasses of the Similarity Strategy class:
         <rdfs:comment xml:lang="en">This property allows existing concepts to be annotated with a reference to the type of Similarity Strategy that is applicable.</rdfs:comment>
         <rdfs:label xml:lang="en">applicable similarity strategy</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#SimilarityStrategy"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/SimilarityKnowledge#isFilter -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#isFilter">
+        <rdfs:comment xml:lang="en">Used to indicate that a resource (property, class, individual) can be used when filtering query results.</rdfs:comment>
+        <rdfs:label xml:lang="en">is filter</rdfs:label>
     </owl:AnnotationProperty>
     
 
