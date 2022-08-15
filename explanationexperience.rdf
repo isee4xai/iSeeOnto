@@ -31,12 +31,12 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/user"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/workflow"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explanation Experience Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/explanationexperience</vann:preferredNamespaceUri>
@@ -86,6 +86,23 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria">
+        <rdfs:comment xml:lang="en">Relationship between the requirements an Explanation or the generation of an Explanation must satisfy and a Criteria specifying the requirements on a particular relationship.</rdfs:comment>
+        <rdfs:label xml:lang="en">has explanation criteria</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationRequirements -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationRequirements">
+        <rdfs:label xml:lang="en">has explanation requirements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature">
@@ -119,6 +136,41 @@
         <rdfs:comment xml:lang="en">Relationship between a Solution and a Workflow</rdfs:comment>
         <rdfs:label xml:lang="en">has workflow</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#onProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#requiredDatatypeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#requiredDatatypeValue"/>
     
 
 
@@ -175,12 +227,34 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationRequirements"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasUser"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#user"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Defines the description of a case using classes defined in other iSeeOnto ontologies to define the query in terms of the AIModel, eo:Explainer (defined in the Explainer Ontology), and eo:User (defined in the Explanation Ontology).</rdfs:comment>
         <rdfs:label xml:lang="en">Description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplainerRequirements -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplainerRequirements"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria">
+        <rdfs:comment xml:lang="en">Defines a criteria that must be satisfied by an explanation or the generation of an explanation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Explanation Criteria</rdfs:label>
+        <skos:example xml:lang="en">Specifies a criteria of the form: &apos;created by an explainability technique that has concurrentness post-hoc&apos;.</skos:example>
     </owl:Class>
     
 
@@ -202,6 +276,21 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Explanation Experience classis intended to capture an individual case in terms of the eo:AIModel used, the Explainer being used, and the User and the Solution created as an Explanation Strategy to satisfy the explanation needs of a user.</rdfs:comment>
         <rdfs:label xml:lang="en">Explanation Experience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Defines the criteria that should be (ideally fully) satisfied when generating an explanation to be provided to an agent</rdfs:comment>
+        <rdfs:label xml:lang="en">Explanation Requirements</rdfs:label>
     </owl:Class>
     
 
