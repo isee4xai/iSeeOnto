@@ -202,6 +202,24 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Attention_Network -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Attention_Network">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Attention Network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Caption_Generation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Caption_Generation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Data-driven"/>
+        <rdfs:label xml:lang="en">Caption Generation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Categorical -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Categorical">
@@ -230,6 +248,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Conditional_Plots -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Conditional_Plots">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Statistics"/>
+        <rdfs:label xml:lang="en">Conditional Plots</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Data-driven -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Data-driven">
@@ -244,6 +271,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DataType">
         <rdfs:comment xml:lang="en">The types of model features (e.g., categorical, numerical, ordinal, image) that a given Explainability Technique can be used.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DiCE -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DiCE">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Data-driven"/>
+        <rdfs:label xml:lang="en">DiCE</rdfs:label>
     </owl:Class>
     
 
@@ -328,6 +364,24 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Game_Theory_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Game_Theory_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Game Theory Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Gradient-based Technique</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Image -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Image">
@@ -338,11 +392,47 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Influence_Function -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Influence_Function">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Influence Function</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Knowledge_Extraction -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Knowledge_Extraction">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Knowledge Extraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Layer_Modification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Layer_Modification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Layer Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Loss_Modification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Loss_Modification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Loss Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Model_Combination -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Model_Combination">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Model Combination</rdfs:label>
     </owl:Class>
     
 
@@ -385,11 +475,83 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Saliency -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Saliency">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Saliency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplicationByWeightsDropout -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplicationByWeightsDropout">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplication By Weights Dropout</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Simplification -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Simplification">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Simplification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByDecisionTree -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByDecisionTree">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Decision Tree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByForests -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByForests">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Forests</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Proxy_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Proxy_Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Linear Proxy Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Regression">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Linear Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByRule_Extraction -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByRule_Extraction">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Rule Extraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationBykNN -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationBykNN">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By kNN</rdfs:label>
     </owl:Class>
     
 
