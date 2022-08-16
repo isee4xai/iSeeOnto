@@ -31,6 +31,7 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/user"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/workflow"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
         <terms:contributor>Anjana Wijekoon</terms:contributor>
         <terms:contributor>Chamath Palihawadana</terms:contributor>
         <terms:contributor>David Corsar</terms:contributor>
@@ -193,14 +194,6 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Explainer -->
-
-    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#Explainer">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature">
@@ -217,12 +210,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -283,6 +270,7 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
@@ -298,12 +286,6 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Solution -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Solution">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Workflow"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Solution class is intended to describe the Workflow (defined in the workflow ontology) created as an Explanation Strategy to satisfy the Explanation needs of a user.</rdfs:comment>
         <rdfs:label xml:lang="en">Solution</rdfs:label>
     </owl:Class>
@@ -314,6 +296,14 @@
 
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree -->
+
+    <rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
     </rdf:Description>
 </rdf:RDF>
 
