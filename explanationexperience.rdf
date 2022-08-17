@@ -19,6 +19,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:prov-o="http://www.w3.org/TR/prov-o/"
      xmlns:schema="http://schema.org/"
+	 xmlns:bt="https://www.w3id.org/iSeeOnto/BehaviourTree#"
      xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
@@ -31,6 +32,7 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/user"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/workflow"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
+        <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
         <terms:contributor>Anjana Wijekoon</terms:contributor>
         <terms:contributor>Chamath Palihawadana</terms:contributor>
         <terms:contributor>David Corsar</terms:contributor>
@@ -298,12 +300,6 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Solution -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Solution">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/workflow#Workflow"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Solution class is intended to describe the Workflow (defined in the workflow ontology) created as an Explanation Strategy to satisfy the Explanation needs of a user.</rdfs:comment>
         <rdfs:label xml:lang="en">Solution</rdfs:label>
     </owl:Class>
@@ -315,6 +311,11 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
     </rdf:Description>
+	
+	<rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
+    </rdf:Description>
+	
 </rdf:RDF>
 
 
