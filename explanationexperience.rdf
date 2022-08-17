@@ -19,6 +19,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:prov-o="http://www.w3.org/TR/prov-o/"
      xmlns:schema="http://schema.org/"
+	 xmlns:bt="https://www.w3id.org/iSeeOnto/BehaviourTree#"
      xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
@@ -297,6 +298,7 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
     </rdf:Description>
+
     
 
 
