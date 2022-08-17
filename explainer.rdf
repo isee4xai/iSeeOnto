@@ -211,6 +211,16 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#AudioModality -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#AudioModality">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+        <rdfs:comment xml:lang="en">An audio modality in which an Explanation exists.</rdfs:comment>
+        <rdfs:label xml:lang="en">Audio Modality</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Caption_Generation -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Caption_Generation">
@@ -567,6 +577,16 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Statistics">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Statistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#VisualModality -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#VisualModality">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+        <rdfs:comment xml:lang="en">A visual form in which an Explanation exists</rdfs:comment>
+        <rdfs:label xml:lang="en">Visual Modality</rdfs:label>
     </owl:Class>
     
 

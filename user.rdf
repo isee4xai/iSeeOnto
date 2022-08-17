@@ -171,6 +171,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#AudioFacilities">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#TechnicalFacilities"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#canHandle"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#AudioModality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Different type of Audio facilities (speakers, headphones, microphones, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">Audio Facilities</rdfs:label>
     </owl:Class>
@@ -260,6 +266,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#VisualFacilities">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#TechnicalFacilities"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#canHandle"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#VisualModality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Different types of technical facilities capable of displaying visual information ( projector, monitor, television, tablet, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Visual Facilities</rdfs:label>
     </owl:Class>
@@ -518,6 +530,28 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#proficient">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#advanced_beginner"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#competent"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#expert"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#no_knowledge"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#novice"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#proficient"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
