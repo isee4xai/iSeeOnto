@@ -286,6 +286,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Where_Question -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Where_Question">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+        <rdfs:comment xml:lang="en">Questions of a Where nature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Where Question</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#WhyQuestion -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhyQuestion">

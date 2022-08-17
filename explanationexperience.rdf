@@ -195,14 +195,6 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Explainer -->
-
-    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#Explainer">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature">
@@ -219,12 +211,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplainer"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -285,6 +271,7 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
@@ -311,11 +298,15 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
     </rdf:Description>
-	
-	<rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree">
+
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree -->
+
+    <rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
     </rdf:Description>
-	
 </rdf:RDF>
 
 

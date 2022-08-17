@@ -8,7 +8,9 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:core="http://purl.org/vocab/frbr/core#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
@@ -21,14 +23,18 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation">
         <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/aimodel"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-		<terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Method Evaluation Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aieval</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/aimethodevaluation</vann:preferredNamespaceUri>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Method Evaluation Ontology is an ontology that models the assessments, such as accuracy, F1 score, etc. of an AI Method. 
 		
 		An assessment activity is performed to evaluate the performance of a AI Method, using a metric which defines how the assessment should be performed. The outcome of the assessment is captured in the Result concept. The metric measuress some aspect of the AI Method, such as accuracy, precision, recall, completeness, etc. The assessment is performed by an Agent, either software or human. 
@@ -39,9 +45,6 @@
 
 		
 This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</rdfs:comment>
-        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Method Evaluation Ontology</terms:title>
-        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aieval</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/aimethodevaluation</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
@@ -57,40 +60,9 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension -->
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension">
-        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension"/>
-        <rdfs:label xml:lang="en">AI Method Assessment Dimension</rdfs:label>
-		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The dimension, such as Accuracy, Prevision, Recall, etc. that an evaluation assessed.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric">
-        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
-        <rdfs:label xml:lang="en">AI Method Assessment Metric</rdfs:label>
-		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The criteria used to guide the assessment of an AI Method and determine the result.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult">
-        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
-        <rdfs:label xml:lang="en">AI Method Assessment Result</rdfs:label>
-		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The result of assessing a specified dimention of an AI Method, as described by the metric specification.</rdfs:comment>
-
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Assessment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -99,9 +71,44 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
                 <owl:onClass rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">AI Method  Assessment</rdfs:label>
-		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The activity performed that made an assessment of a AI Method, guided by a metric, to generate a Result. The assessment can be associated with the agent (e.g. User) that performed the assessment.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The activity performed that made an assessment of a AI Model, guided by a metric, to generate a Result. The assessment can be associated with the agent (e.g. User) that performed the assessment.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Model Assessment</rdfs:label>
+    </owl:Class>
+    
 
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The dimension, such as Accuracy, Prevision, Recall, etc. that an evaluation assessed.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Model Assessment Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The criteria used to guide the assessment of an AI Model and determine the result.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Model Assessment Metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#annotates"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The result of assessing a specified dimension of an AI Model, as described by the metric specification.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Model Assessment Result</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
