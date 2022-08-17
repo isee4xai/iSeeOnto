@@ -195,6 +195,9 @@ These following classes defined as subclasses of the Similarity Strategy class:
     <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget">
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#Portability">
+        <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel">
         <applicableSimilarityStrategy rdf:resource="http://www.w3id.org/iSeeOnto/SimilarityKnowledge#ExactMatch"/>
     </rdf:Description>
