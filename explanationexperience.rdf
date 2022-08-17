@@ -219,19 +219,22 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationRequirements"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasUser"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#user"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/heals/eo#user"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Defines the description of a case using classes defined in other iSeeOnto ontologies to define the query in terms of the AIModel, eo:Explainer (defined in the Explainer Ontology), and eo:User (defined in the Explanation Ontology).</rdfs:comment>
