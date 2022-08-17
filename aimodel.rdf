@@ -23,12 +23,12 @@
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimodel">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor>Anjana Wijekoon</terms:contributor>
-        <terms:contributor>Chamath Palihawadana</terms:contributor>
-        <terms:contributor>David Corsar</terms:contributor>
-        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor>Marta Caro Martínez</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
         <terms:description xml:lang="en">The focus of the AI Model ontology is to further expand the definition of the AI Task and AI Method concepts from the Explanation Ontology to be able to specify the information required by the iSee Platform.
 		
 This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
@@ -55,6 +55,25 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDataType">
         <rdfs:comment xml:lang="en">The relationship between a DataSet and the type of data it contains.</rdfs:comment>
         <rdfs:label>has data type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType">
+        <rdfs:comment xml:lang="en">Defines the types of the dataset</rdfs:comment>
+        <rdfs:label xml:lang="en">has dataset type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Defines the types of features that are contained in a dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feature type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -436,7 +455,13 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasDataType"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
