@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3id.org/iSeeOnto/explanationexperience#"
      xml:base="http://www.w3id.org/iSeeOnto/explanationexperience"
+     xmlns:bt="https://www.w3id.org/iSeeOnto/BehaviourTree#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:eo="https://purl.org/heals/eo#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -19,7 +20,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:prov-o="http://www.w3.org/TR/prov-o/"
      xmlns:schema="http://schema.org/"
-	 xmlns:bt="https://www.w3id.org/iSeeOnto/BehaviourTree#"
      xmlns:aimodel="http://www.w3id.org/iSeeOnto/aimodel#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
@@ -30,6 +30,7 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/aimodel"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/user"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/workflow"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
         <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
@@ -109,6 +110,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasFeature">
         <rdfs:label xml:lang="en">has feature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasOutcome">
+        <rdfs:label xml:lang="en">has outcome</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -231,12 +240,6 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplainerRequirements -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplainerRequirements"/>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria">
@@ -253,13 +256,22 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasOutcome"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Outcome"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Explanation Experience classis intended to capture an individual case in terms of the eo:AIModel used, the Explainer being used, and the User and the Solution created as an Explanation Strategy to satisfy the explanation needs of a user.</rdfs:comment>
@@ -284,6 +296,21 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Outcome -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Outcome">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A summary of the user evaluations conducted throughout the explanation experience</rdfs:comment>
+        <rdfs:label xml:lang="en">Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Solution -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Solution">
@@ -298,7 +325,6 @@
     <rdf:Description rdf:about="https://purl.org/heals/eo#user">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
     </rdf:Description>
-
     
 
 
