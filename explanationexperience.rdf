@@ -243,6 +243,30 @@
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#requiredDatatypeValue"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Defines a criteria that must be satisfied by an explanation or the generation of an explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">Explanation Criteria</rdfs:label>
         <skos:example xml:lang="en">Specifies a criteria of the form: &apos;created by an explainability technique that has concurrentness post-hoc&apos;.</skos:example>
