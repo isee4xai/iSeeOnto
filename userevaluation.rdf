@@ -125,6 +125,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension"/>
+        <rdfs:comment>The dimension, such as Goodness, Satisfaction, etc. that an user evaluation assessed.</rdfs:comment>
+        <rdfs:label>User Evaluation Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult">
@@ -132,6 +142,41 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         <rdfs:comment xml:lang="en">The result (outcome) of a User Evaluation assessment.</rdfs:comment>
         <rdfs:label xml:lang="en">User Evaluation Result</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Goodness -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Goodness">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Satisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Satisfaction">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Trust -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Trust">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
