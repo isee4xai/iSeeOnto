@@ -72,8 +72,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:comment xml:lang="en">Defines the types of features that are contained in a dataset.</rdfs:comment>
-        <rdfs:label xml:lang="en">has feature type</rdfs:label>
     </owl:ObjectProperty>
     
 
