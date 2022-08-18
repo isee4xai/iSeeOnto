@@ -12,6 +12,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:user="http://www.w3id.org/iSeeOnto/user#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -23,12 +24,12 @@
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/user">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor>Anjana Wijekoon</terms:contributor>
-        <terms:contributor>Chamath Palihawadana</terms:contributor>
-        <terms:contributor>David Corsar</terms:contributor>
-        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor>Marta Caro Martínez</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usr</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/user</vann:preferredNamespaceUri>
@@ -117,10 +118,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <!-- http://www.w3id.org/iSeeOnto/user#levelOfKnowledge -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#levelOfKnowledge">
-        <rdfs:comment xml:lang="en">Captures an agent&apos;s level of knowledge / expertise.</rdfs:comment>
-        <rdfs:label xml:lang="en">level of knowledge</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#levelOfKnowledge"/>
     
 
 
@@ -397,6 +395,14 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.isee4xai.com/iseeontov2/cases.owl#AudioRecording -->
+
+    <owl:NamedIndividual rdf:about="http://www.isee4xai.com/iseeontov2/cases.owl#AudioRecording">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#AudioModality"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Debugging -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Debugging">
@@ -465,6 +471,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Speaker">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#AudioFacilities"/>
+        <user:canHandle rdf:resource="http://www.isee4xai.com/iseeontov2/cases.owl#AudioRecording"/>
     </owl:NamedIndividual>
     
 
