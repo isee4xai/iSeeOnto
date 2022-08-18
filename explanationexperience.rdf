@@ -10,6 +10,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:core="http://purl.org/vocab/frbr/core#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -150,12 +151,6 @@
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#onProperty -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue"/>
@@ -176,6 +171,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#onProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -248,12 +252,6 @@
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
@@ -262,6 +260,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
