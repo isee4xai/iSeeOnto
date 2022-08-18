@@ -16,6 +16,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Qual-O="http://sensornet.abdn.ac.uk/onts/Qual-O#"
      xmlns:prov-o="http://www.w3.org/TR/prov-o/"
      xmlns:schema="http://schema.org/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
@@ -26,12 +27,12 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/aimodel"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The AI Method Evaluation Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aieval</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/aimethodevaluation</vann:preferredNamespaceUri>
@@ -110,6 +111,34 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The result of assessing a specified dimension of an AI Model, as described by the metric specification.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Model Assessment Result</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <Qual-O:measures rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
