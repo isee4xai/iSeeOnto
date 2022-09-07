@@ -21,7 +21,6 @@
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/explainer">
-        <owl:imports rdf:resource="http://purl.org/vocab/vann/"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
@@ -56,8 +55,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#applicableProblemType">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:comment xml:lang="en">Relationship between an ExplainabilityTechnique and the type of eo:AI Task the technique can be used with. The Explanation Ontology defines three subclasses of eo:AI Task that the system was undertaking, namely for inductive, abductive, and deductive tasks.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">applicable problem type</rdfs:label>
-		<rdfs:comment xml:lang="en">Relationship between an ExplainabilityTechnique and the type of eo:AI Task the technique can be used with. The Explanation Ontology defines three subclasses of eo:AI Task that the system was undertaking, namely for inductive, abductive, and deductive tasks.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -67,8 +66,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+        <rdfs:comment xml:lang="en">For ExplainabilityTechniques with Portability of model-class specific (works with a particular family of models) and model-specific, this property links to the relevant class in the eo:AI Method hierarchy that this ExplainabilityTechnique can be used with.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has applicable model types</rdfs:label>
-		<rdfs:comment xml:lang="en">For ExplainabilityTechniques with Portability of model-class specific (works with a particular family of models) and model-specific, this property links to the relevant class in the eo:AI Method hierarchy that this ExplainabilityTechnique can be used with.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -78,8 +77,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasComplexity">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"/>
+        <rdfs:comment xml:lang="en">Relationahip between an ExplainabilityTechnique and some representation of the ComputationalComplexity of using it.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has complexity</rdfs:label>
-		<rdfs:comment xml:lang="en">Relationahip between an ExplainabilityTechnique and some representation of the ComputationalComplexity of using it.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -90,9 +89,9 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainerConcurrentness"/>
-        <rdfs:label xml:lang="en">has concurrentness</rdfs:label>
-		<rdfs:comment xml:lang="en">Relationship between an ExplinabilityTechnique and whether it is ante-hoc or post-hoc.
+        <rdfs:comment xml:lang="en">Relationship between an ExplinabilityTechnique and whether it is ante-hoc or post-hoc.
 		</rdfs:comment>
+        <rdfs:label xml:lang="en">has concurrentness</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -102,9 +101,9 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationScope"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has explanation scope</rdfs:label>
-		<rdfs:comment xml:lang="en">Relationship between an ExplinabilityTechnique and the extent to which explanations generated by it can be generalised, as defined in individuals of type ExplanationScope (e.g. local, cohort, global).
+        <rdfs:comment xml:lang="en">Relationship between an ExplinabilityTechnique and the extent to which explanations generated by it can be generalised, as defined in individuals of type ExplanationScope (e.g. local, cohort, global).
 		</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has explanation scope</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -114,9 +113,9 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasOutputType">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has output type</rdfs:label>
-		<rdfs:comment xml:lang="en">Relationship between an ExplinabilityTechnique and the type of explanations generated by it, as defined by subclasses of eo:Explanation.
+        <rdfs:comment xml:lang="en">Relationship between an ExplinabilityTechnique and the type of explanations generated by it, as defined by subclasses of eo:Explanation.
 		</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has output type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -126,8 +125,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPortability">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Portability"/>
+        <rdfs:comment xml:lang="en">Link between Explainability Technique and the type of AI models it can be applied in terms of model-agnostic (works with any model family), model-class specific (works with a particular family of models), and model-specific as represented in individuals of type Portability.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has portability</rdfs:label>
-		<rdfs:comment xml:lang="en">Link between Explainability Technique and the type of AI models it can be applied in terms of model-agnostic (works with any model family), model-class specific (works with a particular family of models), and model-specific as represented in individuals of type Portability.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -137,8 +136,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasPresentation">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <rdfs:comment xml:lang="en">Link between Explainability Technique and the types of Information Content Entity (e.g. mathematical, language, computational) that is used to present the explanation. </rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has presentation</rdfs:label>
-		<rdfs:comment xml:lang="en">Link between Explainability Technique and the types of Information Content Entity (e.g. mathematical, language, computational) that is used to present the explanation. </rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -146,9 +145,9 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <!-- http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes">
-		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is compatible with feature types</rdfs:label>
-		<rdfs:comment xml:lang="en">Link between Explainability Technique and the types of features used by the model being explained that the technique can be used with.	</rdfs:comment>
-	</owl:ObjectProperty>
+        <rdfs:comment xml:lang="en">Link between Explainability Technique and the types of features used by the model being explained that the technique can be used with.	</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is compatible with feature types</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -157,9 +156,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#targetType">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"/>
+        <rdfs:comment xml:lang="en">Link between Explainability Technique and target of the explaination - i.e. the thing being explained.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target type</rdfs:label>
-		<rdfs:comment  xml:lang="en">Link between Explainability Technique and target of the explaination - i.e. the thing being explained.</rdfs:comment>
-
     </owl:ObjectProperty>
     
 
@@ -169,8 +167,8 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#utilises">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Explainer"/>
         <rdfs:range rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:comment xml:lang="en">Link between an Explainer and the Explainability Technique that is uses.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utilises</rdfs:label>
-		<rdfs:comment xml:lang="en">Link between an Explainer and the Explainability Technique that is uses.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -186,12 +184,67 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Activation_Clusters -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Activation_Clusters">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Activation Clusters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Architecture Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Attention_Network -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Attention_Network">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Attention Network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#AudioModality -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#AudioModality">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+        <rdfs:comment xml:lang="en">An audio modality in which an Explanation exists.</rdfs:comment>
+        <rdfs:label xml:lang="en">Audio Modality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Caption_Generation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Caption_Generation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Data-driven"/>
+        <rdfs:label xml:lang="en">Caption Generation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Categorical -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Categorical">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categorical data type.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categorical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Composite -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Composite">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Composite</rdfs:label>
     </owl:Class>
     
 
@@ -205,11 +258,44 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Conditional_Plots -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Conditional_Plots">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Statistics"/>
+        <rdfs:label xml:lang="en">Conditional Plots</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Data-driven -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Data-driven">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Data-driven</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#DataType -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DataType">
         <rdfs:comment xml:lang="en">The types of model features (e.g., categorical, numerical, ordinal, image) that a given Explainability Technique can be used.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DatasetType -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DiCE -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DiCE">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Data-driven"/>
+        <rdfs:label xml:lang="en">DiCE</rdfs:label>
     </owl:Class>
     
 
@@ -276,12 +362,93 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Feature Relevance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Filter -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Filter">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Filter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Game_Theory_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Game_Theory_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Game Theory Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Gradient-based Technique</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Image -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Image">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image data type</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Influence_Function -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Influence_Function">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Influence Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Knowledge_Extraction -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Knowledge_Extraction">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Knowledge Extraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Layer_Modification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Layer_Modification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Layer Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Loss_Modification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Loss_Modification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Loss Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Model_Combination -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Model_Combination">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
+        <rdfs:label xml:lang="en">Model Combination</rdfs:label>
     </owl:Class>
     
 
@@ -311,6 +478,115 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Portability">
         <rdfs:comment xml:lang="en">The type of model an Explainability Technique can be applied to.</rdfs:comment>
         <rdfs:label xml:lang="en">Portability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Probabilistic -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Probabilistic">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Probabilistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Saliency -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Saliency">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
+        <rdfs:label xml:lang="en">Saliency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplicationByWeightsDropout -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplicationByWeightsDropout">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplication By Weights Dropout</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Simplification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Simplification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Simplification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByDecisionTree -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByDecisionTree">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Decision Tree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByForests -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByForests">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Forests</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Proxy_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Proxy_Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Linear Proxy Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Regression">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Linear Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationByRule_Extraction -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationByRule_Extraction">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By Rule Extraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SimplificationBykNN -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationBykNN">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
+        <rdfs:label xml:lang="en">Simplification By kNN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Statistics -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Statistics">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Statistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#VisualModality -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#VisualModality">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
+        <rdfs:comment xml:lang="en">A visual form in which an Explanation exists</rdfs:comment>
+        <rdfs:label xml:lang="en">Visual Modality</rdfs:label>
     </owl:Class>
     
 
@@ -380,6 +656,7 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#image">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
         <rdfs:comment xml:lang="en">Data of type image.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -435,6 +712,14 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#multivariate -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#multivariate">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#numerical -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#numerical">
@@ -469,6 +754,30 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplanationTarget"/>
         <rdfs:comment xml:lang="en">The Predictions are the target of an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">prediction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#text -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#text">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#time_series -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#time_series">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#univariate -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#univariate">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
     </owl:NamedIndividual>
     
 

@@ -59,6 +59,23 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType">
+        <rdfs:comment xml:lang="en">Defines the types of the dataset</rdfs:comment>
+        <rdfs:label xml:lang="en">has dataset type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#solves -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#solves">
@@ -117,6 +134,48 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.a2rd.net.br/mlo#DBSCAN -->
+
+    <owl:Class rdf:about="http://www.a2rd.net.br/mlo#DBSCAN">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <terms:source>https://en.wikipedia.org/wiki/DBSCAN</terms:source>
+        <rdfs:comment xml:lang="en">Density-based spatial clustering of applications with noise (DBSCAN) is a density-based clustering non-parametric algorithm: given a set of points in some space, it groups together points that are closely packed together (points with many nearby neighbours), marking as outliers points that lie alone in low-density regions (whose nearest neighbours are too far away).</rdfs:comment>
+        <rdfs:label xml:lang="en">DBSCAN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.a2rd.net.br/mlo#GloVe -->
+
+    <owl:Class rdf:about="http://www.a2rd.net.br/mlo#GloVe">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Vectorization"/>
+        <terms:source>https://en.wikipedia.org/wiki/GloVe</terms:source>
+        <rdfs:label xml:lang="en">GloVe</rdfs:label>
+        <skos:definition xml:lang="en">coined from Global Vectors, is an unsupervised learning algorithm for obtaining vector representations for words.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.a2rd.net.br/mlo#Mean-Shift -->
+
+    <owl:Class rdf:about="http://www.a2rd.net.br/mlo#Mean-Shift">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <rdfs:label xml:lang="en">Mean-Shift</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.a2rd.net.br/mlo#t-SNE -->
+
+    <owl:Class rdf:about="http://www.a2rd.net.br/mlo#t-SNE">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">t-SNE</rdfs:label>
+        <skos:definition>https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding</skos:definition>
+        <skos:definition xml:lang="en">t-distributed stochastic neighbour embedding (t-SNE) is a statistical method for visualizing high-dimensional data by giving each datapoint a location in a two or three-dimensional map.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#AIModel -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AIModel">
@@ -154,12 +213,157 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#AdaBoost -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AdaBoost">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">AdaBoost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Agglomerative_Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Agglomerative_Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Clustering"/>
+        <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Divisive_Clustering"/>
+        <terms:source>https://en.wikipedia.org/wiki/Hierarchical_clustering</terms:source>
+        <rdfs:label xml:lang="en">Agglomerative Clustering</rdfs:label>
+        <skos:definition xml:lang="en">is a &quot;bottom-up&quot; approach: each observation starts in its own cluster, and pairs of clusters are merged as one moves up the hierarchy.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#AnomalyDetection">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
-        <rdfs:comment xml:lang="en">AI classification task for Anomaly Detection.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://en.wikipedia.org/wiki/Anomaly_detection</terms:source>
         <rdfs:label xml:lang="en">Anomaly Detection</rdfs:label>
+        <skos:definition xml:lang="en">identification of rare items, events or observations which deviate significantly from the majority of the data and do not conform to a well-defined notion of normal behaviour.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Audio_Processing -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Audio_Processing">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <rdfs:label xml:lang="en">Audio Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Autoencoder -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Autoencoder">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001486"/>
+        <terms:source>https://en.wikipedia.org/wiki/Autoencoder</terms:source>
+        <rdfs:label xml:lang="en">Autoencoder</rdfs:label>
+        <skos:definition xml:lang="en">is a type of artificial neural network used to learn efficient codings of unlabeled data (unsupervised learning). The autoencoder learns a representation (encoding) for a set of data, typically for dimensionality reduction, by training the network to ignore insignificant data (“noise”).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Automatic_Speech_Recognition -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Automatic_Speech_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computational_Linguistic"/>
+        <terms:source>https://en.wikipedia.org/wiki/Speech_recognition</terms:source>
+        <rdfs:label xml:lang="en">Automatic Speech Recognition</rdfs:label>
+        <skos:definition xml:lang="en">is an interdisciplinary subfield of computer science and computational linguistics that develops methodologies and technologies that enable the recognition and translation of spoken language into text by computers with the main benefit of searchability.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Autonomous_Driving -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Autonomous_Driving">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <rdfs:label xml:lang="en">Autonomous Driving</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Case_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Case_Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Method"/>
+        <rdfs:label xml:lang="en">Bayesian Case Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Collaborative_Filtering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Collaborative_Filtering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Model_based"/>
+        <rdfs:label xml:lang="en">Bayesian Collaborative Filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Method -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Bayesian_Method">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001486"/>
+        <rdfs:label xml:lang="en">Bayesian Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Bernouilli_Naive_Bayes -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Bernouilli_Naive_Bayes">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Naive_Bayes"/>
+        <rdfs:label xml:lang="en">Bernouilli Naive Bayes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Binary_Classification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Binary_Classification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+        <rdfs:label xml:lang="en">Binary Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Bootstrapped_Aggregation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Bootstrapped_Aggregation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Bootstrapped Aggregation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Byte-Pair_Encoding -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Byte-Pair_Encoding">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Tokenization"/>
+        <rdfs:label xml:lang="en">Byte-Pair Encoding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Case_Based_Reasoning -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Case_Based_Reasoning">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Instance_Based_Learning"/>
+        <terms:source>https://en.wikipedia.org/wiki/Case-based_reasoning</terms:source>
+        <rdfs:label xml:lang="en">Case Based Reasoning</rdfs:label>
+        <skos:definition xml:lang="en">is the process of solving new problems based on the solutions of similar past problems.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Categorical_Naive_Bayes -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Categorical_Naive_Bayes">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Naive_Bayes"/>
+        <rdfs:label xml:lang="en">Categorical Naive Bayes</rdfs:label>
     </owl:Class>
     
 
@@ -167,9 +371,79 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Classification -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification">
-        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
         <rdfs:comment xml:lang="en">AI Tasks performing some classification.</rdfs:comment>
         <rdfs:label xml:lang="en">Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Clustering">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001486"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://en.wikipedia.org/wiki/Cluster_analysis</terms:source>
+        <rdfs:label xml:lang="en">Clustering</rdfs:label>
+        <skos:definition xml:lang="en">is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Collaborative_Filtering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Collaborative_Filtering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Recommenders"/>
+        <rdfs:label xml:lang="en">Collaborative Filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Complement_Naive_Bayes -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Complement_Naive_Bayes">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Naive_Bayes"/>
+        <rdfs:label xml:lang="en">Complement Naive Bayes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Computational_Linguistic -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Computational_Linguistic">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://plato.stanford.edu/entries/computational-linguistics/</terms:source>
+        <rdfs:label xml:lang="en">Computational Linguistics</rdfs:label>
+        <skos:definition xml:lang="en">is concerned with understanding written and spoken language from a computational perspective, and building artefacts that usefully process and produce language, either in bulk or in a dialogue setting.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://en.wikipedia.org/wiki/Computer_vision</terms:source>
+        <rdfs:label xml:lang="en">Computer Vision</rdfs:label>
+        <skos:definition xml:lang="en">deals with how computers can gain high-level understanding from digital images or videos.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Content-based_Recommender -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Content-based_Recommender">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Recommenders"/>
+        <rdfs:label xml:lang="en">Content-based Recommender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Convolutional_Neural_Network -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Convolutional_Neural_Network">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+        <rdfs:label xml:lang="en">Convolutional Neural Network</rdfs:label>
     </owl:Class>
     
 
@@ -179,8 +453,28 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasDataType"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Dataset that has been used to train an AI model.</rdfs:comment>
@@ -189,12 +483,320 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Deep_Belief_Network -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Deep_Belief_Network">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://en.wikipedia.org/wiki/Deep_belief_network</terms:source>
+        <rdfs:label xml:lang="en">Deep Belief Network</rdfs:label>
+        <skos:definition xml:lang="en">is a generative graphical model, or alternatively a class of deep neural network, composed of multiple layers of latent variables (&quot;hidden units&quot;), with connections between the layers but not between units within each layer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Deep_GBT_Mimic_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Deep_GBT_Mimic_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Mimic_Learning"/>
+        <rdfs:label xml:lang="en">Deep GBT Mimic Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dictionary_Based_Tokenization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dictionary_Based_Tokenization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Tokenization"/>
+        <rdfs:label xml:lang="en">Dictionary Based Tokenization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+        <terms:source>https://en.wikipedia.org/wiki/Dimensionality_reduction</terms:source>
+        <rdfs:label xml:lang="en">Dimensionality Reduction</rdfs:label>
+        <skos:definition xml:lang="en">is the transformation of data from a high-dimensional space into a low-dimensional space so that the low-dimensional representation retains some meaningful properties of the original data, ideally close to its intrinsic dimension.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Discrete_Cosine_Transformation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Discrete_Cosine_Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Discrete Cosine Transformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Divisive_Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Divisive_Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Clustering"/>
+        <terms:source>https://en.wikipedia.org/wiki/Hierarchical_clustering</terms:source>
+        <rdfs:label xml:lang="en">Divisive Clustering</rdfs:label>
+        <skos:definition xml:lang="en">is a &quot;top-down&quot; approach: all observations start in one cluster, and splits are performed recursively as one moves down the hierarchy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Edge_Detection -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Edge_Detection">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Edge Detection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://scikit-learn.org/stable/modules/ensemble.html</terms:source>
+        <rdfs:label xml:lang="en">Ensemble Method</rdfs:label>
+        <skos:definition xml:lang="en">combine the predictions of several base estimators built with a given learning algorithm in order to improve generalizability / robustness over a single estimator.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Evolutionary_Algorithm -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Evolutionary_Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Metaheuristic"/>
+        <terms:source>https://en.wikipedia.org/wiki/Evolutionary_algorithm</terms:source>
+        <rdfs:label xml:lang="en">Evolutionary Algorithm</rdfs:label>
+        <skos:definition xml:lang="en">is a subset of evolutionary computation, a generic population-based metaheuristic optimization algorithm. An EA uses mechanisms inspired by biological evolution, such as reproduction, mutation, recombination, and selection.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Expectation_Maximisation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Expectation_Maximisation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <rdfs:label xml:lang="en">Expectation Maximisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Face_Recognition -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Face_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Face Recognition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#FastText -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#FastText">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Vectorization"/>
+        <terms:source>https://en.wikipedia.org/wiki/FastText</terms:source>
+        <rdfs:label xml:lang="en">FastText</rdfs:label>
+        <skos:definition xml:lang="en">is a word embedding library that allows one to create an unsupervised learning or supervised learning algorithm for obtaining vector representations for words.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Flexible_Discriminant_Analysis -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Flexible_Discriminant_Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Flexible Discriminant Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Forecasting -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting">
-        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#AITask"/>
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
         <rdfs:comment xml:lang="en">An AI forecasting task.</rdfs:comment>
         <rdfs:label xml:lang="en">Forecasting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Fourier_Transformation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Fourier_Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Fourier Transformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Genetic_Algorithm -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Genetic_Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Evolutionary_Algorithm"/>
+        <terms:source>https://en.wikipedia.org/wiki/Genetic_algorithm</terms:source>
+        <rdfs:label xml:lang="en">Genetic Algorithm</rdfs:label>
+        <skos:definition xml:lang="en">is a metaheuristic inspired by the process of natural selection that belongs to the larger class of evolutionary algorithms (EA).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Genetic_Programming -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Genetic_Programming">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Evolutionary_Algorithm"/>
+        <terms:source>https://en.wikipedia.org/wiki/Genetic_programming</terms:source>
+        <rdfs:label xml:lang="en">Genetic Programming</rdfs:label>
+        <skos:definition xml:lang="en">is a technique of evolving programs, starting from a population of unfit (usually random) programs, fit for a particular task by applying operations analogous to natural genetic processes to the population of programs.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Gradient_Boosting -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Gradient_Boosting">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Gradient Boosting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Gradient_Tree_Boosting -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Gradient_Tree_Boosting">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Gradient Tree Boosting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Hidden_Markov_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Hidden_Markov_Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model"/>
+        <rdfs:label xml:lang="en">Hidden Markov Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <terms:source>https://scikit-learn.org/stable/modules/clustering.html</terms:source>
+        <rdfs:label xml:lang="en">Hierarchical Clustering</rdfs:label>
+        <skos:definition xml:lang="en">is a general family of clustering algorithms that build nested clusters by merging or splitting them successively. This hierarchy of clusters is represented as a tree (or dendrogram).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Markov_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Markov_Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model"/>
+        <rdfs:label xml:lang="en">Hierarchical Markov Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Hybrid_Recommender -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Hybrid_Recommender">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Recommenders"/>
+        <rdfs:label xml:lang="en">Hybrid Recommender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Image_Detection -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Image_Detection">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Image Detection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Image_Generation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Image_Generation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Image Generation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Image_Restoration -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Image_Restoration">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Image Restoration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Image_Segmentation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Image_Segmentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Image Segmentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Information_Extraction -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Information_Extraction">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+        <terms:source>https://en.wikipedia.org/wiki/Information_extraction</terms:source>
+        <rdfs:label xml:lang="en">Information Extraction</rdfs:label>
+        <skos:definition xml:lang="en">is the task of automatically extracting structured information from unstructured and/or semi-structured machine-readable documents and other electronically represented sources.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Information_Retrieval -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Information_Retrieval">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://en.wikipedia.org/wiki/Information_retrieval</terms:source>
+        <rdfs:label xml:lang="en">Information Retrieval</rdfs:label>
+        <skos:definition xml:lang="en">is the process of obtaining information system resources that are relevant to an information need from a collection of those resources.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Instance_Based_Learning -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Instance_Based_Learning">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+        <terms:source>https://en.wikipedia.org/wiki/Instance-based_learning</terms:source>
+        <rdfs:label xml:lang="en">Instance Based Learning</rdfs:label>
+        <skos:definition xml:lang="en">is a family of learning algorithms that, instead of performing explicit generalization, compare new problem instances with instances seen in training, which have been stored in memory.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#K-Means -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#K-Means">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <terms:source>https://en.wikipedia.org/wiki/K-means_clustering</terms:source>
+        <rdfs:label xml:lang="en">K-Means</rdfs:label>
+        <skos:definition xml:lang="en">is a vector quantisation method that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centres or cluster centroid), serving as a cluster prototype.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#K-Median -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#K-Median">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <terms:source>https://en.wikipedia.org/wiki/K-medians_clustering</terms:source>
+        <rdfs:label xml:lang="en">K-Median</rdfs:label>
+        <skos:definition xml:lang="en">is a variation of k-means clustering where instead of calculating the mean for each cluster to determine its centroid, one instead calculates the median.</skos:definition>
     </owl:Class>
     
 
@@ -210,11 +812,613 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Knowledge-based_Recommender -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Knowledge-based_Recommender">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Recommenders"/>
+        <rdfs:label xml:lang="en">Knowledge-based Recommender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Linear_Discriminant_Analysis -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Linear_Discriminant_Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Linear Discriminant Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Linear_Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Linear_Regression">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <rdfs:label xml:lang="en">Linear Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Logistic_Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Logistic_Regression">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://en.wikipedia.org/wiki/Logistic_regression</terms:source>
+        <rdfs:label xml:lang="en">Logistic Regression</rdfs:label>
+        <skos:definition xml:lang="en">is a statistical model that models the probability of one event (out of two alternatives) taking place by having the log-odds (the logarithm of the odds) for the event be a linear combination of one or more independent variables (&quot;predictors&quot;).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Machine_Translation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Machine_Translation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computational_Linguistic"/>
+        <terms:source>https://en.wikipedia.org/wiki/Machine_translation</terms:source>
+        <rdfs:label xml:lang="en">Machine Translation</rdfs:label>
+        <skos:definition xml:lang="en">is a sub-field of computational linguistics that investigates the use of software to translate text or speech from one language to another.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Markov_Chain -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Markov_Chain">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model"/>
+        <rdfs:label xml:lang="en">Markov Chain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Markov_Decision_Process -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Markov_Decision_Process">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model"/>
+        <rdfs:label xml:lang="en">Markov Decision Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+        <rdfs:label xml:lang="en">Markov Process Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Markov_Random_Field -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Markov_Random_Field">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model"/>
+        <rdfs:label xml:lang="en">Markov Random Field</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Matrix_Factorisation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Matrix_Factorisation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Model_based"/>
+        <rdfs:label xml:lang="en">Matrix Factorisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Metaheuristic -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Metaheuristic">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001177"/>
+        <terms:source>https://en.wikipedia.org/wiki/Metaheuristic</terms:source>
+        <rdfs:label xml:lang="en">Metaheuristic</rdfs:label>
+        <skos:definition xml:lang="en">is a higher-level procedure or heuristic designed to find, generate, or select a heuristic (partial search algorithm) that may provide a sufficiently good solution to an optimization problem, especially with incomplete or imperfect information or limited computation capacity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Mimic_Learning -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Mimic_Learning">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <rdfs:label xml:lang="en">Mimic Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Mini-Batch_K-Means -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Mini-Batch_K-Means">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#K-Means"/>
+        <rdfs:label xml:lang="en">Mini-Batch K-Means</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Mixture_Discriminant_Analysis -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Mixture_Discriminant_Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Mixture Discriminant Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Model_based -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Model_based">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Collaborative_Filtering"/>
+        <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based"/>
+        <rdfs:label xml:lang="en">Model based</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Multi-class_Classification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Multi-class_Classification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+        <rdfs:label xml:lang="en">Multi-class Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Multi-label_Classification -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Multi-label_Classification">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
+        <rdfs:label xml:lang="en">Multi-label Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Multi-layer_Perceptron -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Multi-layer_Perceptron">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+        <rdfs:label xml:lang="en">Multi-layer Perceptron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Multinomial_Naive_Bayes -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Multinomial_Naive_Bayes">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Naive_Bayes"/>
+        <rdfs:label xml:lang="en">Multinomial Naive Bayes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Naive_Bayes -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Naive_Bayes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://scikit-learn.org/stable/modules/naive_bayes.html</terms:source>
+        <rdfs:label xml:lang="en">Naive Bayes</rdfs:label>
+        <skos:definition xml:lang="en">are a set of supervised learning algorithms based on applying Bayes’ theorem with the “naive” assumption of conditional independence between every pair of features given the value of the class variable.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Named_Entity_Recognition -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Named_Entity_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Information_Extraction"/>
+        <terms:source>https://en.wikipedia.org/wiki/Named-entity_recognition</terms:source>
+        <rdfs:label xml:lang="en">Named-Entity Recognition</rdfs:label>
+        <skos:definition xml:lang="en">is a subtask of information extraction that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Collaborative_Filtering"/>
+        <rdfs:label xml:lang="en">Neighbours based</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Object_Tracking -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Object_Tracking">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Object Tracking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Optimisation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Optimisation">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://en.wikipedia.org/wiki/Optimization_problem</terms:source>
+        <rdfs:label xml:lang="en">Optimisation</rdfs:label>
+        <skos:definition xml:lang="en">is the problem of finding the best solution from all feasible solutions.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#POS_Tagging -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#POS_Tagging">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Information_Extraction"/>
+        <terms:source>https://en.wikipedia.org/wiki/Part-of-speech_tagging</terms:source>
+        <rdfs:label xml:lang="en">POS Tagging</rdfs:label>
+        <skos:definition xml:lang="en">Part-of-Speech Tagging is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Partial_Least_Squares_Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Partial_Least_Squares_Regression">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Partial Least Squares Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Policy-based_Reinforcement_Learning -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Policy-based_Reinforcement_Learning">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Reinforcement_Learning"/>
+        <rdfs:label xml:lang="en">Policy-based Reinforcement Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Principal_Component_Analysis -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Principal_Component_Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Principal Component Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Q-Learning -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Q-Learning">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Reinforcement_Learning"/>
+        <rdfs:label xml:lang="en">Q-Learning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Quadratic_Discriminant_Analysis -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Quadratic_Discriminant_Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Quadratic Discriminant Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Random_Forest -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Random_Forest">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Random Forest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Ranking -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Ranking">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Information_Retrieval"/>
+        <rdfs:label xml:lang="en">Ranking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Recommendation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Recommendation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Information_Retrieval"/>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Recommenders -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Recommenders">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+        <terms:source>https://en.wikipedia.org/wiki/Recommender_system</terms:source>
+        <rdfs:label xml:lang="en">Recommenders</rdfs:label>
+        <skos:definition xml:lang="en">is a subclass of information filtering systems that seek to predict the &quot;rating&quot; or &quot;preference&quot; a user would give to an item.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Recurrent_Neural_Network -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Recurrent_Neural_Network">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+        <rdfs:label xml:lang="en">Recurrent Neural Network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Regression">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <rdfs:label xml:lang="en">Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Regular_Expression_Tokenization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Regular_Expression_Tokenization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Tokenization"/>
+        <rdfs:label xml:lang="en">Regular Expression Tokenization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Reinforcement_Learning -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Reinforcement_Learning">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001480"/>
+        <terms:source>https://en.wikipedia.org/wiki/Reinforcement_learning</terms:source>
+        <rdfs:label xml:lang="en">Reinforcement Learning</rdfs:label>
+        <skos:definition xml:lang="en">is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximise the notion of cumulative reward.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Restricted_Boltzmann_Machine -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Restricted_Boltzmann_Machine">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001483"/>
+        <terms:source>https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine</terms:source>
+        <rdfs:label xml:lang="en">Restricted Boltzmann Machine</rdfs:label>
+        <skos:definition xml:lang="en">is a generative stochastic artificial neural network that can learn a probability distribution over its set of inputs.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Rule_Based -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Rule_Based">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#DeductiveTask"/>
+        <rdfs:label xml:lang="en">Rule Based</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Rule_Based_Tokenization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Rule_Based_Tokenization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Tokenization"/>
+        <rdfs:label xml:lang="en">Rule Based Tokenization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#SARSA -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#SARSA">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Reinforcement_Learning"/>
+        <terms:source>https://en.wikipedia.org/wiki/State-action-reward-state-action</terms:source>
+        <rdfs:label xml:lang="en">SARSA</rdfs:label>
+        <skos:definition xml:lang="en">State–action–reward–state–action (SARSA) is an algorithm for learning a Markov decision process policy, used in the reinforcement learning area of machine learning.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Sammon_Mapping -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Sammon_Mapping">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dimensionality_Reduction"/>
+        <rdfs:label xml:lang="en">Sammon Mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Self-organizing_Map -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Self-organizing_Map">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0001486"/>
+        <terms:source>https://en.wikipedia.org/wiki/Self-organizing_map</terms:source>
+        <rdfs:label xml:lang="en">Self-organizing Map</rdfs:label>
+        <skos:definition xml:lang="en">is an unsupervised machine learning technique used to produce a low-dimensional (typically two-dimensional) representation of a higher dimensional data set while preserving the topological structure of the data.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Signal_Processing -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Signal_Processing">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
+        <terms:source>https://en.wikipedia.org/wiki/Signal_processing</terms:source>
+        <rdfs:label xml:lang="en">Signal Processing</rdfs:label>
+        <skos:definition xml:lang="en">focuses on analysing, modifying, and synthesizing signals such as sound, images, and scientific measurements to improve transmission, storage efficiency and subjective quality and to also emphasize or detect components of interest in a measured signal.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Spectral_Bi-Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Spectral_Bi-Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <rdfs:label xml:lang="en">Spectral Bi-Clustering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Spectral_Co-Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Spectral_Co-Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Clustering"/>
+        <rdfs:label xml:lang="en">Spectral Co-Clustering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Stacked_Generalization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Stacked_Generalization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Stacked Generalization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Temporal_Difference -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Temporal_Difference">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Reinforcement_Learning"/>
+        <terms:source>https://en.wikipedia.org/wiki/Temporal_difference_learning</terms:source>
+        <rdfs:label xml:lang="en">Temporal Difference</rdfs:label>
+        <skos:definition xml:lang="en">a class of model-free reinforcement learning methods which learn by bootstrapping from the current estimate of the value function.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Text_Summarisation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Text_Summarisation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computational_Linguistic"/>
+        <rdfs:comment xml:lang="en">reduces the number of sentences and words of a document without changing its meaning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text Summarisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Tokenization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Tokenization">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+        <terms:source>https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization</terms:source>
+        <rdfs:label xml:lang="en">Tokenization</rdfs:label>
+        <skos:definition xml:lang="en">is the process of demarcating and possibly classifying sections of a string of input characters.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Tolerant_Markov_Model -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Tolerant_Markov_Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Markov_Process_Model"/>
+        <rdfs:label xml:lang="en">Tolerant Markov Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Transformers -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Transformers">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0017046"/>
+        <rdfs:label xml:lang="en">Transformers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Vectorization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Vectorization">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
+        <rdfs:label xml:lang="en">Vectorization</rdfs:label>
+        <skos:definition xml:lang="en">is a methodology in NLP to map words or phrases from vocabulary to a corresponding vector of real numbers.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Video_Motion_Tracking -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Video_Motion_Tracking">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Computer_Vision"/>
+        <rdfs:label xml:lang="en">Video Motion Tracking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Voting_Classifier -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Voting_Classifier">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Voting Classifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Voting_Regressor -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Voting_Regressor">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Voting Regressor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Weighted_Average -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Weighted_Average">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Ensemble_Method"/>
+        <rdfs:label xml:lang="en">Weighted Average</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#White_Space_Tokenization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#White_Space_Tokenization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Tokenization"/>
+        <rdfs:label xml:lang="en">White Space Tokenization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Word2vec -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Word2vec">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Vectorization"/>
+        <terms:source>https://en.wikipedia.org/wiki/Word2vec</terms:source>
+        <rdfs:label xml:lang="en">Word2vec</rdfs:label>
+        <skos:definition xml:lang="en">is a technique for natural language processing that uses a neural network model to learn word associations from a large corpus of text.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#WordPiece -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#WordPiece">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Tokenization"/>
+        <rdfs:label xml:lang="en">WordPiece</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#k-Nearest_Neighbour -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#k-Nearest_Neighbour">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Instance_Based_Learning"/>
+        <rdfs:label xml:lang="en">k-Nearest Neighbour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#k-Nearest_Neighbour_Recommender -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#k-Nearest_Neighbour_Recommender">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based"/>
+        <rdfs:label xml:lang="en">k-Nearest Neighbour</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Term_frequency–Inverse_document_frequency">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIT_0010354"/>
-        <terms:source>https://en.wikipedia.org/wiki/Tf%E2%80%93idf</terms:source>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Vectorization"/>
+        <terms:source>https://en.wikipedia.org/wiki/Tf-idf</terms:source>
         <rdfs:label>Term frequency–Inverse document frequency</rdfs:label>
         <skos:definition>is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus.</skos:definition>
     </owl:Class>
@@ -251,11 +1455,62 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.a2rd.net.br/mlo#DBSCAN"/>
+            <rdf:Description rdf:about="http://www.a2rd.net.br/mlo#Mean-Shift"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Divisive_Clustering"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Expectation_Maximisation"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Hierarchical_Clustering"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#K-Means"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#K-Median"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Spectral_Bi-Clustering"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Spectral_Co-Clustering"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.a2rd.net.br/mlo#GloVe"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#FastText"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Word2vec"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Byte-Pair_Encoding"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dictionary_Based_Tokenization"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Regular_Expression_Tokenization"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Rule_Based_Tokenization"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#White_Space_Tokenization"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#WordPiece"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Classification"/>
             <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Forecasting"/>
             <rdf:Description rdf:about="https://purl.org/heals/eo#AbductiveTask"/>
             <rdf:Description rdf:about="https://purl.org/heals/eo#DeductiveTask"/>
             <rdf:Description rdf:about="https://purl.org/heals/eo#InductiveTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Convolutional_Neural_Network"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Multi-layer_Perceptron"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Recurrent_Neural_Network"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Transformers"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Policy-based_Reinforcement_Learning"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Q-Learning"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#SARSA"/>
+            <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Temporal_Difference"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
