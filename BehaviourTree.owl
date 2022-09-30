@@ -15,8 +15,8 @@
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesus Miguel Darias Goitia</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
-        <terms:description xml:lang="en">The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system. 
-		
+        <terms:description xml:lang="en">The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system.
+
 			This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Behaviour Tree Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">btree</vann:preferredNamespacePrefix>
@@ -85,10 +85,11 @@
     
 
 
-    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#data -->
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#display -->
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#data">
-        <rdfs:label xml:lang="en">has Data</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#display">
+        <rdfs:comment xml:lang="en">Display properties such as x and y positions.</rdfs:comment>
+        <rdfs:label xml:lang="en">display</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -96,15 +97,8 @@
     <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild -->
 
     <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild">
+        <rdfs:comment xml:lang="en">The first child of a node.</rdfs:comment>
         <rdfs:label xml:lang="en">first child</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#hasChildren -->
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#hasChildren">
-        <rdfs:label xml:lang="en">has children</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -120,6 +114,7 @@
     <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#next -->
 
     <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#next">
+        <rdfs:comment xml:lang="en">The next sibling of a node.</rdfs:comment>
         <rdfs:label xml:lang="en">next</rdfs:label>
     </owl:ObjectProperty>
     
@@ -226,51 +221,6 @@
     <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#data"/>
-                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Data"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Behaviour Tree</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#Children -->
-
-    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#Children">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#pairValueObject"/>
-                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyValuePair"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#CompositeNode -->
-
-    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#CompositeNode">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
-        <rdfs:label xml:lang="en">Composite Node</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode -->
-
-    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
-        <rdfs:label xml:lang="en">Condition Node</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#Data -->
-
-    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#Data">
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#customNodes"/>
                 <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
             </owl:Restriction>
@@ -288,7 +238,31 @@
                 <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Tree"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Data</rdfs:label>
+        <rdfs:label xml:lang="en">Behaviour Tree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#CompositeNode -->
+
+    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#CompositeNode">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Composite Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode -->
+
+    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+        <rdfs:label xml:lang="en">Condition Node</rdfs:label>
     </owl:Class>
     
 
@@ -297,6 +271,12 @@
 
     <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#DecoratorNode">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Decorator Node</rdfs:label>
     </owl:Class>
     
@@ -411,14 +391,21 @@
     <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#Node">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#hasChildren"/>
-                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Children"/>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#display"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Dictionary"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#properties"/>
                 <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Dictionary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#next"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Node</rdfs:label>
@@ -483,6 +470,12 @@
     <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#Tree -->
 
     <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#Tree">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#display"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Dictionary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#nodes"/>
