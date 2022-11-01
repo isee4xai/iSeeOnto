@@ -16,6 +16,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Qual-O="http://sensornet.abdn.ac.uk/onts/Qual-O#"
      xmlns:prov-o="http://www.w3.org/TR/prov-o/"
      xmlns:schema="http://schema.org/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
@@ -23,7 +24,9 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/userevaluation">
         <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
@@ -45,6 +48,25 @@ This pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E
 		
 This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#hasSteps -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#hasSteps">
+        <rdfs:label xml:lang="en">has steps</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -76,6 +98,46 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://sensornet.abdn.ac.uk/onts/Qual-O#Metric -->
+
+    <owl:Class rdf:about="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Question"/>
+        <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question"/>
+        <rdfs:label xml:lang="en">Closed Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasSteps"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Likert Scale Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Open_Question -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Question"/>
+        <rdfs:label xml:lang="en">Open Question</rdfs:label>
+    </owl:Class>
     
 
 
