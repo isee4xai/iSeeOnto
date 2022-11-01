@@ -407,6 +407,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Debugging">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Debugging</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -415,6 +416,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Education">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Education</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -423,6 +425,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Effectiveness">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Effectiveness</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -431,6 +434,34 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Efficiency">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Efficiency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Keyboard -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Keyboard">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#VisualFacilities"/>
+        <rdfs:label xml:lang="en">Keyboard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Microphone -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Microphone">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#AudioFacilities"/>
+        <rdfs:label xml:lang="en">Microphone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Mouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Mouse">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#VisualFacilities"/>
+        <rdfs:label xml:lang="en">Mouse</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -439,6 +470,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Persuasiveness">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Persuasiveness</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -447,6 +479,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Satisfaction">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Satisfaction</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -455,15 +488,23 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#ScreenDisplay">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#VisualFacilities"/>
+        <rdfs:label xml:lang="en">Screen Display</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Scruitability -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Scruitability">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Scruitability</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.w3id.org/iSeeOnto/user#Scruitablity -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Scruitablity">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Scruitablity"/>
     
 
 
@@ -472,6 +513,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Speaker">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#AudioFacilities"/>
         <user:canHandle rdf:resource="http://www.isee4xai.com/iseeontov2/cases.owl#AudioRecording"/>
+        <rdfs:label xml:lang="en">Speaker</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Touchpad -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Touchpad">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#VisualFacilities"/>
+        <rdfs:label xml:lang="en">Touchpad</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -480,6 +531,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Transparency">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -488,6 +540,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Trust">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Trust</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -496,6 +549,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#advanced_beginner">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+        <rdfs:label xml:lang="en">Advanced beginner</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -504,6 +558,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#competent">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+        <rdfs:label xml:lang="en">Competent</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -512,6 +567,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#expert">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+        <rdfs:label xml:lang="en">Expert</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -520,6 +576,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#no_knowledge">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+        <rdfs:label xml:lang="en">No knowledge</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -528,6 +585,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#novice">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+        <rdfs:label xml:lang="en">Novice</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -536,6 +594,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#proficient">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
+        <rdfs:label xml:lang="en">Proficient</rdfs:label>
     </owl:NamedIndividual>
     
 
