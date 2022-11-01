@@ -184,11 +184,30 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#ALE -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ALE">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Influence_Function"/>
+        <rdfs:comment xml:lang="en">Accumulated Local Effects</rdfs:comment>
+        <rdfs:label xml:lang="en">ALE</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Activation_Clusters -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Activation_Clusters">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Activation Clusters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Anchor_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Anchor_Explanation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation"/>
+        <rdfs:label xml:lang="en">Anchor Explanation</rdfs:label>
     </owl:Class>
     
 
@@ -240,6 +259,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Cluster-TREPAN -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Cluster-TREPAN">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification_and_Hidden-layer_Clustering"/>
+        <rdfs:label xml:lang="en">Cluster-TREPAN</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Composite -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Composite">
@@ -263,6 +291,33 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Conditional_Plots">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Statistics"/>
         <rdfs:label xml:lang="en">Conditional Plots</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Contrasting_Feature_Importance_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Contrasting_Feature_Importance_Explanation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation"/>
+        <rdfs:label xml:lang="en">Contrasting Feature Importance Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Contrasting_Gradient_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Contrasting_Gradient_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique"/>
+        <rdfs:label xml:lang="en">Contrasting Gradient Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Contribution_Distribution_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Contribution_Distribution_Explanation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation"/>
+        <rdfs:label xml:lang="en">Contribution Distribution Explanation</rdfs:label>
     </owl:Class>
     
 
@@ -291,11 +346,38 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DeepLIFT -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DeepLIFT">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique"/>
+        <rdfs:label xml:lang="en">DeepLIFT</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#DiCE -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DiCE">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Data-driven"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Optimisation_Based"/>
         <rdfs:label xml:lang="en">DiCE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DisCERN_Code -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DisCERN_Code">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based"/>
+        <rdfs:label xml:lang="en">DisCERN Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DisCERN_Tabular -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DisCERN_Tabular">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based"/>
+        <rdfs:label xml:lang="en">DisCERN Tabular</rdfs:label>
     </owl:Class>
     
 
@@ -362,11 +444,29 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation">
+        <rdfs:subClassOf rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"/>
+        <rdfs:label xml:lang="en">Feature Influence Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Feature Relevance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Composite"/>
+        <rdfs:label xml:lang="en">Feature Relevance and Example based</rdfs:label>
     </owl:Class>
     
 
@@ -389,11 +489,29 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#GradCam_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#GradCam_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique"/>
+        <rdfs:label xml:lang="en">GradCam Technique</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
         <rdfs:label xml:lang="en">Gradient-based Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Hidden-layer_Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Hidden-layer_Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Saliency"/>
+        <rdfs:label xml:lang="en">Hidden-layer Clustering</rdfs:label>
     </owl:Class>
     
 
@@ -408,6 +526,16 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Individual_Condition_Expectation_Plot -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Individual_Condition_Expectation_Plot">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Influence_Function"/>
+        <rdfs:comment xml:lang="en">Individual Conditional Expectation (ICE) plot gives a graphical depiction of the marginal effect of a variable on the response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Individual Condition Expectation Plot</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Influence_Function -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Influence_Function">
@@ -417,11 +545,39 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Integrated_Gradient_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Integrated_Gradient_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique"/>
+        <rdfs:label xml:lang="en">Integrated Gradient Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Introspective_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Introspective_Explanation">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ContextualExplanation"/>
+        <rdfs:label xml:lang="en">Introspective Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Knowledge_Extraction -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Knowledge_Extraction">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Knowledge Extraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#LIME -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#LIME">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#SimplificationByLinear_Regression"/>
+        <rdfs:comment xml:lang="en">LIME, or Local Interpretable Model-Agnostic Explanations, is an algorithm that can explain the predictions of any classifier or regressor in a faithful way, by approximating it locally with an interpretable model.</rdfs:comment>
+        <rdfs:label xml:lang="en">LIME</rdfs:label>
     </owl:Class>
     
 
@@ -453,6 +609,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Neighbourhood_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Neighbourhood_Explanation">
+        <rdfs:subClassOf rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"/>
+        <rdfs:label xml:lang="en">Neighbourhood Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Numerical -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Numerical">
@@ -463,12 +628,30 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Optimisation_Based -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Optimisation_Based">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
+        <rdfs:label xml:lang="en">Optimisation Based</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Ordinal -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Ordinal">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinal data type.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Partial_Dependence_Plot -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Partial_Dependence_Plot">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Influence_Function"/>
+        <rdfs:label xml:lang="en">Partial Dependence Plot</rdfs:label>
     </owl:Class>
     
 
@@ -491,11 +674,74 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Probabilistic_Reasoning_and_Rule_Based -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Probabilistic_Reasoning_and_Rule_Based">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Composite"/>
+        <rdfs:label xml:lang="en">Probabilistic Reasoning and Rule Based</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Prototype_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Prototype_Explanation">
+        <rdfs:subClassOf rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"/>
+        <rdfs:label xml:lang="en">Prototype Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Rationalisation_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Rationalisation_Explanation">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ContextualExplanation"/>
+        <rdfs:label xml:lang="en">Rationalisation Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SHAP -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SHAP">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Game_Theory_Technique"/>
+        <rdfs:label xml:lang="en">SHAP</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Saliency -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Saliency">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance"/>
         <rdfs:label xml:lang="en">Saliency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Saliency_Map -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Saliency_Map">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation"/>
+        <rdfs:label xml:lang="en">Saliency Map</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Semi-factual_Explanation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Semi-factual_Explanation">
+        <rdfs:subClassOf rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#Explanation"/>
+        <rdfs:label xml:lang="en">Semi-factual Explanation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Sensitivity_Map -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Sensitivity_Map">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Influence_Explanation"/>
+        <rdfs:label xml:lang="en">Sensitivity Map</rdfs:label>
     </owl:Class>
     
 
@@ -568,6 +814,24 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationBykNN">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
         <rdfs:label xml:lang="en">Simplification By kNN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Simplification_and_Hidden-layer_Clustering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Simplification_and_Hidden-layer_Clustering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Composite"/>
+        <rdfs:label xml:lang="en">Simplification and Hidden-layer Clustering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#SmoothGrad_Technique -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SmoothGrad_Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Gradient-based_Technique"/>
+        <rdfs:label xml:lang="en">SmoothGrad Technique</rdfs:label>
     </owl:Class>
     
 
