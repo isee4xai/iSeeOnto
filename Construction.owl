@@ -353,7 +353,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="resource:SIO_000291"/>
         <NamedIndividual IRI="#ConstructionUserQuestion"/>
-        <NamedIndividual IRI="#ConstructionDataset"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
