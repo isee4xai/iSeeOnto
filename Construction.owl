@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.w3id.org/iSeeOnto/iSeeOnto">
-    <Prefix name="" IRI="http://www.w3id.org/iSeeOnto/iSeeOnto#"/>
+    <Prefix name="" IRI="http://www.w3id.org/iSeeOnto/iSeeOnto"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -35,6 +35,12 @@
     <Import>http://www.w3id.org/iSeeOnto/user</Import>
     <Import>http://www.w3id.org/iSeeOnto/userevaluation</Import>
     <Import>http://www.w3id.org/iSeeOnto/workflow</Import>
+    <Declaration>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#chart"/>
+    </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ConstructionAIModel"/>
     </Declaration>
@@ -100,12 +106,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#tabular"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#chart"/>
     </Declaration>
     <ClassAssertion>
         <Class IRI="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
@@ -229,11 +229,6 @@
         <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType"/>
         <NamedIndividual IRI="#ConstructionDataset"/>
         <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#numerical"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
-        <NamedIndividual IRI="#ConstructionDataset"/>
-        <NamedIndividual IRI="#ConstructionAIModel"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel"/>
