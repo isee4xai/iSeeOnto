@@ -259,15 +259,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Cluster-TREPAN -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Cluster-TREPAN">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification_and_Hidden-layer_Clustering"/>
-        <rdfs:label xml:lang="en">Cluster-TREPAN</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explainer#Composite -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Composite">
@@ -364,24 +355,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#DisCERN_Code -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DisCERN_Code">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based"/>
-        <rdfs:label xml:lang="en">DisCERN Code</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/explainer#DisCERN_Tabular -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DisCERN_Tabular">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based"/>
-        <rdfs:label xml:lang="en">DisCERN Tabular</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">
@@ -458,15 +431,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:label xml:lang="en">Feature Relevance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Feature_Relevance_and_Example_based">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Composite"/>
-        <rdfs:label xml:lang="en">Feature Relevance and Example based</rdfs:label>
     </owl:Class>
     
 
@@ -674,15 +638,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Probabilistic_Reasoning_and_Rule_Based -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Probabilistic_Reasoning_and_Rule_Based">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Composite"/>
-        <rdfs:label xml:lang="en">Probabilistic Reasoning and Rule Based</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explainer#Prototype_Explanation -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Prototype_Explanation">
@@ -814,15 +769,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#SimplificationBykNN">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Simplification"/>
         <rdfs:label xml:lang="en">Simplification By kNN</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/explainer#Simplification_and_Hidden-layer_Clustering -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Simplification_and_Hidden-layer_Clustering">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Composite"/>
-        <rdfs:label xml:lang="en">Simplification and Hidden-layer Clustering</rdfs:label>
     </owl:Class>
     
 
