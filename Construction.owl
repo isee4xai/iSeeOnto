@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3id.org/iSeeOnto/iSeeOnto"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3id.org/iSeeOnto/iSeeOnto">
+    <Prefix name="" IRI="http://www.w3id.org/iSeeOnto/iSeeOnto#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="cito" IRI="http://purl.org/spar/cito/"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="void" IRI="http://rdfs.org/ns/void#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="prov-o" IRI="http://www.w3.org/TR/prov-o/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
+    <Prefix name="resource" IRI="http://semanticscience.org/resource/"/>
+    <Import>http://www.w3id.org/iSeeOnto/BehaviourTree</Import>
+    <Import>http://www.w3id.org/iSeeOnto/SimilarityKnowledge</Import>
+    <Import>http://www.w3id.org/iSeeOnto/aimethod</Import>
+    <Import>http://www.w3id.org/iSeeOnto/aimethodevaluation</Import>
+    <Import>http://www.w3id.org/iSeeOnto/evaluation</Import>
+    <Import>http://www.w3id.org/iSeeOnto/explainer</Import>
+    <Import>http://www.w3id.org/iSeeOnto/explanationexperience</Import>
+    <Import>http://www.w3id.org/iSeeOnto/user</Import>
+    <Import>http://www.w3id.org/iSeeOnto/userevaluation</Import>
+    <Import>http://www.w3id.org/iSeeOnto/workflow</Import>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionBehaviourTree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionConcurrentnessCriteria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionExplanationExperience"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionExplanationTargetCriteria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionMLP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionModelPerformance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionOutcome"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionPortabilityCriteria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionPresentationCriteria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionRegression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionScopeCriteria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionUser"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionUserAIKnowledge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionUserDomainKnowledge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConstructionUserQuestion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MAE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#R2Score"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tabular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#chart"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodel#AIModel"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree"/>
+        <NamedIndividual IRI="#ConstructionBehaviourTree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionConcurrentnessCriteria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodel#Dataset"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#Description"/>
+        <NamedIndividual IRI="#ConstructionDescription"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationExperience"/>
+        <NamedIndividual IRI="#ConstructionExplanationExperience"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionExplanationTargetCriteria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodel#Multi-layer_Perceptron"/>
+        <NamedIndividual IRI="#ConstructionMLP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult"/>
+        <NamedIndividual IRI="#ConstructionModelPerformance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#Outcome"/>
+        <NamedIndividual IRI="#ConstructionOutcome"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionPortabilityCriteria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionPresentationCriteria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodel#Regression"/>
+        <NamedIndividual IRI="#ConstructionRegression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationRequirements"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explanationexperience#ExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionScopeCriteria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://purl.org/heals/eo#user"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/user#AIMethodKnowledge"/>
+        <NamedIndividual IRI="#ConstructionUserAIKnowledge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/user#DomainKnowledge"/>
+        <NamedIndividual IRI="#ConstructionUserDomainKnowledge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
+        <NamedIndividual IRI="#ConstructionUserQuestion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <NamedIndividual IRI="#MAE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <NamedIndividual IRI="#R2Score"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <NamedIndividual IRI="#tabular"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#solves"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+        <NamedIndividual IRI="#ConstructionRegression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/evaluation#annotatedBy"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+        <NamedIndividual IRI="#ConstructionModelPerformance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explainer#utilises"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+        <NamedIndividual IRI="#ConstructionMLP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+        <NamedIndividual IRI="#ConstructionConcurrentnessCriteria"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#post-hoc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#hasDatasetType"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+        <NamedIndividual IRI="#tabular"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#numerical"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#trainedOn"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasAIModel"/>
+        <NamedIndividual IRI="#ConstructionDescription"/>
+        <NamedIndividual IRI="#ConstructionAIModel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationRequirements"/>
+        <NamedIndividual IRI="#ConstructionDescription"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasUser"/>
+        <NamedIndividual IRI="#ConstructionDescription"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasDescription"/>
+        <NamedIndividual IRI="#ConstructionExplanationExperience"/>
+        <NamedIndividual IRI="#ConstructionDescription"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasOutcome"/>
+        <NamedIndividual IRI="#ConstructionExplanationExperience"/>
+        <NamedIndividual IRI="#ConstructionOutcome"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution"/>
+        <NamedIndividual IRI="#ConstructionExplanationExperience"/>
+        <NamedIndividual IRI="#ConstructionBehaviourTree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+        <NamedIndividual IRI="#ConstructionExplanationTargetCriteria"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#model"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+        <NamedIndividual IRI="#ConstructionExplanationTargetCriteria"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#prediction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://sensornet.abdn.ac.uk/onts/Qual-O#basedOn"/>
+        <NamedIndividual IRI="#ConstructionModelPerformance"/>
+        <NamedIndividual IRI="#MAE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://sensornet.abdn.ac.uk/onts/Qual-O#basedOn"/>
+        <NamedIndividual IRI="#ConstructionModelPerformance"/>
+        <NamedIndividual IRI="#R2Score"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredObjectValue"/>
+        <NamedIndividual IRI="#ConstructionPortabilityCriteria"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#model-agnostic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+        <NamedIndividual IRI="#ConstructionPresentationCriteria"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/marta/ontologies/2021/11/ExplanationCases#chart"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+        <NamedIndividual IRI="#ConstructionConcurrentnessCriteria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+        <NamedIndividual IRI="#ConstructionExplanationTargetCriteria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+        <NamedIndividual IRI="#ConstructionPortabilityCriteria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+        <NamedIndividual IRI="#ConstructionPresentationCriteria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#hasExplanationCriteria"/>
+        <NamedIndividual IRI="#ConstructionRequirements"/>
+        <NamedIndividual IRI="#ConstructionScopeCriteria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+        <NamedIndividual IRI="#ConstructionScopeCriteria"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#global"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#requiredValueType"/>
+        <NamedIndividual IRI="#ConstructionScopeCriteria"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/explainer#local"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/user#hasIntent"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/user#Transparency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3id.org/iSeeOnto/user#hasResources"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+        <NamedIndividual IRI="http://www.w3id.org/iSeeOnto/user#ScreenDisplay"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://purl.org/heals/eo#asks"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+        <NamedIndividual IRI="#ConstructionUserQuestion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://purl.org/heals/eo#possess"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+        <NamedIndividual IRI="#ConstructionUserAIKnowledge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://purl.org/heals/eo#possess"/>
+        <NamedIndividual IRI="#ConstructionUser"/>
+        <NamedIndividual IRI="#ConstructionUserDomainKnowledge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="resource:SIO_000291"/>
+        <NamedIndividual IRI="#ConstructionUserQuestion"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+        <NamedIndividual IRI="#ConstructionConcurrentnessCriteria"/>
+        <Literal>http://www.w3id.org/iSeeOnto/explainer#hasConcurrentness</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/aimodel#numberOfInstances"/>
+        <NamedIndividual IRI="#ConstructionDataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1899</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+        <NamedIndividual IRI="#ConstructionExplanationTargetCriteria"/>
+        <Literal>http://www.w3id.org/iSeeOnto/explainer#targetType</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+        <NamedIndividual IRI="#ConstructionPortabilityCriteria"/>
+        <Literal>http://www.w3id.org/iSeeOnto/explainer#hasPortability</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+        <NamedIndividual IRI="#ConstructionPresentationCriteria"/>
+        <Literal>http://www.w3id.org/iSeeOnto/explainer#hasPresentation</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3id.org/iSeeOnto/explanationexperience#onProperty"/>
+        <NamedIndividual IRI="#ConstructionScopeCriteria"/>
+        <Literal>http://www.w3id.org/iSeeOnto/explainer#hasExplanationScope</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConstructionBehaviourTree</IRI>
+        <Literal>Explainers used: Importance, ALE, LIME, SHAP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConstructionUserQuestion</IRI>
+        <Literal>What attributes are the most important ones to predict the target variable?</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
