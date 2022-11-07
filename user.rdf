@@ -403,6 +403,36 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Basic_Materials -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Basic_Materials">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Chemicals, Mineral Resources, Applied Resources</rdfs:comment>
+        <rdfs:label xml:lang="en">Basic Materials</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Automobiles &amp; Auto Parts, Cyclical Consumer Products, Cyclical Consumer Services, Retailers</rdfs:comment>
+        <rdfs:label xml:lang="en">Consumer Cyclicals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Food &amp; Beverages, Personal &amp; Household Products &amp; Services, Food &amp; Drug Retailing, Consumer Goods Conglomerates</rdfs:comment>
+        <rdfs:label xml:lang="en">Consumer Non-Cyclicals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Debugging -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Debugging">
@@ -439,6 +469,55 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Energy">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Fossil Fuels, Renewable Energy, Uranium</rdfs:comment>
+        <rdfs:label xml:lang="en">Energy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Financials -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Financials">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Banking &amp; Investment Services, Insurance, Collective Investments,	Investment Holding Companies</rdfs:comment>
+        <rdfs:label xml:lang="en">Financials</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Government_Activity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Government_Activity">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Government Activity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Healthcare -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Healthcare">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Healthcare Services &amp; Equipment, Pharmaceuticals &amp; Medical Research</rdfs:comment>
+        <rdfs:label xml:lang="en">Healthcare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Industrials -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Industrials">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Industrial Goods, Industrial &amp; Commercial Services, Transportation</rdfs:comment>
+        <rdfs:label xml:lang="en">Industrials</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Keyboard -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Keyboard">
@@ -471,6 +550,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Persuasiveness">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
         <rdfs:label xml:lang="en">Persuasiveness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Real_Estate -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Real_Estate">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Real Estate</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -518,6 +606,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Technology -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Technology">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:comment xml:lang="en">Technology Equipment, Software &amp; IT Services, Financial Technology (Fintech) &amp; Infrastructure, Telecommunications Services</rdfs:comment>
+        <rdfs:label xml:lang="en">Technology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Touchpad -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Touchpad">
@@ -541,6 +639,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Trust">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
         <rdfs:label xml:lang="en">Trust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Utilities -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Utilities">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Utilities</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -595,6 +702,24 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#proficient">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
         <rdfs:label xml:lang="en">Proficient</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Academic &amp; Educational Services</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Institutions, Associations &amp; Organizations</rdfs:label>
     </owl:NamedIndividual>
     
 
