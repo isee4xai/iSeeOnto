@@ -125,11 +125,279 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Receiver_operating_characteristic</terms:source>
+        <rdfs:comment xml:lang="en">A receiver operating characteristic curve, or ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.</rdfs:comment>
+        <rdfs:label xml:lang="en">AU-ROC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
         <Qual-O:measures rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance"/>
+        <rdfs:comment xml:lang="en">Accuracy is how close a given set of measurements (observations or readings) are to their true value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accuracy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Rand_index#Adjusted_Rand_index</terms:source>
+        <rdfs:comment xml:lang="en">The adjusted Rand index is the corrected-for-chance version of the Rand index.</rdfs:comment>
+        <rdfs:label xml:lang="en">Adjusted Rand Index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/BLEU</terms:source>
+        <rdfs:comment xml:lang="en">BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another.</rdfs:comment>
+        <rdfs:label xml:lang="en">BLEU</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Brier_score</terms:source>
+        <rdfs:comment xml:lang="en">The Brier Score is a strictly proper score function or strictly proper scoring rule that measures the accuracy of probabilistic predictions. For unidimensional predictions, it is strictly equivalent to the mean squared error as applied to predicted probabilities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Brier Score</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://scikit-learn.org/stable/modules/clustering.html#calinski-harabasz-index</terms:source>
+        <rdfs:comment xml:lang="en">The index is the ratio of the sum of between-clusters dispersion and of within-cluster dispersion for all clusters (where dispersion is defined as the sum of distances squared).</rdfs:comment>
+        <rdfs:label xml:lang="en">Calinski-Harabasz Index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Cohen%27s_kappa</terms:source>
+        <rdfs:comment xml:lang="en">Cohen&apos;s kappa coefficient (κ, lowercase Greek kappa) is a statistic that is used to measure inter-rater reliability (and also intra-rater reliability) for qualitative (categorical) items.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cohen&apos;s Kappa Coefficient</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+        <rdfs:label xml:lang="en">Data Quality</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index</terms:source>
+        <rdfs:comment xml:lang="en">The Davies–Bouldin index (DBI), introduced by David L. Davies and Donald W. Bouldin in 1979, is a metric for evaluating clustering algorithms. This is an internal evaluation scheme, where the validation of how well the clustering has been done is made using quantities and features inherent to the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Davies-Bouldin Index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient</terms:source>
+        <rdfs:comment xml:lang="en">The Sørensen–Dice coefficient is a statistic used to gauge the similarity of two samples.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dice Index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <rdfs:comment xml:lang="en">Discounted cumulative gain (DCG) is a measure of ranking quality.</rdfs:comment>
+        <rdfs:label xml:lang="en">Discounted cumulative gain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Recommender_system#Performance_measures</terms:source>
+        <rdfs:label xml:lang="en">Diversity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Dunn_index</terms:source>
+        <rdfs:comment xml:lang="en">The Dunn index (DI) (introduced by J. C. Dunn in 1974) is a metric for evaluating clustering algorithms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dunn Index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Hamming_distance</terms:source>
+        <rdfs:label xml:lang="en">Hamming Loss</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Hopkins_statistic</terms:source>
+        <rdfs:comment xml:lang="en">The Hopkins statistic (introduced by Brian Hopkins and John Gordon Skellam) is a way of measuring the cluster tendency of a data set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hopkins statistic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Jaccard_index</terms:source>
+        <rdfs:comment xml:lang="en">The Jaccard index, also known as the Jaccard similarity coefficient, is a statistic used for gauging the similarity and diversity of sample sets.</rdfs:comment>
+        <rdfs:label xml:lang="en">Jaccard Score</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/METEOR</terms:source>
+        <rdfs:comment xml:lang="en">METEOR (Metric for Evaluation of Translation with Explicit ORdering) is a metric for the evaluation of machine translation output based on the harmonic mean of unigram precision and recall, with recall weighted higher than precision.</rdfs:comment>
+        <rdfs:label xml:lang="en">METEOR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Phi_coefficient</terms:source>
+        <rdfs:comment xml:lang="en">Matthews correlation coefficient (MCC) is used as a measure of the quality of binary (two-class) classifications.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mathews Correlation Coefficient</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Mean_absolute_error</terms:source>
+        <rdfs:comment xml:lang="en">Mean absolute error (MAE) is a measure of errors between paired observations expressing the same phenomenon as the sum of absolute errors divided by the sample size.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mean Absolute Error</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Mean_squared_error</terms:source>
+        <rdfs:comment xml:lang="en">Mean squared error (MSE) or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors - that is, the average squared difference between the estimated values and the actual value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mean Squared Error</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Mutual_information</terms:source>
+        <rdfs:comment xml:lang="en">The mutual information (MI) of two random variables is a measure of the mutual dependence between the two variables.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mutual Information</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/NIST_(metric)</terms:source>
+        <rdfs:comment xml:lang="en">NIST is a method based on the BLEU metric for evaluating the quality of text which has been translated using machine translation.</rdfs:comment>
+        <rdfs:label xml:lang="en">NIST</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+        <rdfs:label xml:lang="en">Network Usage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Perplexity</terms:source>
+        <rdfs:comment xml:lang="en">Perplexity is a measurement of how well a probability distribution or probability model predicts a sample.</rdfs:comment>
+        <rdfs:label xml:lang="en">Perplexity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Precision_and_recall</terms:source>
+        <rdfs:comment xml:lang="en">Precision (positive predictive value) is the fraction of relevant instances among the retrieved instances.</rdfs:comment>
+        <rdfs:label xml:lang="en">Precision</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -138,6 +406,195 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+        <rdfs:label xml:lang="en">Performance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Cluster_analysis#Evaluation_and_assessment</terms:source>
+        <rdfs:comment xml:lang="en">Purity is a measure of the extent to which clusters contain a single class.</rdfs:comment>
+        <rdfs:label xml:lang="en">Purity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/ROUGE_(metric)</terms:source>
+        <rdfs:comment xml:lang="en">ROUGE, or Recall-Oriented Understudy for Gisting Evaluation, is a set of metrics and a software package used for evaluating automatic summarization and machine translation software in natural language processing.</rdfs:comment>
+        <rdfs:label xml:lang="en">ROUGE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Coefficient_of_determination</terms:source>
+        <rdfs:comment xml:lang="en">R2 (coefficient of determination) is the proportion of the variation in the dependent variable that is predictable from the independent variable(s).</rdfs:comment>
+        <rdfs:label xml:lang="en">R squared</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Rand_index</terms:source>
+        <rdfs:comment xml:lang="en">The Rand index or Rand measure (named after William M. Rand) in statistics, and in particular in data clustering, is a measure of the similarity between two data clusterings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rand Index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Precision_and_recall</terms:source>
+        <rdfs:comment xml:lang="en">Recall (sensitivity) is the fraction of relevant instances that were retrieved.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <rdfs:label xml:lang="en">Recommender persistence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+        <rdfs:label xml:lang="en">Robustness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Root-mean-square_deviation</terms:source>
+        <rdfs:comment xml:lang="en">The root-mean-square deviation (RMSD) or root-mean-square error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Root Mean Squared Error</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <rdfs:label xml:lang="en">Serendipity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Silhouette_(clustering)</terms:source>
+        <rdfs:comment xml:lang="en">Silhouette refers to a method of interpretation and validation of consistency within clusters of data. The technique provides a succinct graphical representation of how well each object has been classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Silhouette Score</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+        <rdfs:label xml:lang="en">Speed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+        <rdfs:label xml:lang="en">Stability</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Sensitivity_and_specificity</terms:source>
+        <rdfs:comment xml:lang="en">Specificity (true negative rate) refers to the probability of a negative test, conditioned on truly being negative.</rdfs:comment>
+        <rdfs:label xml:lang="en">True Negative Rate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#WER -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#WER">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Word_error_rate</terms:source>
+        <rdfs:comment xml:lang="en">Word error rate (WER) is a common metric of the performance of a speech recognition or machine translation system.</rdfs:comment>
+        <rdfs:label xml:lang="en">WER</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro) -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/F-score</terms:source>
+        <rdfs:comment xml:lang="en">F-score or F-measure (macro) is a measure of a test&apos;s accuracy calculated from macro-averaging (taking all classes as equally important) the precision and recall of the test.</rdfs:comment>
+        <rdfs:label xml:lang="en">F1-score (macro)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro) -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/F-score</terms:source>
+        <rdfs:comment xml:lang="en">F-score or F-measure (micro) is a measure of a test&apos;s accuracy calculated from micro-averaging (biased by class frequency) the precision and recall of the test.</rdfs:comment>
+        <rdfs:label xml:lang="en">F1-score (micro)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Fowlkes%E2%80%93Mallows_index</terms:source>
+        <rdfs:comment xml:lang="en">The Fowlkes–Mallows index is an external evaluation method that is used to determine the similarity between two clusterings (clusters obtained after a clustering algorithm), and also a metric to measure confusion matrices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fowlkes–Mallows index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden&apos;s_J_statistic -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden&apos;s_J_statistic">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <terms:source>https://en.wikipedia.org/wiki/Youden%27s_J_statistic</terms:source>
+        <rdfs:comment xml:lang="en">Youden&apos;s J statistic (also called Youden&apos;s index) is a single statistic that captures the performance of a dichotomous diagnostic test.</rdfs:comment>
+        <rdfs:label xml:lang="en">Youden&apos;s J statistic</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
