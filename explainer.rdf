@@ -203,6 +203,17 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Anchor -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Anchor">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#SimplificationByRule_Extraction"/>
+        <terms:source>https://christophm.github.io/interpretable-ml-book/anchors.html</terms:source>
+        <rdfs:comment xml:lang="en">The anchors method explains individual predictions of any black box classification model by finding a decision rule that “anchors” the prediction sufficiently. A rule anchors a prediction if changes in other feature values do not affect the prediction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anchor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Anchor_Explanation -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Anchor_Explanation">
@@ -351,6 +362,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DiCE">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Optimisation_Based"/>
         <rdfs:label xml:lang="en">DiCE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DisCERN -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DisCERN">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Data-driven"/>
+        <rdfs:label xml:lang="en">DisCERN</rdfs:label>
     </owl:Class>
     
 
@@ -797,6 +817,17 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
         <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#ExplanationModality"/>
         <rdfs:comment xml:lang="en">A visual form in which an Explanation exists</rdfs:comment>
         <rdfs:label xml:lang="en">Visual Modality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Wachter -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Wachter">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Optimisation_Based"/>
+        <terms:source>https://arxiv.org/pdf/1711.00399.pdf</terms:source>
+        <rdfs:comment xml:lang="en">Counterfactual explanation by Wachter et al.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wachter</rdfs:label>
     </owl:Class>
     
 
