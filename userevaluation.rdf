@@ -21,6 +21,7 @@
      xmlns:schema="http://schema.org/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:BehaviourTree="https://www.w3id.org/iSeeOnto/BehaviourTree#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/userevaluation">
         <owl:imports rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O"/>
@@ -59,6 +60,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom">
+        <rdfs:comment xml:lang="en">Relationship between a Closed Question and its Response Options</rdfs:comment>
+        <rdfs:label xml:lang="en">has answer from</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -111,6 +121,13 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Question"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question"/>
         <rdfs:label xml:lang="en">Closed Question</rdfs:label>
     </owl:Class>
@@ -123,8 +140,9 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasSteps"/>
-                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Steps"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Likert Scale Question</rdfs:label>
@@ -151,6 +169,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#ResultInterpretationPolicy">
@@ -163,6 +187,20 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Aids the interpretation of a User Evaluation Result by providing a textual description detailing how the result of a metric should be interpreted</rdfs:comment>
         <rdfs:label xml:lang="en">Result Interpretation Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Steps -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Steps">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasSteps"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -218,10 +256,49 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Agree-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Agree-3">
+        <rdf:type rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
+        <BehaviourTree:pairKey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</BehaviourTree:pairKey>
+        <BehaviourTree:pair_value_literal xml:lang="en">Agree</BehaviourTree:pair_value_literal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Disagree-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Disagree-1">
+        <rdf:type rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
+        <BehaviourTree:pairKey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BehaviourTree:pairKey>
+        <BehaviourTree:pair_value_literal xml:lang="en">Disagree</BehaviourTree:pair_value_literal>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#Goodness -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Goodness">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#LikertQuestionTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#LikertQuestionTest">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question"/>
+        <hasAnswerFrom rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#3-Scale_AgreeDisagree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Neutral-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Neutral-2">
+        <rdf:type rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
+        <BehaviourTree:pairKey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</BehaviourTree:pairKey>
+        <BehaviourTree:pair_value_literal xml:lang="en">Neutral</BehaviourTree:pair_value_literal>
     </owl:NamedIndividual>
     
 
@@ -238,6 +315,14 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Trust">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationDimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#3-Scale_AgreeDisagree -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#3-Scale_AgreeDisagree">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Steps"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
