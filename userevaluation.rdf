@@ -323,6 +323,9 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#3-Scale_AgreeDisagree">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Steps"/>
+        <resource:SIO_000974 rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Agree-3"/>
+        <resource:SIO_000974 rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Disagree-1"/>
+        <resource:SIO_000974 rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Neutral-2"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
