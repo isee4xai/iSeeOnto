@@ -811,6 +811,17 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Time_Complexity -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ComputationalComplexity"/>
+        <terms:source>https://en.wikipedia.org/wiki/Time_complexity</terms:source>
+        <rdfs:label xml:lang="en">Time Complexity</rdfs:label>
+        <skos:definition xml:lang="en">Time complexity is the computational complexity that describes the amount of computer time it takes to run an algorithm.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#VisualModality -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#VisualModality">
@@ -840,6 +851,76 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Constant_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Constant_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(1)</rdfs:comment>
+        <rdfs:label xml:lang="en">Constant time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Exponential_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Exponential_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(2^n)</rdfs:comment>
+        <rdfs:label xml:lang="en">Exponential time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Factorial_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Factorial_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(n!)</rdfs:comment>
+        <rdfs:label xml:lang="en">Factorial time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Linearithmic_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Linearithmic_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(n log n)</rdfs:comment>
+        <rdfs:label xml:lang="en">Linearithmic time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Log-logarithmic_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Log-logarithmic_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(log log n)</rdfs:comment>
+        <rdfs:label xml:lang="en">Log-logarithmic time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Logarithmic_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Logarithmic_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(log n)</rdfs:comment>
+        <rdfs:label xml:lang="en">Logarithmic time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Quadratic_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Quadratic_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>O(n^2)</rdfs:comment>
+        <rdfs:label xml:lang="en">Quadratic time</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
