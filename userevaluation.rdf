@@ -28,12 +28,12 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Evaluation Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usreval</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/userevaluation</vann:preferredNamespaceUri>
@@ -107,6 +107,19 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Outcome -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Outcome">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"/>
+                <owl:someValuesFrom rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question">
@@ -145,6 +158,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Question">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Survey"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Question posed to the user and used as a metric for guiding assessment of an entity, such as an Explanation.</rdfs:comment>
         <rdfs:label xml:lang="en">Question</rdfs:label>
     </owl:Class>

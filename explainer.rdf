@@ -61,13 +61,13 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType -->
+    <!-- http://www.w3id.org/iSeeOnto/explainer#hasApplicableMethodType -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasApplicableModelType">
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#hasApplicableMethodType">
         <rdfs:domain rdf:resource="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique"/>
         <rdfs:range rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
         <rdfs:comment xml:lang="en">For ExplainabilityTechniques with Portability of model-class specific (works with a particular family of models) and model-specific, this property links to the relevant class in the eo:AI Method hierarchy that this ExplainabilityTechnique can be used with.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has applicable model types</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has applicable method types</rdfs:label>
     </owl:ObjectProperty>
     
 
