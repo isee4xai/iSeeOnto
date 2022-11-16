@@ -23,12 +23,12 @@
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/aimodel">
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:description xml:lang="en">The focus of the AI Model ontology is to further expand the definition of the AI Task and AI Method concepts from the Explanation Ontology to be able to specify the information required by the iSee Platform.
 		
 This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
@@ -47,6 +47,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#featureCountRange -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#featureCountRange">
+        <rdfs:comment xml:lang="en">Relationship indicating that the number of features in the subject, e.g. a dataset, is within the range of whichever QuantityRange individual is the object value.</rdfs:comment>
+        <rdfs:label xml:lang="en">feature count range</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -72,6 +81,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#instanceCountRange -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#instanceCountRange">
+        <rdfs:comment xml:lang="en">Relationship indicating that the number of instances in the subject, e.g. a dataset, is within the range of whichever QuantityRange individual is the object value.</rdfs:comment>
+        <rdfs:label xml:lang="en">instance count range</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -461,6 +479,20 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DataType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#featureCountRange"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#instanceCountRange"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1097,6 +1129,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#QuantityRange -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange">
+        <rdfs:comment xml:lang="en">General class for capturing information related to the quantity ranges of, for example the number of feature or instances in a dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quantity Range</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Random_Forest -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Random_Forest">
@@ -1422,6 +1463,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         <rdfs:label>Term frequency–Inverse document frequency</rdfs:label>
         <skos:definition>is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus.</skos:definition>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#DatasetType -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
     
 
 
