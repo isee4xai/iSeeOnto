@@ -951,6 +951,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#LightGBM -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#LightGBM">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Application_Framework"/>
+        <rdfs:label xml:lang="en">LightGBM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Linearithmic_time -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Linearithmic_time">
