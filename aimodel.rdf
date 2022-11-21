@@ -487,14 +487,14 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#featureCountRange"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange"/>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Feature_Quantity_Range"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#instanceCountRange"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange"/>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Instance_Quantity_Range"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -513,6 +513,24 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Dataset that has been used to train an AI model.</rdfs:comment>
         <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dataset_Feature_Quantity_Range -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Feature_Quantity_Range">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange"/>
+        <rdfs:label xml:lang="en">Dataset Feature Quantity Range</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dataset_Instance_Quantity_Range -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Instance_Quantity_Range">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#QuantityRange"/>
+        <rdfs:label xml:lang="en">Dataset Instance Quantity Range</rdfs:label>
     </owl:Class>
     
 
@@ -1503,6 +1521,71 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Greater_than_100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Greater_than_100">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Feature_Quantity_Range"/>
+        <rdfs:label xml:lang="en">Greater than 100</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Greater_than_1000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Greater_than_1000">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Instance_Quantity_Range"/>
+        <rdfs:label xml:lang="en">Greater than 1000</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Less_than_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Less_than_10">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Feature_Quantity_Range"/>
+        <rdfs:label xml:lang="en">Less than 10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Less_than_100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Less_than_100">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Instance_Quantity_Range"/>
+        <rdfs:label xml:lang="en">Less than 100</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#10_to_100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodel#10_to_100">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Feature_Quantity_Range"/>
+        <rdfs:label xml:lang="en">10 to 100</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#100_to_1000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodel#100_to_1000">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Dataset_Instance_Quantity_Range"/>
+        <rdfs:label xml:lang="en">100 to 1000</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
