@@ -132,6 +132,19 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Outcome -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Outcome">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://linkedu.eu/dedalo/explanationPattern.owl#isBasedOn"/>
+                <owl:someValuesFrom rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question">

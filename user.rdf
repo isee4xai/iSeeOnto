@@ -260,6 +260,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#User_Group -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#User_Group">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#user"/>
+        <rdfs:comment xml:lang="en">Groups users with similar characteristics e.g. similar explanation need</rdfs:comment>
+        <rdfs:label xml:lang="en">User Group</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#VisualFacilities -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#VisualFacilities">
