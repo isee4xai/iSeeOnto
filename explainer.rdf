@@ -878,15 +878,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#API -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#API">
-        <rdfs:comment xml:lang="en">API access to the AI model</rdfs:comment>
-        <rdfs:label xml:lang="en">API</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explainer#Any -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Any">
@@ -926,15 +917,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/explainer#File -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#File">
-        <rdfs:comment xml:lang="en">Direct file access to AI model</rdfs:comment>
-        <rdfs:label xml:lang="en">File</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/explainer#LightGBM -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#LightGBM">
@@ -970,15 +952,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
         <rdfs:comment>O(log n)</rdfs:comment>
         <rdfs:label xml:lang="en">Logarithmic time</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/explainer#None -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#None">
-        <rdfs:comment xml:lang="en">No access to the AI model</rdfs:comment>
-        <rdfs:label xml:lang="en">None</rdfs:label>
     </owl:NamedIndividual>
     
 
