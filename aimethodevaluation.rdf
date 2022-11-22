@@ -294,6 +294,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <rdfs:label xml:lang="en">Inference Speed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score">
@@ -529,6 +538,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
         <rdfs:label xml:lang="en">Stability</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+        <rdfs:label xml:lang="en">Training Speed</rdfs:label>
     </owl:NamedIndividual>
     
 
