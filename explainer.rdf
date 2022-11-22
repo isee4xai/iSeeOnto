@@ -993,10 +993,18 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#TensorFlow2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#TensorFlow2">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Implementation_Framework"/>
+        <rdfs:label xml:lang="en">TensorFlow 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#TensowFlow2 -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#TensowFlow2">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Implementation_Framework"/>
         <rdfs:label xml:lang="en">TensorFlow 2</rdfs:label>
     </owl:NamedIndividual>
     
