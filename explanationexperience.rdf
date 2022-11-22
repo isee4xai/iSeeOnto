@@ -34,12 +34,12 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
         <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explanation Experience Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/explanationexperience</vann:preferredNamespaceUri>
@@ -140,6 +140,14 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasUserGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasUserGroup">
+        <rdfs:label xml:lang="en">has user group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasWorkflow">
@@ -235,9 +243,9 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasUser"/>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasUserGroup"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://purl.org/heals/eo#user"/>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/user#User_Group"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Defines the description of a case using classes defined in other iSeeOnto ontologies to define the query in terms of the AIModel, eo:Explainer (defined in the Explainer Ontology), and eo:User (defined in the Explanation Ontology).</rdfs:comment>
@@ -351,9 +359,9 @@
     
 
 
-    <!-- https://purl.org/heals/eo#user -->
+    <!-- http://www.w3id.org/iSeeOnto/user#User_Group -->
 
-    <rdf:Description rdf:about="https://purl.org/heals/eo#user">
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/user#User_Group">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#CaseFeature"/>
     </rdf:Description>
     
