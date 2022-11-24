@@ -72,6 +72,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#hasObjectValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#hasObjectValue">
+        <rdfs:comment xml:lang="en">Link between an entity and something that is has as a value. For example, from a User Evaluation Response to the the Response Option Value Pair that the user selected during the evaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has object value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#hasResponseOptions -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#hasResponseOptions"/>
@@ -342,12 +351,19 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult -->
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResponse -->
 
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResponse">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasObjectValue"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The result (outcome) of a User Evaluation assessment.</rdfs:comment>
-        <rdfs:label xml:lang="en">User Evaluation Result</rdfs:label>
+        <rdfs:label xml:lang="en">User Evaluation Response</rdfs:label>
     </owl:Class>
     
 
