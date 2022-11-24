@@ -81,6 +81,8 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasFeatureType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Relationship between a DataSet and the type of features it contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feature type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1469,6 +1471,19 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <!-- http://www.w3id.org/iSeeOnto/explainer#DatasetType -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+    
+
+
+    <!-- https://purl.org/heals/eo#AITask -->
+
+    <rdf:Description rdf:about="https://purl.org/heals/eo#AITask">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000355"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#AITaskGoal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
