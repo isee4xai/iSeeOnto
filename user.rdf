@@ -22,14 +22,15 @@
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.w3id.org/iSeeOnto/user">
+        <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/aimodel"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explainer"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:contributor>Anjana Wijekoon</terms:contributor>
+        <terms:contributor>Chamath Palihawadana</terms:contributor>
+        <terms:contributor>David Corsar</terms:contributor>
+        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor>Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usr</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/user</vann:preferredNamespaceUri>
@@ -142,6 +143,20 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Dataset -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestionTarget"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#AudioModality -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#AudioModality"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique -->
 
     <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">
@@ -152,6 +167,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#VisualModality -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#VisualModality"/>
     
 
 
