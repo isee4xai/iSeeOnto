@@ -63,9 +63,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3.org/ns/prov#hadDerivation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hadDerivation"/>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadDerivation"/>
         <rdfs:comment xml:lang="en">Relationship between a Closed Question and its Response Options</rdfs:comment>
         <rdfs:label xml:lang="en">has answer from</rdfs:label>
     </owl:ObjectProperty>
@@ -203,12 +210,51 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#MultipleChoiceResponse -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#MultipleChoiceResponse">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestionResponse"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestion -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestion">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Closed_Question"/>
         <rdfs:comment xml:lang="en">Nominal quesions are questions that provide a set of non-numerical response options, from which the respondant can select a single option or multple options.</rdfs:comment>
         <rdfs:label xml:lang="en">Nominal Question</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestionResponse -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestionResponse">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResponse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasObjectValue"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#OpenQuestionResponse -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#OpenQuestionResponse">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResponse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#value"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">User response to an Open Question</rdfs:comment>
+        <rdfs:label xml:lang="en">Open Question Response</rdfs:label>
     </owl:Class>
     
 
@@ -320,6 +366,21 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#SingleChoiceResponse -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#SingleChoiceResponse">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestionResponse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasObjectValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#Steps -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Steps">
@@ -368,13 +429,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResponse">
         <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasObjectValue"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The result (outcome) of a User Evaluation assessment.</rdfs:comment>
         <rdfs:label xml:lang="en">User Evaluation Response</rdfs:label>
     </owl:Class>
