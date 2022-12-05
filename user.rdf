@@ -226,16 +226,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#HowQuestion -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#HowQuestion">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
-        <rdfs:comment xml:lang="en">Questions of a How nature.</rdfs:comment>
-        <rdfs:label xml:lang="en">How Question</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/user#KnowledgeLevel -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel">
@@ -264,6 +254,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#UserQuestion">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#hasQuestionTarget"/>
@@ -303,46 +299,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Different types of technical facilities capable of displaying visual information ( projector, monitor, television, tablet, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Visual Facilities</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#WhatQuestion -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhatQuestion">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
-        <rdfs:comment xml:lang="en">Questions of a What nature.</rdfs:comment>
-        <rdfs:label xml:lang="en">What Question</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#WhenQuestion -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhenQuestion">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
-        <rdfs:comment xml:lang="en">Questions of a When nature.</rdfs:comment>
-        <rdfs:label xml:lang="en">When Question</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Where_Question -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Where_Question">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
-        <rdfs:comment xml:lang="en">Questions of a Where nature.</rdfs:comment>
-        <rdfs:label xml:lang="en">Where Question</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#WhyQuestion -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#WhyQuestion">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#UserQuestion"/>
-        <rdfs:comment xml:lang="en">Questions of a Why nature.</rdfs:comment>
-        <rdfs:label xml:lang="en">Why Question</rdfs:label>
     </owl:Class>
     
 
