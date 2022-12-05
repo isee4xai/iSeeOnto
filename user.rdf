@@ -132,6 +132,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#possessKnowledgeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/user#possessKnowledgeOf">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/heals/eo#possess"/>
+        <rdfs:label xml:lang="en">possess knowledge of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -423,6 +432,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#hasResources"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/user#TechnicalFacilities"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#possessKnowledgeOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
