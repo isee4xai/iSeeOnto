@@ -148,6 +148,40 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult -->
+
+    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#basedOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#measures"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#resultOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#value"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Outcome -->
 
     <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Outcome">
