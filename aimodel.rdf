@@ -398,6 +398,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#ClassificationRecommendation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#ClassificationRecommendation">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#SystemRecommendation"/>
+        <rdfs:label xml:lang="en">Classification Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Clustering -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Clustering">
@@ -1210,6 +1219,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Regression">
         <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#InductiveTask"/>
         <rdfs:label xml:lang="en">Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#RegressionRecommendation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#RegressionRecommendation">
+        <rdfs:subClassOf rdf:resource="https://purl.org/heals/eo#SystemRecommendation"/>
+        <rdfs:label xml:lang="en">Regression Recommendation</rdfs:label>
     </owl:Class>
     
 
