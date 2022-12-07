@@ -463,12 +463,39 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Actionability -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Actionability">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Actionability</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Basic_Materials -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Basic_Materials">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
         <rdfs:comment xml:lang="en">Chemicals, Mineral Resources, Applied Resources</rdfs:comment>
         <rdfs:label xml:lang="en">Basic Materials</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Compliancy -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Compliancy">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Compliancy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Comprehensibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Comprehensibility">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Comprehensibility</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -601,6 +628,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Mouse">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#VisualFacilities"/>
         <rdfs:label xml:lang="en">Mouse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Performance -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Performance">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
+        <rdfs:label xml:lang="en">Performance</rdfs:label>
     </owl:NamedIndividual>
     
 
