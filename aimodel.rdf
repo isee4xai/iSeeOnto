@@ -125,6 +125,14 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#hasCaseStructureMetaData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#hasCaseStructureMetaData">
+        <rdfs:label xml:lang="en">has case structure metadata</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/aimodel#numberOfFeatures">
@@ -215,6 +223,12 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explainer#utilises"/>
                 <owl:someValuesFrom rdf:resource="https://purl.org/heals/eo#ArtificialIntelligenceMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#hasCaseStructureMetaData"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An Artificial Intelligence Model that has been developed using some AI Method by training on some Dataset to solve some AI Task.</rdfs:comment>
