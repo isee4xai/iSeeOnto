@@ -1024,7 +1024,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Model_based">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Collaborative_Filtering"/>
         <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based"/>
-        <rdfs:label xml:lang="en">Model based</rdfs:label>
+        <rdfs:label xml:lang="en">Model based Recommender</rdfs:label>
     </owl:Class>
     
 
@@ -1091,7 +1091,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Collaborative_Filtering"/>
-        <rdfs:label xml:lang="en">Neighbours based</rdfs:label>
+        <rdfs:label xml:lang="en">Neighbours based Recommender</rdfs:label>
     </owl:Class>
     
 
@@ -1502,7 +1502,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#k-Nearest_Neighbour_Recommender">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Neighbours_based"/>
-        <rdfs:label xml:lang="en">k-Nearest Neighbour</rdfs:label>
+        <rdfs:label xml:lang="en">k-Nearest Neighbour Recommender</rdfs:label>
     </owl:Class>
     
 
