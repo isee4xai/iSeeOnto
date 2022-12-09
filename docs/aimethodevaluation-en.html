@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/aimethodevaluation","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/aimethodevaluation","name":"The AI Method Evaluation Ontology", "headline":"The Explainer Ontology is an ontology that models the technique used by an Explainer (as defined by the <a href="https://purl.org/heals/eo">Explanation Ontology</a>), to generate an Explanation. The concepts in this ontology reflect the a subset of the explanability fact sheet dimensions defined by Kacper Sokol and Peter Flach. 2020. Explainability fact sheets: a framework for systematic assessment of explainable approaches, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20) DOI:https://doi.org/10.1145/3351095.3372870.This ontology was created as part of the iSee project (https://isee4xai.com) whichreceived funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Wed Feb 16 20:27:40 GMT 2022", "contributor":[{"@type":"Person","name":"Anjana Wijekoon"},{"@type":"Person","name":"Chamath Palihawadana"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/aimethodevaluation","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/aimethodevaluation","name":"The AI Method Evaluation Ontology", "headline":"The AI Method Evaluation Ontology is an ontology that models the assessments, such as accuracy, F1 score, etc. of an AI Method. 				An assessment activity is performed to evaluate the performance of a AI Method, using a metric which defines how the assessment should be performed. The outcome of the assessment is captured in the Result concept. The metric measuress some aspect of the AI Method, such as accuracy, precision, recall, completeness, etc. The assessment is performed by an Agent, either software or human. 				The Prov properties startedAtTime and endedAtTime are used to record when the assessment took place.				This pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E. Pignotti, 2015. QUAL: A Provenance-Aware Quality Model. J. Data and Information Quality 5, 3, Article 12 (February 2015) DOI:https://doi.org/10.1145/2700413.		This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Fri Dec 09 09:25:52 GMT 2022", "contributor":[{"@type":"Person","name":"Anjana Wijekoon"},{"@type":"Person","name":"Chamath Palihawadana"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -64,10 +64,12 @@ $(function(){
 <dd>Anjana Wijekoon</dd><dd>Chamath Palihawadana</dd><dd>David Corsar</dd><dd>Ikechukwu Nkisi-Orji</dd><dd>Juan A. Recio-Garcia</dd><dd>Marta Caro Martínez</dd>
 
 <dt>Imported Ontologies:</dt>
-<dd><a href="http://linkedu.eu/dedalo/explanationPattern.owl">explanationPattern.owl</a></dd><dd><a href="http://semanticscience.org/ontology/sio.owl">sio.owl</a></dd><dd><a href="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl">cpannotationschema.owl</a></dd><dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3id.org/iSeeOnto/evaluation">evaluation</a></dd><dd><a href="https://purl.org/heals/eo">eo</a></dd>
+<dd><a href="http://linkedu.eu/dedalo/explanationPattern.owl">explanationPattern.owl</a></dd><dd><a href="http://semanticscience.org/ontology/sio.owl">sio.owl</a></dd><dd><a href="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl">cpannotationschema.owl</a></dd><dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3id.org/iSeeOnto/aimodel">aimodel</a></dd><dd><a href="https://purl.org/heals/eo">eo</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="aimethodevaluation.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="aimethodevaluation.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="aimethodevaluation.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="aimethodevaluation.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
-</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dt>Download serialization:</dt><dd><span><a href="https://isee4xai.github.io/iSeeOnto/aimethodevaluation.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+<dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a></dd>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd> The AI Method Evaluation Ontology.</dd>
 </dl>
 
@@ -78,17 +80,22 @@ $(function(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-The Explainer Ontology is an ontology that models the technique used by an Explainer (as defined by the <a href="https://purl.org/heals/eo">Explanation Ontology</a>), to generate an Explanation. The concepts in this ontology reflect the a subset of the explanability fact sheet dimensions defined by Kacper Sokol and Peter Flach. 2020. Explainability fact sheets: a framework for systematic assessment of explainable approaches, in Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency (FAT* '20) DOI:https://doi.org/10.1145/3351095.3372870.
+The AI Method Evaluation Ontology is an ontology that models the assessments, such as accuracy, F1 score, etc. of an AI Method. 
+		
+An assessment activity is performed to evaluate the performance of a AI Method, using a metric which defines how the assessment should be performed. The outcome of the assessment is captured in the Result concept. The metric measuress some aspect of the AI Method, such as accuracy, precision, recall, completeness, etc. The assessment is performed by an Agent, either software or human. 
+		
+The Prov properties startedAtTime and endedAtTime are used to record when the assessment took place.
+	
+This pattern is based on that of Qual-O defined in C. Baillie, P. Edwards, and E. Pignotti, 2015. QUAL: A Provenance-Aware Quality Model. J. Data and Information Quality 5, 3, Article 12 (February 2015) DOI:https://doi.org/10.1145/2700413.
 
-This ontology was created as part of the iSee project (https://isee4xai.com) which
-received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</span>
+		
+This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</span>
 </div>
 <div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -97,26 +104,30 @@ This is a place holder text for the introduction. The introduction should briefl
 <tbody>
 <tr><td><b>aieval</b></td><td>&lt;https://www.w3id.org/iSeeOnto/aimethodevaluation&gt;</td></tr>
 <tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
-<tr><td><b>void</b></td><td>&lt;http://rdfs.org/ns/void&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-<tr><td><b>resource</b></td><td>&lt;http://semanticscience.org/resource&gt;</td></tr>
-<tr><td><b>Qual-O</b></td><td>&lt;http://sensornet.abdn.ac.uk/onts/Qual-O&gt;</td></tr>
+<tr><td><b>Fowlkes</b></td><td>&lt;http://www.w3id.org/iSeeOnto/aimodelevaluationFowlkes–&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
-<tr><td><b>protege</b></td><td>&lt;http://protege.stanford.edu/plugins/owl/protege&gt;</td></tr>
-<tr><td><b>cpannotationschema</b></td><td>&lt;http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl&gt;</td></tr>
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
-<tr><td><b>eo</b></td><td>&lt;https://purl.org/heals/eo&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
 <tr><td><b>cito</b></td><td>&lt;http://purl.org/spar/cito&gt;</td></tr>
 <tr><td><b>prov-o</b></td><td>&lt;http://www.w3.org/TR/prov-o&gt;</td></tr>
-<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
-<tr><td><b>aieval</b></td><td>&lt;http://www.w3id.org/iSeeOnto/aimodelevaluation&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
-<tr><td><b>obo</b></td><td>&lt;http://purl.obolibrary.org/obo&gt;</td></tr>
+<tr><td><b>Youden</b></td><td>&lt;http://www.w3id.org/iSeeOnto/aimodelevaluationYouden'&gt;</td></tr>
+<tr><td><b>aimodel</b></td><td>&lt;http://www.w3id.org/iSeeOnto/aimodel&gt;</td></tr>
 <tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov&gt;</td></tr>
 <tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
+<tr><td><b>void</b></td><td>&lt;http://rdfs.org/ns/void&gt;</td></tr>
+<tr><td><b>resource</b></td><td>&lt;http://semanticscience.org/resource&gt;</td></tr>
+<tr><td><b>Qual-O</b></td><td>&lt;http://sensornet.abdn.ac.uk/onts/Qual-O&gt;</td></tr>
+<tr><td><b>protege</b></td><td>&lt;http://protege.stanford.edu/plugins/owl/protege&gt;</td></tr>
+<tr><td><b>cpannotationschema</b></td><td>&lt;http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl&gt;</td></tr>
+<tr><td><b>eo</b></td><td>&lt;https://purl.org/heals/eo&gt;</td></tr>
+<tr><td><b>core</b></td><td>&lt;http://purl.org/vocab/frbr/core&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>aieval</b></td><td>&lt;http://www.w3id.org/iSeeOnto/aimodelevaluation&gt;</td></tr>
+<tr><td><b>obo</b></td><td>&lt;http://purl.obolibrary.org/obo&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
 </tbody>
 </table>
@@ -132,22 +143,211 @@ This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment"
-         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment">AI Method  Assessment</a>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment">AI Model Assessment</a>
    </li>
    <li>
-      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension"
-         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension">AI Method Assessment Dimension</a>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
    </li>
    <li>
-      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric"
-         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric">AI Method Assessment Metric</a>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
    </li>
    <li>
-      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult"
-         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult">AI Method Assessment Result</a>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult">AI Model Assessment Result</a>
    </li>
-</ul>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy">Accuracy</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index">Adjusted Rand Index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC">AU-ROC</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU">BLEU</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score">Brier Score</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index">Calinski-Harabasz Index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient">Cohen's Kappa Coefficient</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage">Coverage</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality">Data Quality</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index">Davies-Bouldin Index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index">Dice Index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain">Discounted cumulative gain</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity">Diversity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index">Dunn Index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)">F1-score (macro)</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)">F1-score (micro)</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index">Fowlkes–Mallows index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss">Hamming Loss</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic">Hopkins statistic</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed">Inference Speed</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score">Jaccard Score</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient">Mathews Correlation Coefficient</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error">Mean Absolute Error</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error">Mean Squared Error</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR">METEOR</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information">Mutual Information</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage">Network Usage</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST">NIST</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance">Performance</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity">Perplexity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision">Precision</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity">Purity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared">R squared</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index">Rand Index</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall">Recall</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence">Recommender persistence</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness">Robustness</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error">Root Mean Squared Error</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE">ROUGE</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity">Serendipity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score">Silhouette Score</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed">Speed</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability">Stability</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed">Training Speed</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate">True Negative Rate</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#WER"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#WER">WER</a>
+   </li>
+   <li>
+      <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic"
+         title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic">Youden's J statistic</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
 </div>
   
 
@@ -156,6 +356,7 @@ This ontology has the following classes and properties.</span>
 
 <img src="imgs/AI Method Assessment.png" alt="Outline of the AI Method Evaluation ontology main classes and relationships">
 <figcaption>Outline of the AI Method Evaluation ontology main classes and relationships. Concepts highlighted in blue are defined in this ontology.</figcaption>
+</div>
 </div>
    
 
@@ -166,31 +367,31 @@ This section provides details for each class and property defined by The AI Meth
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment"
-            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment">AI Method  Assessment</a>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment">AI Model Assessment</a>
       </li>
       <li>
-         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension"
-            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension">AI Method Assessment Dimension</a>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
       </li>
       <li>
-         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric"
-            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric">AI Method Assessment Metric</a>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
       </li>
       <li>
-         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult"
-            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult">AI Method Assessment Result</a>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult">AI Model Assessment Result</a>
       </li>
    </ul>
-   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment">
-      <h3>AI Method  Assessment<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment">
+      <h3>AI Model Assessment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessment</p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessment</p>
       <div class="comment">
-         <span class="markdown">The activity performed that made an assessment of a AI Method, guided by a metric, to generate a Result. The assessment can be associated with the agent (e.g. User) that performed the assessment.</span>
+         <span class="markdown">The activity performed that made an assessment of a AI Model, guided by a metric, to generate a Result. The assessment can be associated with the agent (e.g. User) that performed the assessment.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -202,13 +403,13 @@ This section provides details for each class and property defined by The AI Meth
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension">
-      <h3>AI Method Assessment Dimension<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">
+      <h3>AI Model Assessment Dimension<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentDimension</p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension</p>
       <div class="comment">
          <span class="markdown">The dimension, such as Accuracy, Prevision, Recall, etc. that an evaluation assessed.</span>
       </div>
@@ -220,17 +421,33 @@ This section provides details for each class and property defined by The AI Meth
                title="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension">dimension</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality">Data Quality</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage">Network Usage</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance">Performance</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness">Robustness</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed">Speed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability">Stability</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
    </div>
-   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric">
-      <h3>AI Method Assessment Metric<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">
+      <h3>AI Model Assessment Metric<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentMetric</p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric</p>
       <div class="comment">
-         <span class="markdown">The criteria used to guide the assessment of an AI Method and determine the result.</span>
+         <span class="markdown">The criteria used to guide the assessment of an AI Model and determine the result.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -240,17 +457,103 @@ This section provides details for each class and property defined by The AI Meth
                title="http://sensornet.abdn.ac.uk/onts/Qual-O#Metric">metric</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC">AU-ROC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy">Accuracy</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index">Adjusted Rand Index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU">BLEU</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score">Brier Score</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index">Calinski-Harabasz Index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient">Cohen's Kappa Coefficient</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage">Coverage</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index">Davies-Bouldin Index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index">Dice Index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain">Discounted cumulative gain</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity">Diversity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index">Dunn Index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)">F1-score (macro)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)">F1-score (micro)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index">Fowlkes–Mallows index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss">Hamming Loss</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic">Hopkins statistic</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed">Inference Speed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score">Jaccard Score</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR">METEOR</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient">Mathews Correlation Coefficient</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error">Mean Absolute Error</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error">Mean Squared Error</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information">Mutual Information</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST">NIST</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity">Perplexity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision">Precision</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity">Purity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared">R squared</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE">ROUGE</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index">Rand Index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall">Recall</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence">Recommender persistence</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error">Root Mean Squared Error</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity">Serendipity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score">Silhouette Score</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed">Training Speed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate">True Negative Rate</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#WER"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#WER">WER</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic">Youden's J statistic</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
    </div>
-   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult">
-      <h3>AI Method Assessment Result<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult">
+      <h3>AI Model Assessment Result<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIMethodAssessmentResult</p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentResult</p>
       <div class="comment">
-         <span class="markdown">The result of assessing a specified dimention of an AI Method, as described by the metric specification.</span>
+         <span class="markdown">The result of assessing a specified dimension of an AI Model, as described by the metric specification.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -258,6 +561,1188 @@ This section provides details for each class and property defined by The AI Meth
             <a href="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"
                target="_blank"
                title="http://sensornet.abdn.ac.uk/onts/Qual-O#Result">result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy">Accuracy</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index">Adjusted Rand Index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC">AU-ROC</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU">BLEU</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score">Brier Score</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index">Calinski-Harabasz Index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient">Cohen's Kappa Coefficient</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage">Coverage</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality">Data Quality</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index">Davies-Bouldin Index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index">Dice Index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain">Discounted cumulative gain</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity">Diversity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index">Dunn Index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)">F1-score (macro)</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)">F1-score (micro)</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index">Fowlkes–Mallows index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss">Hamming Loss</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic">Hopkins statistic</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed">Inference Speed</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score">Jaccard Score</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient">Mathews Correlation Coefficient</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error">Mean Absolute Error</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error">Mean Squared Error</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR">METEOR</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information">Mutual Information</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage">Network Usage</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST">NIST</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance">Performance</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity">Perplexity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision">Precision</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity">Purity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared">R squared</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index">Rand Index</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall">Recall</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence">Recommender persistence</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness">Robustness</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error">Root Mean Squared Error</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE">ROUGE</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity">Serendipity</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score">Silhouette Score</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed">Speed</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability">Stability</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed">Training Speed</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate">True Negative Rate</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#WER"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#WER">WER</a>
+      </li>
+      <li>
+         <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic"
+            title="http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic">Youden's J statistic</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy">
+      <h3>Accuracy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Accuracy</p>
+      <div class="comment">
+         <span class="markdown">Accuracy is how close a given set of measurements (observations or readings) are to their true value.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index">
+      <h3>Adjusted Rand Index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Adjusted_Rand_Index</p>
+      <div class="comment">
+         <span class="markdown">The adjusted Rand index is the corrected-for-chance version of the Rand index.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Rand_index#Adjusted_Rand_index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC">
+      <h3>AU-ROC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#AU-ROC</p>
+      <div class="comment">
+         <span class="markdown">A receiver operating characteristic curve, or ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Receiver_operating_characteristic</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU">
+      <h3>BLEU<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#BLEU</p>
+      <div class="comment">
+         <span class="markdown">BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/BLEU</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score">
+      <h3>Brier Score<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Brier_Score</p>
+      <div class="comment">
+         <span class="markdown">The Brier Score is a strictly proper score function or strictly proper scoring rule that measures the accuracy of probabilistic predictions. For unidimensional predictions, it is strictly equivalent to the mean squared error as applied to predicted probabilities.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Brier_score</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index">
+      <h3>Calinski-Harabasz Index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Calinski-Harabasz_Index</p>
+      <div class="comment">
+         <span class="markdown">The index is the ratio of the sum of between-clusters dispersion and of within-cluster dispersion for all clusters (where dispersion is defined as the sum of distances squared).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://scikit-learn.org/stable/modules/clustering.html#calinski-harabasz-index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient">
+      <h3>Cohen's Kappa Coefficient<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Cohens_Kappa_Coefficient</p>
+      <div class="comment">
+         <span class="markdown">Cohen's kappa coefficient (κ, lowercase Greek kappa) is a statistic that is used to measure inter-rater reliability (and also intra-rater reliability) for qualitative (categorical) items.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Cohen%27s_kappa</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage">
+      <h3>Coverage<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Coverage</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality">
+      <h3>Data Quality<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Data_Quality</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index">
+      <h3>Davies-Bouldin Index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Davies-Bouldin_Index</p>
+      <div class="comment">
+         <span class="markdown">The Davies–Bouldin index (DBI), introduced by David L. Davies and Donald W. Bouldin in 1979, is a metric for evaluating clustering algorithms. This is an internal evaluation scheme, where the validation of how well the clustering has been done is made using quantities and features inherent to the dataset.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index">
+      <h3>Dice Index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Dice_Index</p>
+      <div class="comment">
+         <span class="markdown">The Sørensen–Dice coefficient is a statistic used to gauge the similarity of two samples.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain">
+      <h3>Discounted cumulative gain<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Discounted_cumulative_gain</p>
+      <div class="comment">
+         <span class="markdown">Discounted cumulative gain (DCG) is a measure of ranking quality.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity">
+      <h3>Diversity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Diversity</p>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Recommender_system#Performance_measures</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index">
+      <h3>Dunn Index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Dunn_Index</p>
+      <div class="comment">
+         <span class="markdown">The Dunn index (DI) (introduced by J. C. Dunn in 1974) is a metric for evaluating clustering algorithms.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Dunn_index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)">
+      <h3>F1-score (macro)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(macro)</p>
+      <div class="comment">
+         <span class="markdown">F-score or F-measure (macro) is a measure of a test's accuracy calculated from macro-averaging (taking all classes as equally important) the precision and recall of the test.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/F-score</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)">
+      <h3>F1-score (micro)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#F1-score_(micro)</p>
+      <div class="comment">
+         <span class="markdown">F-score or F-measure (micro) is a measure of a test's accuracy calculated from micro-averaging (biased by class frequency) the precision and recall of the test.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/F-score</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index">
+      <h3>Fowlkes–Mallows index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Fowlkes–Mallows_index</p>
+      <div class="comment">
+         <span class="markdown">The Fowlkes–Mallows index is an external evaluation method that is used to determine the similarity between two clusterings (clusters obtained after a clustering algorithm), and also a metric to measure confusion matrices.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Fowlkes%E2%80%93Mallows_index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss">
+      <h3>Hamming Loss<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Hamming_Loss</p>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Hamming_distance</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic">
+      <h3>Hopkins statistic<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Hopkins_statistic</p>
+      <div class="comment">
+         <span class="markdown">The Hopkins statistic (introduced by Brian Hopkins and John Gordon Skellam) is a way of measuring the cluster tendency of a data set.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Hopkins_statistic</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed">
+      <h3>Inference Speed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Inference_Speed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score">
+      <h3>Jaccard Score<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Jaccard_Score</p>
+      <div class="comment">
+         <span class="markdown">The Jaccard index, also known as the Jaccard similarity coefficient, is a statistic used for gauging the similarity and diversity of sample sets.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Jaccard_index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient">
+      <h3>Mathews Correlation Coefficient<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Mathews_Correlation_Coefficient</p>
+      <div class="comment">
+         <span class="markdown">Matthews correlation coefficient (MCC) is used as a measure of the quality of binary (two-class) classifications.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Phi_coefficient</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error">
+      <h3>Mean Absolute Error<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Absolute_Error</p>
+      <div class="comment">
+         <span class="markdown">Mean absolute error (MAE) is a measure of errors between paired observations expressing the same phenomenon as the sum of absolute errors divided by the sample size.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Mean_absolute_error</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error">
+      <h3>Mean Squared Error<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Mean_Squared_Error</p>
+      <div class="comment">
+         <span class="markdown">Mean squared error (MSE) or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors - that is, the average squared difference between the estimated values and the actual value.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Mean_squared_error</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR">
+      <h3>METEOR<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#METEOR</p>
+      <div class="comment">
+         <span class="markdown">METEOR (Metric for Evaluation of Translation with Explicit ORdering) is a metric for the evaluation of machine translation output based on the harmonic mean of unigram precision and recall, with recall weighted higher than precision.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/METEOR</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information">
+      <h3>Mutual Information<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Mutual_Information</p>
+      <div class="comment">
+         <span class="markdown">The mutual information (MI) of two random variables is a measure of the mutual dependence between the two variables.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Mutual_information</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage">
+      <h3>Network Usage<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Network_Usage</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST">
+      <h3>NIST<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#NIST</p>
+      <div class="comment">
+         <span class="markdown">NIST is a method based on the BLEU metric for evaluating the quality of text which has been translated using machine translation.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/NIST_(metric)</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance">
+      <h3>Performance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#PredictivePerformance</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity">
+      <h3>Perplexity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Perplexity</p>
+      <div class="comment">
+         <span class="markdown">Perplexity is a measurement of how well a probability distribution or probability model predicts a sample.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Perplexity</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision">
+      <h3>Precision<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Precision</p>
+      <div class="comment">
+         <span class="markdown">Precision (positive predictive value) is the fraction of relevant instances among the retrieved instances.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Precision_and_recall</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity">
+      <h3>Purity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Purity</p>
+      <div class="comment">
+         <span class="markdown">Purity is a measure of the extent to which clusters contain a single class.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Cluster_analysis#Evaluation_and_assessment</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared">
+      <h3>R squared<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#R_squared</p>
+      <div class="comment">
+         <span class="markdown">R2 (coefficient of determination) is the proportion of the variation in the dependent variable that is predictable from the independent variable(s).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Coefficient_of_determination</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index">
+      <h3>Rand Index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Rand_Index</p>
+      <div class="comment">
+         <span class="markdown">The Rand index or Rand measure (named after William M. Rand) in statistics, and in particular in data clustering, is a measure of the similarity between two data clusterings.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Rand_index</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall">
+      <h3>Recall<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Recall</p>
+      <div class="comment">
+         <span class="markdown">Recall (sensitivity) is the fraction of relevant instances that were retrieved.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Precision_and_recall</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence">
+      <h3>Recommender persistence<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Recommender_persistence</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness">
+      <h3>Robustness<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Robustness</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error">
+      <h3>Root Mean Squared Error<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Root_Mean_Squared_Error</p>
+      <div class="comment">
+         <span class="markdown">The root-mean-square deviation (RMSD) or root-mean-square error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Root-mean-square_deviation</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE">
+      <h3>ROUGE<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#ROUGE</p>
+      <div class="comment">
+         <span class="markdown">ROUGE, or Recall-Oriented Understudy for Gisting Evaluation, is a set of metrics and a software package used for evaluating automatic summarization and machine translation software in natural language processing.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/ROUGE_(metric)</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity">
+      <h3>Serendipity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Serendipity</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score">
+      <h3>Silhouette Score<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Silhouette_Score</p>
+      <div class="comment">
+         <span class="markdown">Silhouette refers to a method of interpretation and validation of consistency within clusters of data. The technique provides a succinct graphical representation of how well each object has been classified.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Silhouette_(clustering)</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed">
+      <h3>Speed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Speed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability">
+      <h3>Stability<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Stability</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentDimension">AI Model Assessment Dimension</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed">
+      <h3>Training Speed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Training_Speed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate">
+      <h3>True Negative Rate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#True_Negative_Rate</p>
+      <div class="comment">
+         <span class="markdown">Specificity (true negative rate) refers to the probability of a negative test, conditioned on truly being negative.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Sensitivity_and_specificity</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#WER">
+      <h3>WER<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#WER</p>
+      <div class="comment">
+         <span class="markdown">Word error rate (WER) is a common metric of the performance of a speech recognition or machine translation system.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Word_error_rate</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic">
+      <h3>Youden's J statistic<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3id.org/iSeeOnto/aimodelevaluation#Youden's_J_statistic</p>
+      <div class="comment">
+         <span class="markdown">Youden's J statistic (also called Youden's index) is a single statistic that captures the performance of a dichotomous diagnostic test.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Source</dt>
+         <dd>https://en.wikipedia.org/wiki/Youden%27s_J_statistic</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric"
+               title="http://www.w3id.org/iSeeOnto/aimodelevaluation#AIModelAssessmentMetric">AI Model Assessment Metric</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
