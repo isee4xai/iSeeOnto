@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/BehaviourTree","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/BehaviourTree","name":"The Behaviour Tree Ontology", "headline":"The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system. 					This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Tue Apr 05 14:49:30 BST 2022", "contributor":[{"@type":"Person","name":"Belén Díaz-Agudo"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Jesus Miguel Darias Goitia"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/iSeeOnto/BehaviourTree","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/iSeeOnto/BehaviourTree","name":"The Behaviour Tree Ontology", "headline":"The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system.			This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.", "datePublished":"Fri Dec 09 10:12:37 GMT 2022", "contributor":[{"@type":"Person","name":"Belén Díaz-Agudo"},{"@type":"Person","name":"David Corsar"},{"@type":"Person","name":"Ikechukwu Nkisi-Orji"},{"@type":"Person","name":"Jesus Miguel Darias Goitia"},{"@type":"Person","name":"Juan A. Recio-Garcia"},{"@type":"Person","name":"Marta Caro Martínez"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -63,11 +63,8 @@ $(function(){
 <dt>Contributors:</dt>
 <dd>Belén Díaz-Agudo</dd><dd>David Corsar</dd><dd>Ikechukwu Nkisi-Orji</dd><dd>Jesus Miguel Darias Goitia</dd><dd>Juan A. Recio-Garcia</dd><dd>Marta Caro Martínez</dd>
 
-<dt>Download serialization:</dt>
-<dd><span><a href="https://isee4xai.github.io/iSeeOnto/BehaviourTree.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span></dd>
-
-<dd><span>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
-</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Download serialization:</dt><dd><span><a href="https://isee4xai.github.io/iSeeOnto/BehaviourTree.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span></dd>
+<dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd> The Behaviour Tree Ontology.</dd>
 </dl>
@@ -79,16 +76,15 @@ $(function(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system. 
-		
+The focus of the Behaviour Tree ontology is to represented Behaviour Trees as used by the ExplanationExperienceEditor (https://github.com/isee4xai/ExplanationExperienceEditor) and the iSee platform to model the experiences of users seeking explanations for the outputs of an AI system.
+
 This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</span>
 </div>
 <div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -109,12 +105,6 @@ This is a place holder text for the introduction. The introduction should briefl
 </div>
 </div>
   
-
-<!--DESCRIPTION SECTION-->
- <div id="description"><h2 id="desc" class="list">The Behaviour Tree Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<img src="imgs/BehaviourTree.png" alt="Outline of the Behaviour Tree ontology main classes and relationships">
-<figcaption>Outline of the Behaviour Tree ontology main classes and relationships.</figcaption>
-</div>
 
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overv" class="list">The Behaviour Tree Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -137,9 +127,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#ConditionNode"
          title="https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode">Condition Node</a>
-   </li>
-   <li>
-      <a href="#Data" title="https://www.w3id.org/iSeeOnto/BehaviourTree#Data">Data</a>
    </li>
    <li>
       <a href="#DecoratorNode"
@@ -217,11 +204,12 @@ This ontology has the following classes and properties.</span>
          title="https://www.w3id.org/iSeeOnto/BehaviourTree#customNodes">custom nodes</a>
    </li>
    <li>
-      <a href="#firstChild"
-         title="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild">first child</a>
+      <a href="#display"
+         title="https://www.w3id.org/iSeeOnto/BehaviourTree#display">display</a>
    </li>
    <li>
-      <a href="#data" title="https://www.w3id.org/iSeeOnto/BehaviourTree#data">has Data</a>
+      <a href="#firstChild"
+         title="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild">first child</a>
    </li>
    <li>
       <a href="#hasDictionaryMember"
@@ -270,12 +258,10 @@ This ontology has the following classes and properties.</span>
   
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">The Behaviour Tree Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
-
+ <div id="description"><h2 id="desc" class="list">The Behaviour Tree Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<img src="imgs/BehaviourTree.png" alt="Outline of the Behaviour Tree ontology main classes and relationships">
+<figcaption>Outline of the Behaviour Tree ontology main classes and relationships.</figcaption>
 </div>
-   
 
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross reference for The Behaviour Tree Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -298,9 +284,6 @@ This section provides details for each class and property defined by The Behavio
       <li>
          <a href="#ConditionNode"
             title="https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode">Condition Node</a>
-      </li>
-      <li>
-         <a href="#Data" title="https://www.w3id.org/iSeeOnto/BehaviourTree#Data">Data</a>
       </li>
       <li>
          <a href="#DecoratorNode"
@@ -388,7 +371,9 @@ This section provides details for each class and property defined by The Behavio
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#ExplanationMethodNode"
+            <a href="#EvaluationMethodNode"
+               title="https://www.w3id.org/iSeeOnto/BehaviourTree#EvaluationMethodNode">Evaluation Method Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExplanationMethodNode"
                title="https://www.w3id.org/iSeeOnto/BehaviourTree#ExplanationMethodNode">Explanation Method Node</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FailureNode"
                title="https://www.w3id.org/iSeeOnto/BehaviourTree#FailureNode">Failure Node</a>
@@ -448,18 +433,6 @@ This section provides details for each class and property defined by The Behavio
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Data">
-      <h3>Data<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://www.w3id.org/iSeeOnto/BehaviourTree#Data</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-      </dl>
-   </div>
    <div class="entity" id="DecoratorNode">
       <h3>Decorator Node<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -511,7 +484,8 @@ This section provides details for each class and property defined by The Behavio
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Node" title="https://www.w3id.org/iSeeOnto/BehaviourTree#Node">Node</a>
+            <a href="#ActionNode"
+               title="https://www.w3id.org/iSeeOnto/BehaviourTree#ActionNode">Action Node</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -664,8 +638,6 @@ This section provides details for each class and property defined by The Behavio
                title="https://www.w3id.org/iSeeOnto/BehaviourTree#ConditionNode">Condition Node</a>
             <sup class="type-c" title="class">c</sup>, <a href="#DecoratorNode"
                title="https://www.w3id.org/iSeeOnto/BehaviourTree#DecoratorNode">Decorator Node</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#EvaluationMethodNode"
-               title="https://www.w3id.org/iSeeOnto/BehaviourTree#EvaluationMethodNode">Evaluation Method Node</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -786,11 +758,12 @@ This section provides details for each class and property defined by The Behavio
             title="https://www.w3id.org/iSeeOnto/BehaviourTree#customNodes">custom nodes</a>
       </li>
       <li>
-         <a href="#firstChild"
-            title="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild">first child</a>
+         <a href="#display"
+            title="https://www.w3id.org/iSeeOnto/BehaviourTree#display">display</a>
       </li>
       <li>
-         <a href="#data" title="https://www.w3id.org/iSeeOnto/BehaviourTree#data">has Data</a>
+         <a href="#firstChild"
+            title="https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild">first child</a>
       </li>
       <li>
          <a href="#hasDictionaryMember"
@@ -834,6 +807,17 @@ This section provides details for each class and property defined by The Behavio
       <p>
          <strong>IRI:</strong> https://www.w3id.org/iSeeOnto/BehaviourTree#customNodes</p>
    </div>
+   <div class="entity" id="display">
+      <h3>display<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/iSeeOnto/BehaviourTree#display</p>
+      <div class="comment">
+         <span class="markdown">Display properties such as x and y positions.</span>
+      </div>
+   </div>
    <div class="entity" id="firstChild">
       <h3>first child<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -841,14 +825,9 @@ This section provides details for each class and property defined by The Behavio
       </h3>
       <p>
          <strong>IRI:</strong> https://www.w3id.org/iSeeOnto/BehaviourTree#firstChild</p>
-   </div>
-   <div class="entity" id="data">
-      <h3>has Data<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://www.w3id.org/iSeeOnto/BehaviourTree#data</p>
+      <div class="comment">
+         <span class="markdown">The first child of a node.</span>
+      </div>
    </div>
    <div class="entity" id="hasDictionaryMember">
       <h3>has dictionary member<sup class="type-op" title="object property">op</sup>
@@ -865,6 +844,9 @@ This section provides details for each class and property defined by The Behavio
       </h3>
       <p>
          <strong>IRI:</strong> https://www.w3id.org/iSeeOnto/BehaviourTree#next</p>
+      <div class="comment">
+         <span class="markdown">The next sibling of a node.</span>
+      </div>
    </div>
    <div class="entity" id="nodes">
       <h3>nodes<sup class="type-op" title="object property">op</sup>
