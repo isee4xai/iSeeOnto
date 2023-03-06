@@ -1,5 +1,5 @@
 # iSeeOnto
-<a href="https://zenodo.org/badge/latestdoi/413838935"><img src="https://zenodo.org/badge/413838935.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.7696096"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7696096.svg" alt="DOI"></a>
 
 The iSeeOnto ontologies are being developed as part of the iSee project, for more details [see the project website](https://isee4xai.com/). 
 
