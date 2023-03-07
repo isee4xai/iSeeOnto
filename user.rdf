@@ -168,14 +168,14 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <!-- http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique -->
 
-    <rdf:Description rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#ExplainabilityTechnique">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/user#addressesQuestion"/>
                 <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000085"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -202,6 +202,33 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Agricultural_Chemicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Agricultural_Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Chemicals"/>
+        <rdfs:label xml:lang="en">Agricultural Chemicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Aluminum -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Aluminum">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Aluminum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Applied_Resources -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Applied_Resources">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Basic_Materials"/>
+        <rdfs:label xml:lang="en">Applied Resources</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#AudioFacilities -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#AudioFacilities">
@@ -218,6 +245,168 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Banking_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Banking_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Banking_&amp;_Investment_Services"/>
+        <rdfs:label xml:lang="en">Banking Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Basic_Materials -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Basic_Materials">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Basic Materials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Beverages -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Beverages">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Food_&amp;_Beverages"/>
+        <rdfs:label xml:lang="en">Beverages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Charity_Organizations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Charity_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations"/>
+        <rdfs:label xml:lang="en">Charity Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Chemicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Basic_Materials"/>
+        <rdfs:label xml:lang="en">Chemicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Coal -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Coal">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Energy_-_Fossil_Fuels"/>
+        <rdfs:label xml:lang="en">Coal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Collective_Investments -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Collective_Investments">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Financials"/>
+        <rdfs:label xml:lang="en">Collective Investments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Commodity_Chemicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Commodity_Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Chemicals"/>
+        <rdfs:label xml:lang="en">Commodity Chemicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Construction_Materials -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Construction_Materials">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Mineral_Resources"/>
+        <rdfs:label xml:lang="en">Construction Materials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Consumer Cyclicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Goods_Conglomerates -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Goods_Conglomerates">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals"/>
+        <rdfs:label xml:lang="en">Consumer Goods Conglomerates</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Consumer Non-Cyclicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Products -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Products">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals"/>
+        <rdfs:label xml:lang="en">Cyclical Consumer Products</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals"/>
+        <rdfs:label xml:lang="en">Cyclical Consumer Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Diversified_Chemicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Diversified_Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Chemicals"/>
+        <rdfs:label xml:lang="en">Diversified Chemicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Diversified_Industrial_Goods_Wholesale -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Diversified_Industrial_Goods_Wholesale">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrial_&amp;_Commercial_Services"/>
+        <rdfs:label xml:lang="en">Diversified Industrial Goods Wholesale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Diversified_Mining -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Diversified_Mining">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Diversified Mining</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Diversified_Retail -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Diversified_Retail">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Retailers"/>
+        <rdfs:label xml:lang="en">Diversified Retail</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#Domain -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Domain">
@@ -227,6 +416,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
                 <owl:allValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Domain of the user with subclasses from The Refinitiv Business Classification (TRBC) - https://en.wikipedia.org/wiki/The_Refinitiv_Business_Classification</rdfs:comment>
         <rdfs:label xml:lang="en">Domain</rdfs:label>
     </owl:Class>
     
@@ -249,11 +439,290 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Energy -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Energy_-_Fossil_Fuels -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Energy_-_Fossil_Fuels">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Energy"/>
+        <rdfs:label xml:lang="en">Energy - Fossil Fuels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Environmental_Organizations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Environmental_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations"/>
+        <rdfs:label xml:lang="en">Environmental Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Financials -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Financials">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Financials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Gold -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Gold">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Gold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Government_Activity -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Government_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Government Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Government_Administration_Activities -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Government_Administration_Activities">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Government_Activity"/>
+        <rdfs:label xml:lang="en">Government Administration Activities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Healthcare -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Healthcare">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Healthcare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Heavy_Electrical_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Heavy_Electrical_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships"/>
+        <rdfs:label xml:lang="en">Heavy Electrical Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Household_Goods -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Household_Goods">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Products"/>
+        <rdfs:label xml:lang="en">Household Goods</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Industrial_Goods -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Industrial_Goods">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrials"/>
+        <rdfs:label xml:lang="en">Industrial Goods</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Industrials -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Industrials">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Industrials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Insurance -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Insurance">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Financials"/>
+        <rdfs:label xml:lang="en">Insurance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Investment_Holding_Companies -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Investment_Holding_Companies">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Financials"/>
+        <rdfs:label xml:lang="en">Investment Holding Companies</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#KnowledgeLevel -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel">
         <rdfs:comment xml:lang="en">Enumeration class for defining the levels of knowledge / expertise an agent can have of discipline, field, or topic.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Leisure_Products -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Leisure_Products">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Products"/>
+        <rdfs:label xml:lang="en">Leisure Products</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Mineral_Resources -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Mineral_Resources">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Basic_Materials"/>
+        <rdfs:label xml:lang="en">Mineral Resources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Miscellaneous_Educational_Service_Providers -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Miscellaneous_Educational_Service_Providers">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services"/>
+        <rdfs:label xml:lang="en">Miscellaneous Educational Service Providers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Multiline_Utilities -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Multiline_Utilities">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Utilities"/>
+        <rdfs:label xml:lang="en">Multiline Utilities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Natural_Gas_Utilities -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Natural_Gas_Utilities">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Utilities"/>
+        <rdfs:label xml:lang="en">Natural Gas Utilities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Office_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Office_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology_Equipment"/>
+        <rdfs:label xml:lang="en">Office Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Passenger_Transportation_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Passenger_Transportation_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Transportation"/>
+        <rdfs:label xml:lang="en">Passenger Transportation Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Pharmaceuticals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Pharmaceuticals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Pharmaceuticals_&amp;_Medical_Research"/>
+        <rdfs:label xml:lang="en">Pharmaceuticals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Professional_Organizations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Professional_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations"/>
+        <rdfs:label xml:lang="en">Professional Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Real_Estate -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Real_Estate">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Real Estate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Real_Estate_Operations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Real_Estate_Operations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Real_Estate"/>
+        <rdfs:label xml:lang="en">Real Estate Operations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Religious_Organizations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Religious_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations"/>
+        <rdfs:label xml:lang="en">Religious Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Renewable_Energy -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Renewable_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Energy"/>
+        <rdfs:label xml:lang="en">Renewable Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Retailers -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Retailers">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals"/>
+        <rdfs:label xml:lang="en">Retailers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Shipbuilding -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Shipbuilding">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships"/>
+        <rdfs:label xml:lang="en">Shipbuilding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Specialty_Chemicals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Specialty_Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Chemicals"/>
+        <rdfs:label xml:lang="en">Specialty Chemicals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Specialty_Retailers -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Specialty_Retailers">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Retailers"/>
+        <rdfs:label xml:lang="en">Specialty Retailers</rdfs:label>
     </owl:Class>
     
 
@@ -269,6 +738,60 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Defines different typs of technical resources (audio, video, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">Technical Facilities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Technology -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Technology">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Technology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Technology_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Technology_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology"/>
+        <rdfs:label xml:lang="en">Technology Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Telecommunications_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Telecommunications_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology"/>
+        <rdfs:label xml:lang="en">Telecommunications Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Transport_Infrastructure -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Transport_Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Transportation"/>
+        <rdfs:label xml:lang="en">Transport Infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Transportation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Transportation">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrials"/>
+        <rdfs:label xml:lang="en">Transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Uranium -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Uranium">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Energy"/>
+        <rdfs:label xml:lang="en">Uranium</rdfs:label>
     </owl:Class>
     
 
@@ -310,6 +833,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/user#Utilities -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Utilities">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Utilities</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/user#VisualFacilities -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#VisualFacilities">
@@ -322,6 +854,501 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Different types of technical facilities capable of displaying visual information ( projector, monitor, television, tablet, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Visual Facilities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Academic &amp; Educational Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Aerospace_&amp;_Defense -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Aerospace_&amp;_Defense">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrial_Goods"/>
+        <rdfs:label xml:lang="en">Aerospace &amp; Defense</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Auto,_Truck_&amp;_Motorcycle_Parts -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Auto,_Truck_&amp;_Motorcycle_Parts">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Automobiles_&amp;_Auto_Parts"/>
+        <rdfs:label xml:lang="en">Auto, Truck &amp; Motorcycle Parts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Auto_&amp;_Truck_Manufacturers -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Auto_&amp;_Truck_Manufacturers">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Automobiles_&amp;_Auto_Parts"/>
+        <rdfs:label xml:lang="en">Auto &amp; Truck Manufacturers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Automobiles_&amp;_Auto_Parts -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Automobiles_&amp;_Auto_Parts">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals"/>
+        <rdfs:label xml:lang="en">Automobiles &amp; Auto Parts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Banking_&amp;_Investment_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Banking_&amp;_Investment_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Financials"/>
+        <rdfs:label xml:lang="en">Banking &amp; Investment Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Biotechnology_&amp;_Medical_Research -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Biotechnology_&amp;_Medical_Research">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Pharmaceuticals_&amp;_Medical_Research"/>
+        <rdfs:label xml:lang="en">Biotechnology &amp; Medical Research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Civic_&amp;_Social_Organizations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Civic_&amp;_Social_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations"/>
+        <rdfs:label xml:lang="en">Civic &amp; Social Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Communications_&amp;_Networking -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Communications_&amp;_Networking">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology_Equipment"/>
+        <rdfs:label xml:lang="en">Communications &amp; Networking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Computers,_Phones_&amp;_Household_Electronics -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Computers,_Phones_&amp;_Household_Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology_Equipment"/>
+        <rdfs:label xml:lang="en">Computers, Phones &amp; Household Electronics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Construction_&amp;_Engineering -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Construction_&amp;_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrial_&amp;_Commercial_Services"/>
+        <rdfs:label xml:lang="en">Construction &amp; Engineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Containers_&amp;_Packaging -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Containers_&amp;_Packaging">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Applied_Resources"/>
+        <rdfs:label xml:lang="en">Containers &amp; Packaging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Electrical_Components_&amp;_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Electrical_Components_&amp;_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships"/>
+        <rdfs:label xml:lang="en">Electrical Components &amp; Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Electrical_Utilities_&amp;_IPPs -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Electrical_Utilities_&amp;_IPPs">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Utilities"/>
+        <rdfs:label xml:lang="en">Electrical Utilities &amp; Independent Power Producers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Electronic_Equipment_&amp;_Parts -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Electronic_Equipment_&amp;_Parts">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology_Equipment"/>
+        <rdfs:label xml:lang="en">Electronic Equipment &amp; Parts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Financial_Technology_&amp;_Infrastructure -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Financial_Technology_&amp;_Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology"/>
+        <rdfs:label xml:lang="en">Financial Technology (Fintech) &amp; Infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Food_&amp;_Beverages -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Food_&amp;_Beverages">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals"/>
+        <rdfs:label xml:lang="en">Food &amp; Beverages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Food_&amp;_Drug_Retailing -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Food_&amp;_Drug_Retailing">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals"/>
+        <rdfs:label xml:lang="en">Food &amp; Drug Retailing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Food_&amp;_Tobacco -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Food_&amp;_Tobacco">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Food_&amp;_Beverages"/>
+        <rdfs:label xml:lang="en">Food &amp; Tobacco</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Freight_&amp;_Logistics_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Freight_&amp;_Logistics_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Transportation"/>
+        <rdfs:label xml:lang="en">Freight &amp; Logistics Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Government_&amp;_Government_Finance -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Government_&amp;_Government_Finance">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Government_Activity"/>
+        <rdfs:label xml:lang="en">Government &amp; Government Finance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Healthcare_Equipment_&amp;_Supplies -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Healthcare_Equipment_&amp;_Supplies">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Healthcare_Services_&amp;_Equipment"/>
+        <rdfs:label xml:lang="en">Healthcare Equipment &amp; Supplies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Healthcare_Providers_&amp;_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Healthcare_Providers_&amp;_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Healthcare_Services_&amp;_Equipment"/>
+        <rdfs:label xml:lang="en">Healthcare Providers &amp; Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Healthcare_Services_&amp;_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Healthcare_Services_&amp;_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Healthcare"/>
+        <rdfs:label xml:lang="en">Healthcare Services &amp; Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Heavy_Machinery_&amp;_Vehicles -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Heavy_Machinery_&amp;_Vehicles">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships"/>
+        <rdfs:label xml:lang="en">Heavy Machinery &amp; Vehicles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Homebuilding_&amp;_Construction_Supplies -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Homebuilding_&amp;_Construction_Supplies">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Products"/>
+        <rdfs:label xml:lang="en">Homebuilding &amp; Construction Supplies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Hotels_&amp;_Entertainment_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Hotels_&amp;_Entertainment_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Services"/>
+        <rdfs:label xml:lang="en">Hotels &amp; Entertainment Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Industrial_&amp;_Commercial_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Industrial_&amp;_Commercial_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrials"/>
+        <rdfs:label xml:lang="en">Industrial &amp; Commercial Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Industrial_Machinery_&amp;_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Industrial_Machinery_&amp;_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships"/>
+        <rdfs:label xml:lang="en">Industrial Machinery &amp; Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
+        <rdfs:label xml:lang="en">Institutions, Associations &amp; Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Integrated_Hardware_&amp;_Software -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Integrated_Hardware_&amp;_Software">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology_Equipment"/>
+        <rdfs:label xml:lang="en">Integrated Hardware &amp; Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Investment_Banking_&amp;_Investment_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Investment_Banking_&amp;_Investment_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Banking_&amp;_Investment_Services"/>
+        <rdfs:label xml:lang="en">Investment Banking &amp; Investment Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Iron_&amp;_Steel -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Iron_&amp;_Steel">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Iron &amp; Steel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Legal_&amp;_Safety_Public_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Legal_&amp;_Safety_Public_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Government_Activity"/>
+        <rdfs:label xml:lang="en">Legal &amp; Safety Public Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Machinery,_Tools,_Heavy_Vehicles,_Trains_&amp;_Ships">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrial_Goods"/>
+        <rdfs:label xml:lang="en">Machinery, Tools, Heavy Vehicles, Trains &amp; Ships</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Media_&amp;_Publishing -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Media_&amp;_Publishing">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Services"/>
+        <rdfs:label xml:lang="en">Media &amp; Publishing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Mineral_Resources"/>
+        <rdfs:label xml:lang="en">Metals &amp; Mining</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Mining_Support_Services_&amp;_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Mining_Support_Services_&amp;_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Mining Support Services &amp; Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#National_Security_&amp;_International_Affairs -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#National_Security_&amp;_International_Affairs">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Government_Activity"/>
+        <rdfs:label xml:lang="en">National Security &amp; International Affairs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Non-Gold_Precious_Metals_&amp;_Minerals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Non-Gold_Precious_Metals_&amp;_Minerals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Non-Gold Precious Metals &amp; Minerals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Oil_&amp;_Gas -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Oil_&amp;_Gas">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Energy_-_Fossil_Fuels"/>
+        <rdfs:label xml:lang="en">Oil &amp; Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Oil_&amp;_Gas_Related_Equipment_and_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Oil_&amp;_Gas_Related_Equipment_and_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Energy_-_Fossil_Fuels"/>
+        <rdfs:label xml:lang="en">Oil &amp; Gas Related Equipment and Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Paper_&amp;_Forest_Products -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Paper_&amp;_Forest_Products">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Applied_Resources"/>
+        <rdfs:label xml:lang="en">Paper &amp; Forest Products</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Personal_&amp;_Household_Products_&amp;_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Personal_&amp;_Household_Products_&amp;_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals"/>
+        <rdfs:label xml:lang="en">Personal &amp; Household Products &amp; Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Pharmaceuticals_&amp;_Medical_Research -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Pharmaceuticals_&amp;_Medical_Research">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Healthcare"/>
+        <rdfs:label xml:lang="en">Pharmaceuticals &amp; Medical Research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Professional_&amp;_Business_Education -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Professional_&amp;_Business_Education">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services"/>
+        <rdfs:label xml:lang="en">Professional &amp; Business Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Professional_&amp;_Commercial_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Professional_&amp;_Commercial_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Industrial_&amp;_Commercial_Services"/>
+        <rdfs:label xml:lang="en">Professional &amp; Commercial Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Residential_&amp;_Commercial_REITs -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Residential_&amp;_Commercial_REITs">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Real_Estate"/>
+        <rdfs:label xml:lang="en">Residential &amp; Commercial REITs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#School,_College_&amp;_University -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#School,_College_&amp;_University">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services"/>
+        <rdfs:label xml:lang="en">School, College &amp; University</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Semiconductors_&amp;_Semiconductor_Equipment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Semiconductors_&amp;_Semiconductor_Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology_Equipment"/>
+        <rdfs:label xml:lang="en">Semiconductors &amp; Semiconductor Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Software_&amp;_IT_Services -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Software_&amp;_IT_Services">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Technology"/>
+        <rdfs:label xml:lang="en">Software &amp; IT Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Specialty_Mining_&amp;_Metals -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Specialty_Mining_&amp;_Metals">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Metals_&amp;_Mining"/>
+        <rdfs:label xml:lang="en">Specialty Mining &amp; Metals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Textiles_&amp;_Apparel -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Textiles_&amp;_Apparel">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Cyclical_Consumer_Products"/>
+        <rdfs:label xml:lang="en">Textiles &amp; Apparel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Tires_&amp;_Rubber_Products -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Tires_&amp;_Rubber_Products">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Automobiles_&amp;_Auto_Parts"/>
+        <rdfs:label xml:lang="en">Tires &amp; Rubber Products</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/user#Water_&amp;_Related_Utilities -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/user#Water_&amp;_Related_Utilities">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/user#Utilities"/>
+        <rdfs:label xml:lang="en">Water &amp; Related Utilities</rdfs:label>
     </owl:Class>
     
 
@@ -428,16 +1455,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#Basic_Materials -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Basic_Materials">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Chemicals, Mineral Resources, Applied Resources</rdfs:comment>
-        <rdfs:label xml:lang="en">Basic Materials</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/user#Compliancy -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Compliancy">
@@ -452,26 +1469,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Comprehensibility">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
         <rdfs:label xml:lang="en">Comprehensibility</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Cyclicals">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Automobiles &amp; Auto Parts, Cyclical Consumer Products, Cyclical Consumer Services, Retailers</rdfs:comment>
-        <rdfs:label xml:lang="en">Consumer Cyclicals</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Consumer_Non-Cyclicals">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Food &amp; Beverages, Personal &amp; Household Products &amp; Services, Food &amp; Drug Retailing, Consumer Goods Conglomerates</rdfs:comment>
-        <rdfs:label xml:lang="en">Consumer Non-Cyclicals</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -508,55 +1505,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Efficiency">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
         <rdfs:label xml:lang="en">Efficiency</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Energy -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Energy">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Fossil Fuels, Renewable Energy, Uranium</rdfs:comment>
-        <rdfs:label xml:lang="en">Energy</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Financials -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Financials">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Banking &amp; Investment Services, Insurance, Collective Investments,	Investment Holding Companies</rdfs:comment>
-        <rdfs:label xml:lang="en">Financials</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Government_Activity -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Government_Activity">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:label xml:lang="en">Government Activity</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Healthcare -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Healthcare">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Healthcare Services &amp; Equipment, Pharmaceuticals &amp; Medical Research</rdfs:comment>
-        <rdfs:label xml:lang="en">Healthcare</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Industrials -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Industrials">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Industrial Goods, Industrial &amp; Commercial Services, Transportation</rdfs:comment>
-        <rdfs:label xml:lang="en">Industrials</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -606,15 +1554,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#Real_Estate -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Real_Estate">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:label xml:lang="en">Real Estate</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/user#Satisfaction -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Satisfaction">
@@ -658,16 +1597,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/user#Technology -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Technology">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:comment xml:lang="en">Technology Equipment, Software &amp; IT Services, Financial Technology (Fintech) &amp; Infrastructure, Telecommunications Services</rdfs:comment>
-        <rdfs:label xml:lang="en">Technology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/user#Touchpad -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Touchpad">
@@ -691,15 +1620,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Trust">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000358"/>
         <rdfs:label xml:lang="en">Trust</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Utilities -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Utilities">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:label xml:lang="en">Utilities</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -754,24 +1674,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#proficient">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#KnowledgeLevel"/>
         <rdfs:label xml:lang="en">Proficient</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Academic_&amp;_Educational_Services">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:label xml:lang="en">Academic &amp; Educational Services</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations -->
-
-    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/user#Institutions,_Associations_&amp;_Organizations">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/user#Domain"/>
-        <rdfs:label xml:lang="en">Institutions, Associations &amp; Organizations</rdfs:label>
     </owl:NamedIndividual>
     
 
