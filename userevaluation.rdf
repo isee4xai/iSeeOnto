@@ -29,12 +29,12 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/evaluation"/>
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
-        <terms:contributor>Anjana Wijekoon</terms:contributor>
-        <terms:contributor>Chamath Palihawadana</terms:contributor>
-        <terms:contributor>David Corsar</terms:contributor>
-        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor>Marta Caro Martínez</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The User Evaluation Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usreval</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/userevaluation</vann:preferredNamespaceUri>
@@ -219,17 +219,20 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Free-Text_Question -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Free-Text_Question">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question"/>
+        <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Number_Question"/>
+        <rdfs:label xml:lang="en">Free-Text Question</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#SingleChoiceNominalQuestion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Steps"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Likert Scale Question</rdfs:label>
     </owl:Class>
     
@@ -248,6 +251,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#MultipleChoiceResponse">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#NominalQuestionResponse"/>
+        <rdfs:label xml:lang="en">Multiple Choice Response</rdfs:label>
     </owl:Class>
     
 
@@ -273,6 +277,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
                 <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Nominal Question Response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Number_Question -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Number_Question">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question"/>
+        <rdfs:label xml:lang="en">Number Question</rdfs:label>
     </owl:Class>
     
 
@@ -354,6 +368,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
                 <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Response Options</rdfs:label>
     </owl:Class>
     
 
@@ -411,20 +426,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
                 <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Steps -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Steps">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasSteps"/>
-                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#KeyLiteralValuePair"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Single Choice Response</rdfs:label>
     </owl:Class>
     
 
