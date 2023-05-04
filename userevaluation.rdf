@@ -219,16 +219,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
-    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Free-Text_Question -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Free-Text_Question">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question"/>
-        <owl:disjointWith rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Number_Question"/>
-        <rdfs:label xml:lang="en">Free-Text Question</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Likert_Scale_Question">
