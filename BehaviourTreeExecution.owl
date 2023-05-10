@@ -33,6 +33,39 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
         <rdfs:domain rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
         <rdfs:range rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+        <rdfs:comment xml:lang="en">
+			This property captures the relationship between a Node (from a Tree in the BehaviourTree ontology) and the NodeExecution prov:Activity that is enacting / executing that Node (viewed as a step in the plan).
+		</rdfs:comment>
+        <rdfs:label xml:lang="en">enacted</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#outcome -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#outcome">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
+        <owl:inverseOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator"/>
+        <rdfs:comment xml:lang="en">
+        This property links a NodeExecution activity to a NodeExecutionSuccessIndicator entity, indicating the outcome of the execution of the Behaviour Tree node.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">outcome</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+        <rdfs:comment xml:lang="en">
+        This property links a NodeExecutionSuccessIndicator entity to a NodeExecution activity, indicating that the entity is the outcome of the execution of the Behaviour Tree node.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">was Outcome Of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -68,6 +101,17 @@
 
     <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#outcome"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+        An activity that enacts or executes a Behaviour Tree Node over a period of time. The result of executing a Behaviour Tree Node must reference exactly one NodeExecutionSuccessIndicator, which is a prov:Entity that indicates whether the execution was successful or not using the outcome relationship.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Node Execution</rdfs:label>
     </owl:Class>
     
 
