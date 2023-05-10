@@ -12,6 +12,23 @@
     <owl:Ontology rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution">
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
+		
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+		<terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wjekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesus Miguel Darias Goitia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belén Díaz-Agudo</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:description xml:lang="en">
+
+    The Behaviour Tree Execution ontology is designed to facilitate the capture of provenance data related to the execution of Behaviour Trees. This is accomplished through the alignment of the Behaviour Tree ontology to PROV-O, viewing Trees as prov:Plans and Nodes as a type of prov:Entity. Additionally, relevant types of prov:Activity and prov:Entity are defined to capture the execution of each Node in a Tree by the iSee engine, along with the outputs generated.
+
+
+			This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Behaviour Tree Execution Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">btexe</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/BehaviourTreeExecution</vann:preferredNamespaceUri>
     </owl:Ontology>
     
 
