@@ -228,6 +228,38 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Maximum_Number -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Maximum_Number">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Response_Requirement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Maximum number that is acceptable as a valid response to a Question (i.e. number cannot be above this value).</rdfs:comment>
+        <rdfs:label xml:lang="en">Maximum Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Minimum_Number -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Minimum_Number">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Response_Requirement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Minimum number that is acceptable as a valid response to a Question (i.e. number cannot be below this value).</rdfs:comment>
+        <rdfs:label xml:lang="en">Minimum Number</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#MultipleChoiceNominalQuestion -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#MultipleChoiceNominalQuestion">
@@ -276,6 +308,20 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Number_Question">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Open_Question"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Maximum_Number"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#hasAnswerFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Minimum_Number"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Number Question</rdfs:label>
     </owl:Class>
     
@@ -351,6 +397,7 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptions">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#Response_Requirement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
@@ -376,6 +423,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Several response options, the ordering of which is important.</rdfs:comment>
         <rdfs:label xml:lang="en">Response Options Sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Response_Requirement -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Response_Requirement">
+        <rdfs:comment xml:lang="en">Requirements for the expected response to a Question.</rdfs:comment>
+        <rdfs:label xml:lang="en">Response Requirement</rdfs:label>
     </owl:Class>
     
 
