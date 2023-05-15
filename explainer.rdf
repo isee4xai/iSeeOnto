@@ -944,6 +944,16 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#BW_Image -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#BW_Image">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <rdfs:comment xml:lang="en">Monochrome image type</rdfs:comment>
+        <rdfs:label xml:lang="en">BW Image</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Constant_time -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Constant_time">
