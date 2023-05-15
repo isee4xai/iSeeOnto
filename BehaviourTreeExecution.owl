@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#"
+     xml:base="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution">
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wjekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belén Díaz-Agudo</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesus Miguel Darias Goitia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
+        <terms:description xml:lang="en">
+
+    The Behaviour Tree Execution ontology is designed to facilitate the capture of provenance data related to the execution of Behaviour Trees. This is accomplished through the alignment of the Behaviour Tree ontology to PROV-O, viewing Trees as prov:Plans and Nodes as a type of prov:Entity. Additionally, relevant types of prov:Activity and prov:Entity are defined to capture the execution of each Node in a Tree by the iSee engine, along with the outputs generated.
+
+
+			This ontology was created as part of the iSee project (https://isee4xai.com) which received funding from EPSRC under the grant number EP/V061755/1. iSee is part of the CHIST-ERA pathfinder programme for European coordinated research on future and emerging information and communication technologies.</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Behaviour Tree Execution Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">btexe</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/BehaviourTreeExecution</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#enacted -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#enacted">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+        <rdfs:comment xml:lang="en">
+			This property captures the relationship between a Node (from a Tree in the BehaviourTree ontology) and the NodeExecution prov:Activity that is enacting / executing that Node (viewed as a step in the plan).
+		</rdfs:comment>
+        <rdfs:label xml:lang="en">enacted</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#outcome -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#outcome">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
+        <owl:inverseOf rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator"/>
+        <rdfs:comment xml:lang="en">
+        This property links a NodeExecution activity to a NodeExecutionSuccessIndicator entity, indicating the outcome of the execution of the Behaviour Tree node.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">outcome</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+        <rdfs:comment xml:lang="en">
+        This property links a NodeExecutionSuccessIndicator entity to a NodeExecution activity, indicating that the entity is the outcome of the execution of the Behaviour Tree node.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">was Outcome Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#Node -->
+
+    <rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#Node">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#Tree -->
+
+    <rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#Tree">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution -->
+
+    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#enacted"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#outcome"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+        An activity that enacts or executes a Behaviour Tree Node over a period of time. The result of executing a Behaviour Tree Node must reference exactly one NodeExecutionSuccessIndicator, which is a prov:Entity that indicates whether the execution was successful or not using the outcome relationship.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Node Execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionOutput -->
+
+    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionOutput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#properties"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Dictionary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+			A Node Execution Output is a prov:Entity that captures the output generated by the execution of a node. As the output can vary depending on the specific node and context, a bt:Dictionary should be used to provide details on the attributes and values of the generated output.
+		</rdfs:comment>
+        <rdfs:label xml:lang="en">Node Execution Output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator -->
+
+    <owl:Class rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecutionSuccessIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#wasOutcomeOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTreeExecution#NodeExecution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#value"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+    Node Execution Success Indicator is a prov:Entity that captures if the bt:Node was executed successfully or not. The prov:value property of an individual of this class is used to indicate whether the node execution was successful (with a value of &quot;true&quot;) or unsuccessful (with a value of &quot;false&quot;).
+</rdfs:comment>
+        <rdfs:label xml:lang="en">Success Indicator</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
