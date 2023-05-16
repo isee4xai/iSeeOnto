@@ -151,6 +151,14 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#has_model_access -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#has_model_access">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has model access</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#isCompatibleWithFeatureTypes">
@@ -179,6 +187,26 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
         <rdfs:comment xml:lang="en">Link between an Explainer and the Explainability Technique that is uses.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utilises</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#needs_training_data -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/iSeeOnto/explainer#needs_training_data">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">needs training data</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -402,6 +430,18 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Implementation_Framework"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explainer#has_model_access"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explainer#needs_training_data"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An Explainer uses an Explainability Technique to generate Explanations for an AI Models output.</rdfs:comment>
         <rdfs:label xml:lang="en">Explainer</rdfs:label>
     </owl:Class>
@@ -604,6 +644,14 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Loss_Modification">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Architecture_Modification"/>
         <rdfs:label xml:lang="en">Loss Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type">
+        <rdfs:label xml:lang="en">Model Access Type</rdfs:label>
     </owl:Class>
     
 
@@ -887,6 +935,25 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Any_access -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Any_access">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type"/>
+        <rdfs:label xml:lang="en">Any access</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#BW_Image -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#BW_Image">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <rdfs:comment xml:lang="en">Monochrome image type</rdfs:comment>
+        <rdfs:label xml:lang="en">BW Image</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Constant_time -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Constant_time">
@@ -913,6 +980,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
         <rdfs:comment>O(n!)</rdfs:comment>
         <rdfs:label xml:lang="en">Factorial time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#File_access -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#File_access">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type"/>
+        <rdfs:label xml:lang="en">File access</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1006,6 +1082,15 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#TensowFlow2">
         <rdfs:label xml:lang="en">TensorFlow 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#URL_access -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#URL_access">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type"/>
+        <rdfs:label xml:lang="en">URL access</rdfs:label>
     </owl:NamedIndividual>
     
 
