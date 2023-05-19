@@ -1347,6 +1347,16 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/aimodel#Single-output_Regression -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Single-output_Regression">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/aimodel#Regression"/>
+        <rdfs:comment xml:lang="en">Regression task that involves predicting one numerical variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Single-output Regression</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/aimodel#Spectral_Bi-Clustering -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/aimodel#Spectral_Bi-Clustering">
