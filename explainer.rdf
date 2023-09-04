@@ -1032,6 +1032,24 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Multivariate_tabular -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Multivariate_tabular">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <rdfs:label xml:lang="en">Multivariate tabular</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Multivariate_time_series -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Multivariate_time_series">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <rdfs:label xml:lang="en">Multivariate time series</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#PyTorch -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#PyTorch">
@@ -1091,6 +1109,24 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#URL_access">
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Model_Access_Type"/>
         <rdfs:label xml:lang="en">URL access</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Univariate_tabular -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Univariate_tabular">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <rdfs:label xml:lang="en">Univariate tabular</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Univariate_time_series -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Univariate_time_series">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
+        <rdfs:label xml:lang="en">Univariate time series</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1218,7 +1254,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <!-- http://www.w3id.org/iSeeOnto/explainer#multivariate -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#multivariate">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
         <rdfs:label xml:lang="en">Multivariate</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1276,7 +1311,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <!-- http://www.w3id.org/iSeeOnto/explainer#time_series -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#time_series">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
         <rdfs:label xml:lang="en">Time series</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1285,7 +1319,6 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     <!-- http://www.w3id.org/iSeeOnto/explainer#univariate -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#univariate">
-        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#DatasetType"/>
         <rdfs:label xml:lang="en">Univariate</rdfs:label>
     </owl:NamedIndividual>
     
