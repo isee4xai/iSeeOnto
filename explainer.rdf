@@ -1002,6 +1002,16 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Linear_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Linear_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment xml:lang="en">O(n)</rdfs:comment>
+        <rdfs:label xml:lang="en">Linear time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#Linearithmic_time -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Linearithmic_time">
