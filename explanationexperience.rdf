@@ -34,12 +34,12 @@
         <owl:imports rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation"/>
         <owl:imports rdf:resource="https://purl.org/heals/eo/1.0.0"/>
         <owl:imports rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree"/>
-        <terms:contributor>Anjana Wijekoon</terms:contributor>
-        <terms:contributor>Chamath Palihawadana</terms:contributor>
-        <terms:contributor>David Corsar</terms:contributor>
-        <terms:contributor>Ikechukwu Nkisi-Orji</terms:contributor>
-        <terms:contributor>Juan A. Recio-Garcia</terms:contributor>
-        <terms:contributor>Marta Caro Martínez</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anjana Wijekoon</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamath Palihawadana</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikechukwu Nkisi-Orji</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan A. Recio-Garcia</terms:contributor>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Caro Martínez</terms:contributor>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Explanation Experience Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.w3id.org/iSeeOnto/explanationexperience</vann:preferredNamespaceUri>
@@ -127,6 +127,15 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasSolution">
         <rdfs:comment xml:lang="en">Relationship between an Explanation Experience and a Solution.</rdfs:comment>
         <rdfs:label xml:lang="en">has solution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#hasStatus">
+        <rdfs:comment xml:lang="en">Relation between Description and status descriptor.</rdfs:comment>
+        <rdfs:label xml:lang="en">has status</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -243,6 +252,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasStatus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://semanticscience.org/resource/SIO_001326"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#hasUserGroup"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/user#User_Group"/>
@@ -341,6 +357,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#AnalysisResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -367,11 +389,68 @@
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#UserEvaluationResult"/>
+    
+
+
     <!-- https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree -->
 
     <rdf:Description rdf:about="https://www.w3id.org/iSeeOnto/BehaviourTree#BehaviourTree">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/explanationexperience#Solution"/>
     </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Compliant -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Compliant">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001326"/>
+        <rdfs:comment xml:lang="en">This status indicates that the content adheres to specific compliance standards or requirements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Compliant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Evaluated -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Evaluated">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001326"/>
+        <rdfs:comment xml:lang="en">This status indicates that the content has been reviewed or assessed in some way e.g. user evaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Not_Evaluated -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Not_Evaluated">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001326"/>
+        <rdfs:comment xml:lang="en">This status indicates that the content has not yet undergone any formal evaluation or assessment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Not Evaluated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/explanationexperience#Peer_reviewed -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explanationexperience#Peer_reviewed">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001326"/>
+        <rdfs:comment xml:lang="en">This status indicates that the content is based on information or research from scholarly or academic sources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Peer reviewed</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
