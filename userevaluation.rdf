@@ -195,15 +195,40 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#AnalysisDimension -->
+
+    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#AnalysisDimension">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Dimension"/>
+        <rdfs:comment xml:lang="en">The dimension such as popularity/frequency of use.</rdfs:comment>
+        <rdfs:label xml:lang="en">Analysis Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/userevaluation#AnalysisResult -->
 
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#AnalysisResult">
+        <rdfs:subClassOf rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#Result"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:onProperty rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#annotates"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/iSeeOnto/BehaviourTree#Node"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://sensornet.abdn.ac.uk/onts/Qual-O#measures"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#AnalysisDimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#value"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Analysis of Behaviour Tree nodes.</rdfs:comment>
         <rdfs:label xml:lang="en">Analysis Result</rdfs:label>
     </owl:Class>
     
@@ -371,15 +396,6 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
     <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#OrderedResponseOptionValuePair">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#ResponseOptionValuePair"/>
         <rdfs:label xml:lang="en">Ordered Response Option Value Pair</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/iSeeOnto/userevaluation#Popularity -->
-
-    <owl:Class rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#Popularity">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#AnalysisResult"/>
-        <rdfs:label xml:lang="en">Popularity</rdfs:label>
     </owl:Class>
     
 
@@ -576,6 +592,15 @@ This ontology was created as part of the iSee project (https://isee4xai.com) whi
         <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#OrderedResponseOptionValuePair"/>
         <BehaviourTree:pairKey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BehaviourTree:pairKey>
         <BehaviourTree:pair_value_literal xml:lang="en">Disagree</BehaviourTree:pair_value_literal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/iSeeOnto/userevaluation#ExplainerPopularity -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/userevaluation#ExplainerPopularity">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/userevaluation#AnalysisDimension"/>
+        <rdfs:label xml:lang="en">Explainer Popularity</rdfs:label>
     </owl:NamedIndividual>
     
 
