@@ -1060,6 +1060,16 @@ received funding from EPSRC under the grant number EP/V061755/1. iSee is part of
     
 
 
+    <!-- http://www.w3id.org/iSeeOnto/explainer#Polynomial_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#Polynomial_time">
+        <rdf:type rdf:resource="http://www.w3id.org/iSeeOnto/explainer#Time_Complexity"/>
+        <rdfs:comment>An algorithm is said to be of polynomial time if its running time is upper bounded by a polynomial expression in the size of the input for the algorithm, that is, T(n) = O(n^k) for some positive constant k.</rdfs:comment>
+        <rdfs:label xml:lang="en">Polynomial time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3id.org/iSeeOnto/explainer#PyTorch -->
 
     <owl:NamedIndividual rdf:about="http://www.w3id.org/iSeeOnto/explainer#PyTorch">
